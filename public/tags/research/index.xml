@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>research | Academic</title>
+    <link>http://jinjeon.me/tags/research/</link>
+      <atom:link href="http://jinjeon.me/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <description>research</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://jinjeon.me/img/icon.png</url>
+      <title>research</title>
+      <link>http://jinjeon.me/tags/research/</link>
+    </image>
+    
+    <item>
+      <title>Vanderbilt Computational Memory Lab</title>
+      <link>http://jinjeon.me/project/vucml/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/vucml/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Lab Manager/Research Analyst&lt;/strong&gt;
+&lt;br&gt;&lt;em&gt;Nashville, TN&lt;/em&gt; | &lt;em&gt;Apr 2018 - Current&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Currently working on multiple projects in behavioral, EEG and fMRI studies in exploring neural mechanism of human memory. Experiments include using continuous distraction tasks to see how they affect categorical memory encoding and retrieval; using word pairs with set cosine similarity values to verify the validity of sentences, and seeing how it associates with brain activity.&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt;Devised data processing pipeline that converts speech to text using Google Speech API, analyzes subject’s task performance, and constructs data frame based on experiment paradigm&lt;/li&gt;
+&lt;li&gt;Coded experiment that communicates with fMRI system to explore neural mechanism in categorization and temporal organization of memory system
+&lt;li&gt;Utilized vector space models on behavioral data to examine how semantics is mapped in memory space
+&lt;li&gt;Developed behavioral and EEG experiments to explore the effect of cosine similarity on feature verification task
+&lt;li&gt;Analyzed EEG data by filtering noise and artifacts using independent component analysis to create evoked response
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Below are some quick snippets of progress:
+&lt;img src=&#34;http://jinjeon.me/img/output_summary.png&#34; alt=&#34;output summary&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/img/list-base-clustering.png&#34; alt=&#34;lbc&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see snippets of the code/work from private repos at:
+&lt;li&gt; &lt;a href=&#34;https://github.com/jeon11/mne-egi&#34; target=&#34;_blank&#34;_&gt;MNE-EGI Walkthrough&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt; &lt;a href=&#34;https://github.com/jeon11/computational_memory&#34; target=&#34;_blank&#34;_&gt;Scratch examples from private repo&lt;/a&gt;&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;strong&gt;Tools and skills:&lt;/strong&gt; Python, MATLAB, PsychoPy, fMRI, EEG&lt;/p&gt;
+
+&lt;p&gt;Check more at &lt;a href=&#34;https://memory.psy.vanderbilt.edu/w/index.php/Main_Page&#34; target=&#34;_blank&#34;_&gt;Computational Memory Lab&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Whitney Perception Lab</title>
+      <link>http://jinjeon.me/project/whitneylab/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/whitneylab/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Research Assistant&lt;/strong&gt;
+&lt;br&gt;&lt;em&gt;Berkeley, CA&lt;/em&gt; | &lt;em&gt;Feb 2017 - Dec 2017&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt; Under Dr. Leib&amp;rsquo;s supervision, operated preliminary auditory percept research from designing and coding the experiment to running subjects and interpreting data for statistical analysis using bootstrapping and psychometric inferential curves&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt; Discovered evidence that there exists positive correlation between auditory ensemble percept and outlier detection&lt;/li&gt;
+&lt;img src=&#34;http://jinjeon.me/img/Slide09.png&#34; alt=&#34;logistic fit curve&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/img/Slide10.png&#34; alt=&#34;parameters&#34; /&gt;
+&lt;li&gt; Under PI Bill Prinzmetal, designed experiments through iterations to discover whether serial dependence persists in more real-life like visual field and in scene changes&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;strong&gt;Tools and skills:&lt;/strong&gt; MATLAB, PsychToolBox, PsychoPy, experimental design, statistical inference&lt;/p&gt;
+
+&lt;p&gt;Check more at &lt;a href=&#34;https://whitneylab.berkeley.edu&#34; target=&#34;_blank&#34;_&gt;Whitney Lab&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Academic</title>
+    <link>http://jinjeon.me/authors/</link>
+      <atom:link href="http://jinjeon.me/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 10 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://jinjeon.me/img/icon.png</url>
+      <title>Authors</title>
+      <link>http://jinjeon.me/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>http://jinjeon.me/authors/admin/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/authors/admin/</guid>
+      <description>&lt;p&gt;I graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology.&lt;/p&gt;
+
+&lt;p&gt;I currently work as a lab manager/research analyst at Vanderbilt Computational Memory Lab under PI Sean Polyn, participating in ongoing studies to explore neural mechanism of human memory.&lt;/p&gt;
+
+&lt;!-- Just as cameras were first invented based on our visual system, I believe cognitive science and current endeavors in artificial intelligence are studies that attempt to imitate the human brain, and ultimately better understand human cognition. --&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/0B9S8oX9rcjjjMDY3ZlVxczlReVk/view?usp=sharing&#34; target=&#34;_blank&#34;&gt;Click here for CV.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

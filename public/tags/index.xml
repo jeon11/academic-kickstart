@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags | Academic</title>
+    <link>http://jinjeon.me/tags/</link>
+      <atom:link href="http://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://jinjeon.me/img/icon.png</url>
+      <title>Tags</title>
+      <link>http://jinjeon.me/tags/</link>
+    </image>
+    
+    <item>
+      <title>research</title>
+      <link>http://jinjeon.me/tags/research/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>startup</title>
+      <link>http://jinjeon.me/tags/startup/</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/startup/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

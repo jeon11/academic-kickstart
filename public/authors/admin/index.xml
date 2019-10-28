@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic</title>
+    <link>http://jinjeon.me/authors/admin/</link>
+      <atom:link href="http://jinjeon.me/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 10 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://jinjeon.me/img/icon.png</url>
+      <title>Academic</title>
+      <link>http://jinjeon.me/authors/admin/</link>
+    </image>
+    
+    <item>
+      <title>Tangible UI: Augmented Shadow Play</title>
+      <link>http://jinjeon.me/post/augmentedshadowplay/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/post/augmentedshadowplay/</guid>
+      <description>&lt;p&gt;Shadow casting possess different physical affordances that follow the laws of physics. Different shadow shapes and patterns can be created by manipulating the shadow’s light source direction and intensity, the physical object’s distance and angle, and the texture of the surface in which the shadow is casted. These physical properties can be used by the operator to create creative patterns with the projected shadows. Some of these physical affordances include playing with the shadow’s movement, superposing different object’s shadows and scaling the shadow’s size by moving the physical object closer or further from the light source. As aesthetically pleasing with its unique black and white contrast, shadows are a fascinating form of media that can create different textures and details based on the skill of the user.&lt;br&gt;&lt;br&gt;&lt;img src=&#34;http://jinjeon.me/img/shadowplay/test.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt; Shadow Play aims to enhance such a playful shadow experience to more advanced creative form of art by allowing users digitally manipulate their shadows. By adding new digital affordances Shadow Play, users can print and add layers of multiple shadows onto the screen, and invigorate them with animated effects and motions. With such various mix of augmented shadow effects, users can utilize their body as a tool for creating their own unique shadow artwork and animations.&lt;br&gt;&lt;a href=&#34;http://jinjeon.me/pdf/ShadowPlay.pdf&#34;&gt;See full paper&lt;/a&gt; &lt;br&gt;&lt;br&gt;&lt;strong&gt;Summary of interaction:&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;Input/Output:&lt;/strong&gt; Shadow Play requires ample activity space for interaction. The system recognizes the user within the activity space, and then displays the digitally augmented shadow onto the projected screen. Optimizing the interaction was one of our key concerns. With camera as an input device for users to communicate with Shadow Play, we wanted to depict the metaphor of users &lt;em&gt;taking pictures&lt;/em&gt; and &lt;em&gt;filming&lt;/em&gt; the creation. By selecting different features, such as snapshot, mirror, effects, and loop, users can create unique patterns and artwork. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/setup.jpg&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;Interaction:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;1. Setting the environment:&lt;/strong&gt; With the shoot feature, users can add layers of current shadows to the previous ones. Users can create static shadows, in which we refer to as background/environment of the artwork. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/env.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;2. Adding in motion and effects:&lt;/strong&gt; After the environment has been set, users can enliven the shadow by adding in animated motions and effects. The loop feature, mainly inspired by Instagram, records the motion of shadows and then is automatically looped. By adding in the fireball effect, Shadow Play recognizes the hand motion of reaching out, which then shoots out a fireball from the tip of the hand. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/motion.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;3. Advanced: Mirror and Patterns:&lt;/strong&gt; The mirror feature allows users to create symmetrical images and animation. The mirror feature is especially useful for creating patterns and symmetrical image, such as butterfly. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/mirror.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;With the mix of these features, users can create shadow artwork in playful environment. Shadow Play resembles the thought process and planning of an actual painting. Just as an artist would plan ahead where certain objects would be placed within the space before making the strokes, Shadow Play users have to deliberately organize the angle and distance of their body in order to perfect the layers of shadow into a single object shape. Such deliberation allows for more playful and interactive activity. By having the augmented shadows displayed on the screen, there is a loop of feedback and manipulation as users constantly refer to the captured shadow to make adjustments accordingly.&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Prioritization in Classification of Novel Objects</title>
+      <link>http://jinjeon.me/post/featureprioritization/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/post/featureprioritization/</guid>
+      <description>&lt;p&gt;Object classification is essential to human learning as it helps us cope with various stimulus around the world. Regardless of multiple features within a single object, object classification seems to occur seamlessly within our cognitive process. In this experiment, we test how we prioritize each feature within an object and how these features are weighted when we categorize a certain object. Test subjects were given novel shapes that each featured either size, color, or orientation, and had to determine whether the shape belongs to a category of a given prototypical shape. &lt;br&gt; &lt;br&gt; The preliminary result showed that color was the single most determining feature when categorizing an object, showing 72.6% of incorporation in all trials, while orientation was the least with 60.7%, but the differences were not statistically significant. We further went on to use logistic regression to analyze the result, which showed thresholds for identifying a novel object to be in a certain category. However, these thresholds for each feature was not significantly different. The experiment suggests that categorization is more of an elaborate and holistic process that combines different features when categorizing a novel object.&lt;/p&gt;
+
+&lt;p&gt;See project repo at &lt;a href=&#34;https://github.com/jeon11/FeaturePrioritization&#34; target=&#34;_blank&#34;&gt;https://github.com/jeon11/FeaturePrioritization&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homy, Private Social Network for Families</title>
+      <link>http://jinjeon.me/post/homy/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/post/homy/</guid>
+      <description>
+
+&lt;p&gt;In Fall 2015, I took a semester off to build my own mobile app. I wanted to develop a niche-specific social media that is just for families. Starting the project with mere passion and lacking practical knowledge, I self-taught how to conduct &lt;a href=&#34;http://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt;market research&lt;/a&gt;, design and prototype. I also had a chance to hire a developer, and won first place in &lt;a href=&#34;http://rehoboth.co.kr&#34; target=&#34;_blank&#34;_&gt;Rehoboth&lt;/a&gt; Business Idea Competition with $5k support. I also received free office space from the state government.&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt; Developed storyboard and high fidelity prototype through iterations of market research, surveys, and user testing&lt;/li&gt;
+&lt;img src=&#34;http://jinjeon.me/img/homyui.png&#34; alt=&#34;&#34; /&gt;
+&lt;li&gt;From ideation and product management to recruiting, engaged in every aspect of early stage startup as founder&lt;/li&gt;
+&lt;br&gt;
+&lt;strong&gt;Tools and skills:&lt;/strong&gt; Entrepreneurship, prototyping, product management, Proto.io, Marvel, market research&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;about-homy&#34;&gt;&lt;strong&gt;About Homy&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem Statement:&lt;/strong&gt;&lt;br&gt;
+Less time is spent for families as people become more and more engaged with work and social lives, and this phenomenon is found across the world as shown above. This is problematic because we are spending the least time with the most important people in our lives while spending more time with strangers, coworkers and friends. The cause of the problem has been generally identified as increased work and commute time, and hectic individual routines.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Design Solution:&lt;/strong&gt;&lt;br&gt;
+Homy attempts to solve this growing social problem by recreating online home and allowing families to seamlessly connect. With unique post-it style fridge page, Homy wants to encourage families to communicate more often. Our mission is &lt;em&gt;to provide emotional communication service to enrich family’s real, offline relationship.&lt;/em&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-2.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-3.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Check more at:&lt;br&gt;
+&lt;a href=&#34;http://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt; &lt;strong&gt;Defining Market Opportunity.pdf&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

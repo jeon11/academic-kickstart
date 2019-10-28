@@ -1,41 +1,34 @@
 ---
 # Display name
-name: Nelson Bighetti
+name: Jin Jeon
 
 # Username (this should match the folder name)
 authors:
-- admin
+- jin
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: BA in Cognitive Science ('18)
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
+- name: University of California, Berkeley
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: ""
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Brain | Cognition
+- HCI | UIUX
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: BA in Cognitive Science
+    institution: University of California, Berkeley
+    year: 2018
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
@@ -44,16 +37,13 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: "mailto:jinjeon@berkeley.edu"  # contact /For a direct email link, use "mailto:test@example.org".
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/jeon11
+- icon: spotify
+  icon_pack: fab
+  link: https://open.spotify.com/user/1232924859/playlist/1MSImXdEIq5x1iqXRJurjZ
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -62,14 +52,18 @@ social:
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
-  
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
 user_groups:
-- Researchers
-- Visitors
+- []
+- []
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+I currently work as a lab manager/research analyst at Vanderbilt Computational Memory Lab under PI Sean Polyn, participating in ongoing studies to explore neural mechanism of human memory.
+
+<!-- Just as cameras were first invented based on our visual system, I believe cognitive science and current endeavors in artificial intelligence are studies that attempt to imitate the human brain, and ultimately better understand human cognition. -->
+
+<a href="https://drive.google.com/file/d/0B9S8oX9rcjjjMDY3ZlVxczlReVk/view?usp=sharing" target="_blank">Click here for CV.</a>

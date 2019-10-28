@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 130  # Order that this section will appear.
 
 title = "Contact"
-subtitle = ""
+subtitle = "Interested in my work or sharing ideas?"
 
 # Automatically link email and phone?
 autolink = true
@@ -17,4 +17,3 @@ autolink = true
 #   2: formspree.io
 email_form = 2
 +++
-
