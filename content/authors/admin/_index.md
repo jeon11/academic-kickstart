@@ -35,6 +35,9 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
+- icon: cv
+  icon_pack: ai
+  link: "https://drive.google.com/file/d/0B9S8oX9rcjjjMDY3ZlVxczlReVk/view?usp=sharing"
 - icon: envelope
   icon_pack: fas
   link: "mailto:jinjeon@berkeley.edu"  # contact /For a direct email link, use "mailto:test@example.org".
@@ -62,7 +65,7 @@ user_groups:
 
 I graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology.
 
-I currently work as a lab manager/research analyst at Vanderbilt Computational Memory Lab under PI Sean Polyn, participating in ongoing studies to explore neural mechanism of human memory.
+I currently work as a lab manager/research analyst at [Vanderbilt Computational Memory Lab](https://memory.psy.vanderbilt.edu/w/index.php/Main_Page) directed by PI Sean Polyn, facilitating ongoing studies to explore cognitive and neural mechanism of human memory.
 
 <!-- Just as cameras were first invented based on our visual system, I believe cognitive science and current endeavors in artificial intelligence are studies that attempt to imitate the human brain, and ultimately better understand human cognition. -->
 
