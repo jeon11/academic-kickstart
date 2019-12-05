@@ -3,88 +3,110 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://jinjeon.me/post/fmri/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jinjeon.me/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jinjeon.me/project/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jinjeon.me/tags/research/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jinjeon.me/tags/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jinjeon.me/project/vucml/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jinjeon.me/authors/admin/</loc>
-    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jinjeon.me/authors/</loc>
-    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://jinjeon.me/categories/</loc>
-    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://jinjeon.me/post/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/post/vectorspace/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/post/eeg-advanced/</loc>
+    <lastmod>2018-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/post/eeg-basics/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/tags/hci/</loc>
     <lastmod>2017-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/post/augmentedshadowplay/</loc>
+    <loc>http://jinjeon.me/project/</loc>
     <lastmod>2017-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/project/whitneylab/</loc>
-    <lastmod>2017-12-01T00:00:00+00:00</lastmod>
+    <loc>http://jinjeon.me/tags/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/project/fronto/</loc>
-    <lastmod>2017-10-01T00:00:00+00:00</lastmod>
+    <loc>http://jinjeon.me/project/shadowplay/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/tags/startup/</loc>
-    <lastmod>2017-10-01T00:00:00+00:00</lastmod>
+    <loc>http://jinjeon.me/tags/ui/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/post/featureprioritization/</loc>
+    <loc>http://jinjeon.me/tags/classification/</loc>
     <lastmod>2017-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/post/yelp/</loc>
+    <loc>http://jinjeon.me/tags/cognition/</loc>
+    <lastmod>2017-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/project/featureprioritization/</loc>
+    <lastmod>2017-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/tags/research/</loc>
+    <lastmod>2017-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/project/yelp/</loc>
     <lastmod>2016-12-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/project/aka/</loc>
-    <lastmod>2016-05-01T00:00:00+00:00</lastmod>
+    <loc>http://jinjeon.me/project/homy/</loc>
+    <lastmod>2015-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jinjeon.me/post/homy/</loc>
-    <lastmod>2015-10-01T00:00:00+00:00</lastmod>
+    <loc>http://jinjeon.me/tags/prototyping/</loc>
+    <lastmod>2015-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/tags/startup/</loc>
+    <lastmod>2015-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>http://jinjeon.me/categories/</loc>
   </url>
   
   <url>

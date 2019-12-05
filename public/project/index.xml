@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Academic</title>
+    <title>Projects | Jin Jeon</title>
     <link>http://jinjeon.me/project/</link>
       <atom:link href="http://jinjeon.me/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 10 Dec 2017 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://jinjeon.me/img/icon.png</url>
       <title>Projects</title>
@@ -13,98 +13,68 @@
     </image>
     
     <item>
-      <title>Vanderbilt Computational Memory Lab</title>
-      <link>http://jinjeon.me/project/vucml/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/project/vucml/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Lab Manager/Research Analyst&lt;/strong&gt;
-&lt;br&gt;&lt;em&gt;Nashville, TN&lt;/em&gt; | &lt;em&gt;Apr 2018 - Current&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Currently working on multiple projects in behavioral, EEG and fMRI studies in exploring neural mechanism of human memory. Experiments include using continuous distraction tasks to see how they affect categorical memory encoding and retrieval; using word pairs with set cosine similarity values to verify the validity of sentences, and seeing how it associates with brain activity.&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;Devised data processing pipeline that converts speech to text using Google Speech API, analyzes subject’s task performance, and constructs data frame based on experiment paradigm&lt;/li&gt;
-&lt;li&gt;Coded experiment that communicates with fMRI system to explore neural mechanism in categorization and temporal organization of memory system
-&lt;li&gt;Utilized vector space models on behavioral data to examine how semantics is mapped in memory space
-&lt;li&gt;Developed behavioral and EEG experiments to explore the effect of cosine similarity on feature verification task
-&lt;li&gt;Analyzed EEG data by filtering noise and artifacts using independent component analysis to create evoked response
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Below are some quick snippets of progress:
-&lt;img src=&#34;http://jinjeon.me/img/output_summary.png&#34; alt=&#34;output summary&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/img/list-base-clustering.png&#34; alt=&#34;lbc&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can see snippets of the code/work from private repos at:
-&lt;li&gt; &lt;a href=&#34;https://github.com/jeon11/mne-egi&#34; target=&#34;_blank&#34;_&gt;MNE-EGI Walkthrough&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt; &lt;a href=&#34;https://github.com/jeon11/computational_memory&#34; target=&#34;_blank&#34;_&gt;Scratch examples from private repo&lt;/a&gt;&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Tools and skills:&lt;/strong&gt; Python, MATLAB, PsychoPy, fMRI, EEG&lt;/p&gt;
-
-&lt;p&gt;Check more at &lt;a href=&#34;https://memory.psy.vanderbilt.edu/w/index.php/Main_Page&#34; target=&#34;_blank&#34;_&gt;Computational Memory Lab&lt;/a&gt;&lt;/p&gt;
+      <title>Tangible UI: Augmented Shadow Play</title>
+      <link>http://jinjeon.me/project/shadowplay/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/shadowplay/</guid>
+      <description>&lt;p&gt;Shadow casting possess different physical affordances that follow the laws of physics. Different shadow shapes and patterns can be created by manipulating the shadow’s light source direction and intensity, the physical object’s distance and angle, and the texture of the surface in which the shadow is casted. These physical properties can be used by the operator to create creative patterns with the projected shadows. Some of these physical affordances include playing with the shadow’s movement, superposing different object’s shadows and scaling the shadow’s size by moving the physical object closer or further from the light source. As aesthetically pleasing with its unique black and white contrast, shadows are a fascinating form of media that can create different textures and details based on the skill of the user.&lt;br&gt;&lt;br&gt;&lt;img src=&#34;http://jinjeon.me/img/shadowplay/test.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt; Shadow Play aims to enhance such a playful shadow experience to more advanced creative form of art by allowing users digitally manipulate their shadows. By adding new digital affordances Shadow Play, users can print and add layers of multiple shadows onto the screen, and invigorate them with animated effects and motions. With such various mix of augmented shadow effects, users can utilize their body as a tool for creating their own unique shadow artwork and animations.&lt;br&gt;&lt;a href=&#34;http://jinjeon.me/pdf/ShadowPlay.pdf&#34;&gt;See full paper&lt;/a&gt; &lt;br&gt;&lt;br&gt;&lt;strong&gt;Summary of interaction:&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;Input/Output:&lt;/strong&gt; Shadow Play requires ample activity space for interaction. The system recognizes the user within the activity space, and then displays the digitally augmented shadow onto the projected screen. Optimizing the interaction was one of our key concerns. With camera as an input device for users to communicate with Shadow Play, we wanted to depict the metaphor of users &lt;em&gt;taking pictures&lt;/em&gt; and &lt;em&gt;filming&lt;/em&gt; the creation. By selecting different features, such as snapshot, mirror, effects, and loop, users can create unique patterns and artwork. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/setup.jpg&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;Interaction:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;1. Setting the environment:&lt;/strong&gt; With the shoot feature, users can add layers of current shadows to the previous ones. Users can create static shadows, in which we refer to as background/environment of the artwork. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/env.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;2. Adding in motion and effects:&lt;/strong&gt; After the environment has been set, users can enliven the shadow by adding in animated motions and effects. The loop feature, mainly inspired by Instagram, records the motion of shadows and then is automatically looped. By adding in the fireball effect, Shadow Play recognizes the hand motion of reaching out, which then shoots out a fireball from the tip of the hand. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/motion.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;3. Advanced: Mirror and Patterns:&lt;/strong&gt; The mirror feature allows users to create symmetrical images and animation. The mirror feature is especially useful for creating patterns and symmetrical image, such as butterfly. &lt;img src=&#34;http://jinjeon.me/img/shadowplay/mirror.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;With the mix of these features, users can create shadow artwork in playful environment. Shadow Play resembles the thought process and planning of an actual painting. Just as an artist would plan ahead where certain objects would be placed within the space before making the strokes, Shadow Play users have to deliberately organize the angle and distance of their body in order to perfect the layers of shadow into a single object shape. Such deliberation allows for more playful and interactive activity. By having the augmented shadows displayed on the screen, there is a loop of feedback and manipulation as users constantly refer to the captured shadow to make adjustments accordingly.&amp;rdquo;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Whitney Perception Lab</title>
-      <link>http://jinjeon.me/project/whitneylab/</link>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/project/whitneylab/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Research Assistant&lt;/strong&gt;
-&lt;br&gt;&lt;em&gt;Berkeley, CA&lt;/em&gt; | &lt;em&gt;Feb 2017 - Dec 2017&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt; Under Dr. Leib&amp;rsquo;s supervision, operated preliminary auditory percept research from designing and coding the experiment to running subjects and interpreting data for statistical analysis using bootstrapping and psychometric inferential curves&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt; Discovered evidence that there exists positive correlation between auditory ensemble percept and outlier detection&lt;/li&gt;
-&lt;img src=&#34;http://jinjeon.me/img/Slide09.png&#34; alt=&#34;logistic fit curve&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/img/Slide10.png&#34; alt=&#34;parameters&#34; /&gt;
-&lt;li&gt; Under PI Bill Prinzmetal, designed experiments through iterations to discover whether serial dependence persists in more real-life like visual field and in scene changes&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Tools and skills:&lt;/strong&gt; MATLAB, PsychToolBox, PsychoPy, experimental design, statistical inference&lt;/p&gt;
-
-&lt;p&gt;Check more at &lt;a href=&#34;https://whitneylab.berkeley.edu&#34; target=&#34;_blank&#34;_&gt;Whitney Lab&lt;/a&gt;&lt;/p&gt;
+      <title>Feature Prioritization in Classification of Novel Objects</title>
+      <link>http://jinjeon.me/project/featureprioritization/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/featureprioritization/</guid>
+      <description>&lt;p&gt;Object classification is essential to human learning as it helps us cope with various stimulus around the world. Regardless of multiple features within a single object, object classification seems to occur seamlessly within our cognitive process. In this experiment, we test how we prioritize each feature within an object and how these features are weighted when we categorize a certain object. Test subjects were given novel shapes that each featured either size, color, or orientation, and had to determine whether the shape belongs to a category of a given prototypical shape. &lt;br&gt; &lt;br&gt; The preliminary result showed that color was the single most determining feature when categorizing an object, showing 72.6% of incorporation in all trials, while orientation was the least with 60.7%, but the differences were not statistically significant. We further went on to use logistic regression to analyze the result, which showed thresholds for identifying a novel object to be in a certain category. However, these thresholds for each feature was not significantly different. The experiment suggests that categorization is more of an elaborate and holistic process that combines different features when categorizing a novel object.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Fronto, Android Advertisement Platform</title>
-      <link>http://jinjeon.me/project/fronto/</link>
-      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/project/fronto/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Product Management Intern&lt;/strong&gt;
-&lt;br&gt;&lt;em&gt;San Francisco, CA&lt;/em&gt; | &lt;em&gt;Mar 2017 - Aug 2017&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Fronto offers free money for every unlock you make on Android mobile lock screens. Since it is a small team of startup, I had the opportunity to work directly with the CEO, developers, and designers.&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt; Automated 90% of manual Zendesk ticket solution process to improve work efficiency&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt; Debugged usability issues and managed user portfolios using MySQL to identify potential abusers&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Tools and skills:&lt;/strong&gt; Agile, product management, MySQL, Jira, Mixpanel, Zendesk, Intercom&lt;/p&gt;
-
-&lt;p&gt;Check more at &lt;a href=&#34;http://www.fronto.co&#34; target=&#34;_blank&#34;_&gt;Fronto&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+      <title>Yelp Dataset Challenge</title>
+      <link>http://jinjeon.me/project/yelp/</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/yelp/</guid>
+      <description>&lt;p&gt;By analyzing Yelp’s dataset, specifically star ratings and text reviews, we created a classifier that predicts whether reviews are positive (star ratings of four or five) or negative (star ratings of one or two). We excluded star ratings of three because we weren’t sure whether they were positive or negative. While Yelp’s star ratings are helpful for concise overview of local businesses, they are also crucial metrics for businesses as the ratings reflect their reputations. However, we realized that star ratings are often misleading as they are subject to user bias and preference. Thus, we wanted to predict ratings solely based on textual features of the reviews and exclude any potential human errors and biases. Performing logistic regression with the combined five features, we were able to correctly predict the reviews with an overall accuracy of 79%.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Musio, AI Robot (AKA)</title>
-      <link>http://jinjeon.me/project/aka/</link>
-      <pubDate>Sun, 01 May 2016 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/project/aka/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Project Management Intern&lt;/strong&gt;
-&lt;br&gt;&lt;em&gt;Seoul, Korea&lt;/em&gt; | &lt;em&gt;May 2016 - Aug 2016&lt;/em&gt;&lt;/p&gt;
+      <title>Homy, Private Social Network for Families</title>
+      <link>http://jinjeon.me/project/homy/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/homy/</guid>
+      <description>
 
-&lt;p&gt;AKA is a startup building Musio, a friendly AI robot mainly for education purposes. While I leveraged communication between the SW and HW team to meet product requirements, I also worked as web developer to improve the overall flow of the website.&lt;/p&gt;
+&lt;p&gt;In Fall 2015, I took a semester off to build my own mobile app. I wanted to develop a niche-specific social media that is just for families. Starting the project with mere passion and lacking practical knowledge, I self-taught how to conduct &lt;a href=&#34;http://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt;market research&lt;/a&gt;, design and build prototypes. I hired a developer to make tangible results, and won first place in &lt;a href=&#34;http://rehoboth.co.kr&#34; target=&#34;_blank&#34;_&gt;Rehoboth&lt;/a&gt; Business Idea Competition with $5k support. I also received free office space from the state government.&lt;/p&gt;
 
-&lt;p&gt;&lt;li&gt; Leveraged communication between software and hardware teams to define and assess product requirements&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt; Developed storyboard and high fidelity prototype through iterations of market research, surveys, and user testing
+&lt;/li&gt;
+&lt;img src=&#34;http://jinjeon.me/img/homyui.png&#34; alt=&#34;&#34; /&gt;
+&lt;li&gt;
+From ideation and product management to recruiting, engaged in every aspect of early stage startup as founder
+&lt;/li&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;li&gt; Iteratively redesigned website and blog interface and flow to improve usability and retention rate &lt;/li&gt;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Tools and skills:&lt;/strong&gt; HTML/CSS, project management, Agile,  Javascript, Bootstrap, Google Analytics&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;Check more at &lt;a href=&#34;https://themusio.com/home&#34; target=&#34;_blank&#34;_&gt;Musio, the AI Robot&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;about-homy&#34;&gt;&lt;strong&gt;About Homy&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem Statement:&lt;/strong&gt;&lt;br&gt;
+We are spending the least time with the most important people in our lives, family, while spending more and more time with strangers, coworkers and friends. The cause of the problem has been generally identified as increased work and commute time, and hectic individual routines.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Design Solution:&lt;/strong&gt;&lt;br&gt;
+Homy attempts to solve this growing social problem by recreating online home and allowing families to seamlessly connect. With unique post-it style fridge page, Homy wants to encourage families to communicate more often. The mission is &lt;em&gt;to provide emotional communication service to enrich family’s real, offline relationship.&lt;/em&gt;
+&lt;br&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-2.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-3.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Check more at:&lt;br&gt;
+&lt;a href=&#34;http://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt; &lt;strong&gt;Defining Market Opportunity.pdf&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
 </description>
     </item>
     

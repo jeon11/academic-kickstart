@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>research | Academic</title>
+    <title>research | Jin Jeon</title>
     <link>http://jinjeon.me/tags/research/</link>
       <atom:link href="http://jinjeon.me/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <description>research</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://jinjeon.me/img/icon.png</url>
       <title>research</title>
@@ -13,56 +13,20 @@
     </image>
     
     <item>
-      <title>Vanderbilt Computational Memory Lab</title>
-      <link>http://jinjeon.me/project/vucml/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/project/vucml/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Lab Manager/Research Analyst&lt;/strong&gt;
-&lt;br&gt;&lt;em&gt;Nashville, TN&lt;/em&gt; | &lt;em&gt;Apr 2018 - Current&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Currently working on multiple projects in behavioral, EEG and fMRI studies in exploring neural mechanism of human memory. Experiments include using continuous distraction tasks to see how they affect categorical memory encoding and retrieval; using word pairs with set cosine similarity values to verify the validity of sentences, and seeing how it associates with brain activity.&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;Devised data processing pipeline that converts speech to text using Google Speech API, analyzes subject’s task performance, and constructs data frame based on experiment paradigm&lt;/li&gt;
-&lt;li&gt;Coded experiment that communicates with fMRI system to explore neural mechanism in categorization and temporal organization of memory system
-&lt;li&gt;Utilized vector space models on behavioral data to examine how semantics is mapped in memory space
-&lt;li&gt;Developed behavioral and EEG experiments to explore the effect of cosine similarity on feature verification task
-&lt;li&gt;Analyzed EEG data by filtering noise and artifacts using independent component analysis to create evoked response
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Below are some quick snippets of progress:
-&lt;img src=&#34;http://jinjeon.me/img/output_summary.png&#34; alt=&#34;output summary&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/img/list-base-clustering.png&#34; alt=&#34;lbc&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can see snippets of the code/work from private repos at:
-&lt;li&gt; &lt;a href=&#34;https://github.com/jeon11/mne-egi&#34; target=&#34;_blank&#34;_&gt;MNE-EGI Walkthrough&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt; &lt;a href=&#34;https://github.com/jeon11/computational_memory&#34; target=&#34;_blank&#34;_&gt;Scratch examples from private repo&lt;/a&gt;&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Tools and skills:&lt;/strong&gt; Python, MATLAB, PsychoPy, fMRI, EEG&lt;/p&gt;
-
-&lt;p&gt;Check more at &lt;a href=&#34;https://memory.psy.vanderbilt.edu/w/index.php/Main_Page&#34; target=&#34;_blank&#34;_&gt;Computational Memory Lab&lt;/a&gt;&lt;/p&gt;
+      <title>Feature Prioritization in Classification of Novel Objects</title>
+      <link>http://jinjeon.me/project/featureprioritization/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/featureprioritization/</guid>
+      <description>&lt;p&gt;Object classification is essential to human learning as it helps us cope with various stimulus around the world. Regardless of multiple features within a single object, object classification seems to occur seamlessly within our cognitive process. In this experiment, we test how we prioritize each feature within an object and how these features are weighted when we categorize a certain object. Test subjects were given novel shapes that each featured either size, color, or orientation, and had to determine whether the shape belongs to a category of a given prototypical shape. &lt;br&gt; &lt;br&gt; The preliminary result showed that color was the single most determining feature when categorizing an object, showing 72.6% of incorporation in all trials, while orientation was the least with 60.7%, but the differences were not statistically significant. We further went on to use logistic regression to analyze the result, which showed thresholds for identifying a novel object to be in a certain category. However, these thresholds for each feature was not significantly different. The experiment suggests that categorization is more of an elaborate and holistic process that combines different features when categorizing a novel object.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Whitney Perception Lab</title>
-      <link>http://jinjeon.me/project/whitneylab/</link>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/project/whitneylab/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Research Assistant&lt;/strong&gt;
-&lt;br&gt;&lt;em&gt;Berkeley, CA&lt;/em&gt; | &lt;em&gt;Feb 2017 - Dec 2017&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt; Under Dr. Leib&amp;rsquo;s supervision, operated preliminary auditory percept research from designing and coding the experiment to running subjects and interpreting data for statistical analysis using bootstrapping and psychometric inferential curves&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt; Discovered evidence that there exists positive correlation between auditory ensemble percept and outlier detection&lt;/li&gt;
-&lt;img src=&#34;http://jinjeon.me/img/Slide09.png&#34; alt=&#34;logistic fit curve&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/img/Slide10.png&#34; alt=&#34;parameters&#34; /&gt;
-&lt;li&gt; Under PI Bill Prinzmetal, designed experiments through iterations to discover whether serial dependence persists in more real-life like visual field and in scene changes&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Tools and skills:&lt;/strong&gt; MATLAB, PsychToolBox, PsychoPy, experimental design, statistical inference&lt;/p&gt;
-
-&lt;p&gt;Check more at &lt;a href=&#34;https://whitneylab.berkeley.edu&#34; target=&#34;_blank&#34;_&gt;Whitney Lab&lt;/a&gt;&lt;/p&gt;
+      <title>Yelp Dataset Challenge</title>
+      <link>http://jinjeon.me/project/yelp/</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/project/yelp/</guid>
+      <description>&lt;p&gt;By analyzing Yelp’s dataset, specifically star ratings and text reviews, we created a classifier that predicts whether reviews are positive (star ratings of four or five) or negative (star ratings of one or two). We excluded star ratings of three because we weren’t sure whether they were positive or negative. While Yelp’s star ratings are helpful for concise overview of local businesses, they are also crucial metrics for businesses as the ratings reflect their reputations. However, we realized that star ratings are often misleading as they are subject to user bias and preference. Thus, we wanted to predict ratings solely based on textual features of the reviews and exclude any potential human errors and biases. Performing logistic regression with the combined five features, we were able to correctly predict the reviews with an overall accuracy of 79%.&lt;/p&gt;
 </description>
     </item>
     

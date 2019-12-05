@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | Academic</title>
+    <title>Tags | Jin Jeon</title>
     <link>http://jinjeon.me/tags/</link>
       <atom:link href="http://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 10 Dec 2017 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
@@ -13,17 +13,57 @@
     </image>
     
     <item>
+      <title>hci</title>
+      <link>http://jinjeon.me/tags/hci/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/hci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>http://jinjeon.me/tags/ui/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>classification</title>
+      <link>http://jinjeon.me/tags/classification/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cognition</title>
+      <link>http://jinjeon.me/tags/cognition/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/cognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>research</title>
       <link>http://jinjeon.me/tags/research/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
       <guid>http://jinjeon.me/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prototyping</title>
+      <link>http://jinjeon.me/tags/prototyping/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/prototyping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>startup</title>
       <link>http://jinjeon.me/tags/startup/</link>
-      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       <guid>http://jinjeon.me/tags/startup/</guid>
       <description></description>
     </item>
