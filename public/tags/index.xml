@@ -5,12 +5,84 @@
     <link>http://jinjeon.me/tags/</link>
       <atom:link href="http://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sun, 10 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
       <link>http://jinjeon.me/tags/</link>
     </image>
+    
+    <item>
+      <title>brain</title>
+      <link>http://jinjeon.me/tags/brain/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/brain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fmri</title>
+      <link>http://jinjeon.me/tags/fmri/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://jinjeon.me/tags/python/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>http://jinjeon.me/tags/research/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>semantics</title>
+      <link>http://jinjeon.me/tags/semantics/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/semantics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>http://jinjeon.me/tags/tensorflow/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vectorspace</title>
+      <link>http://jinjeon.me/tags/vectorspace/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/vectorspace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eeg</title>
+      <link>http://jinjeon.me/tags/eeg/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/eeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>signal processing</title>
+      <link>http://jinjeon.me/tags/signal-processing/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/signal-processing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hci</title>
@@ -29,14 +101,6 @@
     </item>
     
     <item>
-      <title>classification</title>
-      <link>http://jinjeon.me/tags/classification/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/classification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>cognition</title>
       <link>http://jinjeon.me/tags/cognition/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
@@ -45,10 +109,26 @@
     </item>
     
     <item>
-      <title>research</title>
-      <link>http://jinjeon.me/tags/research/</link>
+      <title>experiment</title>
+      <link>http://jinjeon.me/tags/experiment/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/research/</guid>
+      <guid>http://jinjeon.me/tags/experiment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psychology</title>
+      <link>http://jinjeon.me/tags/psychology/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/psychology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>classifier</title>
+      <link>http://jinjeon.me/tags/classifier/</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/classifier/</guid>
       <description></description>
     </item>
     

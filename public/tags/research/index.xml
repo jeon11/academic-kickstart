@@ -5,12 +5,1381 @@
     <link>http://jinjeon.me/tags/research/</link>
       <atom:link href="http://jinjeon.me/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <description>research</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Wed, 10 May 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://jinjeon.me/img/icon.png</url>
       <title>research</title>
       <link>http://jinjeon.me/tags/research/</link>
     </image>
+    
+    <item>
+      <title>Universal Sentence Encoder and GloVe on Narrative Semantic Representation</title>
+      <link>http://jinjeon.me/post/vectorspace/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/post/vectorspace/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;See full repo at &lt;a href=&#34;https://github.com/jeon11/use-glove-narrative.git&#34; target=&#34;_blank&#34;&gt;https://github.com/jeon11/use-glove-narrative.git&lt;/a&gt;&lt;/strong&gt;
+&lt;br&gt;
+&lt;strong&gt;Note:&lt;/strong&gt; The results are shown in the &lt;a href=&#34;http://jinjeon.me/#posters&#34;&gt;poster&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Google&amp;rsquo;s Universal Sentence Encoder (USE)&lt;/strong&gt; provides 512-dimension vectors for each input that are pre-trained on large corpus, and can be plugged into a variety of different task models, such as sentiment analysis, classification, and etc. It is speed-efficient without losing task accuracy, and also provides embeddings not just for word level, but also for phrases, sentences, and even paragraphs. However, the more the words are given as input, the more likely each word meaning gets diluted.&lt;/p&gt;
+
+&lt;p&gt;This notebook is based on the Semantic Similarity with TF-Hub Universal Encoder tutorial, but uses a separate input from one of the projects. We will also use &lt;strong&gt;GloVe&lt;/strong&gt; vectors to compare how the vectors and cosine similarity differ between the two models.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First, the notebook goes over setting up locally and use one sample data to create embeddings saved out as a separate csv file using Pandas.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Then assuming you have cloned the repository, we call in custom functions to quickly extract vectors of given word, phrase, sentences in USE and GloVe.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;table-of-contents-short-cuts&#34;&gt;Table of Contents/Short-cuts:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#About-USE-Models-and-Deep-Average-Network&#34;&gt;About USE Models and Deep Average Network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Installation-&amp;amp;-Setup&#34;&gt;Installation &amp;amp; Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Path-Setup&#34;&gt;Path Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Raw-Data-Format&#34;&gt;Raw Data Format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Get-USE-Embeddings&#34;&gt;Get USE Embeddings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Cosine-Similarity&#34;&gt;Cosine Similarity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Cosine-Similarity-Example&#34;&gt;Cosine Similarity Examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Plotting-Similarity-Matrix&#34;&gt;Plotting Similarity Matrix&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;about-use-models-and-deep-average-network&#34;&gt;About USE Models and Deep Average Network&lt;/h3&gt;
+
+&lt;p&gt;There are two types of models in &lt;strong&gt;USE&lt;/strong&gt;: &lt;strong&gt;Transformer&lt;/strong&gt; and &lt;strong&gt;Deep Averaging Network (DAN)&lt;/strong&gt;. We will use DAN which is a lighter version for efficiency and speed in exchange for reduced accuracy (still accurate enough).&lt;/p&gt;
+
+&lt;p&gt;DAN first averages the input word embeddings to create a sentence embedding. It uses PTB tokenizer, which divides a sentence into a sequence of tokens based on set of rules on  how to process punctuation, articles, etc, in order to create 512 dimension embeddings. This averaged 512 vector is passed to one or more feedforward layers. Then it is multi-task-trained on unsupervised data drawn from various internet sources,  Wikipedia, Stanford Natural Language Inference corpus, web news, and forums.
+- Training  goals:
+    - Uses skip-thought-like model that predicts the surrounding sentences of a given text (see below)
+    - Conversational response suggestion
+    - Classification task on supervised data&lt;/p&gt;
+
+&lt;p&gt;The intuition behind deep feedforward neural network is that each layer learns a more abstract representation of the input than the previous one. So its depth allows to capture subtle variations of the input with more depths. Also, each layer only involves a single matrix multiplication, allowing minimal computing time.&lt;/p&gt;
+
+&lt;p&gt;See full USE paper: &lt;a href=&#34;https://arxiv.org/pdf/1803.11175.pdf&#34; target=&#34;_blank&#34;&gt;https://arxiv.org/pdf/1803.11175.pdf&lt;/a&gt;
+See full DAN paper: &lt;a href=&#34;https://people.cs.umass.edu/~miyyer/pubs/2015_acl_dan.pdf&#34; target=&#34;_blank&#34;&gt;https://people.cs.umass.edu/~miyyer/pubs/2015_acl_dan.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;installation-setup&#34;&gt;Installation &amp;amp; Setup&lt;/h3&gt;
+
+&lt;p&gt;I used Anaconda to create a TensorFlow-specific environment to customize the package versions. After installing Anaconda&amp;hellip;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Creating a new environment:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;conda create -n py3 python=3.6.8
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Activate the created environment by &lt;code&gt;conda activate py3&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using pip, install packages for pandas, numpy, seaborn, tensorflow, tensorflow_hub. ie. &lt;code&gt;pip install pckge-name&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Then, let&amp;rsquo;s make sure to set the packages to exact version:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install --upgrade tensorflow=1.15.0
+pip install --upgrade tensorflow-hub=0.7.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Once the steps are done, we should be able to run the codes locally.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from absl import logging
+import tensorflow as tf
+import tensorflow_hub as hub
+import matplotlib.pyplot as plt
+import numpy as np
+import os
+import pandas as pd
+from glob import glob
+import re
+import seaborn as sns
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;
+due to some depecrated methods and changes made with the tf version upgrade from tf1.X to tf2.0, here we use a specific set of Python and tf versions. You can check via &lt;code&gt;pip freeze&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;tested on python == 3.6.8 | tensorflow == 1.15.0 | tensorflow_hub == 0.7.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Or you can check the version in Python via:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import sys
+print(sys.version_info)  # sys.version_info(major=3, minor=6, micro=8, releaselevel=&#39;final&#39;)
+print(tf.__version__)    # &#39;1.15.0&#39;
+print(hub.__version__)   # &#39;0.7.0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# script variables
+
+# for lite/DAN version:
+module_url = &amp;quot;https://tfhub.dev/google/universal-sentence-encoder/2&amp;quot;
+
+# for heavy/Transformer version:
+# module_url = &amp;quot;https://tfhub.dev/google/universal-sentence-encoder-large/3&amp;quot;
+
+baseDir = &#39;use-glove-narrative&#39;  # repository/base folder name
+embedding_size = 512  # base 512-dimension embedding
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;path-setup&#34;&gt;Path Setup&lt;/h3&gt;
+
+&lt;p&gt;Assuming that you git cloned the project (which is for demo purposes) to your local directory, we set the path so the code knows where to look for certain data files using the &lt;code&gt;baseDir&lt;/code&gt; specified above. We will mainly just work within the cloned folder.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pwd = os.getcwd()
+# recursively find absolute path
+while os.path.basename(pwd) != baseDir:
+    os.chdir(&#39;..&#39;)
+    pwd = os.getcwd()
+baseDir = pwd
+dataDir = baseDir + &#39;/data&#39;
+
+# recursively find all csv files. We will work with one file here
+all_csvs = [y for x in os.walk(dataDir) for y in glob(os.path.join(x[0], &#39;*.csv&#39;))]
+all_csvs.sort()
+all_csvs = all_csvs[0]  # we will just use one sample data
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;raw-data-format&#34;&gt;Raw Data Format&lt;/h3&gt;
+
+&lt;p&gt;To briefly show the data, the data is comprised of numerous idea units, or phrases of words with unique meanings. Here, we are only interested in the &amp;lsquo;text&amp;rsquo; column and &amp;lsquo;index&amp;rsquo; column. We will call in the text of the entire story to create embeddings for each idea unit. Below the example print out, we will loop over each story to create embeddings. Since we will use one story this time, it shouldn&amp;rsquo;t take that long.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# an example print of data format
+datafile = pd.read_csv(all_csvs)
+datafile.head()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;paragraph&lt;/th&gt;
+      &lt;th&gt;index&lt;/th&gt;
+      &lt;th&gt;text&lt;/th&gt;
+      &lt;th&gt;scoring&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;One fine day an old Maine man was fishing&lt;/td&gt;
+      &lt;td&gt;mentions at least 3 of the following: “old”, “...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;on his favorite lake&lt;/td&gt;
+      &lt;td&gt;mentions “favorite lake” or “favorite river”&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;and catching very little.&lt;/td&gt;
+      &lt;td&gt;mentions that he/the fisherman was not having ...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Finally, he gave up&lt;/td&gt;
+      &lt;td&gt;mentions that he gave up/stopped fishing&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;and walked back along the shore to his fishing...&lt;/td&gt;
+      &lt;td&gt;mentions that he walked home/to his fishing sh...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;get-use-embeddings&#34;&gt;Get USE Embeddings&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# let&#39;s read in the data file
+textfile = pd.read_csv(all_csvs)
+# get the title of the narrative story, cutting out the .csv extension
+title = os.path.basename(all_csvs)[:-4]
+
+
+# create df to save out at the end
+vector_df_columns = [&#39;paragraph&#39;, &#39;index&#39;, &#39;text&#39;, &#39;size&#39;]
+# create column for each dimension (out of 512)
+for i in range(1, embedding_size + 1):
+    vector_df_columns.append(&#39;dim&#39; + str(i))
+vector_df = pd.DataFrame(columns=vector_df_columns)
+
+
+# import the Universal Sentence Encoder&#39;s TF Hub module
+embed = hub.Module(module_url)  # hub.load(module_url) for tf==2.0.0
+
+# we call in the text column from data file
+messages = []
+for t in range(0, len(textfile)):
+    messages.append(textfile.iloc[t][&#39;text&#39;])
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Reduce logging output.
+logging.set_verbosity(logging.ERROR)
+
+with tf.compat.v1.Session() as session:
+    session.run([tf.compat.v1.global_variables_initializer(), tf.compat.v1.tables_initializer()])
+    message_embeddings = session.run(embed(messages))
+
+# make sure all units are there/sanity check
+assert len(message_embeddings) == len(textfile) == len(messages)
+
+# loop over each vector value to corresponding text
+for e in range(0, len(message_embeddings)):
+    vector_df.at[e, &#39;paragraph&#39;] = textfile.iloc[e][&#39;paragraph&#39;]
+    vector_df.at[e, &#39;index&#39;] = textfile.iloc[e][&#39;index&#39;]
+    vector_df.at[e, &#39;text&#39;] = messages[e]
+    vector_df.at[e, &#39;size&#39;] = len(message_embeddings[e])
+    for dim in range(0, len(message_embeddings[e])):
+        vector_df.at[e, &#39;dim&#39;+str(dim+1)] = message_embeddings[e][dim]
+
+# display sample format
+vector_df.head()
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;paragraph&lt;/th&gt;
+      &lt;th&gt;index&lt;/th&gt;
+      &lt;th&gt;text&lt;/th&gt;
+      &lt;th&gt;size&lt;/th&gt;
+      &lt;th&gt;dim1&lt;/th&gt;
+      &lt;th&gt;dim2&lt;/th&gt;
+      &lt;th&gt;dim3&lt;/th&gt;
+      &lt;th&gt;dim4&lt;/th&gt;
+      &lt;th&gt;dim5&lt;/th&gt;
+      &lt;th&gt;dim6&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;dim503&lt;/th&gt;
+      &lt;th&gt;dim504&lt;/th&gt;
+      &lt;th&gt;dim505&lt;/th&gt;
+      &lt;th&gt;dim506&lt;/th&gt;
+      &lt;th&gt;dim507&lt;/th&gt;
+      &lt;th&gt;dim508&lt;/th&gt;
+      &lt;th&gt;dim509&lt;/th&gt;
+      &lt;th&gt;dim510&lt;/th&gt;
+      &lt;th&gt;dim511&lt;/th&gt;
+      &lt;th&gt;dim512&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;One fine day an old Maine man was fishing&lt;/td&gt;
+      &lt;td&gt;512&lt;/td&gt;
+      &lt;td&gt;0.0169429&lt;/td&gt;
+      &lt;td&gt;-0.0030699&lt;/td&gt;
+      &lt;td&gt;-0.0156278&lt;/td&gt;
+      &lt;td&gt;-0.00649163&lt;/td&gt;
+      &lt;td&gt;0.0213989&lt;/td&gt;
+      &lt;td&gt;-0.0541645&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0.0404136&lt;/td&gt;
+      &lt;td&gt;-0.0577177&lt;/td&gt;
+      &lt;td&gt;0.0108959&lt;/td&gt;
+      &lt;td&gt;-0.0337963&lt;/td&gt;
+      &lt;td&gt;0.0817816&lt;/td&gt;
+      &lt;td&gt;-0.074783&lt;/td&gt;
+      &lt;td&gt;0.0231454&lt;/td&gt;
+      &lt;td&gt;0.0719041&lt;/td&gt;
+      &lt;td&gt;-0.047105&lt;/td&gt;
+      &lt;td&gt;0.0127639&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;on his favorite lake&lt;/td&gt;
+      &lt;td&gt;512&lt;/td&gt;
+      &lt;td&gt;-0.0172151&lt;/td&gt;
+      &lt;td&gt;0.0418602&lt;/td&gt;
+      &lt;td&gt;0.0105562&lt;/td&gt;
+      &lt;td&gt;0.0290091&lt;/td&gt;
+      &lt;td&gt;0.0351211&lt;/td&gt;
+      &lt;td&gt;-0.0121579&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0.0319399&lt;/td&gt;
+      &lt;td&gt;-0.0201722&lt;/td&gt;
+      &lt;td&gt;-0.00480706&lt;/td&gt;
+      &lt;td&gt;-0.0490393&lt;/td&gt;
+      &lt;td&gt;0.0562807&lt;/td&gt;
+      &lt;td&gt;-0.0840528&lt;/td&gt;
+      &lt;td&gt;0.0359073&lt;/td&gt;
+      &lt;td&gt;0.0519214&lt;/td&gt;
+      &lt;td&gt;0.0635523&lt;/td&gt;
+      &lt;td&gt;-0.0615548&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;and catching very little.&lt;/td&gt;
+      &lt;td&gt;512&lt;/td&gt;
+      &lt;td&gt;0.0515628&lt;/td&gt;
+      &lt;td&gt;0.00556853&lt;/td&gt;
+      &lt;td&gt;-0.0606079&lt;/td&gt;
+      &lt;td&gt;-0.0281095&lt;/td&gt;
+      &lt;td&gt;-0.0631535&lt;/td&gt;
+      &lt;td&gt;-0.0586548&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;-0.0266129&lt;/td&gt;
+      &lt;td&gt;0.0111167&lt;/td&gt;
+      &lt;td&gt;-0.0238963&lt;/td&gt;
+      &lt;td&gt;0.00741908&lt;/td&gt;
+      &lt;td&gt;-0.0685881&lt;/td&gt;
+      &lt;td&gt;-0.0858848&lt;/td&gt;
+      &lt;td&gt;0.066858&lt;/td&gt;
+      &lt;td&gt;-0.0616563&lt;/td&gt;
+      &lt;td&gt;-0.0844253&lt;/td&gt;
+      &lt;td&gt;-0.026685&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Finally, he gave up&lt;/td&gt;
+      &lt;td&gt;512&lt;/td&gt;
+      &lt;td&gt;0.0818241&lt;/td&gt;
+      &lt;td&gt;0.00549721&lt;/td&gt;
+      &lt;td&gt;-0.0245033&lt;/td&gt;
+      &lt;td&gt;0.0286504&lt;/td&gt;
+      &lt;td&gt;-0.0284165&lt;/td&gt;
+      &lt;td&gt;-0.0575481&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0.0474779&lt;/td&gt;
+      &lt;td&gt;-0.00603216&lt;/td&gt;
+      &lt;td&gt;-0.0116888&lt;/td&gt;
+      &lt;td&gt;-0.06419&lt;/td&gt;
+      &lt;td&gt;0.0268704&lt;/td&gt;
+      &lt;td&gt;-0.0640136&lt;/td&gt;
+      &lt;td&gt;0.103409&lt;/td&gt;
+      &lt;td&gt;-0.0235997&lt;/td&gt;
+      &lt;td&gt;-0.0781731&lt;/td&gt;
+      &lt;td&gt;-0.0365196&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;and walked back along the shore to his fishing...&lt;/td&gt;
+      &lt;td&gt;512&lt;/td&gt;
+      &lt;td&gt;0.00286058&lt;/td&gt;
+      &lt;td&gt;0.0576001&lt;/td&gt;
+      &lt;td&gt;0.0103945&lt;/td&gt;
+      &lt;td&gt;-0.00301533&lt;/td&gt;
+      &lt;td&gt;0.0199591&lt;/td&gt;
+      &lt;td&gt;-0.0644398&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;-0.0145959&lt;/td&gt;
+      &lt;td&gt;0.0137776&lt;/td&gt;
+      &lt;td&gt;0.0165417&lt;/td&gt;
+      &lt;td&gt;-0.0406641&lt;/td&gt;
+      &lt;td&gt;-0.0204453&lt;/td&gt;
+      &lt;td&gt;-0.0713526&lt;/td&gt;
+      &lt;td&gt;0.0121754&lt;/td&gt;
+      &lt;td&gt;0.00591647&lt;/td&gt;
+      &lt;td&gt;0.0262764&lt;/td&gt;
+      &lt;td&gt;-0.0329477&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;5 rows × 516 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(np.shape(vector_df))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;(0, 516)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The sample data shows each idea unit/text converted to 512 dimension vectors. &lt;code&gt;np.shape(vector_df)&lt;/code&gt; will return a 41 total idea units/phrases to 516 columns (512 dimensions + custom columns (paragraph info, index, text, and size)). We then use these vectors to explore semantic similarity between text and phrases.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# run the code below to save out as csv file
+vector_df.reindex(columns=vector_df_columns)
+vector_df.to_csv(title + &#39;_vectors.csv&#39;, index=False)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;cosine-similarity&#34;&gt;Cosine Similarity&lt;/h2&gt;
+
+&lt;p&gt;As a brief description, &lt;strong&gt;cosine similarity&lt;/strong&gt; is basically the measure of cosine angle between the two vectors. Since we have USE and GloVe vectors that represent words into multidimensional vectors, we can apply these vector values to calculate how similar the two words are.&lt;/p&gt;
+
+&lt;p&gt;It can be easily calculated in Python with its useful packages:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cos_sim = numpy.dot(vector1, vector2)/(numpy.linalg.norm(vector1) * numpy.linalg.norm(vector2))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Assuming we established some basic understanding, let&amp;rsquo;s call in the functions I made so that we can easily get USE and GloVe vectors at multiple word level.&lt;/p&gt;
+
+&lt;p&gt;I will highlight some of the functions below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from get_glove_use import *
+help(glove_vec)
+help(use_vec)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Help on function glove_vec in module get_glove_use:
+
+glove_vec(item1, item2)
+    get vectors for given two words and calculate cosine similarity
+
+    Parameters
+    ----------
+    item1 : str
+        string in glove word pool vector to compare
+    item2 : str
+        string in glove word pool vector to compare
+
+    Returns
+    -------
+    item1_vector : array
+        item1 GloVe vector
+    item2_vector : array
+        item2 GloVe vector
+    cos_sim : float
+        cosine similarity of item1 and item2 vectors
+
+Help on function use_vec in module get_glove_use:
+
+use_vec(item1, item2)
+    get USE vectors and cosine similairty of the two items
+
+    Parameters
+    ----------
+    item1 : str, list
+        any word to compare, put in string for more than one word
+    item2 : str, list
+        any word to compare, put in string for more than one word
+
+    Returns
+    -------
+    item1_vector : array
+        item1 USE vector
+    item2_vector : array
+        item2 USE vector
+    cos_sim : float
+        cosine similarity of item1 and item2 vectors
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;cosine-similarity-example&#34;&gt;Cosine Similarity Example&lt;/h3&gt;
+
+&lt;p&gt;Using the two functions above, and another function compare_word_vec (which basically uses the two functions), we can easily obtain cosine similarity of two words.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# using the two functions above, we can get
+# GloVe and USE vectors and cosine similarity of two input words
+os.chdir(gloveDir)
+_, _, glove_sim = glove_vec(&#39;fish&#39;,&#39;bear&#39;)
+_, _, use_sim = use_vec(&#39;fish&#39;,&#39;bear&#39;)
+print(&#39;use cos: &#39; + str(use_sim))
+print(&#39;glove cos: &#39; + str(glove_sim))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+0.11964830574261577
+0.5305143
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# the two functions glove_vex and use_vec are use in compare_word_vec
+compare_word_vec(&#39;man&#39;,&#39;fish&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+use cos: 0.49838725
+glove cos: 0.18601566881803455
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; From the example above, USE and GloVe similarly identy &lt;em&gt;fish&lt;/em&gt; to be somewhat equally similar to &lt;em&gt;bear&lt;/em&gt; and &lt;em&gt;man&lt;/em&gt; (but just in different scale/degree).&lt;/p&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s try comparing at multiple words or phrase level. We will use new functions and give in new inputs as strings.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sentence1 = [&#39;old&#39;, &#39;man&#39;, &#39;caught&#39;, &#39;fish&#39;]
+sentence2 = [&#39;bear&#39;, &#39;hunted&#39;, &#39;trout&#39;]
+sentence3 = [&#39;bear&#39;,&#39;eat&#39;,&#39;six&#39;,&#39;fish&#39;]
+
+print(&#39;old man caught fish &amp;amp; bear hunted trout:&#39;)
+phrase_vec(sentence1, sentence2)
+
+print(&#39;old man caught fish &amp;amp; bear eat six fish:&#39;)
+phrase_vec(sentence1, sentence3)
+
+print(&#39;bear hunted trout &amp;amp; bear eat six fish:&#39;)
+phrase_vec(sentence2, sentence3)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;old man caught fish &amp;amp; bear hunted trout:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.36609688461789297
+USE sim: 0.50494814
+old man caught fish &amp;amp; bear eat six fish:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.6818474640845398
+USE sim: 0.5896743
+bear hunted trout &amp;amp; bear eat six fish:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.6082457470353315
+USE sim: 0.72352856
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; From the example above, we can see that USE and GloVe capture somewhat differently. We can see that &lt;em&gt;bear hunted trout&lt;/em&gt; and &lt;em&gt;bear eat six fish&lt;/em&gt; are the most similar to each other, whereas &lt;em&gt;old man caught fish&lt;/em&gt; is also similar to the context of bear eating six fish.&lt;/p&gt;
+
+&lt;p&gt;More detailed analysis is required, but the example above shows great possibilities to exploring semantics.&lt;/p&gt;
+
+&lt;h3 id=&#34;plotting-similarity-matrix&#34;&gt;Plotting Similarity Matrix&lt;/h3&gt;
+
+&lt;p&gt;Now that we can compare similarity of words and sentences, we can plot a simple pairwise matrix, which basically compares how similar each word is to another in the given list. Fortunately, we already have a plot for doing it (using Seaborn).&lt;/p&gt;
+
+&lt;p&gt;I will only use few words as demonstration, since it&amp;rsquo;s been slowing up my computer so much!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plot_sim_matrix([&#39;man&#39;, &#39;bear&#39;, &#39;fish&#39;, &#39;trout&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./use_glove_cosine_similarity_25_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ending-note&#34;&gt;Ending Note&lt;/h2&gt;
+
+&lt;p&gt;In the example above, we only used simple noun words. The stronger blue color, the more similar the two words are. Thus, the diagonal strip is deep blue (similarity of same two words is 1). You can see &lt;em&gt;fish&lt;/em&gt; and &lt;em&gt;trout&lt;/em&gt; are more similar to each other, than is &lt;em&gt;man&lt;/em&gt; to &lt;em&gt;trout&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Keep in mind that you can feed in more words and sentences to create and visualize a larger matrix.&lt;/p&gt;
+
+&lt;p&gt;We looked at setting up USE locally, and creating embeddings from USE. The cloned project also has sample version of GloVe vectors. We use the vectors from the two models to extract vectors and compare similarity of two texts.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EEG/Signal Processing--Advanced Part 2</title>
+      <link>http://jinjeon.me/post/eeg-advanced/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/post/eeg-advanced/</guid>
+      <description>
+
+&lt;h3 id=&#34;note&#34;&gt;Note:&lt;/h3&gt;
+
+&lt;p&gt;This post is a ported version of Jupyter Notebook from my mne-eeg project: &lt;a href=&#34;https://github.com/jeon11/mne-egi/blob/master/walkthrough_advanced.ipynb/walkthrough_basics.ipynb&#34; target=&#34;_blank&#34;&gt;https://github.com/jeon11/mne-egi/blob/master/walkthrough_advanced.ipynb/walkthrough_basics.ipynb&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-processing&#34;&gt;Advanced Processing&lt;/h2&gt;
+
+&lt;p&gt;In the previous walkthrough notebook, we got to manually inspect raw instance and do some cleaning based on annotations and creating evoked responses from time-locked events.&lt;/p&gt;
+
+&lt;p&gt;In this section, we run independent component analysis (ICA) on the epochs we had from the last notebook. We look in ICs to identify potentially bad components with eye related artifcats. Then, we implement autoreject (&lt;a href=&#34;http://autoreject.github.io&#34; target=&#34;_blank&#34;&gt;http://autoreject.github.io&lt;/a&gt;) which automatically attempts to find bad channels and interpolate those based on nearby channels. At the end, we plot the ERPs by channels that we are interested in looking and make comparison.&lt;/p&gt;
+
+&lt;p&gt;Note that the plots below will be using &lt;code&gt;print&lt;/code&gt; statements for demonstration purposes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import mne
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+import Tkinter
+from autoreject import AutoReject
+from autoreject import get_rejection_threshold
+from mne.preprocessing import ICA
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;loading-epochs&#34;&gt;Loading epochs&lt;/h3&gt;
+
+&lt;p&gt;We imported all the necessary dependencies. Now we load the saved epochs from last notebook.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;epochs_tlstS = mne.read_epochs(&#39;/data/epochs_tlsts-epo.fif&#39;, preload=True)
+print(epochs_tlstS)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;EpochsFIF  |   388 events (all good), -0.25 - 0.8 sec, baseline [-0.25, 0], ~72.8 MB, data loaded, with metadata,
+ u&#39;lstS&#39;: 388&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;running-independent-component-analysis-ica&#34;&gt;Running Independent Component Analysis (ICA)&lt;/h2&gt;
+
+&lt;p&gt;ICA is a signal processing method to decompose signals into independent sources from a mixed signal. A representative example is the cocktail party effect, which is a phenomenon in which you are able to concentrate on the voice of the speaker  you are conversing with regardless of the various background noise in a party. Using ICA helps seperate the different sources of mixed sound, under the assumption that the sound components are linear. This method works for EEG signal preprocessing because we assume that each electrode is independent from the others. To think of it easily, I consider ICA as decomposing the data into multiple layers, and by excluding bad ICs, we filter the data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# the function calculates optimal reject threshold for ICA
+reject = get_rejection_threshold(epochs_tlstS)
+print(reject)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Estimating rejection dictionary for eeg
+Estimating rejection dictionary for eog
+{&#39;eeg&#39;: 0.0007759871430524497, &#39;eog&#39;: 5.903189072009943e-05}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;low-frequency-slow-drifts&#34;&gt;Low-frequency slow drifts&lt;/h3&gt;
+
+&lt;p&gt;Because ICA is sensitive to low-frequency slow drifts, it is recommended that 1Hz highpass filter is applied. Since this was already done to our raw instance in the previous notebook, it can be skipped. You can double check as below, or apply the highpass filter if you haven&amp;rsquo;t already.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# double check highpass filter
+print(epochs_tlstS.info[&#39;highpass&#39;])
+
+# epochs_tlstS.info[&#39;highpass&#39;] = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;1.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;fit-ica&#34;&gt;Fit ICA&lt;/h3&gt;
+
+&lt;p&gt;Now we will run ICA on our epoch data. For simplicity and time sake, we will limit the number of components to 20 with fastICA method, which is the generally used one. The number of ICs can be created up to as many electrodes (in this case 128 - bad channels). In &lt;code&gt;ica1.fit&lt;/code&gt;, we use the recommended reject threshold from Autoreject.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ica = ICA(n_components=20, max_pca_components=None, n_pca_components=None, noise_cov=None,
+           random_state=None, method=&#39;fastica&#39;, fit_params=None, max_iter=200, verbose=None)
+print(&#39;fitting ica...&#39;)
+ica.fit(epochs_tlstS, reject=reject)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;fitting ica...
+
+
+/Users/Jin/Library/Python/2.7/lib/python/site-packages/scipy/linalg/basic.py:1321: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to &#39;gelss&#39; driver.
+  x, resids, rank, s = lstsq(a, b, cond=cond, check_finite=False)
+
+
+
+
+
+&amp;lt;ICA  |  epochs decomposition, fit (fastica): 81868 samples, 20 components, channels used: &amp;quot;eeg&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;artifact-detection-using-ica-correlation&#34;&gt;Artifact detection using ICA correlation&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;plot_sources&lt;/code&gt; can show the signals of each ICs. We can manually inspect for ICs with noise, or identify bad ICs that correlates with oscillations from eye-related channels. We use the builtin &lt;code&gt;find_bads_eog&lt;/code&gt; from ICA class.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;plot_scores&lt;/code&gt; will show the correlation values for each component, and mark the ones that are potentially bad with red. Note that because we only specified 20 components, the decomposition is rather compressed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;eog_inds, scores = ica.find_bads_eog(epochs_tlstS)
+print(&#39;suggested eog component: &#39; + str(eog_inds))
+print(ica.plot_scores(scores, exclude=eog_inds, labels=&#39;eog&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;suggested eog component: [3]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_11_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Figure(460.8x194.4)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;find_bads_eog&lt;/code&gt; suggested that component &amp;lsquo;3&amp;rsquo; is bad IC related to eye-related artifact. We can plot that specific component to inspect manually.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(ica.plot_properties(epochs_tlstS, picks=eog_inds, psd_args={&#39;fmax&#39;: 35.}, image_args={&#39;sigma&#39;: 1.}))
+ica.exclude += eog_inds
+print(ica.exclude)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;/Users/Jin/Library/Python/2.7/lib/python/site-packages/mne/transforms.py:689: RuntimeWarning: invalid value encountered in divide
+  out[:, 2] = np.arccos(cart[:, 2] / out[:, 0])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_13_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[&amp;lt;Figure size 504x432 with 5 Axes&amp;gt;]
+[3]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Usually, eye blinks are characterized as having significantly polar activities between the frontal and the posterior regions with high activity in the frontal region (ie. eyes). Also, activities shown in the frontal region, especially near the eye area, would not be helpful in our analysis. Eye movements are characterized as having significantly split activities between left and right. Component above does seem containing eye blinks, we mark that component bad by &lt;code&gt;ica.exclude&lt;/code&gt; and we can see that component has been added.&lt;/p&gt;
+
+&lt;p&gt;We can also manually inspect for other components using &lt;code&gt;plot_components&lt;/code&gt; besides the ones that the builtin method suggested. You can see that the component speficied above being grayed out as a bad IC. The plot prioritizes showing ICs with large activations and polarity, which means that most of the bad ICs could be found in the early ICs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(ica.plot_components(inst=epochs_tlstS))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_15_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[&amp;lt;Figure size 540x504 with 20 Axes&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When running the code on &lt;code&gt;ipython&lt;/code&gt; as suggested in the previous notebook, the plot is actually interactive. By clicking on the component, it shows the component properties. Clicking on the name of the component will gray out the name and be marked as bad IC. Here, it seems components 2, 14, and 18 have high activation in the eye regions, which could be identified as components with eye blinks. Also, componnent 5 has activation in the frontal region, and has polar activities between left and right, which could potentially be eye movements. Because the plot above is not interactive, we will specify which ICs to exclude as a line of code.&lt;/p&gt;
+
+&lt;p&gt;Since we&amp;rsquo;ve identified the bad ICs, we can apply it to our epochs_tlstS, and proceed to autoreject.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ica.exclude += [0, 2, 5, 14, 18]
+print(ica.exclude)
+ica.apply(epochs_tlstS)
+print(&#39;number of ICs dropped: &#39; + str(len(ica.exclude)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;[3, 0, 2, 5, 14, 18]
+number of ICs dropped: 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;autoreject&#34;&gt;Autoreject&lt;/h2&gt;
+
+&lt;p&gt;Now that we have bad ICs identified, we try implementing autoreject for cleaning. Note that the step below may take some time as it tries find bad channels and fix them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ar = AutoReject()
+epochs_clean = ar.fit_transform(epochs_tlstS)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Running autoreject on ch_type=eeg
+[........................................] 100.00% Creating augmented epochs \ Computing thresholds ...
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    2.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:    4.0s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:    5.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   4 out of   4 | elapsed:    7.3s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   10.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   6 out of   6 | elapsed:   13.2s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   7 out of   7 | elapsed:   16.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   8 out of   8 | elapsed:   19.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   9 out of   9 | elapsed:   21.7s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  10 out of  10 | elapsed:   24.6s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  11 out of  11 | elapsed:   27.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:   30.3s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  13 out of  13 | elapsed:   33.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  14 out of  14 | elapsed:   35.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  15 out of  15 | elapsed:   36.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  16 out of  16 | elapsed:   38.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  17 out of  17 | elapsed:   40.2s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  18 out of  18 | elapsed:   42.2s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  19 out of  19 | elapsed:   44.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  20 out of  20 | elapsed:   47.0s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  21 out of  21 | elapsed:   48.7s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  22 out of  22 | elapsed:   50.1s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  23 out of  23 | elapsed:   51.6s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  24 out of  24 | elapsed:   53.1s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  25 out of  25 | elapsed:   54.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  26 out of  26 | elapsed:   56.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  27 out of  27 | elapsed:   57.9s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  28 out of  28 | elapsed:   59.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  29 out of  29 | elapsed:  1.0min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  30 out of  30 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  31 out of  31 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  32 out of  32 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  33 out of  33 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  34 out of  34 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  35 out of  35 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  36 out of  36 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  37 out of  37 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  38 out of  38 | elapsed:  1.3min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  39 out of  39 | elapsed:  1.3min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  40 out of  40 | elapsed:  1.3min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  41 out of  41 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  42 out of  42 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  43 out of  43 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  44 out of  44 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  45 out of  45 | elapsed:  1.5min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  46 out of  46 | elapsed:  1.5min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  47 out of  47 | elapsed:  1.5min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  48 out of  48 | elapsed:  1.6min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  49 out of  49 | elapsed:  1.6min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  50 out of  50 | elapsed:  1.6min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done 115 out of 115 | elapsed:  3.8min finished
+[........................................] 100.00% n_interp \   chs |   
+
+
+
+Estimated consensus=0.30 and n_interpolate=4
+[........................................] 100.00% Repairing epochs |   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above created a new epochs called &lt;code&gt;epochs_clean&lt;/code&gt;. We can compare how the epochs are cleaned by comparing the two plots. For demonstration, we only plot the &lt;code&gt;epochs_clean&lt;/code&gt;. The plot shows individual epochs with green line being 0 (the onset of the word in the experiment). In the interactive plot mode, you can scroll vertically to see different channels and horizontally to search through epochs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(epochs_clean.plot())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_21_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Figure(869.6x536.8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;creating-evoked-response-from-epochs-clean&#34;&gt;Creating evoked response from epochs_clean&lt;/h2&gt;
+
+&lt;p&gt;Now that we have a new, ideally cleaner epochs, we create evoked response for each condition. Currently, &lt;code&gt;epochs_clean&lt;/code&gt; contains all four conditions with approximately 100 epochs for each (less than 400 now because epochs been rejected). Note that the y-axis microvolt scale has been refined compared to our previous notebook.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# now let&#39;s create a new evoked responses (ie. the autoreject evoked)
+arevoked_tlst_c1 = epochs_clean[&amp;quot;label==&#39;lstS&#39; and cond==&#39;1&#39;&amp;quot;].average()
+arevoked_tlst_c2 = epochs_clean[&amp;quot;label==&#39;lstS&#39; and cond==&#39;2&#39;&amp;quot;].average()
+arevoked_tlst_c3 = epochs_clean[&amp;quot;label==&#39;lstS&#39; and cond==&#39;3&#39;&amp;quot;].average()
+arevoked_tlst_c4 = epochs_clean[&amp;quot;label==&#39;lstS&#39; and cond==&#39;4&#39;&amp;quot;].average()
+
+# let&#39;s see a sample evoked response
+print(arevoked_tlst_c1.plot_joint(times=&#39;peaks&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_23_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Figure(576x302.4)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;plotting-erp-comparison&#34;&gt;Plotting ERP comparison&lt;/h2&gt;
+
+&lt;p&gt;Now that we have evoked response for each condition, we can look into specific channels of interest to see how the signals differ by conditions. For the selection list, we will only specify channel E92 as it will create 4 graphs for each channel.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# we specify which channels to look at
+selection = [&#39;E92&#39;]  # [&#39;EB&#39;,&#39;E11&#39;,&#39;E24&#39;,&#39;E124&#39;,&#39;E36&#39;,&#39;E104&#39;,&#39;E52&#39;,&#39;E62&#39;,&#39;E92&#39;]
+picks_select = mne.pick_types(epochs_clean.info, meg=False, eeg=True, eog=True, stim=False,
+                              exclude=&#39;bads&#39;, selection=selection)
+
+# create dictionary for each condition
+evoked_dict = {&#39;highcosval&#39;: arevoked_tlst_c1,
+                &#39;lowcosval&#39;: arevoked_tlst_c2,
+                &#39;highcosinval&#39;: arevoked_tlst_c3,
+                &#39;lowcosinval&#39;: arevoked_tlst_c4}
+
+picks_select = mne.pick_types(arevoked_tlst_c1.info, meg=False, eeg=True, eog=True, stim=False,
+                              exclude=&#39;bads&#39;, selection=selection)
+
+
+# this will plot each selected channel with comparison of two conditions
+title = &#39;%s_vs_%s_E%s.png&#39;
+for i in range(0, len(picks_select)):
+    fig1 = mne.viz.plot_compare_evokeds({&#39;highcos/val&#39;:evoked_dict[&#39;highcosval&#39;],
+                                         &#39;lowcos/val&#39;:evoked_dict[&#39;lowcosval&#39;]}, picks=picks_select[i])
+    fig2 = mne.viz.plot_compare_evokeds({&#39;highcos/inval&#39;:evoked_dict[&#39;highcosinval&#39;],
+                                         &#39;lowcos/inval&#39;:evoked_dict[&#39;lowcosinval&#39;]}, picks=picks_select[i])
+    fig3 = mne.viz.plot_compare_evokeds({&#39;highcos/val&#39;:evoked_dict[&#39;highcosval&#39;],
+                                         &#39;highcos/inval&#39;:evoked_dict[&#39;highcosinval&#39;]},picks=picks_select[i])
+    fig4 = mne.viz.plot_compare_evokeds({&#39;lowcos/val&#39;:evoked_dict[&#39;lowcosval&#39;],
+                                         &#39;lowcos/inval&#39;:evoked_dict[&#39;lowcosinval&#39;]}, picks=picks_select[i])
+
+    # save figs
+    # fig1.savefig(title % (evoked_dict.keys()[0], evoked_dict.keys()[1], i))
+    # fig2.savefig(title % (evoked_dict.keys()[2], evoked_dict.keys()[3], i))
+    # fig3.savefig(title % (evoked_dict.keys()[0], evoked_dict.keys()[2], i))
+    # fig4.savefig(title % (evoked_dict.keys()[1], evoked_dict.keys()[3], i))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_25_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_25_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_25_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_25_3.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# this will plot just the evoked responses per conditions with all channels
+fig5 = arevoked_tlst_c1.plot(titles=&#39;cond1: high cos/val&#39;)
+fig6 = arevoked_tlst_c2.plot(titles=&#39;cond2: low cos/val&#39;)
+fig7 = arevoked_tlst_c3.plot(titles=&#39;cond3: high cos/inval&#39;)
+fig8 = arevoked_tlst_c4.plot(titles=&#39;cond4: low cos/inval&#39;)
+
+# save figs
+# fig5.savefig(&#39;c1all.png&#39;)
+# fig6.savefig(&#39;c2all.png&#39;)
+# fig7.savefig(&#39;c3all.png&#39;)
+# fig8.savefig(&#39;c4all.png&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_26_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_26_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_26_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_advanced_26_3.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;sources-and-useful-links&#34;&gt;Sources and useful links&lt;/h2&gt;
+
+&lt;p&gt;EEGLab ICA guide: &lt;a href=&#34;https://sccn.ucsd.edu/wiki/Chapter_09:_Decomposing_Data_Using_ICA&#34; target=&#34;_blank&#34;&gt;https://sccn.ucsd.edu/wiki/Chapter_09:_Decomposing_Data_Using_ICA&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MNE ICA class: &lt;a href=&#34;https://martinos.org/mne/stable/generated/mne.preprocessing.ICA.html&#34; target=&#34;_blank&#34;&gt;https://martinos.org/mne/stable/generated/mne.preprocessing.ICA.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;autoreject: &lt;a href=&#34;http://autoreject.github.io/auto_examples/plot_auto_repair.html#sphx-glr-auto-examples-plot-auto-repair-py&#34; target=&#34;_blank&#34;&gt;http://autoreject.github.io/auto_examples/plot_auto_repair.html#sphx-glr-auto-examples-plot-auto-repair-py&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Clemens Brunner&amp;rsquo;s great guide on ICA: &lt;a href=&#34;https://cbrnr.github.io/2018/01/29/removing-eog-ica/&#34; target=&#34;_blank&#34;&gt;https://cbrnr.github.io/2018/01/29/removing-eog-ica/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Clemens Brunner&amp;rsquo;s great guide on EOG detection using linear regression: &lt;a href=&#34;https://cbrnr.github.io/2017/10/20/removing-eog-regression/&#34; target=&#34;_blank&#34;&gt;https://cbrnr.github.io/2017/10/20/removing-eog-regression/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MNE stats: &lt;a href=&#34;https://martinos.org/mne/stable/auto_tutorials/plot_stats_cluster_erp.html#sphx-glr-auto-tutorials-plot-stats-cluster-erp-py&#34; target=&#34;_blank&#34;&gt;https://martinos.org/mne/stable/auto_tutorials/plot_stats_cluster_erp.html#sphx-glr-auto-tutorials-plot-stats-cluster-erp-py&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EEG/Signal Processing--Basics Part 1</title>
+      <link>http://jinjeon.me/post/eeg-basics/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/post/eeg-basics/</guid>
+      <description>
+
+&lt;h3 id=&#34;note&#34;&gt;Note:&lt;/h3&gt;
+
+&lt;p&gt;This post is a ported version of Jupyter Notebook from my mne-eeg project: &lt;a href=&#34;https://github.com/jeon11/mne-egi/blob/master/walkthrough_basics.ipynb&#34; target=&#34;_blank&#34;&gt;https://github.com/jeon11/mne-egi/blob/master/walkthrough_basics.ipynb&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;This script runs through sample experiment data from manually reading in raw file to preprocessing through applying filters, eye blink detection using peak finding techniques. Then we create epochs and plot evoked responses.&lt;/p&gt;
+
+&lt;p&gt;In the advanced walkthrough: &lt;a href=&#34;https://github.com/jeon11/mne-egi/blob/master/walkthrough_advanced.ipynb&#34; target=&#34;_blank&#34;&gt;walkthrough_advanced.ipynb&lt;/a&gt;, we implement independent component analysis (ICA) and autoreject, which is an automated tool for fixing data, to see how the epochs are improved and compare the evoked responses by conditions.&lt;/p&gt;
+
+&lt;p&gt;The script requires at least two files:
+  - the raw data &lt;a href=&#34;https://drive.google.com/file/d/1W2UFu_6H4HzFF2DALAxfmr0BNSj7pEok/view?usp=sharing&#34; target=&#34;_blank&#34;&gt;(download from Google Drive ~500MB)&lt;/a&gt;
+  - exported event text log from NetStation software&lt;/p&gt;
+
+&lt;h3 id=&#34;running-the-script-in-command-line&#34;&gt;Running the script in command line&lt;/h3&gt;
+
+&lt;p&gt;When running the Python script from command line, MNE recommends using ipython via:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ipython —-pylab osx -i mne-egi-walkthrough.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For Windows, instead of &lt;code&gt;osx&lt;/code&gt;, you would be specifying &lt;code&gt;qt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;importing&#34;&gt;Importing&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s begin by importing all the necessary modules. Make sure you have all the required dependencies setup.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import mne
+import pandas as pd
+import numpy as np
+import matplotlib
+from matplotlib import pyplot as plt
+from mne.preprocessing import eog
+from mne.preprocessing import create_eog_epochs
+from mne.preprocessing.peak_finder import peak_finder
+import Tkinter
+import extract_nslog_event
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;setting-basic-variables&#34;&gt;Setting basic variables&lt;/h3&gt;
+
+&lt;p&gt;Before we begin any preprocessing, we create variables here to specify what we want to look for. The whole script basically requires two main files.
+1. raw_fname: The raw instance of eeg data file in .raw format
+2. ns_eventlog: Netstation&amp;rsquo;s event exports in text&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;selection&lt;/code&gt; variable is later used to specify which channels to plot and compare. Note, the first item in the &lt;code&gt;selection&lt;/code&gt; list, &lt;code&gt;EB&lt;/code&gt; channel is a virtual channel created from bipolar referene.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# specify sample subject data directory
+raw_fname   = &#39;/Users/Jin/Documents/MATLAB/research/mne-egi/data/sfv_eeg_011ts.raw&#39;
+ns_eventlog = &#39;/Users/Jin/Documents/MATLAB/research/mne-egi/data/sfv_eeg_011ts_nsevent&#39;
+
+# specify sub-sample of channels to look in detail
+selection = [&#39;EB&#39;,&#39;E11&#39;,&#39;E24&#39;,&#39;E124&#39;,&#39;E36&#39;,&#39;E104&#39;,&#39;E52&#39;,&#39;E62&#39;,&#39;E92&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;reading-in-raw-file&#34;&gt;Reading in raw file&lt;/h3&gt;
+
+&lt;p&gt;Raw eeg data can be read in with a simple line below. You can specify montage kind in strings. See &lt;a href=&#34;https://martinos.org/mne/dev/generated/mne.channels.read_montage.html&#34; target=&#34;_blank&#34;&gt;https://martinos.org/mne/dev/generated/mne.channels.read_montage.html&lt;/a&gt; for available montages. We set &lt;code&gt;preload=True&lt;/code&gt; because some of the preprocessing functions require raw file to be preloaded.&lt;/p&gt;
+
+&lt;p&gt;Once the raw file is loaded, typing &lt;code&gt;raw&lt;/code&gt; and &lt;code&gt;raw.info&lt;/code&gt; will show details about the raw instance.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&#39;reading raw file...&#39;)
+raw = mne.io.read_raw_egi(raw_fname, montage=&#39;GSN-HydroCel-128&#39;, preload=True)
+print(&#39;Done!&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;reading raw file...
+
+
+&amp;lt;ipython-input-3-8bc42ae4bead&amp;gt;:2: RuntimeWarning: The following EEG sensors did not have a position specified in the selected montage: [&#39;E129&#39;]. Their position has been left untouched.
+  raw = mne.io.read_raw_egi(raw_fname, montage=&#39;GSN-HydroCel-128&#39;, preload=True)
+
+
+Done!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(raw)
+# see the first ten list of channel names (note by default, prefix &#39;E&#39; is appended)
+print(raw.info[&#39;ch_names&#39;][0:10])
+
+# see highpass &amp;amp; lowpass filter
+print(&#39;highpass filter: &#39; + str(raw.info[&#39;highpass&#39;]))
+print(&#39;lowpass filter: &#39; + str(raw.info[&#39;lowpass&#39;]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;RawEGI  |  sfv_eeg_011ts.raw, n_channels x n_times : 136 x 989490 (4947.4 sec), ~1.00 GB, data loaded&amp;gt;
+[&#39;E1&#39;, &#39;E2&#39;, &#39;E3&#39;, &#39;E4&#39;, &#39;E5&#39;, &#39;E6&#39;, &#39;E7&#39;, &#39;E8&#39;, &#39;E9&#39;, &#39;E10&#39;]
+highpass filter: 0.0
+lowpass filter: 100.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;applying-bandpass-filter&#34;&gt;Applying bandpass filter&lt;/h2&gt;
+
+&lt;p&gt;Our first preprocessing step will be applying the bandpass filter of 1Hz and 30Hz. The numbers can be played around with, but this filter range will potentially remove general noise from environment and slow drifting signals. Other suggestions for highpass is 0.1; for 40 Hz lowpass.&lt;/p&gt;
+
+&lt;p&gt;After bandpass filter is applied, type &lt;code&gt;raw.info&lt;/code&gt; to check how &lt;code&gt;raw.filter&lt;/code&gt; made changes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# apply bandpass filter to raw file (highpass, lowpass)
+raw.filter(1,30)
+
+# see highpass &amp;amp; lowpass filter
+print(&#39;highpass filter: &#39; + str(raw.info[&#39;highpass&#39;]))
+print(&#39;lowpass filter: &#39; + str(raw.info[&#39;lowpass&#39;]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;highpass filter: 1.0
+lowpass filter: 30.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;creating-meta-dataframe&#34;&gt;Creating meta dataframe&lt;/h2&gt;
+
+&lt;p&gt;We will deviate a little from processing raw file, and construct a dataframe that can be later used for effectively creating epochs or querying information we just need. This part uses the custom built module (also experiment specific as each experiment will have different paradigms and event tags). The &lt;code&gt;extract_nslog_event&lt;/code&gt; constructs necessary pandas dataframe from &lt;code&gt;ns_eventlog&lt;/code&gt; text file which we specified earlier in #Setting-basic-variables.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;create_df&lt;/code&gt; returns five dataframes, in which nsdata is a list from simply csv-read file that is used to create task-specific pandas dataframes. For example, &lt;code&gt;df_lst&lt;/code&gt; is the initial dataframe created that includes all practice, trials, and sentences tasks. The rest of dfs contain task specific data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# create pandas data frames for different tasks
+nsdata, df_lst, df_plst, df_tlst, df_slst = extract_nslog_event.create_df(ns_eventlog)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;creating data frame from ns event log...
+dataframes created for subject 011
+trials found: 800
+sentences found: 200
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From now on, for simplicity sake, we will only examine the actual trials task part in this walkthrough. We can focus on looking at the data structure of trials task. Since the dataframe is already created specifically for trials, what we really want now is the onset (sample numbers) of when the event occured and the condition of the stimuli that was presented.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# show data frame structure of 2rd index
+print(df_tlst.iloc[2])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;code      tlst
+label     lstS
+onset    99867
+cond         4
+indx         1
+Name: 2, dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The label for trials task was either a last word start (lstS) or last word end (lstE). Since we are interested in the onset of the word, we will extract just the onsets using the custom code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# create onset-only data frame (event tag specifications)
+df_tlstS = extract_nslog_event.create_df_onset(df_tlst)
+# show total events of interest
+len(df_tlstS)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;400
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;finding-impedance-check-periods-and-annotating&#34;&gt;Finding impedance check periods and annotating&lt;/h2&gt;
+
+&lt;p&gt;Now that we have dataframes setup, we continue to clean up the raw data. Throughout the acquisition, we ran impedance checks to make sure that all electrodes were in good contact with the scalp and that good signal is being read in. During the impedance check, the waveforms peak in extreme amount and we want to make note of these periods, telling the mne functions to avoid and ignore such periods.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# find impedance onsets
+imp_onset, imp_offset, imp_dur = extract_nslog_event.find_impedances(nsdata)
+
+# annotate on raw with &#39;bad&#39; tags (params `reject_by_annotation` will search for &#39;bad&#39; tags later)
+annot_imp = mne.Annotations(imp_onset, imp_dur, [&amp;quot;bad imp&amp;quot;] * len(imp_onset), orig_time=raw.info[&#39;meas_date&#39;])
+raw.set_annotations(annot_imp)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;finding impedance periods...
+found 4 impedance periods!
+
+
+
+
+
+&amp;lt;RawEGI  |  sfv_eeg_011ts.raw, n_channels x n_times : 136 x 989490 (4947.4 sec), ~1.00 GB, data loaded&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;marking-bad-channels&#34;&gt;Marking bad channels&lt;/h2&gt;
+
+&lt;p&gt;We also want to make note of bad channels. We can manually inspect for bad channels by seeing the actual raw data.  &lt;code&gt;raw.plot&lt;/code&gt; will show the actual raw file with annotations from above marked as red segments. You can inspect for good/bad channels and manually click on bad channels to mark them bad. Once you manually inspected the channels, type &lt;code&gt;raw.info[&#39;bads&#39;]&lt;/code&gt; to see how it is updated.&lt;/p&gt;
+
+&lt;p&gt;Note that the plot below is a static figure for example sake. Running the code in ipython will allow us to horizontally and vertically scroll through data. Clicking on a channel will mark that channel red and be considered red. You can see that we&amp;rsquo;ve ran four impedance checks throughout the session (1 task switch period, every 100th trials out fo 400).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# block=True is useful because it will wait to whatever change you make in the raw file at the plot stage
+print(raw.plot(bad_color=&#39;red&#39;, block=True))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_basics_19_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Figure(782.64x483.12)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you already had a list of bad channels noted during the acquisition period, you can skip the above manual inspection and simply specify the bad channels with a line of code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;raw.info[&#39;bads&#39;] = [&#39;E127&#39;, &#39;E107&#39;, &#39;E49&#39;, &#39;E48&#39;, &#39;E115&#39;, &#39;E113&#39;, &#39;E122&#39;, &#39;E121&#39;, &#39;E123&#39;, &#39;E108&#39;, &#39;E63&#39;, &#39;E1&#39;]
+print(raw.info[&#39;bads&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;[&#39;E127&#39;, &#39;E107&#39;, &#39;E49&#39;, &#39;E48&#39;, &#39;E115&#39;, &#39;E113&#39;, &#39;E122&#39;, &#39;E121&#39;, &#39;E123&#39;, &#39;E108&#39;, &#39;E63&#39;, &#39;E1&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;detecting-and-rejecting-eye-blinks&#34;&gt;Detecting and rejecting eye blinks&lt;/h2&gt;
+
+&lt;p&gt;We&amp;rsquo;ve so far applied generic/broad preprocessing steps, such as bandpass filters, marking chunks of bad segments, and marking bad channels. Now we will look at finding eye blinks in the raw and add more annotations to mark those samples bad.&lt;/p&gt;
+
+&lt;h3 id=&#34;step-1-setting-bipolar-reference&#34;&gt;Step 1: Setting bipolar reference&lt;/h3&gt;
+
+&lt;p&gt;Because the cap we use do not have EOG-specific channels, we use the channels that are nearest to the eyes and consider those as our virtual eye channels. Thus, such method has the risk of the eye channels actually not having just the eye-related oscillations. This is done by setting the bipolar reference, which is basically the subtraction of two opposing channels (ie. the top and bottom of each eye for eye blinks; the left and right of the eyes for eye movements).&lt;/p&gt;
+
+&lt;p&gt;Here, we use just the right side of the eye only to detect eye blinks. From the subtraction of channel E8 and E126, a virtual channel EB is created.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# let&#39;s begin eye artifact detections
+print(&#39;Starting EOG artifact detection&#39;)
+raw = mne.set_bipolar_reference(raw, [&#39;E8&#39;],[&#39;E126&#39;],[&#39;EB&#39;])
+
+# specify this as the eye channel
+raw.set_channel_types({&#39;EB&#39;: &#39;eog&#39;})
+
+# double check the changes
+# print(raw.info[&#39;chs&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Starting EOG artifact detection
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;step-2-detecting-eye-blinks&#34;&gt;Step 2: Detecting eye blinks&lt;/h3&gt;
+
+&lt;p&gt;Now that we have a virtual eye channel to inspect, we can try to identify any eye blinks. Because the virtual eye channel that is created from subtraction of the channels, the waveform of EB channel will be generally flat. You can inspect this by &lt;code&gt;raw.plot&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Eye blinks are generally characterized as two eye channels having sudden opposing peaks. So the methodology is to find a sudden peak within the flat EB line. We have the options of:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;finding eye blinks via mne built in function&lt;/li&gt;
+&lt;li&gt;finding eye blinks via scipy peak finding method&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Both results in similar eye blink detections because the methodology of finding local peaks. We will only use the mne built in function and comment out the custom built function that uses scipy. &lt;code&gt;reject_by_annotation&lt;/code&gt; will ignore the bad segments marked as bad earlier. The threshold of 0.0001 can be played around with but it is a reasonable threshold set after having manually inspect the data. The &lt;code&gt;events_eog&lt;/code&gt; will be an array with [sample number, 0, eventlabel in number]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;events_eog = eog.find_eog_events(raw, reject_by_annotation=True, thresh=0.0001, verbose=None)
+
+# type `help(scipy_annotate_eyeblinks)` for detail
+# raw = scipy_annotate_eyeblinks(raw, &#39;EB&#39;, 100)
+
+print(&#39;number of eye blinks detected: &#39; + str(len(events_eog)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;number of eye blinks detected: 1720
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;events_eog&lt;/code&gt; above will give where the eye blinks occured in samples. We will convert the sample number to seconds so we can annotate on the raw file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# get just the sample numbers from the eog events
+eog_sampleN = [i[0] for i in events_eog]
+# convert to seconds for annotation-friendly purposes
+for i in range(0, len(eog_sampleN)):
+    eog_sampleN[i] = eog_sampleN[i] / float(200)
+
+# set annotation
+annot_eog = mne.Annotations(eog_sampleN, [0.1] * len(eog_sampleN),
+                            [&amp;quot;bad eye&amp;quot;] * len(eog_sampleN), orig_time = raw.info[&#39;meas_date&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# add this eye blink annotation to the previous annotation by simply adding
+new_annot = annot_imp + annot_eog
+raw.set_annotations(new_annot)
+print(&#39;new annotation set!&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;new annotation set!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that new annotation is set, let&amp;rsquo;s see the changes made to the raw. Again we will just have a figure printed out here. You can see the bad channels marked red (like E1), and bunch of red bars that potentially mark spikes/eye blinks. Because the Times x-axis is so zoomed out, we see all parts being red, but as we see the plot above, that is actually not true. We see that &amp;lsquo;bad eye&amp;rsquo; is annotated for any potential peaks in the &amp;lsquo;EB&amp;rsquo; channel that is newly created from bipolar reference.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# you can check that more red segments are marked on the raw file
+print(raw.plot(bad_color=&#39;red&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_basics_30_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Figure(782.64x483.12)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;setting-rereference&#34;&gt;Setting rereference&lt;/h2&gt;
+
+&lt;p&gt;Now that bad channels are marked and we know which bad segments to avoid, we will set eeg reference (We want to avoid doing reference before the bad data are marked and rejected).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&#39;setting eeg reference...&#39;)
+raw.set_eeg_reference(&#39;average&#39;, projection=True)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;setting eeg reference...
+
+
+
+
+
+&amp;lt;RawEGI  |  sfv_eeg_011ts.raw, n_channels x n_times : 135 x 989490 (4947.4 sec), ~1019.5 MB, data loaded&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;creating-epochs&#34;&gt;Creating epochs&lt;/h2&gt;
+
+&lt;p&gt;Now that we have done some primary artifact detections, we can create a first look on how our epochs look. Epochs are time-locked events of interest. Here, we look at the few hundred milliseconds before and after the onset of the last word of a sentence presentation. Before creating the epochs, we will run some custom codes to update the event arrays accordingly so the event labels are properly labeled ie. 1 for onsets, 2 for offsets.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# first find events related to tlst stim channel in the cleaned raw
+events_tlst = mne.find_events(raw, stim_channel=&#39;tlst&#39;)
+
+# events_tlst is a array structure ie.  (1, 0, 1) and so far, the all the event tags are 1 which is not true
+# We will update the event tags with 1s and 2s with custom built function
+
+# update event ids in mne events array and double check sampling onset timing as sanity check
+events_tlstS = extract_nslog_event.assign_event_id(df_tlst, events_tlst)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;updating mne event array and double checking sampling onset time...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# epoching initially with metadata applied
+event_id_tlst = dict(lstS=1)
+tmin = -0.25  # start of each epoch
+tmax = 0.8  # end of each epoch
+# set baseline to 0
+baseline = (tmin, 0)
+
+# picks specify which channels we are interested
+picks = mne.pick_types(raw.info, meg=False, eeg=True, eog=True, stim=False, exclude=&#39;bads&#39;)
+
+# `metadata` field is used to put in our comprehensive pandas dataframe
+# it is useful for later creating evoked responses by conditions
+epochs_tlstS = mne.Epochs(raw, events_tlstS, event_id_tlst, tmin, tmax, proj=False, picks=picks,
+                          baseline=baseline, preload=True, reject=None, reject_by_annotation=True, metadata=df_tlstS)
+print(&#39;epochs_tlstS:&#39;)
+print(epochs_tlstS)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;epochs_tlstS:
+&amp;lt;Epochs  |   388 events (all good), -0.25 - 0.8 sec, baseline [-0.25, 0], ~72.8 MB, data loaded, with metadata,
+ &#39;lstS&#39;: 388&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We created epochs named &lt;code&gt;epochs_tlstS&lt;/code&gt; which is mne&amp;rsquo;s epochs instance. Note that the epochs are 388 instead of original 400. It is likely that the some epochs are dropped from annotations. Let&amp;rsquo;s see if it&amp;rsquo;s true.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# show drop percentage from mne.Epochs
+drop_count = 0
+for j in range(0, len(epochs_tlstS.drop_log)):
+    if &#39;bad eye&#39; in epochs_tlstS.drop_log[j]:
+        drop_count += 1
+print(str(drop_count) + &#39; epochs dropped by eog annotation&#39;)
+print(&#39;perecentage dropped: &#39; + str(epochs_tlstS.drop_log_stats()))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;12 epochs dropped by eog annotation
+perecentage dropped: 3.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;creating-evoked-response-erp&#34;&gt;Creating evoked response (ERP)&lt;/h2&gt;
+
+&lt;p&gt;Everything looks good. We can create an evoked response by condition. Currently, the epochs_tlst contains all four conditions of the task. By creating an evoked response by condition, we can examine the data for each condition.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# create evoked respone using pandas query based on metadata created from previous epochs
+evoked_tlst_c1 = epochs_tlstS[&amp;quot;label==&#39;lstS&#39; and cond==&#39;1&#39;&amp;quot;].average()
+evoked_tlst_c2 = epochs_tlstS[&amp;quot;label==&#39;lstS&#39; and cond==&#39;2&#39;&amp;quot;].average()
+evoked_tlst_c3 = epochs_tlstS[&amp;quot;label==&#39;lstS&#39; and cond==&#39;3&#39;&amp;quot;].average()
+evoked_tlst_c4 = epochs_tlstS[&amp;quot;label==&#39;lstS&#39; and cond==&#39;4&#39;&amp;quot;].average()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Evoked responses are created by condition. Let&amp;rsquo;s just inspect the first one. The figure below will show the waveforms of all channels (except the ones marked bad and bipolar referenced channels) with total N epochs in that condition. Originally, N=100 for each condition.&lt;/p&gt;
+
+&lt;p&gt;We can see something happening at 100ms to 300ms range after the onset of the word, which is time point 0s.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(evoked_tlst_c1.plot())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_basics_41_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Figure(460.8x216)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Figure above is in black and could be hard to inspect. A more interesting plot could be using &lt;code&gt;plot_joint&lt;/code&gt; method. You can see that most of the channels in the frontal region are showing flat, insignificant patterns. On the other hand, the right occipital (marked in red, purplish colors) is revealing potentially interesting results.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(evoked_tlst_c1.plot_joint(times=&#39;peaks&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;/Users/Jin/Library/Python/2.7/lib/python/site-packages/mne/transforms.py:689: RuntimeWarning: invalid value encountered in divide
+  out[:, 2] = np.arccos(cart[:, 2] / out[:, 0])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./walkthrough_basics_43_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Figure(576x302.4)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To avoid going through the same process everytime you load in a subject, we can save the progress by saving the resulted epochs (ie. &lt;code&gt;epochs_tlstS&lt;/code&gt; or raw instance). In the other notebook, we will continue with more advanced artifact detection using the saved epochs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;epochs_tlstS.save(&#39;epochs_tlsts-epo.fif&#39;, split_size=&#39;2GB&#39;, fmt=&#39;single&#39;, verbose=True)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;sources-and-useful-links&#34;&gt;Sources and useful links&lt;/h2&gt;
+
+&lt;p&gt;MNE querying metadata: &lt;a href=&#34;https://martinos.org/mne/stable/auto_examples/preprocessing/plot_metadata_query.html&#34; target=&#34;_blank&#34;&gt;https://martinos.org/mne/stable/auto_examples/preprocessing/plot_metadata_query.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MNE annotations: &lt;a href=&#34;https://martinos.org/mne/stable/generated/mne.Annotations.html&#34; target=&#34;_blank&#34;&gt;https://martinos.org/mne/stable/generated/mne.Annotations.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Feature Prioritization in Classification of Novel Objects</title>
