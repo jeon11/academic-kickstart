@@ -5,6 +5,12 @@ summary: Continuation from Part 1, the script runs independent component analysi
 date: "2018-05-02T00:00:00Z"
 lastmod: "2018-05-02T00:00:00Z"
 
+tags:
+- eeg
+- research
+- python
+- signal processing
+
 image:
   placement: 2
   caption: 'Looking over components'

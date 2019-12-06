@@ -5,6 +5,12 @@ summary: This script runs through sample experiment data from manually reading i
 date: "2018-05-01T00:00:00Z"
 lastmod: "2018-05-01T00:00:00Z"
 
+tags:
+- eeg
+- python
+- signal processing
+- research
+
 image:
   placement: 2
   caption: 'example ERP'

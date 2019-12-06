@@ -5,7 +5,8 @@ summary: By analyzing Yelp’s dataset, specifically star ratings and text revie
 tags:
 - research
 - cognition
-- classification
+- classifier
+- python
 date: "2016-12-10T00:00:00Z"
 
 

@@ -4,7 +4,8 @@ summary: Object classification is essential to human learning as it helps us cop
 tags:
 - research
 - cognition
-- classification
+- experiment
+- psychology
 date: "2017-05-10T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
