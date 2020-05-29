@@ -5,12 +5,44 @@
     <link>http://jinjeon.me/tags/</link>
       <atom:link href="http://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
       <link>http://jinjeon.me/tags/</link>
     </image>
+    
+    <item>
+      <title>entropy</title>
+      <link>http://jinjeon.me/tags/entropy/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/entropy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mutual information</title>
+      <link>http://jinjeon.me/tags/mutual-information/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/mutual-information/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neuroimaging</title>
+      <link>http://jinjeon.me/tags/neuroimaging/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/neuroimaging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://jinjeon.me/tags/python/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/tags/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>brain</title>
@@ -25,14 +57,6 @@
       <link>http://jinjeon.me/tags/fmri/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
       <guid>http://jinjeon.me/tags/fmri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>http://jinjeon.me/tags/python/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/python/</guid>
       <description></description>
     </item>
     

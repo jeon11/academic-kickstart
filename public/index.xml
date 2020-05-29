@@ -5,12 +5,563 @@
     <link>http://jinjeon.me/</link>
       <atom:link href="http://jinjeon.me/index.xml" rel="self" type="application/rss+xml" />
     <description>Jin Jeon</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Jin Jeon</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://jinjeon.me/img/icon.png</url>
       <title>Jin Jeon</title>
       <link>http://jinjeon.me/</link>
     </image>
+    
+    <item>
+      <title>Mutual Information in Neuroimaging</title>
+      <link>http://jinjeon.me/post/mutual-info/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://jinjeon.me/post/mutual-info/</guid>
+      <description>
+
+&lt;h2 id=&#34;entropy-in-neuroimaging&#34;&gt;Entropy in Neuroimaging&lt;/h2&gt;
+
+&lt;p&gt;Entropy has three interpretations (three are identical, but in different expressions &amp;amp; relations):&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1. Amount of information in an event (N of possible outcomes, or grey value in images)&lt;/b&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The larger the number of possible outcomes, the larger the information gain
+
+&lt;ul&gt;
+&lt;li&gt;Ex. Information gain from a sentence would exponentially increase with length of sentence&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;If outcome is 1, information gain is 0 (i.e. log1 = 0)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b&gt;2. Uncertainty of outcome in an event&lt;/b&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Amount of information gain with probability is inversely related to the probability that the event will take place. The information per event is weighted by the probability of the event&lt;/li&gt;&lt;/li&gt;
+&lt;li&gt;The rarer an event, the more significance the event has&lt;/li&gt;
+&lt;li&gt;When all events are likely to occur, uncertainty or entropy is maximum (ie. more possible outcomes)&lt;/li&gt;
+&lt;li&gt;Most common entropy form is the Shannon&amp;rsquo;s entropy:
+\begin{equation&lt;em&gt;}
+H = \sum_{i} p_i log(p_i)
+\end{equation&lt;/em&gt;}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Entropy Example&lt;/strong&gt; &lt;br&gt;
+    &amp;gt;  In a fair coin toss, entropy is maximum. Vice versa, the more unfair the coint toss is, the more definitive the outcome is (which means lower entropy)&lt;br&gt;&lt;br&gt;
+    &amp;gt;  Fair coin toss: P(head) = 0.5, P(tail) = 0.5&lt;br&gt;
+    &amp;gt;  Entropy = -0.5log0.5 - 0.5log0.5 = 0.150 + 0.150 = 0.300
+    &amp;gt;&lt;br /&gt;
+    &amp;gt;  Unfair coin toss: P(head) = 0.8, P(tail) = 0.2&lt;br&gt;
+    &amp;gt;  Entropy = -0.8log0.8 - 0.2log0.2 = 0.077 + 0.140 = 0.217&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;b&gt;3. Dispersion of probability distribution&lt;/b&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shannon&amp;rsquo;s entropy can be used as a measure of dispersion of a probability distribution. It can be computed on images by looking at their dispersion of grey values&lt;/li&gt;
+&lt;li&gt;Image with single intensity will have low entropy value as it contains little information. Conversely, if image with varying intesity will have higher entropy value with more information&lt;/li&gt;
+&lt;li&gt;Ex. image with single sharp peak (ie. grey value condensed in small area) will have low entropy value&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;mutual-information&#34;&gt;Mutual Information&lt;/h2&gt;
+
+&lt;p&gt;The goal of registration is to maximize mutual information or the overlaps. There are three ways of interpreting MI, in which they are identical but in different forms of expression and relation of variables.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;I(X, Y) = H(Y) - H(Y | X)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;This is the most closest form of mutual information. ie. MI of X and Y is subtracting entropy of H(Y) from the conditional entropy H(Y|X) (or p(Y) given p(X): chance of grey value in B given that corresponding image in A has grey value).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In expression of uncertainty, MI is the amount by which uncertainty about Y changes when the amount of X containing Y is given
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;I(X, Y) = H(X) + H(Y) - H(X, Y)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It is the most closest form to joint entropy. &lt;em&gt;H(X | Y)&lt;/em&gt; tells us that mutual information is greater when the joint entropy is lower. Small entropy or less dispersion would mean that information overlaps more.&lt;br /&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;I(X, Y) = Sum of [p(x,y) log (p(x,y) / p(x)p(y))&lt;/em&gt;&lt;/strong&gt;]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This formula is analogous to Kullback-Leibler distance, which measures the distance between two distributions. It measures the dependence of the two images by calculating the distance between the joint distribution of the image&amp;rsquo;s grey values p(x,y) and the joint distribution in case of independence of the two images p(x)p(y)&lt;/li&gt;
+&lt;li&gt;We will use this formula to measure MI later in the code&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;code-implementation&#34;&gt;Code Implementation&lt;/h2&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s try using Python to measure mutual information of given images. We will be mainly comparing in two ways: comparing the identical images, and two different images.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-let-s-begin-with-a-setup-and-direct-the-image-files&#34;&gt;1. Let&amp;rsquo;s begin with a setup, and direct the image files&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from __future__ import division
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+import nibabel as nib
+
+# set gray colormap and nearest neighbor interpolation by default
+plt.rcParams[&#39;image.cmap&#39;] = &#39;gray&#39;
+plt.rcParams[&#39;image.interpolation&#39;] = &#39;nearest&#39;
+
+# set the images
+os.chdir(&#39;/Users/Jin/Documents/MATLAB&#39;)
+
+img1 = &#39;4_23_Drake.nii&#39;
+img2 = &#39;4_24_Denzel_Washington.nii&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-let-s-slice-the-image-and-set-side-by-side-to-display&#34;&gt;2. Let&amp;rsquo;s slice the image and set side by side to display&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_img_slice(img, size=50):
+    &amp;quot;&amp;quot;&amp;quot;
+    load the image using nibabel and slice the image by given size
+
+    Parameters
+    ----------
+    img: nii image data read via nibabel
+
+
+    Returns
+    -------
+    numpy memmap: ndarray of image slice
+    &amp;quot;&amp;quot;&amp;quot;
+    img_data = nib.load(img)
+    img_data = img_data.get_data()
+    img_slice = img_data[:, :, size]  # 50 is arbitrary here
+    # convert any nans to 0s
+    img_nans = np.isnan(img_slice)
+    img_slice[img_nans] = 0
+    return img_slice
+
+img1_slice = get_img_slice(img1)
+img2_slice = get_img_slice(img2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# display images left and right
+def plot_raw(img1, img2):
+    plt.imshow(np.hstack((img1, img2)))
+    plt.show()
+
+plot_raw(img1_slice, img1_slice)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./mutual_information_neuroimaging_6_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-let-s-plot-a-1d-histogram-for-each-of-the-two-iamges&#34;&gt;3. Let&amp;rsquo;s plot a 1d histogram for each of the two iamges&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def plot_hist1d(img1, img2, bins=20):
+    &amp;quot;&amp;quot;&amp;quot;
+    one dimensional histogram of the slices
+
+    Parameters
+    ----------
+    img1: nii image data read via nibabel
+
+    img2: nii image data read via nibabel
+
+    bins: optional (default=20)
+        bin size of the histogram
+
+    Returns
+    -------
+    histogram
+        comparing two images side by side
+    &amp;quot;&amp;quot;&amp;quot;
+    fig, axes = plt.subplots(1, 2)
+    axes[0].hist(img1.ravel(), bins)
+    axes[0].set_title(&#39;Img1 histogram&#39;)
+    axes[1].hist(img2.ravel(), bins)
+    axes[1].set_title(&#39;Img2 histogram&#39;)
+    plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plot_hist1d(img1_slice, img2_slice)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./mutual_information_neuroimaging_9_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;4-let-s-plot-the-two-images-against-each-other-on-a-scatter-plot-and-calculate-correlation-coefficient&#34;&gt;4. Let&amp;rsquo;s plot the two images against each other on a scatter plot, and calculate correlation coefficient&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def plot_scatter2d(img1, img2):
+    &amp;quot;&amp;quot;&amp;quot;
+    plot the two image&#39;s histogram against each other
+
+    Parameters
+    ----------
+    img1: nii image data read via nibabel
+
+    img2: nii image data read via nibabel
+
+    Returns
+    -------
+    2d plotting of the two images and correlation coeeficient
+    &amp;quot;&amp;quot;&amp;quot;
+    corr = np.corrcoef(img1.ravel(), img2.ravel())[0, 1]
+    plt.plot(img1.ravel(), img2.ravel(), &#39;.&#39;)
+
+    plt.xlabel(&#39;Img1 signal&#39;)
+    plt.ylabel(&#39;Img2 signal&#39;)
+    plt.title(&#39;Img1 vs Img2 signal cc=&#39; + str(corr))
+    plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# this one is comparing two identical images so it should equal 1
+plot_scatter2d(img1_slice, img1_slice)
+
+# image 1 vs image 2
+plot_scatter2d(img1_slice, img2_slice)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./mutual_information_neuroimaging_12_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./mutual_information_neuroimaging_12_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;feature-space&#34;&gt;Feature Space&lt;/h3&gt;
+
+&lt;p&gt;Using MI as a registration measure, we plot a &lt;strong&gt;&lt;em&gt;feature space&lt;/em&gt;&lt;/strong&gt; (or &lt;strong&gt;&lt;em&gt;joint histogram&lt;/em&gt;&lt;/strong&gt;), a two-dimensional plot showing the combinations of grey values in each of the two images for all corresponding points. For example, for each corresponding point (x, y), in which x and y are coordinates of first and second images respectively,&lt;/p&gt;
+
+&lt;p&gt;As the alignment of the two images change, the feature space changes. The more correctly registered the two images are, the more anatomical structures will overlap, showing clusters for the grey values. When the images are misaligned, the intensity of the clusters for certain structures will decrease, and a new pair of (x, y) will be matched as the image gets incorrectly aligned with other nearby structures of the other image. This is be shown as the dispersion of the clustering.&lt;/p&gt;
+
+&lt;h4 id=&#34;5-let-s-plot-a-joint-histogram-now&#34;&gt;5. Let&amp;rsquo;s plot a joint histogram now&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def plot_joint_histogram(img1, img2, bins=20, log=True):
+    &amp;quot;&amp;quot;&amp;quot;
+    plot feature space. Given two images, the feature space is constructed by counting the number of times a combination of grey values occur
+
+    Parameters
+    ----------
+    img1: nii image data read via nibabel
+
+    img2: nii image data read via nibabel
+
+    bins: optional (default=20)
+        bin size of the histogram
+    log: boolean (default=True)
+        keeping it true will show a better contrasted image
+
+    Returns
+    -------
+    joint histogram
+        feature space of the two images in graph
+
+    &amp;quot;&amp;quot;&amp;quot;
+    hist_2d, x_edges, y_edges = np.histogram2d(img1.ravel(), img2.ravel(), bins)
+    # transpose to put the T1 bins on the horizontal axis and use &#39;lower&#39; to put 0, 0 at the bottom of the plot
+    if not log:
+        plt.imshow(hist_2d.T, origin=&#39;lower&#39;)
+        plt.xlabel(&#39;Img1 signal bin&#39;)
+        plt.ylabel(&#39;Img2 signal bin&#39;)
+
+    # log the values to reduce the bins with large values
+    hist_2d_log = np.zeros(hist_2d.shape)
+    non_zeros = hist_2d != 0
+    hist_2d_log[non_zeros] = np.log(hist_2d[non_zeros])
+    plt.imshow(hist_2d_log.T, origin=&#39;lower&#39;)
+    plt.xlabel(&#39;Img1 signal bin&#39;)
+    plt.ylabel(&#39;Img2 signal bin&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# this should print a linear graph as it&#39;s comparing it to itself
+print(plot_joint_histogram(img1_slice, img1_slice))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;None
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./mutual_information_neuroimaging_15_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# compare images 1 and 2
+print(plot_joint_histogram(img1_slice, img2_slice))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;None
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./mutual_information_neuroimaging_16_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;6-let-s-calculate-the-mutual-information-of-the-two-images-now&#34;&gt;6. Let&amp;rsquo;s calculate the mutual information of the two images now.&lt;/h4&gt;
+
+&lt;p&gt;We use the third formula stated above to measure the overlaps of the two images. The goal of registration is to maximize mutual information or the overlaps.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def mutual_information(img1, img2, bins=20):
+    &amp;quot;&amp;quot;&amp;quot;
+    measure the mutual information of the given two images
+
+    Parameters
+    ----------
+    img1: nii image data read via nibabel
+
+    img2: nii image data read via nibabel
+
+    bins: optional (default=20)
+        bin size of the histogram
+
+    Returns
+    -------
+    calculated mutual information: float
+
+    &amp;quot;&amp;quot;&amp;quot;
+    hist_2d, x_edges, y_edges = np.histogram2d(img1.ravel(), img2.ravel(), bins)
+
+    # convert bins counts to probability values
+    pxy = hist_2d / float(np.sum(hist_2d))
+    px = np.sum(pxy, axis=1)  # marginal x over y
+    py = np.sum(pxy, axis=0)  # marginal y over x
+    px_py = px[:, None] * py[None, :]  # broadcast to multiply marginals
+
+    # now we can do the calculation using the pxy, px_py 2D arrays
+    nonzeros = pxy &amp;gt; 0  # filer out the zero values
+    return np.sum(pxy[nonzeros] * np.log(pxy[nonzeros] / px_py[nonzeros]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# the MI value of the first should be greater than the second as the first is comparing the image to itself
+print(mutual_information(img1_slice, img1_slice))
+print(mutual_information(img1_slice, img2_slice))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;1.1967155090861803
+0.20578049748917815
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;calculating-the-grand-average-of-mutual-information&#34;&gt;Calculating the Grand Average of Mutual Information&lt;/h2&gt;
+
+&lt;p&gt;The codes above are detailed step-by-step processes. We can condense the codes above into one useful function that will allow us to examine the overall average of mutual information of each every scan image to the register image.&lt;/p&gt;
+
+&lt;p&gt;For example, given a register type (&amp;lsquo;rtf&amp;rsquo; for register to first image, or &amp;lsquo;rtm&amp;rsquo; for register to mean), it will calculate each scan to the register image, calculate the MI, and return the grand average MI value.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: The code is currently based on ACCRE system so the paths directing to the images must be changed for flexible use. The path should direct to the folder which holds all the scan images, and since it requires gigabytes of data, I had to implement the code on ACCRE-use only.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_avg_mi(subjID, type=&#39;rtf&#39;, saveText=False, verbose=False, nScans=187):
+    &amp;quot;&amp;quot;&amp;quot;
+    calculates the correlation coefficient and mutual information of the registered image to the rest of image files, and returns the grand average and trial averages
+
+    Parameters
+    ----------
+    subjID : str
+        string of subject data (ie. &#39;cdcatmr011&#39;)
+    type : str {&#39;rtf&#39;, &#39;rtm&#39;}
+        registration type that would either register to first scan image or the mean image (default: &#39;rtf&#39;)
+    saveText : boolean
+        if True, will save the table report to a separate text file (default: False)
+    verbose : boolean
+        if True, will print out which scan file is being worked on (default: False)
+    nScans : int
+        integer of how many scans to expect per each run (default: 187)
+
+    Returns
+    -------
+    cc_all: list
+        list of all correlation coefficient values
+    mi_all: list
+        list of all mutual information values
+
+    &amp;quot;&amp;quot;&amp;quot;
+    saveText = False
+    subj = str(subjID)
+    baseDir = &#39;/scratch/polynlab/fmri/cdcatmr/&#39;
+    funcDir = baseDir + subj + &#39;/images/func&#39;
+    tag = &#39;func&#39;
+    if type == &#39;rtf&#39;:  # register to first
+        sourceImg = &#39;/func1/func1_00001.nii&#39;  # [rmeanfunc1_00001.nii, meanfunc1_00001.nii]
+        # tag = &#39;func&#39;
+    elif type == &#39;rtm&#39;:  # register to mean
+        sourceImg = &#39;/func1/meanfunc1_00001.nii&#39;
+        # tag = &#39;rfunc&#39;
+    resDir = &#39;/home/jeonj1/proj/mi&#39;
+
+    os.chdir(funcDir)
+    funcs = os.listdir(funcDir)
+    funcs.sort()  # funcs = [&#39;func1&#39;, &#39;func2&#39;, ... &#39;func7&#39;, &#39;func8&#39;]
+
+    meanImg = mi.get_img_slice(funcDir + sourceImg, verbose=verbose)
+    mi_listVar = []
+    cc_listVar = []
+    # loop by each functional run
+    for i in range(0, len(funcs)):
+        curr_func = funcs[i]
+        # let&#39;s first create list variables for each functional run
+        temp = &#39;&#39;
+        temp = &#39;mi_&#39; + curr_func + &#39; = []&#39;
+        exec(temp)
+        mi_listVar.append(&#39;mi_&#39; + curr_func)
+        temp = &#39;&#39;
+        temp = &#39;cc_&#39; + curr_func + &#39; = []&#39;
+        exec(temp)
+        cc_listVar.append(&#39;cc_&#39; + curr_func)
+
+        # now let&#39;s read in each functional run folder
+        cfuncDir = funcDir + &#39;/&#39; + curr_func
+        os.chdir(cfuncDir)
+        nii_files = os.listdir(cfuncDir)
+        nii_files = [x for x in nii_files if x.startswith(tag) and x.endswith(&#39;nii&#39;)]
+        nii_files.sort()
+
+        # sanity check: count scan files
+        assert len(nii_files) == nScans, &amp;quot;total scan files found do not match &amp;quot; + str(nScans) + &amp;quot; for func run &amp;quot; + str(i+1)
+
+        # loop by each scan within run
+        for j in range(0, nScans):
+            if verbose:
+                print(&#39;starting &#39; + curr_func + &#39; | scan &#39; + str(j+1))
+            curr_nii = mi.get_img_slice(nii_files[j], verbose=verbose)
+            corr = mi.get_core(meanImg, curr_nii)
+            mutual_info = mi.mutual_information(meanImg, curr_nii)
+
+            # append each list
+            temp_cc = &#39;cc_&#39; + curr_func + &#39;.append(corr)&#39;
+            exec(temp_cc)
+            temp_mi = &#39;mi_&#39; + curr_func + &#39;.append(mutual_info)&#39;
+            exec(temp_mi)
+
+    cc_sums = []
+    mi_sums = []
+    for r in range(0, len(funcs)):
+        cc_sums.append(sum(eval(cc_listVar[r])))
+        mi_sums.append(sum(eval(mi_listVar[r])))
+
+    # get all entries in a single list
+    cc_all = []
+    mi_all = []
+    for r in range(0, len(funcs)):
+        cc_all = cc_all + eval(cc_listVar[r])
+        mi_all = mi_all + eval(mi_listVar[r])
+
+
+    reports = []
+    reports.append([&#39;avg cc&#39;, sum(cc_sums)/(nScans*len(funcs))])
+    reports.append([&#39;avg mi&#39;, sum(mi_sums)/(nScans*len(funcs))])
+    reports.append([&#39;cc by runs&#39;, &#39;-----&#39;])
+    for l in cc_listVar:
+        reports.append([l, sum(eval(l))/nScans])
+    reports.append([&#39;mi by runs&#39;, &#39;-----&#39;])
+    for l in mi_listVar:
+        reports.append([l, sum(eval(l))/nScans])
+
+    print(tabulate(reports))
+
+    if saveText:
+        with open(resDir + &#39;/&#39; + subj + &#39;_mi_&#39; + os.path.basename(sourceImg) + &#39;.txt&#39;, &#39;w&#39;) as f:
+            for item in reports:
+                f.write(&amp;quot;%s\n&amp;quot; % item)
+        print(&#39;saved the table report to &#39; + resDir)
+
+    return cc_all, mi_all
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;t-test-and-plotting&#34;&gt;T-test and Plotting&lt;/h2&gt;
+
+&lt;p&gt;We can use the function &lt;code&gt;get_avg_mi&lt;/code&gt; above to calculate the grand average. Then we will run a t-test on the two averages and plot the differences for visual reference. The script below is currently somewhat hard coded for simplicity sake.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nScans = 187
+nRuns = 8
+
+# we use the get_avg_mi function stated above. Specify the subject and register type.
+cc1, mi1 = get_avg_mi(&#39;cdcatmr066&#39;, &#39;rtf&#39;, verbose=True)  # register to first scan
+cc2, mi2 = get_avg_mi(&#39;cdcatmr066&#39;, &#39;rtm&#39;, verbose=True)  # register to mean
+
+assert len(cc1) == len(cc2) == nScans * nRuns
+assert len(mi1) == len(mi2) == nScans * nRuns
+
+cc_t, cc_p = stats.ttest_ind(cc1, cc2)
+mi_t, mi_p = stats.ttest_ind(mi1, mi2)
+
+
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+# switch matplotlib backend so that it knows it won&#39;t print anything.
+plt.switch_backend(&#39;agg&#39;)
+
+# sns.set(color_codes=True)
+sns.set_color_codes(&#39;pastel&#39;)
+# sns.set_palette(&amp;quot;tab10&amp;quot;)
+
+plt.figure(0)
+sns.distplot(cc1, label=&#39;rtf&#39;);
+sns.distplot(cc2, label=&#39;rtm&#39;);
+plt.legend()
+plt.title(&#39;correlation coefficient n=&#39; + str(len(cc1)))
+plt.savefig(&#39;/home/jeonj1/proj/mi/cc_distplot.png&#39;)
+
+plt.figure(1)
+sns.distplot(mi1, label=&#39;rtf&#39;);
+sns.distplot(mi2, label=&#39;rtm&#39;);
+plt.legend()
+plt.title(&#39;mutual info | n=&#39; + str(len(mi1)))
+plt.savefig(&#39;/home/jeonj1/proj/mi/mi_distplot.png&#39;)
+
+
+# let&#39;s plot box-dist plot combined
+f, (ax_box1, ax_box2, ax_dist) = plt.subplots(3, sharex=True, gridspec_kw= {&amp;quot;height_ratios&amp;quot;: (0.3, 0.3, 1)})
+
+cc1_mean = np.mean(cc1)
+cc2_mean = np.mean(cc2)
+
+sns.boxplot(cc1, ax=ax_box1, color=&#39;b&#39;)
+sns.boxplot(cc2, ax=ax_box2, color=&#39;r&#39;)
+ax_box1.axvline(cc1_mean, color=&#39;g&#39;, linestyle=&#39;--&#39;)
+ax_box2.axvline(cc2_mean, color=&#39;m&#39;, linestyle=&#39;--&#39;)
+plt.subplots_adjust(top=0.87)
+plt.suptitle(&#39;correlation coefficient n=&#39; + str(len(cc1)), fontsize = 16)
+
+sns.distplot(cc1, ax=ax_dist, label=&#39;rtf&#39;, color=&#39;b&#39;, norm_hist=True)
+sns.distplot(cc2, ax=ax_dist, label=&#39;rtm&#39;, color=&#39;r&#39;, norm_hist=True)
+ax_dist.axvline(cc1_mean, color=&#39;g&#39;, linestyle=&#39;--&#39;)
+ax_dist.axvline(cc2_mean, color=&#39;m&#39;, linestyle=&#39;--&#39;)
+plt.legend()
+ax_box1.set(xlabel=&#39;&#39;)
+ax_box2.set(xlabel=&#39;&#39;)
+plt.savefig(&#39;/home/jeonj1/proj/mi/cc_box_distplot.png&#39;)
+
+
+# let&#39;s plot box-dist plot combined
+f, (ax_box1, ax_box2, ax_dist) = plt.subplots(3, sharex=True, gridspec_kw= {&amp;quot;height_ratios&amp;quot;: (0.3, 0.3, 1)})
+
+mi1_mean = np.mean(mi1)
+mi2_mean = np.mean(mi2)
+
+sns.boxplot(mi1, ax=ax_box1, color=&#39;b&#39;)
+sns.boxplot(mi2, ax=ax_box2, color=&#39;r&#39;)
+ax_box1.axvline(mi1_mean, color=&#39;g&#39;, linestyle=&#39;--&#39;)
+ax_box2.axvline(mi2_mean, color=&#39;m&#39;, linestyle=&#39;--&#39;)
+plt.subplots_adjust(top=0.87)
+plt.suptitle(&#39;mutual information n=&#39; + str(len(cc1)), fontsize = 16)
+
+sns.distplot(mi1, ax=ax_dist, label=&#39;rtf&#39;, color=&#39;b&#39;, norm_hist=True)
+sns.distplot(mi2, ax=ax_dist, label=&#39;rtm&#39;, color=&#39;r&#39;, norm_hist=True)
+ax_dist.axvline(mi1_mean, color=&#39;g&#39;, linestyle=&#39;--&#39;)
+ax_dist.axvline(mi2_mean, color=&#39;m&#39;, linestyle=&#39;--&#39;)
+plt.legend()
+ax_box1.set(xlabel=&#39;&#39;)
+ax_box2.set(xlabel=&#39;&#39;)
+plt.savefig(&#39;/home/jeonj1/proj/mi/mi_box_distplot.png&#39;)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The following code above will generate two joint plots that combine the box plot and distribution plot for correlation coefficient and mutual information. The first image below shows the correlation coefficient distribution (note that the max is at 1.00). The N here represents the total number of scan images that were compared.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;cc_box_distplot.png&#34; alt=&#34;CC distribution plot for rtf vs rtm&#34; title=&#34;CC distribution plot for rtf vs rtm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The image below is what we&amp;rsquo;re really interested in (!The title should be changed to MI!). You can see the values range from 0.6~1.4. Also, it shows evidence that RTF version has outliers depicted in the box plot, but the outlier is moderated with the RTM method.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;mi_box_distplot.png&#34; alt=&#34;MI distribution plot for rtf vs rtm&#34; title=&#34;MI distribution plot for rtf vs rtm&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;references-useful-links&#34;&gt;References &amp;amp; Useful Links&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://people.csail.mit.edu/fisher/publications/papers/tsai99.pdf&#34; target=&#34;_blank&#34;&gt;https://people.csail.mit.edu/fisher/publications/papers/tsai99.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.2130&amp;amp;rep=rep1&amp;amp;type=pdf&#34; target=&#34;_blank&#34;&gt;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.2130&amp;amp;rep=rep1&amp;amp;type=pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://matthew-brett.github.io/teaching/mutual_information.html#t1-t2-scatter&#34; target=&#34;_blank&#34;&gt;https://matthew-brett.github.io/teaching/mutual_information.html#t1-t2-scatter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>fMRI Neuroimaging &amp; Classifier Coming Soon...</title>
