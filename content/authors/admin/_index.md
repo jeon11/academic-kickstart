@@ -74,7 +74,7 @@ user_groups:
 I am a masters student at Human Centered Design and Engineering Program (HCDE) at the University of Washington's College of Engineering.
 <!-- I received my bachelors in cognitive science from UC Berkeley graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology. -->
 
-I previously worked as a research analyst at the [Vanderbilt Computational Memory Lab](https://memory.psy.vanderbilt.edu/w/index.php/Main_Page), facilitating various research in academia and handling large data for preprocessing, analysis, and visualization.
+My primary interests lie in UX design and research. I previously worked as a research analyst in academia, facilitating various research in human memory and handling large data for preprocessing, analysis, and visualization.
 
 <!-- Just as cameras were first invented based on our visual system, I believe cognitive science and current endeavors in artificial intelligence are studies that attempt to imitate the human brain, and ultimately better understand human cognition. -->
 
