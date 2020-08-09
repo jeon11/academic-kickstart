@@ -10,23 +10,28 @@ authors:
 superuser: true
 
 # Role/position
-role: BA in Cognitive Science ('18)
+role: M.S. in HCDE ('22)
 
 # Organizations/Affiliations
 organizations:
-- name: University of California, Berkeley
+- name: University of Washington - Seattle
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
 bio: ""
 
 interests:
-- Brain | Cognition
+- UX Research
 - HCI | UIUX
+- AI | Cognition
 
 education:
   courses:
-  - course: BA in Cognitive Science
+  - course: M.S. in Human Centered Design and Engineering
+    institution: University of Washington - Seattle
+    year: 2022
+
+  - course: B.A. in Cognitive Science
     institution: University of California, Berkeley
     year: 2018
 
@@ -38,12 +43,15 @@ social:
 - icon: cv
   icon_pack: ai
   link: "https://drive.google.com/file/d/0B9S8oX9rcjjjMDY3ZlVxczlReVk/view?usp=sharing"
-- icon: envelope
-  icon_pack: fas
-  link: "mailto:jinjeon@berkeley.edu"  # contact /For a direct email link, use "mailto:test@example.org".
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/jinjeon/
 - icon: github
   icon_pack: fab
   link: https://github.com/jeon11
+- icon: envelope
+  icon_pack: fas
+  link: "mailto:jinjeon@berkeley.edu"  # contact /For a direct email link, use "mailto:test@example.org".
 - icon: spotify
   icon_pack: fab
   link: https://open.spotify.com/user/1232924859/playlist/1MSImXdEIq5x1iqXRJurjZ
@@ -63,9 +71,10 @@ user_groups:
 - []
 ---
 
-I graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology.
+I am a masters student at Human Centered Design and Engineering Program (HCDE) at the University of Washington's College of Engineering.
+<!-- I received my bachelors in cognitive science from UC Berkeley graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology. -->
 
-I currently work as a lab manager/research analyst at [Vanderbilt Computational Memory Lab](https://memory.psy.vanderbilt.edu/w/index.php/Main_Page) directed by PI Sean Polyn, facilitating ongoing studies to explore cognitive and neural mechanism of human memory.
+I previously worked as a research analyst at the [Vanderbilt Computational Memory Lab](https://memory.psy.vanderbilt.edu/w/index.php/Main_Page), facilitating various research in academia and handling large data for preprocessing, analysis, and visualization.
 
 <!-- Just as cameras were first invented based on our visual system, I believe cognitive science and current endeavors in artificial intelligence are studies that attempt to imitate the human brain, and ultimately better understand human cognition. -->
 
