@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>startup | Jin Jeon</title>
-    <link>http://jinjeon.me/tags/startup/</link>
-      <atom:link href="http://jinjeon.me/tags/startup/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jinjeon.me/tags/startup/</link>
+      <atom:link href="https://jinjeon.me/tags/startup/index.xml" rel="self" type="application/rss+xml" />
     <description>startup</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Tue, 10 Nov 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://jinjeon.me/img/icon.png</url>
+      <url>https://jinjeon.me/img/icon.png</url>
       <title>startup</title>
-      <link>http://jinjeon.me/tags/startup/</link>
+      <link>https://jinjeon.me/tags/startup/</link>
     </image>
     
     <item>
       <title>Homy, Private Social Network for Families</title>
-      <link>http://jinjeon.me/project/homy/</link>
+      <link>https://jinjeon.me/project/homy/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/project/homy/</guid>
+      <guid>https://jinjeon.me/project/homy/</guid>
       <description>
 
-&lt;p&gt;In Fall 2015, I took a semester off to build my own mobile app. I wanted to develop a niche-specific social media that is just for families. Starting the project with mere passion and lacking practical knowledge, I self-taught how to conduct &lt;a href=&#34;http://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt;market research&lt;/a&gt;, design and build prototypes. I hired a developer to make tangible results, and won first place in &lt;a href=&#34;http://rehoboth.co.kr&#34; target=&#34;_blank&#34;_&gt;Rehoboth&lt;/a&gt; Business Idea Competition with $5k support. I also received free office space from the state government.&lt;/p&gt;
+&lt;p&gt;In Fall 2015, I took a semester off to build my own mobile app. I wanted to develop a niche-specific social media that is just for families. Starting the project with mere passion and lacking practical knowledge, I self-taught how to conduct &lt;a href=&#34;https://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt;market research&lt;/a&gt;, design and build prototypes. I hired a developer to make tangible results, and won first place in &lt;a href=&#34;http://rehoboth.co.kr&#34; target=&#34;_blank&#34;_&gt;Rehoboth&lt;/a&gt; Business Idea Competition with $5k support. I also received free office space from the state government.&lt;/p&gt;
 
 &lt;p&gt;&lt;li&gt; Developed storyboard and high fidelity prototype through iterations of market research, surveys, and user testing
 &lt;/li&gt;
-&lt;img src=&#34;http://jinjeon.me/img/homyui.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jinjeon.me/img/homyui.png&#34; alt=&#34;&#34; /&gt;
 &lt;li&gt;
 From ideation and product management to recruiting, engaged in every aspect of early stage startup as founder
 &lt;/li&gt;&lt;/p&gt;
@@ -40,14 +40,14 @@ We are spending the least time with the most important people in our lives, fami
 &lt;p&gt;&lt;strong&gt;Design Solution:&lt;/strong&gt;&lt;br&gt;
 Homy attempts to solve this growing social problem by recreating online home and allowing families to seamlessly connect. With unique post-it style fridge page, Homy wants to encourage families to communicate more often. The mission is &lt;em&gt;to provide emotional communication service to enrich family’s real, offline relationship.&lt;/em&gt;
 &lt;br&gt;
-&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-1.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-2.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-3.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-4.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://jinjeon.me/pdf/Homy_A2-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-1.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-2.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-3.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-4.png&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Check more at:&lt;br&gt;
-&lt;a href=&#34;http://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt; &lt;strong&gt;Defining Market Opportunity.pdf&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+&lt;a href=&#34;https://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt; &lt;strong&gt;Defining Market Opportunity.pdf&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
 </description>
     </item>
     

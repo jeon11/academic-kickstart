@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks | Jin Jeon</title>
-    <link>http://jinjeon.me/talk/</link>
-      <atom:link href="http://jinjeon.me/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jinjeon.me/talk/</link>
+      <atom:link href="https://jinjeon.me/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright>
     <image>
-      <url>http://jinjeon.me/img/icon.png</url>
+      <url>https://jinjeon.me/img/icon.png</url>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>http://jinjeon.me/talk/</link>
+      <link>https://jinjeon.me/talk/</link>
     </image>
     
   </channel>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | Jin Jeon</title>
-    <link>http://jinjeon.me/post/</link>
-      <atom:link href="http://jinjeon.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jinjeon.me/post/</link>
+      <atom:link href="https://jinjeon.me/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://jinjeon.me/img/icon.png</url>
+      <url>https://jinjeon.me/img/icon.png</url>
       <title>Posts</title>
-      <link>http://jinjeon.me/post/</link>
+      <link>https://jinjeon.me/post/</link>
     </image>
     
     <item>
       <title>Mutual Information in Neuroimaging</title>
-      <link>http://jinjeon.me/post/mutual-info/</link>
+      <link>https://jinjeon.me/post/mutual-info/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/post/mutual-info/</guid>
+      <guid>https://jinjeon.me/post/mutual-info/</guid>
       <description>
 
 &lt;h2 id=&#34;entropy-in-neuroimaging&#34;&gt;Entropy in Neuroimaging&lt;/h2&gt;
@@ -565,23 +565,23 @@ plt.savefig(&#39;/home/jeonj1/proj/mi/mi_box_distplot.png&#39;)
     
     <item>
       <title>fMRI Neuroimaging &amp; Classifier Coming Soon...</title>
-      <link>http://jinjeon.me/post/fmri/</link>
+      <link>https://jinjeon.me/post/fmri/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/post/fmri/</guid>
+      <guid>https://jinjeon.me/post/fmri/</guid>
       <description>&lt;p&gt;In prep for fMRI neuroimaging processing and building classifier&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Universal Sentence Encoder and GloVe on Narrative Semantic Representation</title>
-      <link>http://jinjeon.me/post/vectorspace/</link>
+      <link>https://jinjeon.me/post/vectorspace/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/post/vectorspace/</guid>
+      <guid>https://jinjeon.me/post/vectorspace/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;See full repo at &lt;a href=&#34;https://github.com/jeon11/use-glove-narrative.git&#34; target=&#34;_blank&#34;&gt;https://github.com/jeon11/use-glove-narrative.git&lt;/a&gt;&lt;/strong&gt;
 &lt;br&gt;
-&lt;strong&gt;Note:&lt;/strong&gt; The results are shown in the &lt;a href=&#34;http://jinjeon.me/#posters&#34;&gt;poster&lt;/a&gt;&lt;/p&gt;
+&lt;strong&gt;Note:&lt;/strong&gt; The results are shown in the &lt;a href=&#34;https://jinjeon.me/#posters&#34;&gt;poster&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
@@ -1201,9 +1201,9 @@ INFO:tensorflow:Saver not created because there are no variables in the graph to
     
     <item>
       <title>EEG/Signal Processing--Advanced Part 2</title>
-      <link>http://jinjeon.me/post/eeg-advanced/</link>
+      <link>https://jinjeon.me/post/eeg-advanced/</link>
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/post/eeg-advanced/</guid>
+      <guid>https://jinjeon.me/post/eeg-advanced/</guid>
       <description>
 
 &lt;h3 id=&#34;note&#34;&gt;Note:&lt;/h3&gt;
@@ -1536,9 +1536,9 @@ fig8 = arevoked_tlst_c4.plot(titles=&#39;cond4: low cos/inval&#39;)
     
     <item>
       <title>EEG/Signal Processing--Basics Part 1</title>
-      <link>http://jinjeon.me/post/eeg-basics/</link>
+      <link>https://jinjeon.me/post/eeg-basics/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/post/eeg-basics/</guid>
+      <guid>https://jinjeon.me/post/eeg-basics/</guid>
       <description>
 
 &lt;h3 id=&#34;note&#34;&gt;Note:&lt;/h3&gt;

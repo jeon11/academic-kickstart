@@ -2,173 +2,173 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Jin Jeon</title>
-    <link>http://jinjeon.me/tags/</link>
-      <atom:link href="http://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jinjeon.me/tags/</link>
+      <atom:link href="https://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://jinjeon.me/img/icon.png</url>
+      <url>https://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
-      <link>http://jinjeon.me/tags/</link>
+      <link>https://jinjeon.me/tags/</link>
     </image>
     
     <item>
       <title>entropy</title>
-      <link>http://jinjeon.me/tags/entropy/</link>
+      <link>https://jinjeon.me/tags/entropy/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/entropy/</guid>
+      <guid>https://jinjeon.me/tags/entropy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mutual information</title>
-      <link>http://jinjeon.me/tags/mutual-information/</link>
+      <link>https://jinjeon.me/tags/mutual-information/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/mutual-information/</guid>
+      <guid>https://jinjeon.me/tags/mutual-information/</guid>
       <description></description>
     </item>
     
     <item>
       <title>neuroimaging</title>
-      <link>http://jinjeon.me/tags/neuroimaging/</link>
+      <link>https://jinjeon.me/tags/neuroimaging/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/neuroimaging/</guid>
+      <guid>https://jinjeon.me/tags/neuroimaging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>http://jinjeon.me/tags/python/</link>
+      <link>https://jinjeon.me/tags/python/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/python/</guid>
+      <guid>https://jinjeon.me/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>brain</title>
-      <link>http://jinjeon.me/tags/brain/</link>
+      <link>https://jinjeon.me/tags/brain/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/brain/</guid>
+      <guid>https://jinjeon.me/tags/brain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fmri</title>
-      <link>http://jinjeon.me/tags/fmri/</link>
+      <link>https://jinjeon.me/tags/fmri/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/fmri/</guid>
+      <guid>https://jinjeon.me/tags/fmri/</guid>
       <description></description>
     </item>
     
     <item>
       <title>research</title>
-      <link>http://jinjeon.me/tags/research/</link>
+      <link>https://jinjeon.me/tags/research/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/research/</guid>
+      <guid>https://jinjeon.me/tags/research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>semantics</title>
-      <link>http://jinjeon.me/tags/semantics/</link>
+      <link>https://jinjeon.me/tags/semantics/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/semantics/</guid>
+      <guid>https://jinjeon.me/tags/semantics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tensorflow</title>
-      <link>http://jinjeon.me/tags/tensorflow/</link>
+      <link>https://jinjeon.me/tags/tensorflow/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/tensorflow/</guid>
+      <guid>https://jinjeon.me/tags/tensorflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vectorspace</title>
-      <link>http://jinjeon.me/tags/vectorspace/</link>
+      <link>https://jinjeon.me/tags/vectorspace/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/vectorspace/</guid>
+      <guid>https://jinjeon.me/tags/vectorspace/</guid>
       <description></description>
     </item>
     
     <item>
       <title>eeg</title>
-      <link>http://jinjeon.me/tags/eeg/</link>
+      <link>https://jinjeon.me/tags/eeg/</link>
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/eeg/</guid>
+      <guid>https://jinjeon.me/tags/eeg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>signal processing</title>
-      <link>http://jinjeon.me/tags/signal-processing/</link>
+      <link>https://jinjeon.me/tags/signal-processing/</link>
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/signal-processing/</guid>
+      <guid>https://jinjeon.me/tags/signal-processing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hci</title>
-      <link>http://jinjeon.me/tags/hci/</link>
+      <link>https://jinjeon.me/tags/hci/</link>
       <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/hci/</guid>
+      <guid>https://jinjeon.me/tags/hci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ui</title>
-      <link>http://jinjeon.me/tags/ui/</link>
+      <link>https://jinjeon.me/tags/ui/</link>
       <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/ui/</guid>
+      <guid>https://jinjeon.me/tags/ui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cognition</title>
-      <link>http://jinjeon.me/tags/cognition/</link>
+      <link>https://jinjeon.me/tags/cognition/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/cognition/</guid>
+      <guid>https://jinjeon.me/tags/cognition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>experiment</title>
-      <link>http://jinjeon.me/tags/experiment/</link>
+      <link>https://jinjeon.me/tags/experiment/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/experiment/</guid>
+      <guid>https://jinjeon.me/tags/experiment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>psychology</title>
-      <link>http://jinjeon.me/tags/psychology/</link>
+      <link>https://jinjeon.me/tags/psychology/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/psychology/</guid>
+      <guid>https://jinjeon.me/tags/psychology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>classifier</title>
-      <link>http://jinjeon.me/tags/classifier/</link>
+      <link>https://jinjeon.me/tags/classifier/</link>
       <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/classifier/</guid>
+      <guid>https://jinjeon.me/tags/classifier/</guid>
       <description></description>
     </item>
     
     <item>
       <title>prototyping</title>
-      <link>http://jinjeon.me/tags/prototyping/</link>
+      <link>https://jinjeon.me/tags/prototyping/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/prototyping/</guid>
+      <guid>https://jinjeon.me/tags/prototyping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>startup</title>
-      <link>http://jinjeon.me/tags/startup/</link>
+      <link>https://jinjeon.me/tags/startup/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/tags/startup/</guid>
+      <guid>https://jinjeon.me/tags/startup/</guid>
       <description></description>
     </item>
     

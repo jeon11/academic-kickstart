@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Jin Jeon</title>
-    <link>http://jinjeon.me/authors/</link>
-      <atom:link href="http://jinjeon.me/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jinjeon.me/authors/</link>
+      <atom:link href="https://jinjeon.me/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright>
     <image>
-      <url>http://jinjeon.me/img/icon.png</url>
+      <url>https://jinjeon.me/img/icon.png</url>
       <title>Authors</title>
-      <link>http://jinjeon.me/authors/</link>
+      <link>https://jinjeon.me/authors/</link>
     </image>
     
     <item>
       <title></title>
-      <link>http://jinjeon.me/authors/admin/</link>
+      <link>https://jinjeon.me/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://jinjeon.me/authors/admin/</guid>
+      <guid>https://jinjeon.me/authors/admin/</guid>
       <description>&lt;p&gt;I am a masters student at Human Centered Design and Engineering Program (HCDE) at the University of Washington&amp;rsquo;s College of Engineering.
 &lt;!-- I received my bachelors in cognitive science from UC Berkeley graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology. --&gt;&lt;/p&gt;
 
