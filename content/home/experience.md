@@ -3,9 +3,9 @@
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 30  # Order that this section will appear.
+weight = 20  # Order that this section will appear.
 
-title = "Professional Experience"
+title = "Work Experience"
 subtitle = ""
 
 # Date format for experience
@@ -19,14 +19,38 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Lab Manager/Research Analyst"
+  title = "UX Research Intern (Remote)"
+  company = "Navigating Cancer"
+  company_url = "https://www.navigatingcancer.com"
+  location = "Seattle, WA"
+  date_start = "2020-06-01"
+  date_end = "2020-09-01"
+  description = """
+  Conducted user research and qualitative data analysis to propose potential features for the health tracker.
+  <details>
+  <summary>See in detail:</summary>
+  <li>
+  Performed qualitative research to explore user problem, conducting over 10 interviews with various stakeholders
+  </li>
+
+  <li>
+  Presented a prototype with multiple features that would enhance the user experience of the health tracker tool
+  </li>
+
+  <br>
+  **Skills:** Figma, Qualitative Research, User Interviews & Surveys, Affinity Diagramming, Working as an internationally distributed team
+  </details>
+  """
+
+[[experience]]
+  title = "Research Analyst"
   company = "Vanderbilt Computational Memory Lab"
   company_url = "https://memory.psy.vanderbilt.edu/w/index.php/Main_Page"
   location = "Nashville, TN"
   date_start = "2018-04-01"
-  date_end = ""
+  date_end = "2020-07-15"
   description = """
-  **Currently working on multiple projects in behavioral, EEG and fMRI studies to explore human memory.**
+  Facilitated multiple projects in behavioral, EEG and fMRI studies to explore human memory.
   <details>
   <summary>See in detail:</summary>
   <li>
@@ -34,22 +58,14 @@ date_format = "Jan 2006"
   </li>
 
   <li>
-  Coded experiment that communicates with fMRI system to explore [neural mechanism](/post/fmri) in categorization and temporal organization of memory system
-  </li>
-
-  <li>
-  Utilized [vector space models](/post/vectorspace), such as GloVe and USE, to examine how semantics is mapped in memory space
-  </li>
-
-  <li>
-  Developed behavioral and EEG experiments to explore the effect of cosine similarity on feature verification task
+  Applied [vector space models](/post/vectorspace), such as GloVe and USE, to measure cosine similarities between idea units and characterized their semantic representations in short and long term memory
   </li>
 
   <li>
   Analyzed EEG data by filtering noise and artifacts using independent component analysis to [create evoked response](/post/eeg-advanced/)
   </li>
   <br>
-  **Skills:** Python, MATLAB, Neuroimaging/Signal processing, Machine Learning
+  **Skills:** Python, MATLAB, Neuroimaging, Machine Learning
   </details>
   """
 
