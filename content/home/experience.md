@@ -30,11 +30,19 @@ date_format = "Jan 2006"
   <details>
   <summary>See in detail:</summary>
   <li>
-  Performed qualitative research to explore user problem, conducting over 10 interviews with various stakeholders
+  Ideated new features based on user stories generated from surveys and interviews with clinicians and patients
   </li>
 
   <li>
-  Presented a prototype with multiple features that would enhance the user experience of the health tracker tool
+  Validated prototype through iterations of concept-testing and evaluation
+  </li>
+
+  <li>
+  Collaborated as an internationally distributed cross-functional team of product manager, researchers, and designers to improve patients’ engagement with health tracker and symptom management
+  </li>
+
+  <li>
+  Evangelized the impact of research by presenting findings to the leaders and internal stakeholders
   </li>
 
   <br>

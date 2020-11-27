@@ -5,12 +5,37 @@
     <link>https://jinjeon.me/project/</link>
       <atom:link href="https://jinjeon.me/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Sun, 10 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Projects</title>
       <link>https://jinjeon.me/project/</link>
     </image>
+    
+    <item>
+      <title>Navigating Cancer (NDA)</title>
+      <link>https://jinjeon.me/project/navigating-cancer/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project/navigating-cancer/</guid>
+      <description>
+
+&lt;p&gt;In summer 2020, I had a chance to work with the health tracker team at Navigating Cancer, a company that is devoted to enhancing the patient relationship management for cancer patients. During the weird time of COVID, the research team was working remotely as an international team with each of us in different time zones. I was also flying around being in the US and in my hometown Korea.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-design-process&#34;&gt;The Design Process&lt;/h2&gt;
+
+&lt;p&gt;We used design thinking framework to help us guide our research focus by better framing the problem and solving the users’ underlying needs.We adapted the double-diamond model, which maps the divergent and convergent stages of the design process. The model is divided into 4 phases (discover, define, develop, and deliver). We begin by exploring the users’ problem space through various research. Then we narrow down to defining the user needs. At the developing phase, we would build prototypes and deliver to the end users to test the product.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jinjeon.me/pdf/navigating-cancer-resources/double-diamond.pdf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While the ideal model is a perfectly-shaped two diamonds, the reality of our journey was rather a deformed diamond process. As we had to go back-and-forth within each phase, we had multiple pivots, which ended up being a valuable process as we gained greater insights to the problem space.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://jinjeon.me/pdf/navigating-cancer-resources/deformed-diamond.pdf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Tangible UI: Augmented Shadow Play</title>

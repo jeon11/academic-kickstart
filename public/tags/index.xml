@@ -5,12 +5,28 @@
     <link>https://jinjeon.me/tags/</link>
       <atom:link href="https://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
       <link>https://jinjeon.me/tags/</link>
     </image>
+    
+    <item>
+      <title>research</title>
+      <link>https://jinjeon.me/tags/research/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>startup</title>
+      <link>https://jinjeon.me/tags/startup/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/startup/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>entropy</title>
@@ -57,14 +73,6 @@
       <link>https://jinjeon.me/tags/fmri/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/fmri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>research</title>
-      <link>https://jinjeon.me/tags/research/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/research/</guid>
       <description></description>
     </item>
     
@@ -161,14 +169,6 @@
       <link>https://jinjeon.me/tags/prototyping/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/prototyping/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>startup</title>
-      <link>https://jinjeon.me/tags/startup/</link>
-      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/startup/</guid>
       <description></description>
     </item>
     

@@ -3,12 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jinjeon.me/tags/entropy/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
+    <loc>https://jinjeon.me/</loc>
+    <lastmod>2020-07-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jinjeon.me/</loc>
+    <loc>https://jinjeon.me/project/navigating-cancer/</loc>
+    <lastmod>2020-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/project/</loc>
+    <lastmod>2020-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/tags/research/</loc>
+    <lastmod>2020-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/tags/startup/</loc>
+    <lastmod>2020-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/tags/</loc>
+    <lastmod>2020-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/tags/entropy/</loc>
     <lastmod>2020-01-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,11 +63,6 @@
   </url>
   
   <url>
-    <loc>https://jinjeon.me/tags/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jinjeon.me/tags/brain/</loc>
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -55,11 +75,6 @@
   <url>
     <loc>https://jinjeon.me/post/fmri/</loc>
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/tags/research/</loc>
-    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -104,11 +119,6 @@
   
   <url>
     <loc>https://jinjeon.me/tags/hci/</loc>
-    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/project/</loc>
     <lastmod>2017-12-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -159,11 +169,6 @@
   
   <url>
     <loc>https://jinjeon.me/tags/prototyping/</loc>
-    <lastmod>2015-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/tags/startup/</loc>
     <lastmod>2015-11-10T00:00:00+00:00</lastmod>
   </url>
   
