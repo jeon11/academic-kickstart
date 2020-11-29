@@ -21,15 +21,15 @@ subtitle = ""
   description = "Python (SciPy, NumPy, Pandas, TensorFlow, Matplotlib, Seaborn, SciKit-Learn)<br>MATLAB; HTML, CSS, jQuery"
 
 [[feature]]
-  icon = "chart-line"
-  icon_pack = "fas"
-  name = "UX"
-  description = "Surveys, Competitive Analysis, Interviews, Prototyping, User Testing, Journey Mapping"
-
-[[feature]]
   icon = "user-check"
   icon_pack = "fas"
-  name = "Curiosity"
+  name = "UX"
+  description = "Surveys, Interviews, Competitive Analysis, Prototyping, User Testing, Journey Mapping"
+
+[[feature]]
+  icon = "heart"
+  icon_pack = "fas"
+  name = "Empathy & Curiosity"
   description = "```>>>while user == :disappointed_relieved::```<br>```user_need = research(divergent_thinking)```<br>```:bulb: = brainstorm(user_need)```<br>```prototype = iterate(:bulb:)```<br>```deliver(prototype)```<br>```if user == :smile:: break```"
 
 +++
