@@ -5,12 +5,27 @@
     <link>https://jinjeon.me/project/</link>
       <atom:link href="https://jinjeon.me/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Projects</title>
       <link>https://jinjeon.me/project/</link>
     </image>
+    
+    <item>
+      <title>Alaska Airlines (NDA)</title>
+      <link>https://jinjeon.me/project/alaska-airlines/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project/alaska-airlines/</guid>
+      <description>&lt;p&gt;LoREM IPSUM&lt;/p&gt;
+
+&lt;!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) --&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Navigating Cancer (NDA)</title>
@@ -30,6 +45,94 @@
 &lt;p&gt;While the ideal model is a perfectly-shaped two diamonds, the reality of our journey was rather a deformed diamond process. As we had to go back-and-forth within each phase, we had multiple pivots, which ended up being a valuable process as we gained greater insights to the problem space.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://jinjeon.me/pdf/navigating-cancer-resources/deformed-diamond.pdf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Visualizations</title>
+      <link>https://jinjeon.me/project/data-viz/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project/data-viz/</guid>
+      <description>&lt;p&gt;LoREM IPSUM&lt;/p&gt;
+
+&lt;!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) --&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Posters</title>
+      <link>https://jinjeon.me/project/conference/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project/conference/</guid>
+      <description>&lt;p&gt;LoREM IPSUM&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; data-caption=&#34;Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual&#34;&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; alt=&#34;&#34; width=&#34;400&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; data-caption=&#34;Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC&#34;&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; alt=&#34;&#34; width=&#34;400&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
 
 &lt;hr /&gt;
 

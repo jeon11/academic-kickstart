@@ -5,7 +5,7 @@
     <link>https://jinjeon.me/tags/</link>
       <atom:link href="https://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
@@ -13,18 +13,26 @@
     </image>
     
     <item>
+      <title>highlights</title>
+      <link>https://jinjeon.me/tags/highlights/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/highlights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>research</title>
       <link>https://jinjeon.me/tags/research/</link>
-      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/research/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>startup</title>
-      <link>https://jinjeon.me/tags/startup/</link>
-      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/startup/</guid>
+      <title>side-projects</title>
+      <link>https://jinjeon.me/tags/side-projects/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/side-projects/</guid>
       <description></description>
     </item>
     
@@ -113,62 +121,6 @@
       <link>https://jinjeon.me/tags/signal-processing/</link>
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/signal-processing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hci</title>
-      <link>https://jinjeon.me/tags/hci/</link>
-      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/hci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ui</title>
-      <link>https://jinjeon.me/tags/ui/</link>
-      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/ui/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cognition</title>
-      <link>https://jinjeon.me/tags/cognition/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/cognition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>experiment</title>
-      <link>https://jinjeon.me/tags/experiment/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/experiment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>psychology</title>
-      <link>https://jinjeon.me/tags/psychology/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/psychology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>classifier</title>
-      <link>https://jinjeon.me/tags/classifier/</link>
-      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/classifier/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>prototyping</title>
-      <link>https://jinjeon.me/tags/prototyping/</link>
-      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/prototyping/</guid>
       <description></description>
     </item>
     

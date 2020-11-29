@@ -15,24 +15,25 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 
 [[feature]]
-  icon = "python"
-  icon_pack = "fab"
-  name = "Python"
-  description = "120% <br><br> SciPy, NumPy, Pandas, TensorFlow, Matplotlib, Seaborn, SciKit-Learn, PsychoPy"
+  icon = "code"
+  icon_pack = "fas"
+  name = "Programming"
+  description = "Python (SciPy, NumPy, Pandas, TensorFlow, Matplotlib, Seaborn, SciKit-Learn)<br>MATLAB; HTML, CSS, jQuery"
 
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
-  name = "MATLAB<br>HTML/CSS/jQuery"
-  description = "100% <br><br> SPM, and toolboxes "  
-
-#[[feature]]
-#  icon = "battery-full"
-#  icon_pack = "fas"
-#  name = "Diligence"
-#  description = "120%"
+  name = "UX"
+  description = "Surveys, Competitive Analysis, Interviews, Prototyping, User Testing, Journey Mapping"
 
 [[feature]]
+  icon = "user-check"
+  icon_pack = "fas"
+  name = "Curiosity"
+  description = "```>>>while user == :disappointed_relieved::```<br>```user_need = research(divergent_thinking)```<br>```:bulb: = brainstorm(user_need)```<br>```prototype = iterate(:bulb:)```<br>```deliver(prototype)```<br>```if user == :smile:: break```"
+
++++
+<!--[[feature]]
   icon = "mug-hot"
   icon_pack = "fas"
   name = "Coffee"

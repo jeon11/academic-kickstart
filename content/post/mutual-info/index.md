@@ -1,6 +1,6 @@
 ---
-title: 'Mutual Information in Neuroimaging'
-summary: Using mutual information to compare and plot the different registration types in neuroimaging preprocessing
+title: 'Information Theory: Mutual Information'
+summary: Using mutual information to compare and plot the different registration types in neuroimaging data preprocessing steps
 
 date: "2020-01-31T00:00:00Z"
 lastmod: "2020-01-31T00:00:00Z"
