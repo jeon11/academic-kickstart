@@ -2,10 +2,7 @@
 title: Feature Prioritization in Classification of Novel Objects
 summary: Object classification is essential to human learning as it helps us cope with various stimulus around the world. Regardless of multiple features within a single object, object classification seems to occur seamlessly within our cognitive process. In this experiment, we test how we prioritize each feature within an object and how these features are weighted when we categorize a certain
 tags:
-- research
-- cognition
-- experiment
-- psychology
+- side-projects
 date: "2017-05-10T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

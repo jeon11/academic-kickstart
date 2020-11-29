@@ -3,7 +3,7 @@
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 20  # Order that this section will appear.
+weight = 30  # Order that this section will appear.
 
 title = "Work Experience"
 subtitle = ""
@@ -26,9 +26,9 @@ date_format = "Jan 2006"
   date_start = "2020-06-01"
   date_end = "2020-09-01"
   description = """
-  Conducted user research and qualitative data analysis to propose potential features for the health tracker.
+  Collaborated as an internationally distributed cross-functional team of product manager, researchers, and designers to improve patients’ engagement with health tracker and symptom management
   <details>
-  <summary>See in detail:</summary>
+  <summary>See more...:</summary>
   <li>
   Ideated new features based on user stories generated from surveys and interviews with clinicians and patients
   </li>
@@ -38,16 +38,10 @@ date_format = "Jan 2006"
   </li>
 
   <li>
-  Collaborated as an internationally distributed cross-functional team of product manager, researchers, and designers to improve patients’ engagement with health tracker and symptom management
-  </li>
-
-  <li>
   Evangelized the impact of research by presenting findings to the leaders and internal stakeholders
   </li>
-
-  <br>
-  **Skills:** Figma, Qualitative Research, User Interviews & Surveys, Affinity Diagramming, Working as an internationally distributed team
-  </details>
+  </details>  
+  **Skills:** Figma, Qualitative Research, User Interviews & Surveys, Affinity Diagramming
   """
 
 [[experience]]
@@ -58,23 +52,22 @@ date_format = "Jan 2006"
   date_start = "2018-04-01"
   date_end = "2020-07-15"
   description = """
-  Facilitated multiple projects in behavioral, EEG and fMRI studies to explore human memory.
+  Conducted quantitative research (t-test, correlation, NLP, ML) and data visualization to present at conferences
   <details>
-  <summary>See in detail:</summary>
+  <summary>See more...:</summary>
   <li>
-  Devised automated data processing pipeline that converts speech to text using Google Speech API, analyzes subject task performance, and constructs data frame based on experiment paradigm
+  Devised automated data processing pipeline that converts participants’ speech to textual data, analyzes task performance, builds a data frame to summarize the results
+  </li>
+
+  <li>
+  Administered over 200 experiments, and mentored undergraduates for coding, data processing, and analysis
   </li>
 
   <li>
   Applied [vector space models](/post/vectorspace), such as GloVe and USE, to measure cosine similarities between idea units and characterized their semantic representations in short and long term memory
   </li>
-
-  <li>
-  Analyzed EEG data by filtering noise and artifacts using independent component analysis to [create evoked response](/post/eeg-advanced/)
-  </li>
-  <br>
-  **Skills:** Python, MATLAB, Neuroimaging, Machine Learning
   </details>
+  **Skills:** Python, MATLAB, ML, Data Processing and Visualization
   """
 
 [[experience]]
@@ -86,22 +79,21 @@ date_format = "Jan 2006"
   date_end = "2017-12-31"
   description = """
   <li>
-  Operated preliminary auditory percept research from designing and coding the experiment to running subjects and interpreting data for statistical analysis using bootstrapping and psychometric inferential curves
+  Spearheaded preliminary research in auditory perception from experimental design and coding to running subjects and processing data for statistical analysis using bootstrapping and psychometric inferential curves
   </li>
   <br>
   <details>
   <summary>See more...:</summary>
 
   <li>
-  Mentored high school students to understand experiment design and replicate the results
+  Mentored over 20 high school students to understand experiment design and replicate the results
   </li>
 
   <li>
   Assisted Prof. Bill Prinzmetal in developing experiments to test whether serial dependence persists in real-life visual scenes
   </li>
-  <br>
-  **Skills:** MATLAB, PsychToolBox, PsychoPy, experimental design, statistical analysis
   </details>
+  **Skills:** MATLAB, PsychToolBox, PsychoPy, experimental design, statistical analysis
   """
 
 
@@ -113,17 +105,14 @@ date_format = "Jan 2006"
   date_start = "2017-02-25"
   date_end = "2017-08-31"
   description = """
-  **Fronto is an Android advertisement platform that provides free money for every unlock its users make on their mobile lock screens. As a small startup team, I worked directly with the CEO, developers, and designers.**
-  <details>
-  <summary>See in detail:</summary>
   <li>
-  Automated 90% of manual Zendesk ticket solution process to improve work efficiency
+  Identified usability issues by engaging with the users and customer success team, and communicated directly with the CEO, developer and designer teams to deliver solution
   </li>
 
   <li>
-  Debugged usability issues and managed user portfolios using MySQL to identify potential abusers
+  Automated 90% of manual Zendesk ticket solution process to improve work efficiency of customer success team
   </li>
-  <br>
+
   **Skills:** Agile, product management, MySQL, Jira, Mixpanel, Zendesk, Intercom
   </details>
   """
@@ -131,25 +120,21 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Project Management Intern"
-  company = "Musio, AI Robot (AKA)"
+  company = "AKA AI - Musio, AI Robot"
   company_url = "https://themusio.com/home"
   location = "Seoul, Korea"
   date_start = "2016-05-01"
   date_end = "2016-08-31"
   description = """
-  **AKA is a startup building Musio, a friendly AI robot built for educational purposes.**
-  <details>
-  <summary>See in detail:</summary>
+  <li>
+  Organized and led a task force for generative research, competitive analysis, and viral marketing strategies
+  </li>
+
   <li>
   Leveraged communication between software and hardware teams to define and assess product requirements
   </li>
 
-  <li>
-  Iteratively redesigned website and blog interface and flow to improve usability and retention rate
-  </li>
-  <br>
   **Skills:** HTML/CSS/Javascript/Bootstrap, project management, Agile, Google Analytics
-  </details>
   """
 
 +++

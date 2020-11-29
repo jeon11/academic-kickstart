@@ -2,8 +2,8 @@
 title: 'Tangible UI: Augmented Shadow Play'
 summary: Shadow Play aims to enhance playful shadow experience to more advanced creative form of art by allowing users digitally manipulate their shadows. By adding new digital affordances Shadow Play, users can print and add layers of multiple shadows onto the screen, and invigorate them with animated effects and motions. With such various mix of augmented shadow effects, users can ...
 tags:
-- ui
-- hci
+- highlights
+- side-projects
 date: "2017-12-10T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

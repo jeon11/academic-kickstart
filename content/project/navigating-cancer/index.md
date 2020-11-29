@@ -2,7 +2,7 @@
 title: Navigating Cancer (NDA)
 summary: Conducted qualitative user research to identify the problem space and propose features that would enhance the current health tracker experience ...
 tags:
-- startup
+- highlights
 - research
 date: "2020-07-31T00:00:00Z"
 

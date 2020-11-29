@@ -3,10 +3,7 @@ title: Yelp Dataset Challenge
 subtitle: Predicting Positive/Negative Yelp Reviews Using Textual Features
 summary: By analyzing Yelp’s dataset, specifically star ratings and text reviews, we created a classifier that predicts whether reviews are positive (star ratings of four or five) or negative (star ratings of one or two). We excluded star ratings of three because we weren’t sure whether they were positive or negative. While Yelp’s star ratings are helpful for concise overview of local businesses
 tags:
-- research
-- cognition
-- classifier
-- python
+- side-projects
 date: "2016-12-10T00:00:00Z"
 
 

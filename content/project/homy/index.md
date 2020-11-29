@@ -2,10 +2,7 @@
 title: Homy, Private Social Network for Families
 summary: Homy provides a private space just for families as an emotional communication tool just for families
 tags:
-- startup
-- ui
-- prototyping
-- hci
+- side-projects
 date: "2015-11-10T00:00:00Z"
 
 

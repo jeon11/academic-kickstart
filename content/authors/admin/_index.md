@@ -28,7 +28,7 @@ interests:
 education:
   courses:
   - course: M.S. in Human Centered Design and Engineering
-    institution: University of Washington - Seattle
+    institution: University of Washington - Seattle  # M.S. in Human Centered Design and Engineering
     year: 2022
 
   - course: B.A. in Cognitive Science
@@ -71,11 +71,11 @@ user_groups:
 - []
 ---
 
-I am a 1st year graduate student at Human Centered Design and Engineering Program (HCDE) at the University of Washington's College of Engineering.
-<!-- I received my bachelors in cognitive science from UC Berkeley graduated from UC Berkeley with BA in cognitive science with concentration in computer science and cognitive psychology. -->
+I am a 1st year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington's College of Engineering.
 
-I am a data enthusiast passionate in UX research. My previous experience ranges from working as a research analyst in academia to various startups focusing in UX research, project and product management.  
+I am a **data enthusiast** passionate in **UX research**. My UX expertise includes both **quantitative** and **qualitative** methods to better understand the users. My previous experiences range from research in academia to project management in various startups.
+<!-- My previous experiences range from working as a research analyst in academia to various startups focusing in UX research, project and product management.   -->
 
 <!-- Just as cameras were first invented based on our visual system, I believe cognitive science and current endeavors in artificial intelligence are studies that attempt to imitate the human brain, and ultimately better understand human cognition. -->
 
-<a href="https://drive.google.com/file/d/0B9S8oX9rcjjjMDY3ZlVxczlReVk/view?usp=sharing" target="_blank">Click here for CV.</a>
+<!-- <a href="https://drive.google.com/file/d/0B9S8oX9rcjjjMDY3ZlVxczlReVk/view?usp=sharing" target="_blank">Click here for CV.</a> -->
