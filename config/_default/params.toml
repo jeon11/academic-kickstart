@@ -90,7 +90,7 @@ phone = "510 725 1972"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {}
+address = {city = "Seattle", region = "Washington"}
 # address = {street = "450 Serra Mall", city = "Stanford", region = "CA", postcode = "94305", country = "United States", country_code = "US"}
 
 # Geographic coordinates
@@ -247,6 +247,6 @@ plugins_js  = []
 ## Marketing
 ############################
 [marketing]
-  # google_analytics = "UA-103774722-2"
+  google_analytics = "UA-103774722-2"
   googleAnalytics = "UA-103774722-2"
   # google_tag_manager = ""

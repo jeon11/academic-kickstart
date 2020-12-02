@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: M.S. in HCDE ('22)
+role: UX Researcher<br><br> M.S. in HCDE ('22)
 
 # Organizations/Affiliations
 organizations:

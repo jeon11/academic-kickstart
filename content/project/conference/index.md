@@ -1,5 +1,5 @@
 ---
-title: Posters
+title: Conference Presentations
 summary: Python
 tags:
 - research

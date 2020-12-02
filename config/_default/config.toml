@@ -16,6 +16,7 @@ baseurl = "https://jinjeon.me/"
 copyright = "&copy; 2020 Jin Jeon"
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-103774722-2"
+google_analytics = "UA-103774722-2"
 ############################
 ## Advanced options below ##
 ############################
