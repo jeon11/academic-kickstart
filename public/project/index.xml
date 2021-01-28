@@ -5,7 +5,7 @@
     <link>https://jinjeon.me/project/</link>
       <atom:link href="https://jinjeon.me/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Projects</title>
@@ -13,17 +13,83 @@
     </image>
     
     <item>
-      <title>Alaska Airlines (NDA)</title>
+      <title>Alaska Airlines (Company sponsored summer project/NDA)</title>
       <link>https://jinjeon.me/project/alaska-airlines/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/alaska-airlines/</guid>
-      <description>&lt;p&gt;LoREM IPSUM&lt;/p&gt;
+      <description>
 
-&lt;!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) --&gt;
+&lt;p&gt;&lt;body style=&#34;font-size:10pt&#34;&gt;&lt;/body&gt;
+&lt;!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) --&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;my-role&#34;&gt;My Role&lt;/h3&gt;
+
+&lt;p&gt;UX researcher in a 4-person team of researchers and designers&lt;/p&gt;
+
+&lt;h3 id=&#34;timeline&#34;&gt;Timeline&lt;/h3&gt;
+
+&lt;p&gt;June 2020 - Oct 2020 (~4 months)&lt;/p&gt;
+
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+
+&lt;p&gt;Generative Research, Competitive Analysis, Remote Qualitative Interview, Journey Map, Affinity Diagram&lt;/p&gt;
+
+&lt;h3 id=&#34;stakeholders&#34;&gt;Stakeholders&lt;/h3&gt;
+
+&lt;p&gt;Research manager, product designers, brand manager, eCommerce team&lt;/p&gt;
+
+&lt;!-- ![](./intro.pdf) --&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;To improve the upselling strategies of Alaska Airlines, we explore users&amp;rsquo; behaviors, motivations and overall experience of Alaska Airlines and its five competitors. Additionally, we study the impact of the current pandemic on their travel experiences.&lt;/p&gt;
+
+&lt;p&gt;Our research identifies users&amp;rsquo; top values, pain points, and overarching themes that affect their decision to make additional purchases. We present our findings to multiple stakeholders and conclude with four recommendations that will improve the overall experience and lead to increase in sales.&lt;/p&gt;
+
+&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The research findings matched with the ongoing research conducted by the company&amp;rsquo;s internal research team.&lt;/li&gt;
+&lt;li&gt;Our findings and key recommendations were presented to multiple internal stakeholders.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ![](./designquestion.svg) --&gt;
+
+&lt;h2 id=&#34;design-question&#34;&gt;Design Question:&lt;/h2&gt;
+
+&lt;p&gt;What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./journey.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./demographics.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;user-research&#34;&gt;User Research&lt;/h2&gt;
+
+&lt;p&gt;We conducted a total of 30 remote qualitative interviews (5 participants for 6 different airlines). We probed for X, Y, Z, and also had users interactively participate in the session through journey mapping in the Miro board.&lt;/p&gt;
+
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;We divided the users journey map into 5 stages:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;During the initial booking&lt;/li&gt;
+&lt;li&gt;After booking but more than 24 hours from day of travel&lt;/li&gt;
+&lt;li&gt;Getting to the airport and the process to onboarding the plane&lt;/li&gt;
+&lt;li&gt;During flight&lt;/li&gt;
+&lt;li&gt;Arriving at the destination&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;./journeymap.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;recommendations&#34;&gt;Recommendations&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;./rec0.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./rec1.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./rec2.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -68,7 +134,7 @@
     </item>
     
     <item>
-      <title>Posters</title>
+      <title>Conference Presentations</title>
       <link>https://jinjeon.me/project/conference/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/conference/</guid>

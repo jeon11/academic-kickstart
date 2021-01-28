@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: UX Researcher<br><br> M.S. in HCDE ('22)
+role: UX Researcher /<br> Graduate Student
 
 # Organizations/Affiliations
 organizations:
@@ -22,7 +22,7 @@ bio: ""
 
 interests:
 - UX Research
-- HCI | UIUX
+- HCI | UX Design
 - AI | Cognition
 
 education:
@@ -71,9 +71,10 @@ user_groups:
 - []
 ---
 
-I am a 1st year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington's College of Engineering.
+I am a 1st year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington.
 
-I am a **data enthusiast** passionate in **UX research**. My UX expertise includes both **quantitative** and **qualitative** methods to better understand the users. My previous experiences range from research in academia to project management in various startups.
+I am a **data enthusiast** passionate in **UX research**. I believe that data-driven insights are core to delivering a meaningful experience. With my background in data science, I use both **quantitative** and **qualitative** methods to synthesize insights that unveils users' underlying needs.
+<!-- I come with a background in psychology and data science for several years. and have been working with data for several years. I My previous experiences range from research in academia to project management in various startups. -->
 <!-- My previous experiences range from working as a research analyst in academia to various startups focusing in UX research, project and product management.   -->
 
 <!-- Just as cameras were first invented based on our visual system, I believe cognitive science and current endeavors in artificial intelligence are studies that attempt to imitate the human brain, and ultimately better understand human cognition. -->

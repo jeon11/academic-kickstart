@@ -13,7 +13,7 @@ external_link: ""
 image:
   caption: ""
   focal_point: Smart
-  preview_only: true
+  preview_only: false
 
 url_code: ""
 url_pdf: ""
@@ -30,7 +30,6 @@ slides: ""
 
 LoREM IPSUM
 
-<!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) -->
 
 ---
 <br>

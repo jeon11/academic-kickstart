@@ -5,7 +5,7 @@ headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
-title = "Work Experience"
+title = "Experience"
 subtitle = ""
 
 # Date format for experience
@@ -19,6 +19,26 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "Student UX Researcher"
+  company = "Alaska Airlines"
+  company_url = "https://www.alaskaair.com"
+  location = "Seattle, WA"
+  date_start = "2020-07-01"
+  date_end = "2020-10-01"
+  description = """
+  • Moderated 30 remote qualitative interviews with users from six different airlines, and 
+  conducted competitive analysis to pair insights from user experience benchmarking
+
+ • Utilized interactive journey mapping to identify users’ core values and motivations at 
+ different stages of their travel experiences
+
+ • Delivered four key insights and recommendations to improve users’ upgrade 
+ experience to multiple stakeholders
+
+  **Skills:** generative research, interview, survey, journey mapping, personas, competitive analysis, UserTesting.com, Figma
+  """
+
+[[experience]]
   title = "UX Research Intern (Remote)"
   company = "Navigating Cancer"
   company_url = "https://www.navigatingcancer.com"
@@ -26,22 +46,19 @@ date_format = "Jan 2006"
   date_start = "2020-06-01"
   date_end = "2020-09-01"
   description = """
-  Collaborated as an internationally distributed cross-functional team of product manager, researchers, and designers to improve patients’ engagement with health tracker and symptom management
-  <details>
-  <summary>See more...:</summary>
-  <li>
-  Ideated new features based on user stories generated from surveys and interviews with clinicians and patients
-  </li>
+  • Ideated new features based on user stories generated from surveys and interviews 
+with two cancer patients and four cancer survivors
 
-  <li>
-  Validated prototype through iterations of concept-testing and evaluation
-  </li>
+  • Validated prototype iterations through expert evaluations and concept-testing with 
+eight users including clinicians and patients
 
-  <li>
-  Evangelized the impact of research by presenting findings to the leaders and internal stakeholders
-  </li>
-  </details>  
-  **Skills:** Figma, Qualitative Research, User Interviews & Surveys, Affinity Diagramming
+  • Collaborated with an internationally-distributed, cross-functional team of 
+researchers, designers, and a product manager to improve patients’ symptom 
+management and engagement with the health tracker
+
+  • Evangelized the impact of research by presenting findings to the leaders
+
+  **Skills:** qualitative research, interview, survey, concept-testing, expert evaluations, Figma
   """
 
 [[experience]]
@@ -52,22 +69,19 @@ date_format = "Jan 2006"
   date_start = "2018-04-01"
   date_end = "2020-07-15"
   description = """
-  Conducted quantitative research (t-test, correlation, NLP, ML) and data visualization to present at conferences
-  <details>
-  <summary>See more...:</summary>
-  <li>
-  Devised automated data processing pipeline that converts participants’ speech to textual data, analyzes task performance, builds a data frame to summarize the results
-  </li>
+  • Administered over 200 experiments that examines the dynamics of temporal and 
+semantic structures in human memory
 
-  <li>
-  Administered over 200 experiments, and mentored undergraduates for coding, data processing, and analysis
-  </li>
+  • Conducted quantitative research (t-test, correlation, ML, NLP) and data visualization 
+to present findings at international conferences
 
-  <li>
-  Applied [vector space models](/post/vectorspace), such as GloVe and USE, to measure cosine similarities between idea units and characterized their semantic representations in short and long term memory
-  </li>
-  </details>
-  **Skills:** Python, MATLAB, ML, Data Processing and Visualization
+  • Devised automated data processing pipeline that converts participants’ speech to 
+textual data, analyzes task performance, and builds dataframe to summarize results
+
+ • Mentored undergraduates in coding, data processing, analysis, and designing   
+their own experiments
+
+  **Skills:** Python, data science, MATLAB, ML, NLP, data preprocessing, data visualization, experimental design
   """
 
 [[experience]]
@@ -78,22 +92,11 @@ date_format = "Jan 2006"
   date_start = "2017-02-25"
   date_end = "2017-12-31"
   description = """
-  <li>
-  Spearheaded preliminary research in auditory perception from experimental design and coding to running subjects and processing data for statistical analysis using bootstrapping and psychometric inferential curves
-  </li>
-  <br>
-  <details>
-  <summary>See more...:</summary>
 
-  <li>
-  Mentored over 20 high school students to understand experiment design and replicate the results
-  </li>
+  • Spearheaded preliminary research in auditory perception. Contributions included: 
+experimental design, coding, running subjects, and processing data for statistical  analysis using bootstrapping and psychometric inferential curves
 
-  <li>
-  Assisted Prof. Bill Prinzmetal in developing experiments to test whether serial dependence persists in real-life visual scenes
-  </li>
-  </details>
-  **Skills:** MATLAB, PsychToolBox, PsychoPy, experimental design, statistical analysis
+  **Skills:** MATLAB, PsychoPy, experimental design, statistical analysis
   """
 
 
@@ -105,16 +108,13 @@ date_format = "Jan 2006"
   date_start = "2017-02-25"
   date_end = "2017-08-31"
   description = """
-  <li>
-  Identified usability issues by engaging with the users and customer success team, and communicated directly with the CEO, developer and designer teams to deliver solution
-  </li>
 
-  <li>
-  Automated 90% of manual Zendesk ticket solution process to improve work efficiency of customer success team
-  </li>
+  • Identified usability issues by engaging with users and the customer success team
 
-  **Skills:** Agile, product management, MySQL, Jira, Mixpanel, Zendesk, Intercom
-  </details>
+  • Communicated directly with the CEO, developer and design teams to deliver 
+  solutions to the usability issues that led to 90% decrease in incoming tickets and  quicker response time
+
+  **Skills:** usability testing, product management, agile, MySQL, Jira, Mixpanel, Zendesk
   """
 
 
@@ -126,15 +126,11 @@ date_format = "Jan 2006"
   date_start = "2016-05-01"
   date_end = "2016-08-31"
   description = """
-  <li>
-  Organized and led a task force for generative research, competitive analysis, and viral marketing strategies
-  </li>
+  • Organized and led a task force for generative research, competitive analysis, and viral marketing strategies
 
-  <li>
-  Leveraged communication between software and hardware teams to define and assess product requirements
-  </li>
+  • Leveraged communication between software and hardware teams to define and assess product requirements
 
-  **Skills:** HTML/CSS/Javascript/Bootstrap, project management, Agile, Google Analytics
+  **Skills:** project management, HTML/CSS/Javascript/Bootstrap, agile, Google Analytics
   """
 
 +++
