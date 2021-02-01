@@ -17,7 +17,7 @@ height = "calc(100vh - 70px)"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "</> Hello, I'm Jin!"
-  content = "<br>I'm a 1st year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in **UX research**. <br>I'm curious 🧐, data-driven 📊, and empathetic ❤️. <br><br>"
+  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in **UX research**. <br>I'm curious 🧐, data-driven 📊, and empathetic ❤️. <br><br>"
   align = "right"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
