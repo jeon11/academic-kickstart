@@ -30,7 +30,7 @@ subtitle = ""
   icon = "heart"
   icon_pack = "fas"
   name = "Empathy & Curiosity"
-  description = "```>>>while user == :disappointed_relieved::```<br>```user_need = research(divergent_thinking)```<br>```:bulb: = brainstorm(user_need)```<br>```prototype = iterate(:bulb:)```<br>```deliver(prototype)```<br>```if user == :smile:: break```"
+  description = ""
 
 +++
 <!--[[feature]]

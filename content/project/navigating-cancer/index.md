@@ -1,6 +1,6 @@
 ---
 title: Navigating Cancer (NDA)
-summary: Conducted qualitative user research to identify the problem space and propose features that would enhance the current health tracker experience ...
+summary: "**//Currently under construction//**<br>Conducted user research to identify problems & recommended features to enhance the symptom management experience"
 tags:
 - highlights
 - research

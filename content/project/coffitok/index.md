@@ -1,14 +1,15 @@
 ---
-title: Data Visualizations
-summary: "**//Currently under construction//**<br> Examples of graphs created using Python and MATLAB, and their source codes"
+title: Coffitok
+summary: "From identifying user needs to iterating prototypes, a 10-week project in user centered design <br>**(opens external project link)**"
 tags:
 - highlights
+- research
 - side-projects
-date: "2020-05-31T00:00:00Z"
+date: "2020-12-10T00:00:00Z"
 
 
 # Optional external URL for project (replaces project detail page).
-external_link: ""
+external_link: "https://sites.google.com/view/coffitok/home"
 
 image:
   caption: ""
@@ -28,7 +29,7 @@ url_video: ""
 slides: ""
 ---
 
-LoREM IPSUM
+
 
 
 ---

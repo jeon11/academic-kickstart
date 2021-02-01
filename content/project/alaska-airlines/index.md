@@ -1,14 +1,10 @@
 ---
 title: Alaska Airlines (Company sponsored summer project/NDA)
-summary: "We research users' varying behaviors and motivations at different stages of their travel experiences"
+summary: "**//Currently under construction//**<br>Moderated interviews and journey mapping to visaulize users' travel experiences "
 tags:
 - highlights
 - research
-- Generative Research
-- Competitive Analysis
-- Qualitative Interview
-- Journey Map
-- Affinity Diagram
+
 date: "2020-10-05T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
