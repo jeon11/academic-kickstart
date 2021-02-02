@@ -5,7 +5,7 @@
     <link>https://jinjeon.me/tags/</link>
       <atom:link href="https://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
@@ -13,57 +13,17 @@
     </image>
     
     <item>
-      <title>Affinity Diagram</title>
-      <link>https://jinjeon.me/tags/affinity-diagram/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/affinity-diagram/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Competitive Analysis</title>
-      <link>https://jinjeon.me/tags/competitive-analysis/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/competitive-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Generative Research</title>
-      <link>https://jinjeon.me/tags/generative-research/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/generative-research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>highlights</title>
       <link>https://jinjeon.me/tags/highlights/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/highlights/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Journey Map</title>
-      <link>https://jinjeon.me/tags/journey-map/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/journey-map/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Qualitative Interview</title>
-      <link>https://jinjeon.me/tags/qualitative-interview/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/qualitative-interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>research</title>
       <link>https://jinjeon.me/tags/research/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/research/</guid>
       <description></description>
     </item>
@@ -71,7 +31,7 @@
     <item>
       <title>side-projects</title>
       <link>https://jinjeon.me/tags/side-projects/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/side-projects/</guid>
       <description></description>
     </item>

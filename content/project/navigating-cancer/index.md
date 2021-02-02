@@ -28,6 +28,7 @@ url_video: ""
 slides: ""
 ---
 
+
 In summer 2020, I had a chance to work with the health tracker team at Navigating Cancer, a company that is devoted to enhancing the patient relationship management for cancer patients. During the weird time of COVID, the research team was working remotely as an international team with each of us in different time zones. I was also flying around being in the US and in my hometown Korea.
 
 
