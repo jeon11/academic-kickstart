@@ -27,35 +27,41 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
-<body style="font-size:10pt"></body>
+<style>
+.introduction {
+  column-count: 2;
+}
+</style>
+
+<body style="font-family:Arial; font-size: 12pt">
+<div class="introduction">
+<b>My Role:</b>
+<br><small>UX researcher in a 4-person team of researchers and designers</small><br><br>
+
+<b>Methods:</b>
+<br><small>generative research, competitive analysis, remote qualitative interview, journey map, affinity diagram</small><br><br>
+
+<b>Timeline: </b>
+<br><small>June 2020 - Oct 2020 (~4 months)</small><br><br>
+
+<b>Stakeholders:</b>
+<br><small>Research manager, product designers, <br>brand manager, eCommerce team</small>
+</div>
+___
 <!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) -->
-### My Role
-UX researcher in a 4-person team of researchers and designers
-
-### Timeline
-June 2020 - Oct 2020 (~4 months)
-
-### Methods
-Generative Research, Competitive Analysis, Remote Qualitative Interview, Journey Map, Affinity Diagram
-
-### Stakeholders
-Research manager, product designers, brand manager, eCommerce team
-
-<!-- ![](./intro.pdf) -->
-
-## Summary
-To improve the upselling strategies of Alaska Airlines, we explore users' behaviors, motivations and overall experience of Alaska Airlines and its five competitors. Additionally, we study the impact of the current pandemic on their travel experiences.
-
-Our research identifies users' top values, pain points, and overarching themes that affect their decision to make additional purchases. We present our findings to multiple stakeholders and conclude with four recommendations that will improve the overall experience and lead to increase in sales.
+## Overview
+To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, we conducted user research to understand users' behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.
 
 ## Impact
-- The research findings matched with the ongoing research conducted by the company's internal research team.
-- Our findings and key recommendations were presented to multiple internal stakeholders.
+We presented four recommendations to research managers, product and eCommerce teams. Some of the research findings matched with the ongoing research that was being conducted internally within the company, suggesting the validity of research. Other recommendations provide new insights to improve users' overall experience by adapting to the pandemic world.
 
 <!-- ![](./designquestion.svg) -->
-## Design Question:
-What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?
+## Research Question
+> <p style="font-size: 16pt"><mark><em>"What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?"</em></mark><br><br>
 
+___
+# BELOW ARE UNDER CONSTRUCTION.
+# PLEASE VISIT BACK!
 ![](./journey.svg)
 
 ![](./demographics.svg)
@@ -86,3 +92,4 @@ We divided the users journey map into 5 stages:
 
 
 ---
+</body>
