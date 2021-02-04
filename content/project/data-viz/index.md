@@ -13,7 +13,7 @@ external_link: ""
 image:
   caption: ""
   focal_point: Smart
-  preview_only: false
+  preview_only: true
 
 url_code: ""
 url_pdf: ""
@@ -27,8 +27,9 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+# Currently under development
 
-LoREM IPSUM
+</div><iframe src="https://editor.p5js.org/jeon11/embed/w2Ugnl4dR" width="800" height="500">Image Reconstruction using Perlin Noise</iframe>
 
 
 ---

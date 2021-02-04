@@ -210,7 +210,7 @@ We conducted a total of 30 interviews (5 participants from 6 different airlines)
 &lt;p&gt;&lt;li&gt;&lt;b&gt;Interactive Journey Maps:&lt;/b&gt;&lt;br&gt;
 We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session in each interview to have participants walkthrough their most recent experience and capture their moment-to-moment emotions and actions.&lt;/li&gt;&lt;/p&gt;
 
-&lt;p&gt;To capture their moment-to-moment emotions and actions, we divided the entire flight experience into four phases:
+&lt;p&gt;To capture their moment-to-moment emotions and actions, we divided the entire flight experience into 5 phases:
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;booking the flight ticket&lt;/strong&gt; (e.g. web vs. mobile vs. phone)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;before 24 hours of travel&lt;/strong&gt; (includes preparation and traveling to the airport)&lt;/li&gt;
@@ -558,12 +558,15 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;limitations&#34;&gt;Limitations&lt;/h2&gt;
+&lt;h2 id=&#34;limitations-lessons-learned&#34;&gt;Limitations &amp;amp; Lessons Learned&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;The participants were not racially diverse as recruitment of participants were automatically done via UserTesting.com.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Majority of participants&amp;rsquo; recent travels occured 6 months ago, in which they may have distorted memory of their travel experiences.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Majority of participants&amp;rsquo; recent travels occurred 6 months ago, in which they may have distorted memory of their travel experiences.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In a qualitative research, it&amp;rsquo;s more about finding about the big buckets &amp;amp; themes unlike a quant research. &lt;br&gt;
+When presenting the different demographic groups, it can be as easy as describing &amp;ldquo;we examined a wide income group&amp;rdquo; instead of graphing out all the different income groups. If all the demographic information was graphically presented, it can convey the different stakeholders, esp. data scientists, that the results and insights will be quant focused when the research is actually qualitative.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 

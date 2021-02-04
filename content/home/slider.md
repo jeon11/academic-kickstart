@@ -17,12 +17,12 @@ height = "calc(100vh - 70px)"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "👋 Hello, I'm Jin!"
-  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in **UX research**. <br>I'm curious 🧐, data-driven 📊, and empathetic ❤️. <br><br><u>[• More About Me](#about)</u><br><u>[• See My Projects](#projects)</u>"
+  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in <mark>**UX research**</mark>. <br>I'm curious 🧐, data-driven 📊, and empathetic ❤️. <br><br><u>[• More About Me](#about)</u><br><u>[• See My Projects](#projects)</u>"
   align = "right"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  overlay_color = "#333333"  # An HTML color value.
+  overlay_color = "#B5CEEF"  # An HTML color value.
   overlay_img = "uxr_8frpersecond.gif"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.2  # Darken the image. Value in range 0-1.
 
@@ -36,12 +36,14 @@ height = "calc(100vh - 70px)"
 
 [[item]]
   title = "Project Highlights"
-  content = "<a href='#projects'> See my projects </a> :smile:"
+  content = "<a href='#projects'> See my projects</a> :smile: <iframe width='760' height='600' src='https://editor.p5js.org/jeon11/embed/rIpX6_wm0' frameborder='0'></iframe>"
   align = "left"
 
   overlay_color = "#B5CEEF"  # An HTML color value.
-  overlay_img = "sticky.jpg"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.8  # Darken the image. Value in range 0-1.
+  overlay_img = "<iframe src='https://editor.p5js.org/jeon11/embed/rIpX6_wm0'></iframe>"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
+
 +++
 
 <!-- [[item]]

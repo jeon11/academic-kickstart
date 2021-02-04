@@ -27,7 +27,28 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+<style>
+.introduction {
+  column-count: 2;
+}
+</style>
 
+<body style="font-family:Arial; font-size: 12pt">
+<div class="introduction">
+<b>My Role:</b>
+<br><small>UX researcher in a 4-person team of researchers and designers</small><br><br>
+
+<b>Methods:</b>
+<br><small>survey, interview, affinity diagram, prototyping, heuristic evaluation, usability testing</small><br>
+
+<b>Timeline: </b>
+<br><small>Jul 2020 - Sep 2020 (~3 months)</small><br><br>
+
+<b>Stakeholders:</b>
+<br><small>product manager, senior designer, clinicians, patients</small>
+</div>
+
+# Currently under construction. Please visit back!
 
 In summer 2020, I had a chance to work with the health tracker team at Navigating Cancer, a company that is devoted to enhancing the patient relationship management for cancer patients. During the weird time of COVID, the research team was working remotely as an international team with each of us in different time zones. I was also flying around being in the US and in my hometown Korea.
 
