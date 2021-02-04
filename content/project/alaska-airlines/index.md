@@ -106,7 +106,7 @@ We conducted a total of 30 interviews (5 participants from 6 different airlines)
 <li><b>Interactive Journey Maps:</b><br>
 We incorporated an **interactive journey map** session in each interview to have participants walkthrough their most recent experience and capture their moment-to-moment emotions and actions.</li>
 
-To capture their moment-to-moment emotions and actions, we divided the entire flight experience into four phases:
+To capture their moment-to-moment emotions and actions, we divided the entire flight experience into 5 phases:
 <ol>
 <li>**booking the flight ticket** (e.g. web vs. mobile vs. phone)</li>
 <li>**before 24 hours of travel** (includes preparation and traveling to the airport)</li>
@@ -163,10 +163,13 @@ Based on the four recommendations, we additionally modified some of the website 
 {{< figure src="design_rec2.svg" title="**Click to see in a large view**/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision."  caption="Sample Design Recommendation2" width=full >}}
 
 ---
-## Limitations
+## Limitations & Lessons Learned
 1. The participants were not racially diverse as recruitment of participants were automatically done via UserTesting.com.
 
-2. Majority of participants' recent travels occured 6 months ago, in which they may have distorted memory of their travel experiences.
+2. Majority of participants' recent travels occurred 6 months ago, in which they may have distorted memory of their travel experiences.
+
+3. In a qualitative research, it's more about finding about the big buckets & themes unlike a quant research. <br>
+When presenting the different demographic groups, it can be as easy as describing "we examined a wide income group" instead of graphing out all the different income groups. If all the demographic information was graphically presented, it can convey the different stakeholders, esp. data scientists, that the results and insights will be quant focused when the research is actually qualitative. 
 
 {{< figure src="ending.png" title="<b>With that, I end with a fun quote from one of our participants</b> :smile:"  caption="User Quote" width=full >}}
 

@@ -5,7 +5,7 @@
     <link>https://jinjeon.me/</link>
       <atom:link href="https://jinjeon.me/index.xml" rel="self" type="application/rss+xml" />
     <description>Jin Jeon</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Jin Jeon</copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 developed by Jin Jeon with HTML/CSS/Markdown and ❤️ </copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Jin Jeon</title>
@@ -61,9 +61,11 @@
 
 &lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
 
-&lt;p&gt;We presented four recommendations to research managers, product and eCommerce teams. Some of the research findings matched with the ongoing research that was being conducted internally within the company, suggesting the validity of research. Other recommendations provide new insights to improve users&amp;rsquo; overall experience by adapting to the pandemic world.&lt;/p&gt;
-
-&lt;!-- ![](./designquestion.svg) --&gt;
+&lt;ul&gt;
+&lt;li&gt;Presented four major recommendations to research managers, product and eCommerce teams.&lt;/li&gt;
+&lt;li&gt;Research findings matched with the ongoing internal research, suggesting its validity.&lt;/li&gt;
+&lt;li&gt;Provided new insights to improve users&amp;rsquo; overall experiences by adapting to the pandemic world.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;research-question&#34;&gt;Research Question&lt;/h2&gt;
 
@@ -73,41 +75,528 @@
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;below-are-under-construction&#34;&gt;BELOW ARE UNDER CONSTRUCTION.&lt;/h1&gt;
+&lt;h2 id=&#34;project-timeline&#34;&gt;Project Timeline&lt;/h2&gt;
 
-&lt;h1 id=&#34;please-visit-back&#34;&gt;PLEASE VISIT BACK!&lt;/h1&gt;
+&lt;!-- ![Project Timeline](./timeline.svg) --&gt;
 
-&lt;p&gt;&lt;img src=&#34;./journey.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;./demographics.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;timeline.svg&#34; data-caption=&#34;Our project spanned from late June to October. We initiated our study with reviewing company&amp;rsquo;s past research, examining the different competitors and case studies. We then proceeded with running qualitative interviews on UserTesting.com to get to the hearty meat of this research&#34;&gt;
+&lt;img src=&#34;timeline.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Our project spanned from late June to October. We initiated our study with reviewing company&amp;rsquo;s past research, examining the different competitors and case studies. We then proceeded with running qualitative interviews on UserTesting.com to get to the hearty meat of this research
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
 
 &lt;h2 id=&#34;user-research&#34;&gt;User Research&lt;/h2&gt;
 
-&lt;p&gt;We conducted a total of 30 remote qualitative interviews (5 participants for 6 different airlines). We probed for X, Y, Z, and also had users interactively participate in the session through journey mapping in the Miro board.&lt;/p&gt;
+&lt;p&gt;Please note that below are &lt;strong&gt;&lt;em&gt;summarized insights&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;challenges&lt;/em&gt;&lt;/strong&gt; our team had during the user research process.&lt;/p&gt;
 
-&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;h3 id=&#34;preliminary-competitive-analysis&#34;&gt;Preliminary &amp;amp; Competitive Analysis&lt;/h3&gt;
 
-&lt;p&gt;We divided the users journey map into 5 stages:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt;&lt;br&gt;
+To first better understand the competitive landscape of the airline industries, we examined the websites of the six airlines to visualize the user flow of booking a flight.&lt;/p&gt;
+
+&lt;p&gt;💡 &lt;strong&gt;Key/fun Fact:&lt;/strong&gt;&lt;br&gt;
+Despite the industry standard of generalizing the classification of seat types into economy, business, and first class, we noticed that each airline had different ways of classifying, naming, and promoting the different fare classes. We searched for areas that could be confusing and be improved for the users.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;fareclass.svg&#34; data-caption=&#34;Each airline had its own ways of classifying and naming the seats. Even though the perks that came along with each fare type were quite consistent throughout, low-cost airline, such as Southwest, had a uniquely different seating plan.&#34;&gt;
+&lt;img src=&#34;fareclass.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;Each airline had its own ways of classifying and naming the seats. Even though the perks that came along with each fare type were quite consistent throughout, low-cost airline, such as Southwest, had a uniquely different seating plan.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h4 id=&#34;insights&#34;&gt;Insights:&lt;/h4&gt;
 
 &lt;ol&gt;
-&lt;li&gt;During the initial booking&lt;/li&gt;
-&lt;li&gt;After booking but more than 24 hours from day of travel&lt;/li&gt;
-&lt;li&gt;Getting to the airport and the process to onboarding the plane&lt;/li&gt;
-&lt;li&gt;During flight&lt;/li&gt;
-&lt;li&gt;Arriving at the destination&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alaska Airlines&lt;/strong&gt;&amp;rsquo; fare types were straightforward and transparent. The seat names are in consistent ascending order: &lt;br&gt;i.e. saver → economy → premium → first class.&lt;/li&gt;
+&lt;li&gt;Fare types and their associated perks can become very unclear:&lt;br&gt;
+e.g. &lt;strong&gt;JetBlue&lt;/strong&gt;&amp;rsquo;s first class name is &amp;ldquo;Mint&amp;rdquo; which has no association with Blue.&lt;br&gt;
+e.g. &lt;strong&gt;SouthWest&lt;/strong&gt;&amp;rsquo;s distinction between basic economy and economy is vague.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;United&lt;/strong&gt; had the most visually busy interface and complex fare types, leading to a poor booking experience.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&#34;./journeymap.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;qualitative-interview&#34;&gt;Qualitative Interview&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt;&lt;br&gt;
+To understand users&amp;rsquo;:
+&lt;ol&gt;
+  &lt;li&gt;General flight behavior&lt;/li&gt;
+  &lt;li&gt;Top values&lt;br&gt;&lt;/li&gt;
+  &lt;li&gt;Pain points&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;b&gt;Remote Qualitative Interview: &lt;/b&gt;&lt;br&gt;
+We conducted a total of 30 interviews (5 participants from 6 different airlines) remotely over UserTesting.com and Zoom. We probed for their general flying behaviors and preferences, and narrowed down to their most recent flight experience (considering both pre-COVID &amp;amp; post-COVID).&lt;/li&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;demographics.svg&#34; data-caption=&#34;We accounted for various factors, including age, gender, income range, and travel behaviors, during our interview to capture the holistic view of participants&amp;rsquo; travel experiences.&#34;&gt;
+&lt;img src=&#34;demographics.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;We accounted for various factors, including age, gender, income range, and travel behaviors, during our interview to capture the holistic view of participants&amp;rsquo; travel experiences.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt;&lt;b&gt;Interactive Journey Maps:&lt;/b&gt;&lt;br&gt;
+We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session in each interview to have participants walkthrough their most recent experience and capture their moment-to-moment emotions and actions.&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;To capture their moment-to-moment emotions and actions, we divided the entire flight experience into four phases:
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;booking the flight ticket&lt;/strong&gt; (e.g. web vs. mobile vs. phone)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;before 24 hours of travel&lt;/strong&gt; (includes preparation and traveling to the airport)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;being at the airport&lt;/strong&gt; (checking-in, luggage, security checks, and so on)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;in-flight&lt;/strong&gt; (seat space, perks, food &amp;amp; beverage, etc)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;arrival&lt;/strong&gt; (post travel experience)&lt;/li&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;journeymapping.svg&#34; data-caption=&#34;A simplified abstract example of the interactive journey map: Participants can vertically toggle each action item (as shown in the red arrows) based on their overall experience of that particular event (Good to Poor).&#34;&gt;
+&lt;img src=&#34;journeymapping.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;A simplified abstract example of the interactive journey map: Participants can vertically toggle each action item (as shown in the red arrows) based on their overall experience of that particular event (Good to Poor).&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;thematic-analysis&#34;&gt;Thematic Analysis&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;themes.svg&#34; data-caption=&#34;We explored multi-facets of the travel experience to search for emerging themes from the qualitative data we collected from interviews and journey maps.&#34;&gt;
+&lt;img src=&#34;themes.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;We explored multi-facets of the travel experience to search for emerging themes from the qualitative data we collected from interviews and journey maps.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;affinitymap.svg&#34; data-caption=&#34;Overview of our affinity map. We inductively searched for overarching themes by&amp;hellip;Participant journey map → airline journey map → all airline journey map. From each participant&amp;rsquo;s journey map, we combined them to characterize the overall experience of each airline. We then combined all airlines to identify any patterns.&#34;&gt;
+&lt;img src=&#34;affinitymap.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;Overview of our affinity map. We inductively searched for overarching themes by&amp;hellip;&lt;br&gt;Participant journey map → airline journey map → all airline journey map. &lt;br&gt;From each participant&amp;rsquo;s journey map, we combined them to characterize the overall experience of each airline. We then combined all airlines to identify any patterns.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;key-insights-results&#34;&gt;Key Insights &amp;amp; Results&lt;/h2&gt;
+
+&lt;p&gt;Please note that below are &lt;strong&gt;&lt;em&gt;partial results&lt;/em&gt;&lt;/strong&gt; due to NDA.&lt;/p&gt;
+
+&lt;h3 id=&#34;personas-highlights&#34;&gt;Personas/Highlights&lt;/h3&gt;
+
+&lt;p&gt;We developed three prototypical personas (&lt;strong&gt;we intentionally used the term &amp;ldquo;highlight&amp;rdquo; instead of &amp;ldquo;persona&amp;rdquo; because they were modeled after participants that stood out with clear preference of values and motivations&lt;/strong&gt;). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;persona1.svg&#34; data-caption=&#34;This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.&#34;&gt;
+&lt;img src=&#34;persona1.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;persona2.svg&#34; data-caption=&#34;The second person is characterized by how traveling in the pandemic era is worst not just because of the safety concerns, but also due to the lack of services. Another unique perspective is the consideration for how family members can buy tickets for other family members.&#34;&gt;
+&lt;img src=&#34;persona2.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;The second person is characterized by how traveling in the pandemic era is worst not just because of the safety concerns, but also due to the lack of services. Another unique perspective is the consideration for how family members can buy tickets for other family members.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;persona3.svg&#34; data-caption=&#34;This last person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&#34;&gt;
+&lt;img src=&#34;persona3.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;This last person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h3 id=&#34;characterizing-the-travel-experience&#34;&gt;Characterizing the Travel Experience&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;journeymap.svg&#34; data-caption=&#34;We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes. &#34;&gt;
+&lt;img src=&#34;journeymap.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes. &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;We then devised step-by-step recommendations for each travel stage (NDA).&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&#34;recommendations&#34;&gt;Recommendations&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;./rec0.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Please note this part is NDA sensitive. Based on key insights and results we synthesized from the data, we came up with four major recommendations.
 
-&lt;p&gt;&lt;img src=&#34;./rec1.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;./rec2.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;recommendations.svg&#34; data-caption=&#34;Our high-level summaries of the four recommendations&#34;&gt;
+&lt;img src=&#34;recommendations.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Our high-level summaries of the four recommendations
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;💡 &lt;strong&gt;Key/fun Fact:&lt;/strong&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;TRANSPARENCY MATTERS&lt;/strong&gt;: it is a critical factor in the overall experience especially due to COVID. For example, users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.&lt;/li&gt;
+  &lt;li&gt;metrics, such as &lt;strong&gt;time to complete a booking&lt;/strong&gt;, are &lt;strong&gt;less important&lt;/strong&gt; than &lt;strong&gt;transparency&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Transparency is important because it translates to expectations. When expectations are not met, the overall experience worsens. &lt;/li&gt;
+&lt;li&gt;Clear communication on what each seat upgrade entails can entice users. &lt;br&gt;e.g. &lt;strong&gt;&amp;ldquo;upgrading a seat will get you a 7-inch wider leg room&amp;rdquo;&lt;/strong&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Users don&amp;rsquo;t mind receiving few more notifications&lt;/strong&gt; for clarifying and communicating the travel information (especially if contains deals). &lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;design-recommendations&#34;&gt;Design Recommendations&lt;/h3&gt;
+
+&lt;p&gt;Based on the four recommendations, we additionally modified some of the website elements to convey more transparency.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-show-what-services-are-suspended&#34;&gt;1. Show what services are suspended&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;design_rec1.svg&#34; data-caption=&#34;Click to see in a large view/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food &amp;amp; beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted&#34;&gt;
+&lt;img src=&#34;design_rec1.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in a large view&lt;/strong&gt;/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food &amp;amp; beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h4 id=&#34;2-clearly-communicate-the-perks-of-upgrading&#34;&gt;2. Clearly communicate the perks of upgrading&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;design_rec2.svg&#34; data-caption=&#34;Click to see in a large view/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision.&#34;&gt;
+&lt;img src=&#34;design_rec2.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in a large view&lt;/strong&gt;/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
 
 &lt;hr /&gt;
+
+&lt;h2 id=&#34;limitations&#34;&gt;Limitations&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;The participants were not racially diverse as recruitment of participants were automatically done via UserTesting.com.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Majority of participants&amp;rsquo; recent travels occured 6 months ago, in which they may have distorted memory of their travel experiences.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;ending.png&#34; data-caption=&#34;With that, I end with a fun quote from one of our participants 😄&#34;&gt;
+&lt;img src=&#34;ending.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;With that, I end with a fun quote from one of our participants&lt;/b&gt; 😄
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h2 id=&#34;back-to-top&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;/body&gt;&lt;/p&gt;
 </description>
