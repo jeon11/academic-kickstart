@@ -30,45 +30,52 @@
       <guid>https://jinjeon.me/project/alaska-airlines/</guid>
       <description>
 
-&lt;p&gt;&lt;body style=&#34;font-size:10pt&#34;&gt;&lt;/body&gt;
-&lt;!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) --&gt;&lt;/p&gt;
+&lt;style&gt;
+.introduction {
+  column-count: 2;
+}
+&lt;/style&gt;
 
-&lt;h3 id=&#34;my-role&#34;&gt;My Role&lt;/h3&gt;
+&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
+&lt;div class=&#34;introduction&#34;&gt;
+&lt;b&gt;My Role:&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;UX researcher in a 4-person team of researchers and designers&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;UX researcher in a 4-person team of researchers and designers&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Methods:&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;generative research, competitive analysis, remote qualitative interview, journey map, affinity diagram&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;timeline&#34;&gt;Timeline&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Timeline: &lt;/b&gt;
+&lt;br&gt;&lt;small&gt;June 2020 - Oct 2020 (~4 months)&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;June 2020 - Oct 2020 (~4 months)&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Stakeholders:&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;Research manager, product designers, &lt;br&gt;brand manager, eCommerce team&lt;/small&gt;
+&lt;/div&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;Generative Research, Competitive Analysis, Remote Qualitative Interview, Journey Map, Affinity Diagram&lt;/p&gt;
+&lt;!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) --&gt;
 
-&lt;h3 id=&#34;stakeholders&#34;&gt;Stakeholders&lt;/h3&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;Research manager, product designers, brand manager, eCommerce team&lt;/p&gt;
-
-&lt;!-- ![](./intro.pdf) --&gt;
-
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;To improve the upselling strategies of Alaska Airlines, we explore users&amp;rsquo; behaviors, motivations and overall experience of Alaska Airlines and its five competitors. Additionally, we study the impact of the current pandemic on their travel experiences.&lt;/p&gt;
-
-&lt;p&gt;Our research identifies users&amp;rsquo; top values, pain points, and overarching themes that affect their decision to make additional purchases. We present our findings to multiple stakeholders and conclude with four recommendations that will improve the overall experience and lead to increase in sales.&lt;/p&gt;
+&lt;p&gt;To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, we conducted user research to understand users&amp;rsquo; behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.&lt;/p&gt;
 
 &lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;The research findings matched with the ongoing research conducted by the company&amp;rsquo;s internal research team.&lt;/li&gt;
-&lt;li&gt;Our findings and key recommendations were presented to multiple internal stakeholders.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;We presented four recommendations to research managers, product and eCommerce teams. Some of the research findings matched with the ongoing research that was being conducted internally within the company, suggesting the validity of research. Other recommendations provide new insights to improve users&amp;rsquo; overall experience by adapting to the pandemic world.&lt;/p&gt;
 
 &lt;!-- ![](./designquestion.svg) --&gt;
 
-&lt;h2 id=&#34;design-question&#34;&gt;Design Question:&lt;/h2&gt;
+&lt;h2 id=&#34;research-question&#34;&gt;Research Question&lt;/h2&gt;
 
-&lt;p&gt;What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;below-are-under-construction&#34;&gt;BELOW ARE UNDER CONSTRUCTION.&lt;/h1&gt;
+
+&lt;h1 id=&#34;please-visit-back&#34;&gt;PLEASE VISIT BACK!&lt;/h1&gt;
 
 &lt;p&gt;&lt;img src=&#34;./journey.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
@@ -101,6 +108,8 @@
 &lt;p&gt;&lt;img src=&#34;./rec2.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
 </description>
     </item>
     

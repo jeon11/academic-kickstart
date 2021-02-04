@@ -1,6 +1,6 @@
 ---
 title: Alaska Airlines (Company sponsored summer project/NDA)
-summary: "**//Currently under construction//**<br>Moderated interviews and journey mapping to visaulize users' travel experiences "
+summary: "Moderated interviews and journey mapping to visualize users' travel experiences"
 tags:
 - highlights
 - research
@@ -53,43 +53,123 @@ ___
 To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, we conducted user research to understand users' behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.
 
 ## Impact
-We presented four recommendations to research managers, product and eCommerce teams. Some of the research findings matched with the ongoing research that was being conducted internally within the company, suggesting the validity of research. Other recommendations provide new insights to improve users' overall experience by adapting to the pandemic world.
+- Presented four major recommendations to research managers, product and eCommerce teams.
+- Research findings matched with the ongoing internal research, suggesting its validity.
+- Provided new insights to improve users' overall experiences by adapting to the pandemic world.
 
-<!-- ![](./designquestion.svg) -->
 ## Research Question
 > <p style="font-size: 16pt"><mark><em>"What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?"</em></mark><br><br>
 
 ___
-# BELOW ARE UNDER CONSTRUCTION.
-# PLEASE VISIT BACK!
-![](./journey.svg)
-
-![](./demographics.svg)
-
+## Project Timeline
+<!-- ![Project Timeline](./timeline.svg) -->
+{{< figure src="timeline.svg" title="Our project spanned from late June to October. We initiated our study with reviewing company's past research, examining the different competitors and case studies. We then proceeded with running qualitative interviews on UserTesting.com to get to the hearty meat of this research"  caption="Project timeline" width=full >}}
+___
 
 ## User Research
-We conducted a total of 30 remote qualitative interviews (5 participants for 6 different airlines). We probed for X, Y, Z, and also had users interactively participate in the session through journey mapping in the Miro board.
+Please note that below are **_summarized insights_** and **_challenges_** our team had during the user research process.
+
+### Preliminary & Competitive Analysis
+
+**Goal:**<br>
+To first better understand the competitive landscape of the airline industries, we examined the websites of the six airlines to visualize the user flow of booking a flight.
+
+💡 **Key/fun Fact:**<br>
+Despite the industry standard of generalizing the classification of seat types into economy, business, and first class, we noticed that each airline had different ways of classifying, naming, and promoting the different fare classes. We searched for areas that could be confusing and be improved for the users.
+
+{{< figure src="fareclass.svg" title="<b>Each airline had its own ways of classifying and naming the seats. Even though the perks that came along with each fare type were quite consistent throughout, low-cost airline, such as Southwest, had a uniquely different seating plan.</b>"  caption="Fare types of different airlines" width=full >}}
+
+#### Insights:
+1. **Alaska Airlines**' fare types were straightforward and transparent. The seat names are in consistent ascending order: <br>i.e. saver → economy → premium → first class.
+2. Fare types and their associated perks can become very unclear:<br>
+  e.g. **JetBlue**'s first class name is "Mint" which has no association with Blue.<br>
+  e.g. **SouthWest**'s distinction between basic economy and economy is vague.
+3. **United** had the most visually busy interface and complex fare types, leading to a poor booking experience.
 
 
-## Results
-We divided the users journey map into 5 stages:
+### Qualitative Interview
 
-1. During the initial booking
-2. After booking but more than 24 hours from day of travel
-3. Getting to the airport and the process to onboarding the plane
-4. During flight
-5. Arriving at the destination
+**Goal:**<br>
+To understand users':
+<ol>
+  <li>General flight behavior</li>
+  <li>Top values<br></li>
+  <li>Pain points<br></li>
+</ol>
 
-![](./journeymap.svg)
+**Methods:**<br>
+<ol>
+<li><b>Remote Qualitative Interview: </b><br>
+We conducted a total of 30 interviews (5 participants from 6 different airlines) remotely over UserTesting.com and Zoom. We probed for their general flying behaviors and preferences, and narrowed down to their most recent flight experience (considering both pre-COVID & post-COVID).</li>
+{{< figure src="demographics.svg" title="<b>We accounted for various factors, including age, gender, income range, and travel behaviors, during our interview to capture the holistic view of participants' travel experiences.</b>"  caption="Study demographics" width=full >}}
 
+<li><b>Interactive Journey Maps:</b><br>
+We incorporated an **interactive journey map** session in each interview to have participants walkthrough their most recent experience and capture their moment-to-moment emotions and actions.</li>
 
+To capture their moment-to-moment emotions and actions, we divided the entire flight experience into four phases:
+<ol>
+<li>**booking the flight ticket** (e.g. web vs. mobile vs. phone)</li>
+<li>**before 24 hours of travel** (includes preparation and traveling to the airport)</li>
+<li>**being at the airport** (checking-in, luggage, security checks, and so on)</li>
+<li>**in-flight** (seat space, perks, food & beverage, etc)</li>
+<li>**arrival** (post travel experience)</li>
+{{< figure src="journeymapping.svg" title="<b>A simplified abstract example of the interactive journey map: Participants can vertically toggle each action item (as shown in the red arrows) based on their overall experience of that particular event (Good to Poor).</b>"  caption="Journey Map Example" width=full >}}
+</ol>
+
+## Thematic Analysis
+{{< figure src="themes.svg" title="<b>We explored multi-facets of the travel experience to search for emerging themes from the qualitative data we collected from interviews and journey maps.</b>"  caption="Themes" width=full >}}
+
+{{< figure src="affinitymap.svg" title="<b>Overview of our affinity map. We inductively searched for overarching themes by...<br>Participant journey map → airline journey map → all airline journey map. <br>From each participant's journey map, we combined them to characterize the overall experience of each airline. We then combined all airlines to identify any patterns.</b>"  caption="Affinity Map" width=full >}}
+
+___
+## Key Insights & Results
+Please note that below are **_partial results_** due to NDA.
+
+### Personas/Highlights
+We developed three prototypical personas (**we intentionally used the term "highlight" instead of "persona" because they were modeled after participants that stood out with clear preference of values and motivations**). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat.
+
+{{< figure src="persona1.svg" title="<b>This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.</b>"  caption="persona 1" width=full >}}
+
+{{< figure src="persona2.svg" title="<b>The second person is characterized by how traveling in the pandemic era is worst not just because of the safety concerns, but also due to the lack of services. Another unique perspective is the consideration for how family members can buy tickets for other family members.</b>"  caption="persona 2" width=full >}}
+
+{{< figure src="persona3.svg" title="<b>This last person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.</b>"  caption="persona 3" width=full >}}
+
+### Characterizing the Travel Experience
+{{< figure src="journeymap.svg" title="<b>We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes. </b>"  caption="Journey Map Summary" width=full >}}
+
+We then devised step-by-step recommendations for each travel stage (NDA).
+
+___
 ## Recommendations
-![](./rec0.svg)
+Please note this part is NDA sensitive. Based on key insights and results we synthesized from the data, we came up with four major recommendations.
+{{< figure src="recommendations.svg" title=""  caption="Our high-level summaries of the four recommendations" width=full >}}
 
-![](./rec1.svg)
+💡 **Key/fun Fact:**<br>
+<ol>
+<li>**TRANSPARENCY MATTERS**: it is a critical factor in the overall experience especially due to COVID. For example, users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.</li>
+  <li>metrics, such as **time to complete a booking**, are **less important** than **transparency**</li>
+<li>Transparency is important because it translates to expectations. When expectations are not met, the overall experience worsens. </li>
+<li>Clear communication on what each seat upgrade entails can entice users. <br>e.g. **"upgrading a seat will get you a 7-inch wider leg room"**. </li>
+<li>**Users don't mind receiving few more notifications** for clarifying and communicating the travel information (especially if contains deals). </li>
+</ol>
 
-![](./rec2.svg)
+### Design Recommendations
+Based on the four recommendations, we additionally modified some of the website elements to convey more transparency.
 
+#### 1. Show what services are suspended
+{{< figure src="design_rec1.svg" title="**Click to see in a large view**/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food & beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted"  caption="Sample Design Recommendation1" width=full >}}
 
+#### 2. Clearly communicate the perks of upgrading
+{{< figure src="design_rec2.svg" title="**Click to see in a large view**/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision."  caption="Sample Design Recommendation2" width=full >}}
+
+---
+## Limitations
+1. The participants were not racially diverse as recruitment of participants were automatically done via UserTesting.com.
+
+2. Majority of participants' recent travels occured 6 months ago, in which they may have distorted memory of their travel experiences.
+
+{{< figure src="ending.png" title="<b>With that, I end with a fun quote from one of our participants</b> :smile:"  caption="User Quote" width=full >}}
+
+[Back to top ^](#)
 ---
 </body>

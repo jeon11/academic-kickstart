@@ -16,23 +16,23 @@ height = "calc(100vh - 70px)"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = "Hello, I'm Jin!"
-  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in **UX research**. <br>I'm curious 🧐, data-driven 📊, and empathetic ❤️. <br><br>"
+  title = "👋 Hello, I'm Jin!"
+  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in **UX research**. <br>I'm curious 🧐, data-driven 📊, and empathetic ❤️. <br><br><u>[• More About Me](#about)</u><br><u>[• See My Projects](#projects)</u>"
   align = "right"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  overlay_color = "#CE87C1"  # An HTML color value.
+  overlay_color = "#333333"  # An HTML color value.
   overlay_img = "uxr_8frpersecond.gif"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.2  # Darken the image. Value in range 0-1.
 
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
-  cta_label = "Go to About Me"
-  cta_url = "#about"
-  cta_icon_pack = "fas"
-  cta_icon = "user"
+  # cta_label = "Go to About Me"
+  # cta_url = "#about"
+  # cta_icon_pack = "fas"
+  # cta_icon = "user"
 
 [[item]]
   title = "Project Highlights"

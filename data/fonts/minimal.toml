@@ -1,0 +1,14 @@
+# Font style metadata
+# https://wowchemy.com/docs/getting-started/customization/#custom-font
+name = "Minimal"
+
+# Optional Google font URL
+google_fonts = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300"
+# google_fonts = "family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700"
+# <link rel="preconnect" href="https://fonts.gstatic.com">
+# <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+# Font families
+heading_font = "Montserrat"
+body_font = "Roboto"
+nav_font = "Open Sans"
+mono_font = "Roboto Mono"
