@@ -6,8 +6,6 @@ date: "2018-12-01T00:00:00Z"
 lastmod: "2018-12-01T00:00:00Z"
 
 tags:
-- fmri
-- brain
 
 image:
   placement: 2

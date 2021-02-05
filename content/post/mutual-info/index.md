@@ -6,10 +6,8 @@ date: "2020-01-31T00:00:00Z"
 lastmod: "2020-01-31T00:00:00Z"
 
 tags:
-- mutual information
-- neuroimaging
 - python
-- entropy
+- signal-processing
 
 image:
   placement: 2

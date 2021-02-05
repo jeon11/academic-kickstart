@@ -6,11 +6,9 @@ date: "2018-11-01T00:00:00Z"
 lastmod: "2018-11-01T00:00:00Z"
 
 tags:
-- tensorflow
 - python
-- vectorspace
-- semantics
 - research
+- machine-learning
 
 image:
   placement: 2

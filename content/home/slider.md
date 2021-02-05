@@ -36,7 +36,7 @@ height = "calc(100vh - 70px)"
 
 [[item]]
   title = "Project Highlights"
-  content = "<a href='#projects'> See my projects</a> :smile: <iframe width='760' height='600' src='https://editor.p5js.org/jeon11/embed/rIpX6_wm0' frameborder='0'></iframe>"
+  content = "<a href='#projects'> See my projects</a> :smile:"
   align = "left"
 
   overlay_color = "#B5CEEF"  # An HTML color value.

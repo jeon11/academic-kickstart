@@ -6,10 +6,8 @@ date: "2018-05-02T00:00:00Z"
 lastmod: "2018-05-02T00:00:00Z"
 
 tags:
-- eeg
-- research
 - python
-- signal processing
+- signal-processing
 
 image:
   placement: 2
