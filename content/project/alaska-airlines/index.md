@@ -48,7 +48,6 @@ slides: ""
 <br><small>Research manager, product designers, <br>brand manager, eCommerce team</small>
 </div>
 ___
-<!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) -->
 ## Overview
 To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, we conducted user research to understand users' behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.
 
@@ -169,7 +168,7 @@ Based on the four recommendations, we additionally modified some of the website 
 2. Majority of participants' recent travels occurred 6 months ago, in which they may have distorted memory of their travel experiences.
 
 3. In a qualitative research, it's more about finding about the big buckets & themes unlike a quant research. <br>
-When presenting the different demographic groups, it can be as easy as describing "we examined a wide income group" instead of graphing out all the different income groups. If all the demographic information was graphically presented, it can convey the different stakeholders, esp. data scientists, that the results and insights will be quant focused when the research is actually qualitative. 
+When presenting the different demographic groups, it can be as easy as describing "we examined a wide income group" instead of graphing out all the different income groups. If all the demographic information was graphically presented, it can convey the different stakeholders, esp. data scientists, that the results and insights will be quant focused when the research is actually qualitative.
 
 {{< figure src="ending.png" title="<b>With that, I end with a fun quote from one of our participants</b> :smile:"  caption="User Quote" width=full >}}
 

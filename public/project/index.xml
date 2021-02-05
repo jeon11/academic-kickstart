@@ -612,6 +612,29 @@ When presenting the different demographic groups, it can be as easy as describin
       <guid>https://jinjeon.me/project/navigating-cancer/</guid>
       <description>
 
+&lt;style&gt;
+.introduction {
+  column-count: 2;
+}
+&lt;/style&gt;
+
+&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
+&lt;div class=&#34;introduction&#34;&gt;
+&lt;b&gt;My Role:&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;UX researcher in a 4-person team of researchers and designers&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Methods:&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;survey, interview, affinity diagram, prototyping, heuristic evaluation, usability testing&lt;/small&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Timeline: &lt;/b&gt;
+&lt;br&gt;&lt;small&gt;Jul 2020 - Sep 2020 (~3 months)&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Stakeholders:&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;product manager, senior designer, clinicians, patients&lt;/small&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;currently-under-construction-please-visit-back&#34;&gt;Currently under construction. Please visit back!&lt;/h1&gt;
+
 &lt;p&gt;In summer 2020, I had a chance to work with the health tracker team at Navigating Cancer, a company that is devoted to enhancing the patient relationship management for cancer patients. During the weird time of COVID, the research team was working remotely as an international team with each of us in different time zones. I was also flying around being in the US and in my hometown Korea.&lt;/p&gt;
 
 &lt;h2 id=&#34;the-design-process&#34;&gt;The Design Process&lt;/h2&gt;
@@ -635,7 +658,11 @@ When presenting the different demographic groups, it can be as easy as describin
       <link>https://jinjeon.me/project/data-viz/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/data-viz/</guid>
-      <description>&lt;p&gt;LoREM IPSUM&lt;/p&gt;
+      <description>
+
+&lt;h1 id=&#34;currently-under-development&#34;&gt;Currently under development&lt;/h1&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;800&#34; height=&#34;500&#34;&gt;Image Reconstruction using Perlin Noise&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 

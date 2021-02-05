@@ -40,7 +40,7 @@ height = "calc(100vh - 70px)"
   align = "left"
 
   overlay_color = "#B5CEEF"  # An HTML color value.
-  overlay_img = "<iframe src='https://editor.p5js.org/jeon11/embed/rIpX6_wm0'></iframe>"  # Image path relative to your `static/img/` folder.
+  overlay_img = "sticky.jpg"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
 

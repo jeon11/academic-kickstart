@@ -48,19 +48,114 @@ slides: ""
 <br><small>product manager, senior designer, clinicians, patients</small>
 </div>
 
-# Currently under construction. Please visit back!
+## Overview
+To improve patients' experiences with symptom management and engagement with the health tracker, the team conducted **user research to identify needs**, **concept-tested prototypes**, and **delivered a high-fidelity prototype** to the leaders and multiple stakeholders.
+<br>**+ With COVID-19**, the team was working remotely as an international, cross-functional team with each of us in different time zones. I was also flying around being in the US and my hometown Korea, making the project more dynamic!
 
-In summer 2020, I had a chance to work with the health tracker team at Navigating Cancer, a company that is devoted to enhancing the patient relationship management for cancer patients. During the weird time of COVID, the research team was working remotely as an international team with each of us in different time zones. I was also flying around being in the US and in my hometown Korea.
+## Impact
+- Presented research findings and 4 major feature recommendations to leaders and multiple stakeholders.
+- Received strong positive feedbacks from the stakeholders, and recommendations aligned with company's future milestones.
 
-
-## The Design Process
-We used design thinking framework to help us guide our research focus by better framing the problem and solving the users’ underlying needs.We adapted the double-diamond model, which maps the divergent and convergent stages of the design process. The model is divided into 4 phases (discover, define, develop, and deliver). We begin by exploring the users’ problem space through various research. Then we narrow down to defining the user needs. At the developing phase, we would build prototypes and deliver to the end users to test the product.
-
-![](/pdf/navigating-cancer-resources/double-diamond.pdf)
-
-While the ideal model is a perfectly-shaped two diamonds, the reality of our journey was rather a deformed diamond process. As we had to go back-and-forth within each phase, we had multiple pivots, which ended up being a valuable process as we gained greater insights to the problem space.
-
-![](/pdf/navigating-cancer-resources/deformed-diamond.pdf)
+## Research Question
+> <p style="font-size: 16pt"><mark><em>"How might we increase patient engagement with health tracker?"</em></mark><br><br>
 
 ---
-<br>
+## The Design Process
+
+### Unfolding the Research through Design Framework
+Part of our team's mission was to **evangelize the impact of research** as the company lacked a dedicated research team. We incorporated the [Double Diamond](https://www.designcouncil.org.uk/news-opinion/what-framework-innovation-design-councils-evolved-double-diamond) design framework to help us guide our research focus by better framing the problem and solving the users' underlying needs.
+
+<mark>This case study will unfold along with the different stages of the Double Diamond.</mark>
+
+### The Ideal Double Diamond
+{{< figure src="doublediamond.png" title="<b>The ideal double diamond. Design frameworks help organize the design thinking process by helping researchers better frame the problem and focus on identifying and solving the users’ underlying needs.<br>The model, divided into 4 phases (discover, define, develop, and deliver), maps the divergent and convergent stages of the design process.</b>"  caption="Ideal Double Diamond" width=full >}}
+
+#### but the Reality...
+{{< figure src="reality.png" title="<b>The deformed double diamond. While the ideal model is a perfectly-shaped two diamonds, the reality of our research journey was a deformed diamond process. We made multiple pivots along the research, which ended up being a valuable process as we gained greater insights to the problem space.</b>"  caption="Reality Double Diamond" width=full >}}
+
+---
+## User Research
+Please note that below are **_summarized insights_** our team had during the user research process.
+
+{{< figure src="user_research.png" title="**Click to see in large view** <br> **Overall high-level research process.** We began our research with a general survey. From the insights from the general survey and existing survey results from the company, we conducted interviews with cancer patients and survivors."  caption="Overall User Research" width=full >}}
+
+___
+### <mark>Discover</mark>
+- We initiated our research with a general survey sent out online (n=72) to understand the general space of health care and health trackers. It helped us **identify people's health goals and tracking habits.**
+- From the general survey results, we devised a remote moderated **interview plan to better understand what it feels like to undergo cancer treatments and how they manage their symptoms.**
+- From the interview with cancer patients and survivors, **affinity mapping helped us categorize their responses** into various sections, such as their emotions throughout the oncology journey, how they track and manage their symptoms, interaction with the care team and caregivers, and so on.
+
+#### Key Insights
+Interview with the patients and survivors shed light to clearly understand not just how they manage their symptoms, but **empathize with their adjusted lifestyles and daily challenges.**
+
+- Cancer oncology treatments were perceived as **long "journeys"** even sometimes with no end.
+- **Symptom management varies by each individual, severity, and cancer types.** As a researcher and designer, another design challenge was how we can deliver a solution that addresses all cancer types and patients.
+
+{{< figure src="discover.svg" title="<b>Click to see large view. </b>"  caption="Interview Insights" width=full >}}
+
+___
+### <mark>Define</mark>
+Below are only partial insights synthesized.<br>
+
+💡 **Key Insight:**
+
+- Identifying the user needs and listing out the stories in a prioritized order immensely helped the team properly guide to the next steps.
+
+- We synthesized potential features that would address the user needs.
+
+{{< figure src="define.svg" title="<b>User Stories. These are partial high-level user stories synthesized from the research. </b>"  caption="Define" width=full >}}
+
+___
+### <mark>Develop </mark>
+
+💡 **Key Insights:**<br>
+
+- With my background in data visualization, **I was particularly fascinated in developing visual dashboards and data visualization to help patients track their symptoms.**
+
+- One key lesson I learned was: <mark>**Designing should always consider the target audience first.**</mark>
+  - Excited to develop data visualization screens, **I initially thought that the more diverse, interactive, and comprehensive graphs are, the better.**
+  - Nevertheless, during the expert evaluation and concept-testing, I realized that the screens were simply too busy and users (particularly the old population that are less tech savvy) find the **visuals to be too complicated and less informative.**
+
+{{< figure src="develop.svg" title="<b>Click to see in large view. <br> Developing prototypes. We began our development with quick sketches using Google's Crazy 8's methodology. We used Figma to develop into a high-fidelity prototypes, which were later concept-tested in the deliver phase </b>"  caption="Develop" width=full >}}
+
+#### Concept-testing
+{{< figure src="concept_test.svg" title="<b>We conducted concept-testing with 8 users, and organized by each participant. We then categorized by themes and features. </b>"  caption="Develop" width=full >}}
+
+{{< figure src="concept_test2.svg" title="<b>Concept-testing helped us narrow down our scope, and focus on key 3 areas, and specifically 4 feature design recommendations. </b>"  caption="Develop" width=full >}}
+
+___
+### <mark>Deliver</mark> (Design Recommendations)
+** **Disclaimer: Below displays only 2 of the total 4 final design recommendations** **
+
+In order to ensure that our design solutions stem to delivering the actual user needs, we explicitly stated the user needs that are being met with each design recommendation.
+
+#### **1. Dashboard and Data Visualization**
+Personalized dashboard provides a way to effectively track users' past symptoms and even compare and predict how they would feel in the next few days.
+{{< figure src="feature-1.svg" title=""  caption="" width=full >}}
+
+{{< figure src="feature-1.1.svg" title=""  caption="" width=full >}}
+
+{{< figure src="feature-1.2.svg" title=""  caption="" width=full >}}
+
+#### **2. Journal**
+Journal feature lets users record their symptoms through various means. **Considering accessibility and finger "tickling" & "numbness" being a common symptom of cancer, we include voice memo, photo upload, and emotion scale** to faciliate their input.
+
+{{< figure src="feature-2.svg" title=""  caption="" width=full >}}
+
+{{< figure src="feature-2.1.svg" title=""  caption="" width=full >}}
+
+{{< figure src="feature-2.2.svg" title=""  caption="" width=full >}}
+
+
+To learn more about this project, please reach out to me!
+
+---
+## Reflections
+1. Interviewing minorities and patients could be overwhelming at first. I thought I needed to know all the jargons related to cancer and oncology treatments. While it would be great to know all these details, acknowledging that you are "learning" in this space and trying to hear more from interviewees' experience not only helps lighten the atmosphere but also gives patients more confidence.
+
+2. User centered design approach is critical: For designing data visualizations, more comprehensive data, interaction, and fancy features do not translate to happy experience.
+
+3. There are fine lines of products requiring FDA approval, and fortunately, this project did not require it.
+
+
+---

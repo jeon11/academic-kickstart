@@ -29,7 +29,7 @@ slides: ""
 ---
 # Currently under development
 
-</div><iframe src="https://editor.p5js.org/jeon11/embed/w2Ugnl4dR" width="800" height="500">Image Reconstruction using Perlin Noise</iframe>
+</div><iframe src="https://editor.p5js.org/jeon11/embed/w2Ugnl4dR" width="760" height="600">Image Reconstruction using Perlin Noise</iframe>
 
 
 ---
