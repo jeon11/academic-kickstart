@@ -53,8 +53,6 @@
 
 &lt;hr /&gt;
 
-&lt;!-- ![](/pdf/navigating-cancer-resources/deformed-diamond.pdf) --&gt;
-
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
 &lt;p&gt;To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, we conducted user research to understand users&amp;rsquo; behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.&lt;/p&gt;
@@ -633,23 +631,510 @@ When presenting the different demographic groups, it can be as easy as describin
 &lt;br&gt;&lt;small&gt;product manager, senior designer, clinicians, patients&lt;/small&gt;
 &lt;/div&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;currently-under-construction-please-visit-back&#34;&gt;Currently under construction. Please visit back!&lt;/h1&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;In summer 2020, I had a chance to work with the health tracker team at Navigating Cancer, a company that is devoted to enhancing the patient relationship management for cancer patients. During the weird time of COVID, the research team was working remotely as an international team with each of us in different time zones. I was also flying around being in the US and in my hometown Korea.&lt;/p&gt;
+&lt;p&gt;To improve patients&amp;rsquo; experiences with symptom management and engagement with the health tracker, the team conducted &lt;strong&gt;user research to identify needs&lt;/strong&gt;, &lt;strong&gt;concept-tested prototypes&lt;/strong&gt;, and &lt;strong&gt;delivered a high-fidelity prototype&lt;/strong&gt; to the leaders and multiple stakeholders.
+&lt;br&gt;&lt;strong&gt;+ With COVID-19&lt;/strong&gt;, the team was working remotely as an international, cross-functional team with each of us in different time zones. I was also flying around being in the US and my hometown Korea, making the project more dynamic!&lt;/p&gt;
 
-&lt;h2 id=&#34;the-design-process&#34;&gt;The Design Process&lt;/h2&gt;
+&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
 
-&lt;p&gt;We used design thinking framework to help us guide our research focus by better framing the problem and solving the users’ underlying needs.We adapted the double-diamond model, which maps the divergent and convergent stages of the design process. The model is divided into 4 phases (discover, define, develop, and deliver). We begin by exploring the users’ problem space through various research. Then we narrow down to defining the user needs. At the developing phase, we would build prototypes and deliver to the end users to test the product.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Presented research findings and 4 major feature recommendations to leaders and multiple stakeholders.&lt;/li&gt;
+&lt;li&gt;Received strong positive feedbacks from the stakeholders, and recommendations aligned with company&amp;rsquo;s future milestones.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://jinjeon.me/pdf/navigating-cancer-resources/double-diamond.pdf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;research-question&#34;&gt;Research Question&lt;/h2&gt;
 
-&lt;p&gt;While the ideal model is a perfectly-shaped two diamonds, the reality of our journey was rather a deformed diamond process. As we had to go back-and-forth within each phase, we had multiple pivots, which ended up being a valuable process as we gained greater insights to the problem space.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://jinjeon.me/pdf/navigating-cancer-resources/deformed-diamond.pdf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;How might we increase patient engagement with health tracker?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-design-process&#34;&gt;The Design Process&lt;/h2&gt;
+
+&lt;h3 id=&#34;unfolding-the-research-through-design-framework&#34;&gt;Unfolding the Research through Design Framework&lt;/h3&gt;
+
+&lt;p&gt;Part of our team&amp;rsquo;s mission was to &lt;strong&gt;evangelize the impact of research&lt;/strong&gt; as the company lacked a dedicated research team. We incorporated the &lt;a href=&#34;https://www.designcouncil.org.uk/news-opinion/what-framework-innovation-design-councils-evolved-double-diamond&#34; target=&#34;_blank&#34;&gt;Double Diamond&lt;/a&gt; design framework to help us guide our research focus by better framing the problem and solving the users&amp;rsquo; underlying needs.&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;This case study will unfold along with the different stages of the Double Diamond.&lt;/mark&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;the-ideal-double-diamond&#34;&gt;The Ideal Double Diamond&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;doublediamond.png&#34; data-caption=&#34;The ideal double diamond. Design frameworks help organize the design thinking process by helping researchers better frame the problem and focus on identifying and solving the users’ underlying needs.The model, divided into 4 phases (discover, define, develop, and deliver), maps the divergent and convergent stages of the design process.&#34;&gt;
+&lt;img src=&#34;doublediamond.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;The ideal double diamond. Design frameworks help organize the design thinking process by helping researchers better frame the problem and focus on identifying and solving the users’ underlying needs.&lt;br&gt;The model, divided into 4 phases (discover, define, develop, and deliver), maps the divergent and convergent stages of the design process.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h4 id=&#34;but-the-reality&#34;&gt;but the Reality&amp;hellip;&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;reality.png&#34; data-caption=&#34;The deformed double diamond. While the ideal model is a perfectly-shaped two diamonds, the reality of our research journey was a deformed diamond process. We made multiple pivots along the research, which ended up being a valuable process as we gained greater insights to the problem space.&#34;&gt;
+&lt;img src=&#34;reality.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;The deformed double diamond. While the ideal model is a perfectly-shaped two diamonds, the reality of our research journey was a deformed diamond process. We made multiple pivots along the research, which ended up being a valuable process as we gained greater insights to the problem space.&lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;user-research&#34;&gt;User Research&lt;/h2&gt;
+
+&lt;p&gt;Please note that below are &lt;strong&gt;&lt;em&gt;summarized insights&lt;/em&gt;&lt;/strong&gt; our team had during the user research process.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;user_research.png&#34; data-caption=&#34;Click to see in large view  Overall high-level research process. We began our research with a general survey. From the insights from the general survey and existing survey results from the company, we conducted interviews with cancer patients and survivors.&#34;&gt;
+&lt;img src=&#34;user_research.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;Overall high-level research process.&lt;/strong&gt; We began our research with a general survey. From the insights from the general survey and existing survey results from the company, we conducted interviews with cancer patients and survivors.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;mark-discover-mark&#34;&gt;&lt;mark&gt;Discover&lt;/mark&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We initiated our research with a general survey sent out online (n=72) to understand the general space of health care and health trackers. It helped us &lt;strong&gt;identify people&amp;rsquo;s health goals and tracking habits.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;From the general survey results, we devised a remote moderated &lt;strong&gt;interview plan to better understand what it feels like to undergo cancer treatments and how they manage their symptoms.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;From the interview with cancer patients and survivors, &lt;strong&gt;affinity mapping helped us categorize their responses&lt;/strong&gt; into various sections, such as their emotions throughout the oncology journey, how they track and manage their symptoms, interaction with the care team and caregivers, and so on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;key-insights&#34;&gt;Key Insights&lt;/h4&gt;
+
+&lt;p&gt;Interview with the patients and survivors shed light to clearly understand not just how they manage their symptoms, but &lt;strong&gt;empathize with their adjusted lifestyles and daily challenges.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cancer oncology treatments were perceived as &lt;strong&gt;long &amp;ldquo;journeys&amp;rdquo;&lt;/strong&gt; even sometimes with no end.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Symptom management varies by each individual, severity, and cancer types.&lt;/strong&gt; As a researcher and designer, another design challenge was how we can deliver a solution that addresses all cancer types and patients.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;discover.svg&#34; data-caption=&#34;Click to see large view. &#34;&gt;
+&lt;img src=&#34;discover.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;Click to see large view. &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;mark-define-mark&#34;&gt;&lt;mark&gt;Define&lt;/mark&gt;&lt;/h3&gt;
+
+&lt;p&gt;Below are only partial insights synthesized.&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;💡 &lt;strong&gt;Key Insight:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Identifying the user needs and listing out the stories in a prioritized order immensely helped the team properly guide to the next steps.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;We synthesized potential features that would address the user needs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;define.svg&#34; data-caption=&#34;User Stories. These are partial high-level user stories synthesized from the research. &#34;&gt;
+&lt;img src=&#34;define.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;User Stories. These are partial high-level user stories synthesized from the research. &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;mark-develop-mark&#34;&gt;&lt;mark&gt;Develop &lt;/mark&gt;&lt;/h3&gt;
+
+&lt;p&gt;💡 &lt;strong&gt;Key Insights:&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;With my background in data visualization, &lt;strong&gt;I was particularly fascinated in developing visual dashboards and data visualization to help patients track their symptoms.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;One key lesson I learned was: &lt;mark&gt;&lt;strong&gt;Designing should always consider the target audience first.&lt;/strong&gt;&lt;/mark&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Excited to develop data visualization screens, &lt;strong&gt;I initially thought that the more diverse, interactive, and comprehensive graphs are, the better.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Nevertheless, during the expert evaluation and concept-testing, I realized that the screens were simply too busy and users (particularly the old population that are less tech savvy) find the &lt;strong&gt;visuals to be too complicated and less informative.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;develop.svg&#34; data-caption=&#34;Click to see in large view.  Developing prototypes. We began our development with quick sketches using Google&amp;rsquo;s Crazy 8&amp;rsquo;s methodology. We used Figma to develop into a high-fidelity prototypes, which were later concept-tested in the deliver phase &#34;&gt;
+&lt;img src=&#34;develop.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;Click to see in large view. &lt;br&gt; Developing prototypes. We began our development with quick sketches using Google&amp;rsquo;s Crazy 8&amp;rsquo;s methodology. We used Figma to develop into a high-fidelity prototypes, which were later concept-tested in the deliver phase &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h4 id=&#34;concept-testing&#34;&gt;Concept-testing&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;concept_test.svg&#34; data-caption=&#34;We conducted concept-testing with 8 users, and organized by each participant. We then categorized by themes and features. &#34;&gt;
+&lt;img src=&#34;concept_test.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;We conducted concept-testing with 8 users, and organized by each participant. We then categorized by themes and features. &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;concept_test2.svg&#34; data-caption=&#34;Concept-testing helped us narrow down our scope, and focus on key 3 areas, and specifically 4 feature design recommendations. &#34;&gt;
+&lt;img src=&#34;concept_test2.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;Concept-testing helped us narrow down our scope, and focus on key 3 areas, and specifically 4 feature design recommendations. &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;mark-deliver-mark-design-recommendations&#34;&gt;&lt;mark&gt;Deliver&lt;/mark&gt; (Design Recommendations)&lt;/h3&gt;
+
+&lt;p&gt;** &lt;strong&gt;Disclaimer: Below displays only 2 of the total 4 final design recommendations&lt;/strong&gt; **&lt;/p&gt;
+
+&lt;p&gt;In order to ensure that our design solutions stem to delivering the actual user needs, we explicitly stated the user needs that are being met with each design recommendation.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-dashboard-and-data-visualization&#34;&gt;&lt;strong&gt;1. Dashboard and Data Visualization&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Personalized dashboard provides a way to effectively track users&amp;rsquo; past symptoms and even compare and predict how they would feel in the next few days.
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;feature-1.svg&#34; &gt;
+&lt;img src=&#34;feature-1.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;feature-1.1.svg&#34; &gt;
+&lt;img src=&#34;feature-1.1.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;feature-1.2.svg&#34; &gt;
+&lt;img src=&#34;feature-1.2.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+&lt;h4 id=&#34;2-journal&#34;&gt;&lt;strong&gt;2. Journal&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Journal feature lets users record their symptoms through various means. &lt;strong&gt;Considering accessibility and finger &amp;ldquo;tickling&amp;rdquo; &amp;amp; &amp;ldquo;numbness&amp;rdquo; being a common symptom of cancer, we include voice memo, photo upload, and emotion scale&lt;/strong&gt; to faciliate their input.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;feature-2.svg&#34; &gt;
+&lt;img src=&#34;feature-2.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;feature-2.1.svg&#34; &gt;
+&lt;img src=&#34;feature-2.1.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;feature-2.2.svg&#34; &gt;
+&lt;img src=&#34;feature-2.2.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;To learn more about this project, please reach out to me!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;reflections&#34;&gt;Reflections&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Interviewing minorities and patients could be overwhelming at first. I thought I needed to know all the jargons related to cancer and oncology treatments. While it would be great to know all these details, acknowledging that you are &amp;ldquo;learning&amp;rdquo; in this space and trying to hear more from interviewees&amp;rsquo; experience not only helps lighten the atmosphere but also gives patients more confidence.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;User centered design approach is critical: For designing data visualizations, more comprehensive data, interaction, and fancy features do not translate to happy experience.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;There are fine lines of products requiring FDA approval, and fortunately, this project did not require it.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
 </description>
     </item>
     

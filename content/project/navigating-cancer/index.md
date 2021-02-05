@@ -1,6 +1,6 @@
 ---
 title: Navigating Cancer (NDA)
-summary: "**//Currently under construction//**<br>Conducted user research to identify problems & recommended features to enhance the symptom management experience"
+summary: "Conducted user research to identify problems & recommended features to enhance the health tracker"
 tags:
 - highlights
 - research
