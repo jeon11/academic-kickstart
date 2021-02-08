@@ -1151,9 +1151,13 @@ When presenting the different demographic groups, it can be as easy as describin
 
 &lt;p&gt;&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;
 
-&lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap. There are total of four images that are randomly chosen at the beginning. Feel free to refresh to see how different images are created.&lt;/p&gt;
+&lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.&lt;/p&gt;
 
-&lt;p&gt;Dragging the mouse will draw circles on top of the default loop to recover the image closer to the original.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;There are total of four images that are randomly chosen at the beginning. Refresh the page to see how different images are created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Dragging the mouse will draw circles on top of the default loop to recover the image closer to the original.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;page-is-currently-under-development&#34;&gt;Page is currently under development&lt;/h2&gt;
 
@@ -1169,9 +1173,7 @@ When presenting the different demographic groups, it can be as easy as describin
       <link>https://jinjeon.me/project/conference/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/conference/</guid>
-      <description>&lt;p&gt;LoREM IPSUM&lt;/p&gt;
-
-
+      <description>
 
 
 
@@ -1187,14 +1189,14 @@ When presenting the different demographic groups, it can be as easy as describin
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; data-caption=&#34;Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual&#34;&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; alt=&#34;&#34; width=&#34;400&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; data-caption=&#34;Click to see in large viewCutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual&#34;&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; alt=&#34;&#34; width=&#34;&amp;#39;max&amp;#39;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual
+    &lt;b&gt;Click to see in large view&lt;/b&gt;&lt;br&gt;Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual
   &lt;/figcaption&gt;
 
 
@@ -1217,14 +1219,14 @@ When presenting the different demographic groups, it can be as easy as describin
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; data-caption=&#34;Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC&#34;&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; alt=&#34;&#34; width=&#34;400&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; data-caption=&#34;Click to see in large viewCutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC&#34;&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; alt=&#34;&#34; width=&#34;&amp;#39;max&amp;#39;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC
+    &lt;b&gt;Click to see in large view&lt;/b&gt;&lt;br&gt;Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC
   &lt;/figcaption&gt;
 
 
@@ -1243,24 +1245,6 @@ When presenting the different demographic groups, it can be as easy as describin
       <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/shadowplay/</guid>
       <description>&lt;p&gt;Shadow casting possess different physical affordances that follow the laws of physics. Different shadow shapes and patterns can be created by manipulating the shadow’s light source direction and intensity, the physical object’s distance and angle, and the texture of the surface in which the shadow is casted. These physical properties can be used by the operator to create creative patterns with the projected shadows. Some of these physical affordances include playing with the shadow’s movement, superposing different object’s shadows and scaling the shadow’s size by moving the physical object closer or further from the light source. As aesthetically pleasing with its unique black and white contrast, shadows are a fascinating form of media that can create different textures and details based on the skill of the user.&lt;br&gt;&lt;br&gt;&lt;img src=&#34;https://jinjeon.me/img/shadowplay/test.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt; Shadow Play aims to enhance such a playful shadow experience to more advanced creative form of art by allowing users digitally manipulate their shadows. By adding new digital affordances Shadow Play, users can print and add layers of multiple shadows onto the screen, and invigorate them with animated effects and motions. With such various mix of augmented shadow effects, users can utilize their body as a tool for creating their own unique shadow artwork and animations.&lt;br&gt;&lt;a href=&#34;https://jinjeon.me/pdf/ShadowPlay.pdf&#34;&gt;See full paper&lt;/a&gt; &lt;br&gt;&lt;br&gt;&lt;strong&gt;Summary of interaction:&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;Input/Output:&lt;/strong&gt; Shadow Play requires ample activity space for interaction. The system recognizes the user within the activity space, and then displays the digitally augmented shadow onto the projected screen. Optimizing the interaction was one of our key concerns. With camera as an input device for users to communicate with Shadow Play, we wanted to depict the metaphor of users &lt;em&gt;taking pictures&lt;/em&gt; and &lt;em&gt;filming&lt;/em&gt; the creation. By selecting different features, such as snapshot, mirror, effects, and loop, users can create unique patterns and artwork. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/setup.jpg&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;Interaction:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;1. Setting the environment:&lt;/strong&gt; With the shoot feature, users can add layers of current shadows to the previous ones. Users can create static shadows, in which we refer to as background/environment of the artwork. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/env.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;2. Adding in motion and effects:&lt;/strong&gt; After the environment has been set, users can enliven the shadow by adding in animated motions and effects. The loop feature, mainly inspired by Instagram, records the motion of shadows and then is automatically looped. By adding in the fireball effect, Shadow Play recognizes the hand motion of reaching out, which then shoots out a fireball from the tip of the hand. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/motion.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;3. Advanced: Mirror and Patterns:&lt;/strong&gt; The mirror feature allows users to create symmetrical images and animation. The mirror feature is especially useful for creating patterns and symmetrical image, such as butterfly. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/mirror.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;With the mix of these features, users can create shadow artwork in playful environment. Shadow Play resembles the thought process and planning of an actual painting. Just as an artist would plan ahead where certain objects would be placed within the space before making the strokes, Shadow Play users have to deliberately organize the angle and distance of their body in order to perfect the layers of shadow into a single object shape. Such deliberation allows for more playful and interactive activity. By having the augmented shadows displayed on the screen, there is a loop of feedback and manipulation as users constantly refer to the captured shadow to make adjustments accordingly.&amp;rdquo;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Feature Prioritization in Classification of Novel Objects</title>
-      <link>https://jinjeon.me/project/featureprioritization/</link>
-      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/project/featureprioritization/</guid>
-      <description>&lt;p&gt;Object classification is essential to human learning as it helps us cope with various stimulus around the world. Regardless of multiple features within a single object, object classification seems to occur seamlessly within our cognitive process. In this experiment, we test how we prioritize each feature within an object and how these features are weighted when we categorize a certain object. Test subjects were given novel shapes that each featured either size, color, or orientation, and had to determine whether the shape belongs to a category of a given prototypical shape. &lt;br&gt; &lt;br&gt; The preliminary result showed that color was the single most determining feature when categorizing an object, showing 72.6% of incorporation in all trials, while orientation was the least with 60.7%, but the differences were not statistically significant. We further went on to use logistic regression to analyze the result, which showed thresholds for identifying a novel object to be in a certain category. However, these thresholds for each feature was not significantly different. The experiment suggests that categorization is more of an elaborate and holistic process that combines different features when categorizing a novel object.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Yelp Dataset Challenge</title>
-      <link>https://jinjeon.me/project/yelp/</link>
-      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/project/yelp/</guid>
-      <description>&lt;p&gt;By analyzing Yelp’s dataset, specifically star ratings and text reviews, we created a classifier that predicts whether reviews are positive (star ratings of four or five) or negative (star ratings of one or two). We excluded star ratings of three because we weren’t sure whether they were positive or negative. While Yelp’s star ratings are helpful for concise overview of local businesses, they are also crucial metrics for businesses as the ratings reflect their reputations. However, we realized that star ratings are often misleading as they are subject to user bias and preference. Thus, we wanted to predict ratings solely based on textual features of the reviews and exclude any potential human errors and biases. Performing logistic regression with the combined five features, we were able to correctly predict the reviews with an overall accuracy of 79%.&lt;/p&gt;
 </description>
     </item>
     

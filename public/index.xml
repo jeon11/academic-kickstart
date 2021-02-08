@@ -1151,9 +1151,13 @@ When presenting the different demographic groups, it can be as easy as describin
 
 &lt;p&gt;&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;
 
-&lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap. There are total of four images that are randomly chosen at the beginning. Feel free to refresh to see how different images are created.&lt;/p&gt;
+&lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.&lt;/p&gt;
 
-&lt;p&gt;Dragging the mouse will draw circles on top of the default loop to recover the image closer to the original.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;There are total of four images that are randomly chosen at the beginning. Refresh the page to see how different images are created.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Dragging the mouse will draw circles on top of the default loop to recover the image closer to the original.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;page-is-currently-under-development&#34;&gt;Page is currently under development&lt;/h2&gt;
 
@@ -1169,9 +1173,7 @@ When presenting the different demographic groups, it can be as easy as describin
       <link>https://jinjeon.me/project/conference/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/conference/</guid>
-      <description>&lt;p&gt;LoREM IPSUM&lt;/p&gt;
-
-
+      <description>
 
 
 
@@ -1187,14 +1189,14 @@ When presenting the different demographic groups, it can be as easy as describin
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; data-caption=&#34;Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual&#34;&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; alt=&#34;&#34; width=&#34;400&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; data-caption=&#34;Click to see in large viewCutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual&#34;&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/cns20.pdf&#34; alt=&#34;&#34; width=&#34;&amp;#39;max&amp;#39;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual
+    &lt;b&gt;Click to see in large view&lt;/b&gt;&lt;br&gt;Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual
   &lt;/figcaption&gt;
 
 
@@ -1217,14 +1219,14 @@ When presenting the different demographic groups, it can be as easy as describin
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; data-caption=&#34;Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC&#34;&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; alt=&#34;&#34; width=&#34;400&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; data-caption=&#34;Click to see in large viewCutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC&#34;&gt;
+&lt;img src=&#34;https://jinjeon.me/pdf/Psychonomics19.pdf&#34; alt=&#34;&#34; width=&#34;&amp;#39;max&amp;#39;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC
+    &lt;b&gt;Click to see in large view&lt;/b&gt;&lt;br&gt;Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC
   &lt;/figcaption&gt;
 
 
@@ -3177,18 +3179,18 @@ evoked_tlst_c4 = epochs_tlstS[&amp;quot;label==&#39;lstS&#39; and cond==&#39;4&#
     
     <item>
       <title>Feature Prioritization in Classification of Novel Objects</title>
-      <link>https://jinjeon.me/project/featureprioritization/</link>
+      <link>https://jinjeon.me/project-archives/featureprioritization/</link>
       <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/project/featureprioritization/</guid>
+      <guid>https://jinjeon.me/project-archives/featureprioritization/</guid>
       <description>&lt;p&gt;Object classification is essential to human learning as it helps us cope with various stimulus around the world. Regardless of multiple features within a single object, object classification seems to occur seamlessly within our cognitive process. In this experiment, we test how we prioritize each feature within an object and how these features are weighted when we categorize a certain object. Test subjects were given novel shapes that each featured either size, color, or orientation, and had to determine whether the shape belongs to a category of a given prototypical shape. &lt;br&gt; &lt;br&gt; The preliminary result showed that color was the single most determining feature when categorizing an object, showing 72.6% of incorporation in all trials, while orientation was the least with 60.7%, but the differences were not statistically significant. We further went on to use logistic regression to analyze the result, which showed thresholds for identifying a novel object to be in a certain category. However, these thresholds for each feature was not significantly different. The experiment suggests that categorization is more of an elaborate and holistic process that combines different features when categorizing a novel object.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Yelp Dataset Challenge</title>
-      <link>https://jinjeon.me/project/yelp/</link>
+      <link>https://jinjeon.me/project-archives/yelp/</link>
       <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/project/yelp/</guid>
+      <guid>https://jinjeon.me/project-archives/yelp/</guid>
       <description>&lt;p&gt;By analyzing Yelp’s dataset, specifically star ratings and text reviews, we created a classifier that predicts whether reviews are positive (star ratings of four or five) or negative (star ratings of one or two). We excluded star ratings of three because we weren’t sure whether they were positive or negative. While Yelp’s star ratings are helpful for concise overview of local businesses, they are also crucial metrics for businesses as the ratings reflect their reputations. However, we realized that star ratings are often misleading as they are subject to user bias and preference. Thus, we wanted to predict ratings solely based on textual features of the reviews and exclude any potential human errors and biases. Performing logistic regression with the combined five features, we were able to correctly predict the reviews with an overall accuracy of 79%.&lt;/p&gt;
 </description>
     </item>

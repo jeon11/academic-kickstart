@@ -7,7 +7,7 @@ weight = 1  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
-interval = 'false'  # 7000
+interval = '27000'  # 7000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
@@ -23,7 +23,7 @@ height = "calc(100vh - 70px)"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#B5CEEF"  # An HTML color value.
-  overlay_img = "uxr_8frpersecond.gif"  # Image path relative to your `static/img/` folder.
+  overlay_img = "uxr_10fr135.gif"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.2  # Darken the image. Value in range 0-1.
 
   # Call to action button (optional).
