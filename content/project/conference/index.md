@@ -1,6 +1,6 @@
 ---
 title: Conference Presentations
-summary: Python
+summary: Posters presented at international conferences
 tags:
 - research
 date: "2020-05-01T00:00:00Z"
@@ -27,11 +27,9 @@ url_video: ""
 slides: ""
 ---
 
-LoREM IPSUM
+{{< figure src="/pdf/cns20.pdf" title="<b>Click to see in large view</b><br>Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual"  caption="Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual" width='max' >}}
 
-{{< figure src="/pdf/cns20.pdf" title="Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual"  caption="Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual" width=400 >}}
-
-{{< figure src="/pdf/Psychonomics19.pdf" title="Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC"  caption="Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC" width=400 >}}
+{{< figure src="/pdf/Psychonomics19.pdf" title="<b>Click to see in large view</b><br>Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC"  caption="Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC" width='max' >}}
 
 ---
 <br>

@@ -37,30 +37,6 @@
     </item>
     
     <item>
-      <title>entropy</title>
-      <link>https://jinjeon.me/tags/entropy/</link>
-      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/entropy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mutual information</title>
-      <link>https://jinjeon.me/tags/mutual-information/</link>
-      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/mutual-information/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>neuroimaging</title>
-      <link>https://jinjeon.me/tags/neuroimaging/</link>
-      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/neuroimaging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>python</title>
       <link>https://jinjeon.me/tags/python/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
@@ -69,58 +45,18 @@
     </item>
     
     <item>
-      <title>brain</title>
-      <link>https://jinjeon.me/tags/brain/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/brain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fmri</title>
-      <link>https://jinjeon.me/tags/fmri/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/fmri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>semantics</title>
-      <link>https://jinjeon.me/tags/semantics/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/semantics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tensorflow</title>
-      <link>https://jinjeon.me/tags/tensorflow/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vectorspace</title>
-      <link>https://jinjeon.me/tags/vectorspace/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/vectorspace/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>eeg</title>
-      <link>https://jinjeon.me/tags/eeg/</link>
-      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/eeg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>signal processing</title>
+      <title>signal-processing</title>
       <link>https://jinjeon.me/tags/signal-processing/</link>
-      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/signal-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine-learning</title>
+      <link>https://jinjeon.me/tags/machine-learning/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/machine-learning/</guid>
       <description></description>
     </item>
     

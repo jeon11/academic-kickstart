@@ -36,7 +36,7 @@ height = "calc(100vh - 70px)"
 
 [[item]]
   title = "Project Highlights"
-  content = "<a href='#projects'> See my projects</a> :smile:"
+  content = "<br><a href='#projects'> Check out my recent projects here</a> :smile: <br>"
   align = "left"
 
   overlay_color = "#B5CEEF"  # An HTML color value.

@@ -1145,6 +1145,8 @@ When presenting the different demographic groups, it can be as easy as describin
       <guid>https://jinjeon.me/project/data-viz/</guid>
       <description>
 
+&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;interactive-art-image-reconstruction-using-perlin-noise-p5-js-javascript&#34;&gt;Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)&lt;/h2&gt;
 
 &lt;p&gt;&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;
@@ -1157,7 +1159,8 @@ When presenting the different demographic groups, it can be as easy as describin
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;/body&gt;&lt;/p&gt;
 </description>
     </item>
     
