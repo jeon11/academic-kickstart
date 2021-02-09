@@ -88,6 +88,7 @@ ___
 #### Key Insights
 Interview with the patients and survivors shed light to clearly understand not just how they manage their symptoms, but **empathize with their adjusted lifestyles and daily challenges.**
 
+- **Through quantitative analysis of the self-reported metrics, I identified that "older people's self perception of health level is higher than that of younger people"**
 - Cancer oncology treatments were perceived as **long "journeys"** even sometimes with no end.
 - **Symptom management varies by each individual, severity, and cancer types.** As a researcher and designer, another design challenge was how we can deliver a solution that addresses all cancer types and patients.
 

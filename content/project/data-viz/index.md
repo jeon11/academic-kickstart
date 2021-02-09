@@ -33,9 +33,9 @@ slides: ""
 
 The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.
 
-- There are total of four images that are randomly chosen at the beginning. Refresh the page to see how different images are created.
+- Refresh the page to see different image creations (total 4 images).
 
-- Dragging the mouse will draw circles on top of the default loop to recover the image closer to the original.
+- Drag the mouse to draw circles on top of the noises.
 
 
 ## Page is currently under development

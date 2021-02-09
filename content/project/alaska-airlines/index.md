@@ -156,10 +156,10 @@ Please note this part is NDA sensitive. Based on key insights and results we syn
 Based on the four recommendations, we additionally modified some of the website elements to convey more transparency.
 
 #### 1. Show what services are suspended
-{{< figure src="design_rec1.svg" title="**Click to see in a large view**/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food & beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted"  caption="Sample Design Recommendation1" width=full >}}
+{{< figure src="design_rec1.svg" title="**Click to see in large view**/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food & beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted"  caption="Sample Design Recommendation1" width=full >}}
 
 #### 2. Clearly communicate the perks of upgrading
-{{< figure src="design_rec2.svg" title="**Click to see in a large view**/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision."  caption="Sample Design Recommendation2" width=full >}}
+{{< figure src="design_rec2.svg" title="**Click to see in large view**/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision."  caption="Sample Design Recommendation2" width=full >}}
 
 ---
 ## Limitations & Lessons Learned
