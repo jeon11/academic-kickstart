@@ -22,7 +22,7 @@ bio: ""
 
 interests:
 - UX Research
-- HCI | UX Design
+- UX Design | HCI
 - AI | Cognition
 
 education:

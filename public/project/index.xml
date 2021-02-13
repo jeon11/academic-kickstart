@@ -508,14 +508,14 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;design_rec1.svg&#34; data-caption=&#34;Click to see in a large view/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food &amp;amp; beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;design_rec1.svg&#34; data-caption=&#34;Click to see in large view/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food &amp;amp; beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted&#34;&gt;
 &lt;img src=&#34;design_rec1.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    &lt;strong&gt;Click to see in a large view&lt;/strong&gt;/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food &amp;amp; beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;/ We added a devoted section that clearly communicates what services are currently suspended especially due to COVID (e.g. in-flight food &amp;amp; beverages). When a user is expecting quality in-flight service but does not receive it, the experience cannot be reverted
   &lt;/figcaption&gt;
 
 
@@ -540,14 +540,14 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;design_rec2.svg&#34; data-caption=&#34;Click to see in a large view/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;design_rec2.svg&#34; data-caption=&#34;Click to see in large view/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision.&#34;&gt;
 &lt;img src=&#34;design_rec2.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    &lt;strong&gt;Click to see in a large view&lt;/strong&gt;/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision.
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;/ Communicating what an upgraded seat entails provide transparency and facilitates the upgrading decision.
   &lt;/figcaption&gt;
 
 
@@ -774,6 +774,7 @@ When presenting the different demographic groups, it can be as easy as describin
 &lt;p&gt;Interview with the patients and survivors shed light to clearly understand not just how they manage their symptoms, but &lt;strong&gt;empathize with their adjusted lifestyles and daily challenges.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Through quantitative analysis of the self-reported metrics, I identified that &amp;ldquo;older people&amp;rsquo;s self perception of health level is higher than that of younger people&amp;rdquo;&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Cancer oncology treatments were perceived as &lt;strong&gt;long &amp;ldquo;journeys&amp;rdquo;&lt;/strong&gt; even sometimes with no end.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Symptom management varies by each individual, severity, and cancer types.&lt;/strong&gt; As a researcher and designer, another design challenge was how we can deliver a solution that addresses all cancer types and patients.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1154,9 +1155,9 @@ When presenting the different demographic groups, it can be as easy as describin
 &lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;There are total of four images that are randomly chosen at the beginning. Refresh the page to see how different images are created.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Refresh the page to see different image creations (total 4 images).&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Dragging the mouse will draw circles on top of the default loop to recover the image closer to the original.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Drag the mouse to draw circles on top of the noises.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;page-is-currently-under-development&#34;&gt;Page is currently under development&lt;/h2&gt;
@@ -1249,38 +1250,233 @@ When presenting the different demographic groups, it can be as easy as describin
     </item>
     
     <item>
-      <title>Homy, Private Social Network for Families</title>
+      <title>Homy, private social network for families</title>
       <link>https://jinjeon.me/project/homy/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/homy/</guid>
       <description>
 
-&lt;p&gt;In Fall 2015, I took a semester off to build my own mobile app. I wanted to develop a niche-specific social media that is just for families. Starting the project with mere passion and lacking practical knowledge, I self-taught how to conduct &lt;a href=&#34;https://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt;market research&lt;/a&gt;, design and build prototypes. I hired a developer to make tangible results, and won first place in &lt;a href=&#34;http://rehoboth.co.kr&#34; target=&#34;_blank&#34;_&gt;Rehoboth&lt;/a&gt; Business Idea Competition with $5k support. I also received free office space from the state government.&lt;/p&gt;
+&lt;style&gt;
+.introduction {
+  column-count: 2;
+}
+&lt;/style&gt;
 
-&lt;p&gt;&lt;li&gt; Developed storyboard and high fidelity prototype through iterations of market research, surveys, and user testing
-&lt;/li&gt;
-&lt;img src=&#34;https://jinjeon.me/img/homyui.png&#34; alt=&#34;&#34; /&gt;
-&lt;li&gt;
-From ideation and product management to recruiting, engaged in every aspect of early stage startup as founder
-&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
+&lt;div class=&#34;introduction&#34;&gt;
+&lt;b&gt;Methods:&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;generative research, market research, prototyping, usability testing&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;b&gt;Timeline: &lt;/b&gt;
+&lt;br&gt;&lt;small&gt;June 2015 - Nov 2015 &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;div&#34;&gt;&lt;/div&gt;&lt;/h2&gt;
 
-&lt;h2 id=&#34;about-homy&#34;&gt;&lt;strong&gt;About Homy&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Problem Statement:&lt;/strong&gt;&lt;br&gt;
-We are spending the least time with the most important people in our lives, family, while spending more and more time with strangers, coworkers and friends. The cause of the problem has been generally identified as increased work and commute time, and hectic individual routines.&lt;/p&gt;
+&lt;p&gt;I took a semester off to build my own mobile app, which is a niche-specific social media built just for families. Without any prior knowledge in UX, I self-taught myself along the entire journey, which involved conducting a &lt;a href=&#34;https://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt;market research&lt;/a&gt;, sketching wireframes, designing prototypes, and conducting usability tests.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Design Solution:&lt;/strong&gt;&lt;br&gt;
-Homy attempts to solve this growing social problem by recreating online home and allowing families to seamlessly connect. With unique post-it style fridge page, Homy wants to encourage families to communicate more often. The mission is &lt;em&gt;to provide emotional communication service to enrich family’s real, offline relationship.&lt;/em&gt;
-&lt;br&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-1.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-2.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-3.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-4.png&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;https://jinjeon.me/pdf/Homy_A2-5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I received 5K funding from Rehoboth Business Idea Competition&lt;/li&gt;
+&lt;li&gt;State government support with free office space in the tech hub valley&lt;/li&gt;
+&lt;li&gt;Developed storyboard and high fidelity prototype through iterations of market research, surveys, and user testing&lt;/li&gt;
+&lt;li&gt;Hired a software engineer to develop into an app
+&amp;mdash;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+
+&lt;p&gt;We are spending the least time with the most important people in our lives, family, while spending more and more time with strangers, coworkers and friends. The cause of the problem has been generally identified as increased work and commute time, and busier individual routines.&lt;/p&gt;
+
+&lt;h2 id=&#34;design-question&#34;&gt;Design Question&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;How might we recreate an online home where family members can seamlessly connect and provide emotional support?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;
+
+&lt;p&gt;Homy attempts to solve this growing social problem by recreating online home and allowing families to seamlessly connect. With unique post-it style fridge page, Homy wants to encourage families to communicate more often. The mission is &lt;em&gt;to provide emotional communication service to enrich family’s real, offline relationship.&lt;/em&gt;
+&lt;br&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;homyui.png&#34; data-caption=&#34;Click to see in large view.  My initial iteration of the prototype using Proto.io The Fridge, the landing page, recreates the experience of having post-it notes on the kitchen fridge&#34;&gt;
+&lt;img src=&#34;homyui.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view. &lt;br&gt; My initial iteration of the prototype using Proto.io&lt;/strong&gt; &lt;br&gt;The Fridge, the landing page, recreates the experience of having post-it notes on the kitchen fridge
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-1.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-1.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-2.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-2.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-3.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-3.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-4.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-4.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-5.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-5.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Check more at:&lt;br&gt;
 &lt;a href=&#34;https://jinjeon.me/pdf/Homy_A1.pdf&#34; target=&#34;_blank&#34;_&gt; &lt;strong&gt;Defining Market Opportunity.pdf&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
