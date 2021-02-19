@@ -7,7 +7,7 @@ weight = 1  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
-interval = '27000'  # 7000
+interval = '18000'  # 7000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
@@ -23,7 +23,7 @@ height = "calc(100vh - 70px)"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#B5CEEF"  # An HTML color value.
-  overlay_img = "uxr_10fr184.gif"  # Image path relative to your `static/img/` folder.
+  overlay_img = "uxr_10fr184.gif"  # Image path relative to your `static/img/` folder.  uxr_10fr184.gif
   overlay_filter = 0.2  # Darken the image. Value in range 0-1.
 
   # Call to action button (optional).
@@ -35,8 +35,8 @@ height = "calc(100vh - 70px)"
   # cta_icon = "user"
 
 [[item]]
-  title = "Project Highlights"
-  content = "<br><a href='#projects'> Check out my recent projects here</a> :smile: <br>"
+  title = "Projects"
+  content = "<br><a href='#projects'> Check out my highlighted projects here</a> :smile: <br><br> <a href='#contact'> Interested in my work? Reach out! </a> "
   align = "left"
 
   overlay_color = "#B5CEEF"  # An HTML color value.

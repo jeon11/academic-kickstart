@@ -125,31 +125,32 @@ ___
 Please note that below are **_partial results_** due to NDA.
 
 ### Personas/Highlights
-We developed three prototypical personas (**we intentionally used the term "highlight" instead of "persona" because they were modeled after participants that stood out with clear preference of values and motivations**). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat.
+We developed three prototypical personas (**we intentionally used the term "highlight" instead of "persona" because they were modeled after participants that stood out with clear preference of values and motivations**). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat. Only 1 of the 3 is shown here.
 
-{{< figure src="persona1.svg" title="<b>This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.</b>"  caption="persona 1" width=full >}}
+<!-- {{< figure src="persona1.svg" title="<b>This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.</b>"  caption="persona 1" width=full >}} -->
 
-{{< figure src="persona2.svg" title="<b>The second person is characterized by how traveling in the pandemic era is worst not just because of the safety concerns, but also due to the lack of services. Another unique perspective is the consideration for how family members can buy tickets for other family members.</b>"  caption="persona 2" width=full >}}
+<!-- {{< figure src="persona2.svg" title="<b>The second person is characterized by how traveling in the pandemic era is worst not just because of the safety concerns, but also due to the lack of services. Another unique perspective is the consideration for how family members can buy tickets for other family members.</b>"  caption="persona 2" width=full >}} -->
 
-{{< figure src="persona3.svg" title="<b>This last person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.</b>"  caption="persona 3" width=full >}}
+{{< figure src="persona3.svg" title="<b>This person is characterized as a <i>bargain hunter</i>, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.</b>"  caption="persona 3" width=full >}}
 
 ### Characterizing the Travel Experience
-{{< figure src="journeymap.svg" title="<b>We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes. </b>"  caption="Journey Map Summary" width=full >}}
+{{< figure src="journeymap.svg" title="<b>An overall experience of Airline X:</b> <br>We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes."  caption="Journey Map Summary" width=full >}}
 
 We then devised step-by-step recommendations for each travel stage (NDA).
 
 ___
 ## Recommendations
 Please note this part is NDA sensitive. Based on key insights and results we synthesized from the data, we came up with four major recommendations.
-{{< figure src="recommendations.svg" title=""  caption="Our high-level summaries of the four recommendations" width=full >}}
+{{< figure src="recommendations.svg" title=""  caption="<b>The four high level recommendations</b>" width=full >}}
 
-💡 **Key/fun Fact:**<br>
+💡 **Key/Fun Fact:**<br>
 <ol>
-<li>**TRANSPARENCY MATTERS**: it is a critical factor in the overall experience especially due to COVID. For example, users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.</li>
-  <li>metrics, such as **time to complete a booking**, are **less important** than **transparency**</li>
-<li>Transparency is important because it translates to expectations. When expectations are not met, the overall experience worsens. </li>
-<li>Clear communication on what each seat upgrade entails can entice users. <br>e.g. **"upgrading a seat will get you a 7-inch wider leg room"**. </li>
-<li>**Users don't mind receiving few more notifications** for clarifying and communicating the travel information (especially if contains deals). </li>
+<li>**TRANSPARENCY MATTERS**: it is a critical factor in the overall experience especially due to COVID. Users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.</li>
+
+  - Quantitative metrics, such as **time to complete a booking**, are **less important** than **transparency**.
+  - Transparency translates to expectations. When expectations are not met, the overall experience worsens.
+  - Clear communication on what each seat upgrade entails can entice users. <br>e.g. **"upgrading a seat will get you a 7-inch wider leg room"**.
+  <!-- <li>**Users don't mind receiving few more notifications** for clarifying and communicating the travel information (especially if contains deals). </li> -->
 </ol>
 
 ### Design Recommendations
