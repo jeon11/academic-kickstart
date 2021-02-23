@@ -2,7 +2,6 @@
 title: Data Visualizations
 summary: "**//Currently under construction//**<br> Examples of graphs created using Python and MATLAB, and their source codes"
 tags:
-- highlights
 - side-projects
 date: "2020-05-31T00:00:00Z"
 

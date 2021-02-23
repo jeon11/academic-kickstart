@@ -564,15 +564,6 @@ plt.savefig(&#39;/home/jeonj1/proj/mi/mi_box_distplot.png&#39;)
     </item>
     
     <item>
-      <title>fMRI Neuroimaging &amp; Classifier Coming Soon...</title>
-      <link>https://jinjeon.me/post/fmri/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/post/fmri/</guid>
-      <description>&lt;p&gt;In prep for fMRI neuroimaging processing and building classifier&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Universal Sentence Encoder and GloVe on Narrative Semantic Representation</title>
       <link>https://jinjeon.me/post/vectorspace/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>

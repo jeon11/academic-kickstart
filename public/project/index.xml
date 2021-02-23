@@ -316,9 +316,9 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 &lt;h3 id=&#34;personas-highlights&#34;&gt;Personas/Highlights&lt;/h3&gt;
 
-&lt;p&gt;We developed three prototypical personas (&lt;strong&gt;we intentionally used the term &amp;ldquo;highlight&amp;rdquo; instead of &amp;ldquo;persona&amp;rdquo; because they were modeled after participants that stood out with clear preference of values and motivations&lt;/strong&gt;). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat.&lt;/p&gt;
+&lt;p&gt;We developed three prototypical personas (&lt;strong&gt;we intentionally used the term &amp;ldquo;highlight&amp;rdquo; instead of &amp;ldquo;persona&amp;rdquo; because they were modeled after participants that stood out with clear preference of values and motivations&lt;/strong&gt;). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat. Only 1 of the 3 is shown here.&lt;/p&gt;
 
-
+&lt;!-- 
 
 
 
@@ -346,9 +346,9 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 
 &lt;/figure&gt;
+ --&gt;
 
-
-
+&lt;!-- 
 
 
 
@@ -376,7 +376,7 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 
 &lt;/figure&gt;
-
+ --&gt;
 
 
 
@@ -394,14 +394,14 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;persona3.svg&#34; data-caption=&#34;This last person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;persona3.svg&#34; data-caption=&#34;This person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&#34;&gt;
 &lt;img src=&#34;persona3.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;This last person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&lt;/b&gt;
+    &lt;b&gt;This person is characterized as a &lt;i&gt;bargain hunter&lt;/i&gt;, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&lt;/b&gt;
   &lt;/figcaption&gt;
 
 
@@ -426,14 +426,14 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;journeymap.svg&#34; data-caption=&#34;We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes. &#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;journeymap.svg&#34; data-caption=&#34;An overall experience of Airline X: We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes.&#34;&gt;
 &lt;img src=&#34;journeymap.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes. &lt;/b&gt;
+    &lt;b&gt;An overall experience of Airline X:&lt;/b&gt; &lt;br&gt;We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes.
   &lt;/figcaption&gt;
 
 
@@ -463,28 +463,31 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;recommendations.svg&#34; data-caption=&#34;Our high-level summaries of the four recommendations&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;recommendations.svg&#34; data-caption=&#34;The four high level recommendations&#34;&gt;
 &lt;img src=&#34;recommendations.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Our high-level summaries of the four recommendations
+    &lt;b&gt;The four high level recommendations&lt;/b&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 &lt;/p&gt;
 
-&lt;p&gt;💡 &lt;strong&gt;Key/fun Fact:&lt;/strong&gt;&lt;br&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key/Fun Fact:&lt;/strong&gt;&lt;br&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;TRANSPARENCY MATTERS&lt;/strong&gt;: it is a critical factor in the overall experience especially due to COVID. For example, users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.&lt;/li&gt;
-  &lt;li&gt;metrics, such as &lt;strong&gt;time to complete a booking&lt;/strong&gt;, are &lt;strong&gt;less important&lt;/strong&gt; than &lt;strong&gt;transparency&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Transparency is important because it translates to expectations. When expectations are not met, the overall experience worsens. &lt;/li&gt;
-&lt;li&gt;Clear communication on what each seat upgrade entails can entice users. &lt;br&gt;e.g. &lt;strong&gt;&amp;ldquo;upgrading a seat will get you a 7-inch wider leg room&amp;rdquo;&lt;/strong&gt;. &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Users don&amp;rsquo;t mind receiving few more notifications&lt;/strong&gt; for clarifying and communicating the travel information (especially if contains deals). &lt;/li&gt;
-&lt;/ol&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;TRANSPARENCY MATTERS&lt;/strong&gt;: it is a critical factor in the overall experience especially due to COVID. Users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.&lt;/li&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quantitative metrics, such as &lt;strong&gt;time to complete a booking&lt;/strong&gt;, are &lt;strong&gt;less important&lt;/strong&gt; than &lt;strong&gt;transparency&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Transparency translates to expectations. When expectations are not met, the overall experience worsens.&lt;/li&gt;
+&lt;li&gt;Clear communication on what each seat upgrade entails can entice users. &lt;br&gt;e.g. &lt;strong&gt;&amp;ldquo;upgrading a seat will get you a 7-inch wider leg room&amp;rdquo;&lt;/strong&gt;.
+&lt;!-- &lt;li&gt;**Users don&#39;t mind receiving few more notifications** for clarifying and communicating the travel information (especially if contains deals). &lt;/li&gt; --&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;design-recommendations&#34;&gt;Design Recommendations&lt;/h3&gt;
 
