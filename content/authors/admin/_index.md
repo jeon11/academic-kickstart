@@ -52,9 +52,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:jinjeon@berkeley.edu"  # contact /For a direct email link, use "mailto:test@example.org".
-- icon: spotify
-  icon_pack: fab
-  link: https://open.spotify.com/user/1232924859/playlist/1MSImXdEIq5x1iqXRJurjZ
+#- icon: spotify
+#  icon_pack: fab
+#  link: https://open.spotify.com/user/1232924859/playlist/1MSImXdEIq5x1iqXRJurjZ
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
