@@ -2,7 +2,8 @@
 title: Conference Presentations
 summary: Posters presented at international conferences
 tags:
-- research
+- academia
+- side-projects
 date: "2020-05-01T00:00:00Z"
 
 

@@ -49,12 +49,12 @@ slides: ""
 </div>
 ___
 ## Overview
-To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, we conducted user research to understand users' behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.
+To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, the team conducted user research to understand users' behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.
 
 ## Impact
 - Presented four major recommendations to research managers, product and eCommerce teams.
 - Research findings matched with the ongoing internal research, suggesting its validity.
-- Provided new insights to improve users' overall experiences by adapting to the pandemic world.
+- Provided recommendations on how the company in the travel industry can adapt to the pandemic.
 
 ## Research Question
 > <p style="font-size: 16pt"><mark><em>"What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?"</em></mark><br><br>
@@ -122,16 +122,16 @@ To capture their moment-to-moment emotions and actions, we divided the entire fl
 
 ___
 ## Key Insights & Results
-Please note that below are **_partial results_** due to NDA.
+Please note that below are **_filtered results_** due to NDA.
 
 ### Personas/Highlights
-We developed three prototypical personas (**we intentionally used the term "highlight" instead of "persona" because they were modeled after participants that stood out with clear preference of values and motivations**). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat. Only 1 of the 3 is shown here.
-
+Three prototypical personas were developed. The information provides basic demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. It also identifies top values, pain points, and motivations for upgrading a seat. Only 1 of the 3 is shown here.
+ <!-- (**we intentionally used the term "highlight" instead of "persona" because they were modeled after participants that stood out with clear preference of values and motivations**) -->
 <!-- {{< figure src="persona1.svg" title="<b>This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.</b>"  caption="persona 1" width=full >}} -->
 
-<!-- {{< figure src="persona2.svg" title="<b>The second person is characterized by how traveling in the pandemic era is worst not just because of the safety concerns, but also due to the lack of services. Another unique perspective is the consideration for how family members can buy tickets for other family members.</b>"  caption="persona 2" width=full >}} -->
+{{< figure src="persona2.svg" title="<b>The second person is characterized by how traveling in the pandemic era is worst not just because of the safety concerns, but also due to the lack of services. Another unique perspective is the consideration for how family members can buy tickets for other family members.</b>"  caption="persona 2" width=full >}}
 
-{{< figure src="persona3.svg" title="<b>This person is characterized as a <i>bargain hunter</i>, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.</b>"  caption="persona 3" width=full >}}
+<!-- {{< figure src="persona3.svg" title="<b>This person is characterized as a <i>bargain hunter</i>, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.</b>"  caption="persona 3" width=full >}} -->
 
 ### Characterizing the Travel Experience
 {{< figure src="journeymap.svg" title="<b>An overall experience of Airline X:</b> <br>We visualized a typical journey map, capturing the different motivations for upgrading a seat at each stage of travel. We identified values, emotions, and quotes."  caption="Journey Map Summary" width=full >}}
@@ -143,7 +143,7 @@ ___
 Please note this part is NDA sensitive. Based on key insights and results we synthesized from the data, we came up with four major recommendations.
 {{< figure src="recommendations.svg" title=""  caption="<b>The four high level recommendations</b>" width=full >}}
 
-💡 **Key/Fun Fact:**<br>
+💡 **Key Fact:**<br>
 <ol>
 <li>**TRANSPARENCY MATTERS**: it is a critical factor in the overall experience especially due to COVID. Users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.</li>
 

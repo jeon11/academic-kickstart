@@ -5,12 +5,28 @@
     <link>https://jinjeon.me/tags/</link>
       <atom:link href="https://jinjeon.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 developed by Jin Jeon with HTML/CSS/Markdown and ❤️ </copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 developed by Jin Jeon with HTML/CSS/Markdown and ❤️ </copyright><lastBuildDate>Mon, 22 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>Tags</title>
       <link>https://jinjeon.me/tags/</link>
     </image>
+    
+    <item>
+      <title>data</title>
+      <link>https://jinjeon.me/tags/data/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://jinjeon.me/tags/python/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>highlights</title>
@@ -33,14 +49,6 @@
       <link>https://jinjeon.me/tags/side-projects/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/side-projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://jinjeon.me/tags/python/</link>
-      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/python/</guid>
       <description></description>
     </item>
     

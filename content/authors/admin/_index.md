@@ -73,7 +73,7 @@ user_groups:
 
 I am a 1st year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington.
 
-I am a **curious-minded, data enthusiast** passionate in **UX research**. I believe that data-driven insights are at the heart of delivering meaningful experiences. With my background in data science, I use both **quantitative** and **qualitative** methods to synthesize insights and unveil users' underlying needs.
+I am a **curious-minded, data enthusiast** passionate in <mark>**UX research & design**</mark>. I believe that data-driven insights are at the heart of unveiling users' underlying needs and delivering meaningful experiences.
 
 See my projects [>> HERE <<](#projects).
 <!-- I come with a background in psychology and data science for several years. and have been working with data for several years. I My previous experiences range from research in academia to project management in various startups. -->

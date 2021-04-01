@@ -14,6 +14,9 @@ image:
   caption: ''
   focal_point: ""
   preview_only: true
+
+url_code: "https://github.com/jeon11/quant-ux"
+url_pdf: ""
 ---
 
 I use survey data collected from Amazon Mechanical Turk and Reddit user groups (all personal data  have been removed) in a study to examine the impact of cultural localization on web-based account creation between American and Korean users. I use the experiment data to display basic statistical tests in Python.
