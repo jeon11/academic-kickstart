@@ -7,7 +7,6 @@ lastmod: "2018-11-01T00:00:00Z"
 
 tags:
 - python
-- research
 - machine-learning
 
 image:

@@ -7,7 +7,6 @@ lastmod: "2018-05-01T00:00:00Z"
 
 tags:
 - python
-- signal-processing
 
 image:
   placement: 2

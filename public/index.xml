@@ -534,14 +534,14 @@ sm.stats.anova_lm(model, typ=2)
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;p&gt;To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, we conducted user research to understand users&amp;rsquo; behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.&lt;/p&gt;
+&lt;p&gt;To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies, the team conducted user research to understand users&amp;rsquo; behaviors, values, and motivations at different stages of their flight travel experiences. We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.&lt;/p&gt;
 
 &lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Presented four major recommendations to research managers, product and eCommerce teams.&lt;/li&gt;
 &lt;li&gt;Research findings matched with the ongoing internal research, suggesting its validity.&lt;/li&gt;
-&lt;li&gt;Provided new insights to improve users&amp;rsquo; overall experiences by adapting to the pandemic world.&lt;/li&gt;
+&lt;li&gt;Provided recommendations on how the company in the travel industry can adapt to the pandemic.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;research-question&#34;&gt;Research Question&lt;/h2&gt;
@@ -791,12 +791,12 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 &lt;h2 id=&#34;key-insights-results&#34;&gt;Key Insights &amp;amp; Results&lt;/h2&gt;
 
-&lt;p&gt;Please note that below are &lt;strong&gt;&lt;em&gt;partial results&lt;/em&gt;&lt;/strong&gt; due to NDA.&lt;/p&gt;
+&lt;p&gt;Please note that below are &lt;strong&gt;&lt;em&gt;filtered results&lt;/em&gt;&lt;/strong&gt; due to NDA.&lt;/p&gt;
 
 &lt;h3 id=&#34;personas-highlights&#34;&gt;Personas/Highlights&lt;/h3&gt;
 
-&lt;p&gt;We developed three prototypical personas (&lt;strong&gt;we intentionally used the term &amp;ldquo;highlight&amp;rdquo; instead of &amp;ldquo;persona&amp;rdquo; because they were modeled after participants that stood out with clear preference of values and motivations&lt;/strong&gt;). We introduced the demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. We also identified top values, pain points, and motivations for upgrading a seat. Only 1 of the 3 is shown here.&lt;/p&gt;
-
+&lt;p&gt;Three prototypical personas were developed. The information provides basic demographic information, a hypothetical trip destination, quote from the interview, means used to book and upgrade the seat. It also identifies top values, pain points, and motivations for upgrading a seat. Only 1 of the 3 is shown here.
+ &lt;!-- (**we intentionally used the term &#34;highlight&#34; instead of &#34;persona&#34; because they were modeled after participants that stood out with clear preference of values and motivations**) --&gt;
 &lt;!-- 
 
 
@@ -825,9 +825,9 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 
 &lt;/figure&gt;
- --&gt;
+ --&gt;&lt;/p&gt;
 
-&lt;!-- 
+
 
 
 
@@ -855,9 +855,9 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 
 &lt;/figure&gt;
- --&gt;
 
 
+&lt;!-- 
 
 
 
@@ -885,7 +885,7 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 
 &lt;/figure&gt;
-
+ --&gt;
 
 &lt;h3 id=&#34;characterizing-the-travel-experience&#34;&gt;Characterizing the Travel Experience&lt;/h3&gt;
 
@@ -956,7 +956,7 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 &lt;/figure&gt;
 &lt;/p&gt;
 
-&lt;p&gt;💡 &lt;strong&gt;Key/Fun Fact:&lt;/strong&gt;&lt;br&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Fact:&lt;/strong&gt;&lt;br&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;TRANSPARENCY MATTERS&lt;/strong&gt;: it is a critical factor in the overall experience especially due to COVID. Users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.&lt;/li&gt;&lt;/p&gt;
 
@@ -1622,7 +1622,7 @@ When presenting the different demographic groups, it can be as easy as describin
     </item>
     
     <item>
-      <title>Data Visualizations</title>
+      <title>Coding &amp; Data Visualizations</title>
       <link>https://jinjeon.me/project/data-viz/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/data-viz/</guid>
@@ -3653,9 +3653,9 @@ evoked_tlst_c4 = epochs_tlstS[&amp;quot;label==&#39;lstS&#39; and cond==&#39;4&#
     
     <item>
       <title>Tangible UI: Augmented Shadow Play</title>
-      <link>https://jinjeon.me/project/shadowplay/</link>
+      <link>https://jinjeon.me/project-archives/shadowplay/</link>
       <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/project/shadowplay/</guid>
+      <guid>https://jinjeon.me/project-archives/shadowplay/</guid>
       <description>&lt;p&gt;Shadow casting possess different physical affordances that follow the laws of physics. Different shadow shapes and patterns can be created by manipulating the shadow’s light source direction and intensity, the physical object’s distance and angle, and the texture of the surface in which the shadow is casted. These physical properties can be used by the operator to create creative patterns with the projected shadows. Some of these physical affordances include playing with the shadow’s movement, superposing different object’s shadows and scaling the shadow’s size by moving the physical object closer or further from the light source. As aesthetically pleasing with its unique black and white contrast, shadows are a fascinating form of media that can create different textures and details based on the skill of the user.&lt;br&gt;&lt;br&gt;&lt;img src=&#34;https://jinjeon.me/img/shadowplay/test.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt; Shadow Play aims to enhance such a playful shadow experience to more advanced creative form of art by allowing users digitally manipulate their shadows. By adding new digital affordances Shadow Play, users can print and add layers of multiple shadows onto the screen, and invigorate them with animated effects and motions. With such various mix of augmented shadow effects, users can utilize their body as a tool for creating their own unique shadow artwork and animations.&lt;br&gt;&lt;a href=&#34;https://jinjeon.me/pdf/ShadowPlay.pdf&#34;&gt;See full paper&lt;/a&gt; &lt;br&gt;&lt;br&gt;&lt;strong&gt;Summary of interaction:&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;Input/Output:&lt;/strong&gt; Shadow Play requires ample activity space for interaction. The system recognizes the user within the activity space, and then displays the digitally augmented shadow onto the projected screen. Optimizing the interaction was one of our key concerns. With camera as an input device for users to communicate with Shadow Play, we wanted to depict the metaphor of users &lt;em&gt;taking pictures&lt;/em&gt; and &lt;em&gt;filming&lt;/em&gt; the creation. By selecting different features, such as snapshot, mirror, effects, and loop, users can create unique patterns and artwork. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/setup.jpg&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;Interaction:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;1. Setting the environment:&lt;/strong&gt; With the shoot feature, users can add layers of current shadows to the previous ones. Users can create static shadows, in which we refer to as background/environment of the artwork. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/env.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;2. Adding in motion and effects:&lt;/strong&gt; After the environment has been set, users can enliven the shadow by adding in animated motions and effects. The loop feature, mainly inspired by Instagram, records the motion of shadows and then is automatically looped. By adding in the fireball effect, Shadow Play recognizes the hand motion of reaching out, which then shoots out a fireball from the tip of the hand. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/motion.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;&lt;strong&gt;3. Advanced: Mirror and Patterns:&lt;/strong&gt; The mirror feature allows users to create symmetrical images and animation. The mirror feature is especially useful for creating patterns and symmetrical image, such as butterfly. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/mirror.gif&#34; alt=&#34;&#34; /&gt;&lt;br&gt;With the mix of these features, users can create shadow artwork in playful environment. Shadow Play resembles the thought process and planning of an actual painting. Just as an artist would plan ahead where certain objects would be placed within the space before making the strokes, Shadow Play users have to deliberately organize the angle and distance of their body in order to perfect the layers of shadow into a single object shape. Such deliberation allows for more playful and interactive activity. By having the augmented shadows displayed on the screen, there is a loop of feedback and manipulation as users constantly refer to the captured shadow to make adjustments accordingly.&amp;rdquo;&lt;/p&gt;
 </description>
     </item>
@@ -3680,9 +3680,9 @@ evoked_tlst_c4 = epochs_tlstS[&amp;quot;label==&#39;lstS&#39; and cond==&#39;4&#
     
     <item>
       <title>Homy, private social network for families</title>
-      <link>https://jinjeon.me/project/homy/</link>
+      <link>https://jinjeon.me/project-archives/homy/</link>
       <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/project/homy/</guid>
+      <guid>https://jinjeon.me/project-archives/homy/</guid>
       <description>
 
 &lt;style&gt;
