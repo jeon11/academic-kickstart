@@ -71,7 +71,7 @@ user_groups:
 - []
 ---
 
-I am a 1st year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington.
+I am a 2nd year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington.
 
 I am a **curious-minded, data enthusiast** passionate in <mark>**UX research & design**</mark>. I believe that data-driven insights are at the heart of unveiling users' underlying needs and delivering meaningful experiences.
 

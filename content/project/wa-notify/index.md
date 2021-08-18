@@ -1,19 +1,20 @@
 ---
-title: Coffitok
-summary: "From identifying user needs to iterating prototypes, a 10-week project in user centered design <br>**(opens external project link)**"
+title: WA COVID Exposure Notification Usability Study
+summary: "Coming soon"
 tags:
+- highlights
 - research
-- side-projects
-date: "2020-12-10T00:00:00Z"
+
+date: "2021-03-31T00:00:00Z"
 
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://sites.google.com/view/coffitok/home"
+external_link: ""
 
 image:
   caption: ""
   focal_point: Smart
-  preview_only: false
+  preview_only: true
 
 url_code: ""
 url_pdf: ""
@@ -27,9 +28,10 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+<body style="font-family:Arial; font-size: 12pt">
 
 
-
-
+## Page is currently under development
 ---
 <br>
+</body>
