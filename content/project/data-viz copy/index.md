@@ -1,9 +1,14 @@
 ---
-title: SAP Generative research in data comparison habits (NDA)
-summary: "Coming soon"
+title: SAP Generative research in sourcing data comparison (NDA)
+summary: "Owned the project and initiative to integrate user research into design process"
 tags:
 - highlights
 - research
+- preliminary-research
+- contextual-inquiries
+- interview
+- affinity-diagrams
+- journey-mapping
 
 date: "2021-08-13T00:00:00Z"
 

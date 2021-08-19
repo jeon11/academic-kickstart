@@ -2,7 +2,6 @@
 title: WA COVID Exposure Notification Usability Study
 summary: "Coming soon"
 tags:
-- highlights
 - research
 
 date: "2021-03-31T00:00:00Z"

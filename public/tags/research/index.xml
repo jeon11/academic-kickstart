@@ -5,12 +5,415 @@
     <link>https://jinjeon.me/tags/research/</link>
       <atom:link href="https://jinjeon.me/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <description>research</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 developed by Jin Jeon with HTML/CSS/Markdown and ❤️ </copyright><lastBuildDate>Wed, 31 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 developed by Jin Jeon with HTML/CSS/Markdown and ❤️ </copyright><lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://jinjeon.me/img/icon.png</url>
       <title>research</title>
       <link>https://jinjeon.me/tags/research/</link>
     </image>
+    
+    <item>
+      <title>SAP Generative research in data comparison habits (NDA)</title>
+      <link>https://jinjeon.me/project/data-viz-copy/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project/data-viz-copy/</guid>
+      <description>
+
+&lt;style&gt;
+.introduction {
+  column-count: 2;
+}
+&lt;/style&gt;
+
+&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
+&lt;div class=&#34;introduction&#34;&gt;
+&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;My Role:&lt;/h&gt;&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;UX researcher owning the comparison pattern research project &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Methods:&lt;/h&gt;&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;&lt;strong&gt;Contextual inquiries&lt;/strong&gt;, &lt;strong&gt;journey maps&lt;/strong&gt;, collaborative workshop facilitation, generative research, preliminary research &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Timeline: &lt;/h&gt;&lt;/b&gt;
+&lt;br&gt;&lt;small&gt;June 2021 - Aug 2021 (~3 months)&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Stakeholders:&lt;/h&gt;&lt;/b&gt;
+&lt;br&gt;&lt;small&gt; UX manager, UX designers and researchers, dev team, PM and product team &lt;/small&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-overview-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Overview &lt;/h&gt;&lt;/h2&gt;
+
+&lt;p&gt;SAP provides various products and software for enterprise resource planning. &lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, this project is an initiative to integrate user research into the design process so that design decisions are informed and inspired by user data&lt;/strong&gt;&lt;/mark&gt;. As a starting point, the research focuses on comparison patterns in sourcing product domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Disclaimer:&lt;/strong&gt; Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-objectives-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Objectives &lt;/h&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Identify user needs&lt;/strong&gt; and &lt;strong&gt;pain points&lt;/strong&gt; when comparing data in a procurement process.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visualize&lt;/strong&gt; users&amp;rsquo; touchpoints of typical use cases through &lt;strong&gt;journey mapping&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Serve research findings to better &lt;strong&gt;inform design decisions&lt;/strong&gt; in building comparison pattern.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-impact-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Impact &lt;/h&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Validated&lt;/strong&gt; major research findings that matched with previous research.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Provided high-level recommendations&lt;/strong&gt; to address major pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Set the foundation&lt;/strong&gt; for the next stage of the design process which involves ideating and concept testing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-research-question-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Question &lt;/h&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;What are the different use cases that involve comparing data in sourcing?&amp;rdquo;&lt;br&gt;&lt;br&gt;
+&lt;mark&lt;em&gt;&amp;ldquo;How does typical workflow look like, and what are the needs and pain points at each touchpoint?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-high-level-research-process-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; High Level Research Process &lt;/h&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;research-process.png&#34; data-caption=&#34;The project began with preliminary research, examining what has been done in the past. It served as a guide for designing primary user research. Through a collaborative data synthesis workshop, I was able to engage different stakeholders onboard with the key research findings and deliver recommendations.&#34;&gt;
+&lt;img src=&#34;research-process.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The project began with preliminary research, examining what has been done in the past. It served as a guide for designing primary user research. Through a collaborative data synthesis workshop, I was able to engage different stakeholders onboard with the key research findings and deliver recommendations.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-1-preliminary-research-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; 1. Preliminary Research &lt;/h&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;goals&#34;&gt;Goals:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To first better understand the product space in procurement and sourcing&lt;/li&gt;
+&lt;li&gt;To understand what has been done in the past to avoid overlapping work&lt;/li&gt;
+&lt;li&gt;Identify knowledge gaps&lt;/li&gt;
+&lt;li&gt;Use the preliminary research findings as a guide for designing preliminary research&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;at-a-glance-intentionally-not-readable&#34;&gt;At a Glance (Intentionally not readable)&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;preliminary-research.png&#34; data-caption=&#34;Using FigJam, I visually laid out findings from past research.  The white empty spaces indicated potential knowledge gaps.&#34;&gt;
+&lt;img src=&#34;preliminary-research.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Using FigJam, I visually laid out findings from past research. &lt;br&gt; &lt;strong&gt;The white empty spaces indicated potential knowledge gaps.&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h3 id=&#34;outcomes&#34;&gt;Outcomes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Examined 5+ past research work and findings, and &lt;strong&gt;organized into an affinity map to identify knowledge gaps.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Studies were from 2018-2019, involving evaluative research, testing design iterations and concepts. &lt;strong&gt;Because past work often dealt with specific design concepts, it was difficult to generalize findings across different studies.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Lot of data was missing or not as well organized.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;insights&#34;&gt;Insights:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Preliminary research revealed the knowledge gaps and how past work has been mainly focused on testing design iterations with lack of understanding of the users.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In order to inform future design decisions, the primary user research was designed to focus on foundational research to understand users&amp;rsquo; needs, behaviors, pain points, and typical use cases in their sourcing workflow.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-2-primary-user-research-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; 2. Primary User Research &lt;/h&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;goals-1&#34;&gt;Goals:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Identify major use cases and touchpoints in sourcing and data comparison&lt;/li&gt;
+&lt;li&gt;Understand users&amp;rsquo; behaviors and pain points&lt;/li&gt;
+&lt;li&gt;Develop user journey map of typical use cases&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;study-design&#34;&gt;Study Design:&lt;/h3&gt;
+
+&lt;p&gt;The purpose of the study was &lt;strong&gt;generative&lt;/strong&gt; to understand users&amp;rsquo; behaviors, needs, and pain points.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;60 minutes of &lt;strong&gt;qualitative&lt;/strong&gt; remotely-moderated &lt;strong&gt;contextual inquiries&lt;/strong&gt; and &lt;strong&gt;interviews&lt;/strong&gt; via Respondent.io&lt;/li&gt;
+&lt;li&gt;Design of the study was 2 folds:
+
+&lt;ol&gt;
+&lt;li&gt;High level start to end process of sourcing&lt;/li&gt;
+&lt;li&gt;Detailed step by step of data comparison process from analyzing bids to making decisions&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;study-demographics-at-a-glance&#34;&gt;Study Demographics at a Glance:&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;primary-demographics.png&#34; data-caption=&#34;Participant criteria were strictly controlled to ensure that I spoke with the participants that best matches with the current users. &#34;&gt;
+&lt;img src=&#34;primary-demographics.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;Participant criteria were strictly controlled to ensure that I spoke with the participants that best matches with the current users. &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-3-data-analysis-collaborative-workshop-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; 3. Data Analysis &amp;amp; Collaborative Workshop &lt;/h&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;3-1-data-analysis&#34;&gt;3.1 Data Analysis:&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;data-analysis1.png&#34; data-caption=&#34; For the initial data analysis, notes from Excel was converted to Mural whiteboard, and was organized into high level themes. Each participant was color-coded. &#34;&gt;
+&lt;img src=&#34;data-analysis1.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt; For the initial data analysis, notes from Excel was converted to Mural whiteboard, and was organized into high level themes. Each participant was color-coded. &lt;/b&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h3 id=&#34;3-2-thematic-analysis-and-journey-mapping&#34;&gt;3.2 Thematic Analysis and Journey Mapping:&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;data-analysis2.png&#34; &gt;
+&lt;img src=&#34;data-analysis2.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Each sticky was broken down by corresponding themes.&lt;/li&gt;
+&lt;li&gt;By visually laying out the participants&amp;rsquo; workflow from start to end in sourcing, it helped understand the journey of each participant.&lt;/li&gt;
+&lt;li&gt;I was able to identify emerging patterns, characterizing behaviors, needs, and major paint points at each touchpoint in the journey.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;3-3-collaborative-synthesis-workshop&#34;&gt;3.3 Collaborative Synthesis Workshop:&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;workshop.png&#34; &gt;
+&lt;img src=&#34;workshop.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Over two days, my supervising mentor and I facilitated a data synthesis workshop to onboard stakeholders with research findings. In order to make the data more digestible, I made sure the data was organized and presented concisely.&lt;/li&gt;
+&lt;li&gt;Through affinity mapping, we had two groups of stakeholders move stickies by topics and discuss emerging patterns.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-research-findings-deliverables-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Findings &amp;amp; Deliverables &lt;/h&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;outcomes-deliverables&#34;&gt;Outcomes &amp;amp; Deliverables:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Identified three major use cases in sourcing&lt;/li&gt;
+&lt;li&gt;Developed persona, user story, and journey map for each use case highlighting actions taken, pain points, quotes, and emotions at each touch point.&lt;/li&gt;
+&lt;li&gt;Delivered general findings related to sourcing, and data comparison habits
+
+&lt;ul&gt;
+&lt;li&gt;Including &lt;strong&gt;high level objectives&lt;/strong&gt; in sourcing and data comparison&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Major pain points&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recommendations for each pain point&lt;/strong&gt; to improve the experience&lt;/li&gt;
+&lt;li&gt;Showcasing examples of &lt;strong&gt;data manipulation workflow step by step&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;example-of-journey-map-1-redacted&#34;&gt;Example of Journey Map #1 (Redacted):&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;journey-map.png&#34; data-caption=&#34;Example of journey map of use case #1. Total 3 use cases were presented to the stakeholders. They highlighted the corresponding user story, key descriptions of the persona, behaviors, needs and pain points, quotes, and emotion scale.&#34;&gt;
+&lt;img src=&#34;journey-map.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;b&gt;Example of journey map of use case #1.&lt;/b&gt; Total 3 use cases were presented to the stakeholders. They highlighted the corresponding user story, key descriptions of the persona, behaviors, needs and pain points, quotes, and emotion scale.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-limitations-challenges-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Limitations &amp;amp; Challenges &lt;/h&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;None of the participants were able to share their interactions in the e-procurement tools due to company compliance reasons. As the moderator of the interview sessions, it was my responsibility to maneuver and extract the information needed to address the research questions that have been set out.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Because of time constraints, the scope of the project was focused on the &amp;ldquo;buyer&amp;rdquo; side of the procurement process. To have a better holistic understanding of the entire process, &amp;ldquo;supplier&amp;rdquo; side of research needs to be done.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;h-style-font-family-georgia-lessons-reflections-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Lessons &amp;amp; Reflections &lt;/h&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;I learned to engage with stakeholders as early as the project planning stage.&lt;/strong&gt;&lt;br&gt; By weekly updating the stakeholders and asking for their feedback, I was able to plan and develop a research plan that addresses their needs. Moreover, facilitating a collaborative data synthesis workshop session helped better synchronize the stakeholders as a team to share key findings and results.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Knowledge of product domain is essential especially in the B2B space.&lt;/strong&gt;&lt;br&gt; My initial challenge was to get my head around the B2B space and procurement processes within a short period of time. Despite studying the terms, watching tutorial videos, and reading, it took time to really soak the information in.
+My way around the challenge was to not only study hard, but also to acknowledge that I am new to the field and asking follow-up clarifying questions during the user interviews.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;It was fascinating to speak to users from all over the world from different industries.&lt;/strong&gt;&lt;br&gt; One major reason that I love user research is being able to speak with users and approaching a problem from users&amp;rsquo; perspectives. During the interview sessions, I was speaking to a consultant in Belgium one day and to a procurement executive in India the next day.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Last but not least, I had fun with amazing mentorship, rich resources, and owning the project.&lt;/strong&gt; &lt;br&gt;The lessons I learned were not limited specifically to user research, but also taught me how to navigate myself through the corporate organization and personal networking.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;back-to-top&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>WA COVID Exposure Notification Usability Study</title>

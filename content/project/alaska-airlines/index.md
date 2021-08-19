@@ -4,6 +4,10 @@ summary: "Moderated interviews and journey mapping to visualize users' travel ex
 tags:
 - highlights
 - research
+- preliminary-research
+- interview
+- affinity-diagrams
+- journey-mapping
 
 date: "2020-10-05T00:00:00Z"
 
