@@ -1,5 +1,5 @@
 ---
-title: "[Navigating Cancer] Generative research to ideating, concept-testing, and validating (NDA)"
+title: "Generative research to ideating, prototyping, concept-testing, and validating (NDA)"
 summary: "Conducted user research to identify problems and recommended features to enhance the health tracker"
 tags:
 - highlights
@@ -21,6 +21,10 @@ image:
   caption: ""
   focal_point: Smart
   preview_only: true
+
+header:
+  image: '/headers/nc-header.png'
+  caption: ''
 
 url_code: ""
 url_pdf: ""

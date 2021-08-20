@@ -29,18 +29,18 @@
     </item>
     
     <item>
-      <title>highlights</title>
-      <link>https://jinjeon.me/tags/highlights/</link>
+      <title>generative-research</title>
+      <link>https://jinjeon.me/tags/generative-research/</link>
       <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/highlights/</guid>
+      <guid>https://jinjeon.me/tags/generative-research/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>interview</title>
-      <link>https://jinjeon.me/tags/interview/</link>
+      <title>highlights</title>
+      <link>https://jinjeon.me/tags/highlights/</link>
       <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/interview/</guid>
+      <guid>https://jinjeon.me/tags/highlights/</guid>
       <description></description>
     </item>
     
@@ -61,6 +61,14 @@
     </item>
     
     <item>
+      <title>qualitative-interviews</title>
+      <link>https://jinjeon.me/tags/qualitative-interviews/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/qualitative-interviews/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>research</title>
       <link>https://jinjeon.me/tags/research/</link>
       <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
@@ -69,10 +77,18 @@
     </item>
     
     <item>
-      <title>data</title>
-      <link>https://jinjeon.me/tags/data/</link>
-      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/data/</guid>
+      <title>ABTesting</title>
+      <link>https://jinjeon.me/tags/abtesting/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/abtesting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>usability-testing</title>
+      <link>https://jinjeon.me/tags/usability-testing/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/usability-testing/</guid>
       <description></description>
     </item>
     
@@ -85,6 +101,14 @@
     </item>
     
     <item>
+      <title>quant-ux</title>
+      <link>https://jinjeon.me/tags/quant-ux/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/quant-ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>side-projects</title>
       <link>https://jinjeon.me/tags/side-projects/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
@@ -93,18 +117,18 @@
     </item>
     
     <item>
-      <title>academia</title>
-      <link>https://jinjeon.me/tags/academia/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/academia/</guid>
+      <title>heuristic-evaluation</title>
+      <link>https://jinjeon.me/tags/heuristic-evaluation/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/heuristic-evaluation/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>signal-processing</title>
-      <link>https://jinjeon.me/tags/signal-processing/</link>
-      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/signal-processing/</guid>
+      <title>academia</title>
+      <link>https://jinjeon.me/tags/academia/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/academia/</guid>
       <description></description>
     </item>
     

@@ -1,6 +1,6 @@
 ---
 title: WA COVID Exposure Notification Usability Study
-summary: "Coming soon"
+summary: "Under Construction"
 tags:
 # - highlights
 - research

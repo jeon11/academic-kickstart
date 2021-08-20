@@ -1,5 +1,5 @@
 ---
-title: "[SAP] Generative research in sourcing data comparison (NDA)"
+title: "Generative research in sourcing data comparison (NDA)"
 summary: "Owned the project and initiative to integrate user research into SAP's design process"
 tags:
 - highlights
@@ -22,9 +22,9 @@ image:
   focal_point: Smart
   preview_only: true
 
-# header:
-#  image: '/headers/SAP-header.svg'
-#  caption: ''
+header:
+  image: '/headers/SAP-header.png'
+  caption: ''
 
 url_code: ""
 url_pdf: ""
@@ -93,10 +93,10 @@ ___
 - Identify knowledge gaps
 - Use the preliminary research findings as a guide for designing preliminary research
 
-### At a Glance (Intentionally not readable)
+### At a Glance (Intentionally not readable):
 {{< figure src="preliminary-research.png" title="Using FigJam, I visually laid out findings from past research. <br> **The white empty spaces indicated potential knowledge gaps.**" caption="Preliminary Research" width=full >}}
 
-### Outcomes
+### Outcomes:
 - Examined 5+ past research work and findings, and **organized into an affinity map to identify knowledge gaps.**
 - Studies were from 2018-2019, involving evaluative research, testing design iterations and concepts. **Because past work often dealt with specific design concepts, it was difficult to generalize findings across different studies.**
 - Lot of data was missing or not as well organized.

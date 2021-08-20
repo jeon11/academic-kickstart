@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jinjeon.me/project/sap/</loc>
+    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jinjeon.me/tags/affinity-diagrams/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url>
@@ -13,12 +18,12 @@
   </url>
   
   <url>
-    <loc>https://jinjeon.me/tags/highlights/</loc>
+    <loc>https://jinjeon.me/tags/generative-research/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jinjeon.me/tags/interview/</loc>
+    <loc>https://jinjeon.me/tags/highlights/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,12 +48,12 @@
   </url>
   
   <url>
-    <loc>https://jinjeon.me/tags/research/</loc>
+    <loc>https://jinjeon.me/tags/qualitative-interviews/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jinjeon.me/project/data-viz-copy/</loc>
+    <loc>https://jinjeon.me/tags/research/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,13 +63,18 @@
   </url>
   
   <url>
-    <loc>https://jinjeon.me/project/wa-notify/</loc>
+    <loc>https://jinjeon.me/tags/abtesting/</loc>
     <lastmod>2021-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jinjeon.me/tags/data/</loc>
-    <lastmod>2021-03-22T00:00:00+00:00</lastmod>
+    <loc>https://jinjeon.me/tags/usability-testing/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/project/wa-notify/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -74,6 +84,11 @@
   
   <url>
     <loc>https://jinjeon.me/tags/python/</loc>
+    <lastmod>2021-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/tags/quant-ux/</loc>
     <lastmod>2021-03-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -103,6 +118,11 @@
   </url>
   
   <url>
+    <loc>https://jinjeon.me/tags/heuristic-evaluation/</loc>
+    <lastmod>2020-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jinjeon.me/project/data-viz/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url>
@@ -119,11 +139,6 @@
   
   <url>
     <loc>https://jinjeon.me/post/mutual-info/</loc>
-    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/tags/signal-processing/</loc>
     <lastmod>2020-01-31T00:00:00+00:00</lastmod>
   </url>
   

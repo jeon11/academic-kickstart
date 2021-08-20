@@ -1,5 +1,5 @@
 ---
-title: "[Alaska Airlines] Visualizing the travel experience during the pandemic (Company sponsored project/ NDA)"
+title: "Visualizing users' travel experiences during the pandemic (Company sponsored project/ NDA)"
 summary: "Moderated interviews and visualized users' travel experience through journey mapping"
 tags:
 - highlights
@@ -19,6 +19,10 @@ image:
   caption: ""
   focal_point: Smart
   preview_only: true
+
+header:
+  image: '/headers/alaska-header.png'
+  caption: ''
 
 url_code: ""
 url_pdf: ""

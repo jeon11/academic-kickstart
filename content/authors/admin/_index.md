@@ -14,7 +14,7 @@ role: UX Researcher /<br> Graduate Student
 
 # Organizations/Affiliations
 organizations:
-- name: University of Washington - Seattle
+- name: University of Washington, Seattle
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -28,7 +28,7 @@ interests:
 education:
   courses:
   - course: M.S. in Human Centered Design and Engineering
-    institution: University of Washington - Seattle  # M.S. in Human Centered Design and Engineering
+    institution: University of Washington, Seattle  # M.S. in Human Centered Design and Engineering
     year: 2022
 
   - course: B.A. in Cognitive Science
@@ -73,9 +73,10 @@ user_groups:
 
 I am a 2nd year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington.
 
-I am a **curious-minded, data enthusiast** passionate in <mark>**UX research**</mark>. I believe that data-driven insights are at the heart of unveiling users' underlying needs and delivering meaningful experiences.
+I am an **inquisitive, data enthusiast** passionate in <mark>**UX research**</mark>. I believe that data-driven insights are at the heart of unveiling users' underlying needs and delivering meaningful experiences.
 
 See my projects [>> HERE <<](#projects).
+
 <!-- I come with a background in psychology and data science for several years. and have been working with data for several years. I My previous experiences range from research in academia to project management in various startups. -->
 <!-- My previous experiences range from working as a research analyst in academia to various startups focusing in UX research, project and product management.   -->
 

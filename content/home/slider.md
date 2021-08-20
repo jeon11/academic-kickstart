@@ -7,7 +7,7 @@ weight = 1  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
-interval = '18000'  # 7000
+interval = '18000'  # 18000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
@@ -17,7 +17,7 @@ height = "calc(100vh - 70px)"
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "👋 Hello, I'm Jin!"
-  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in <mark>**UX research & design**</mark>. <br>I'm curious 🧐, data-driven 📊, and empathetic ❤️. <br><br><u>[• More About Me](#about)</u><br><u>[• See My Projects](#projects)</u>"
+  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in <mark>**UX research**</mark>. <br>I'm inquisitive 🧐, data-driven 📊, and empathetic ❤️. <br><br>"
   align = "right"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -29,21 +29,34 @@ height = "calc(100vh - 70px)"
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
-  # cta_label = "Go to About Me"
-  # cta_url = "#about"
-  # cta_icon_pack = "fas"
-  # cta_icon = "user"
+  cta_label = "See My Projects"
+  cta_url = "#projects"
+  cta_icon_pack = "fab"
+  cta_icon = ""
+
+  [cta_alt]
+    url = "#about"
+    label = "More About Me"
+  cta_alt = "See me "
 
 [[item]]
-  title = "Projects"
-  content = "<br><a href='#projects'> Check out my highlighted projects here</a> :smile: <br><br> <a href='#contact'> Interested in my work? Reach out! </a> "
+  title = "**Latest Project - SAP**"
+  content = "<br>As an initiative to integrate user research into the design process and establish a UX framework library so that design decisions are informed and inspired by user data. <br><br> As a UX researcher, I spearheaded the generative stdy to identify user needs and pain points, and visualize them through journey maps.<br><br>"
   align = "left"
 
   overlay_color = "#B5CEEF"  # An HTML color value.
-  overlay_img = "sticky.jpg"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+  overlay_img = "slider2.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.7  # Darken the image. Value in range 0-1.
 
+  cta_label = "Read More"
+  cta_url = "./project/sap/"
+  # cta_icon_pack = "fas"
+  # cta_icon = ""
+[design.background]
 
+  # Background gradient.
+  gradient_start = "#CE87C1" #"#CE87C1"
+  gradient_end = "#B5CEEF" # "#B5CEEF"
 +++
 
 <!-- [[item]]

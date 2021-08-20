@@ -19,6 +19,40 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "UX Research Intern"
+  company = "SAP"
+  company_url = "https://www.sap.com/index.html"
+  location = "Palo Alto, CA"
+  date_start = "2021-06-07"
+  date_end = "2021-08-13"
+  description = """
+  • Owned the end-to-end generative research from initial planning, recruiting, moderating contextual inquiries, analyzing the data, and reporting the findings to UX managers, designers, product, and developer teams
+
+ • Visualized key pain points, needs, and behaviors at each touchpoint in user journey maps of 3 personas developed from research findings
+
+ • Spearheaded user research initiative in building a UX framework library and actively engaged the stakeholders by facilitating collaborative whiteboard workshops
+
+  **Skills:** generative research, contextual inquiries, journey mapping, personas, preliminary research
+  """
+
+
+[[experience]]
+  title = "UX Research Associate"
+  company = "Anthro-Tech"
+  company_url = "https://anthro-tech.com"
+  location = "Seattle, WA"
+  date_start = "2021-04-01"
+  date_end = "2021-06-06"
+  description = """
+  • Facilitated a total of 76 sessions of contextual inquiries and usability testing across 7 different projects from WA state government agencies, Facebook, and Instagram
+
+ • Assisted senior UX researchers in moderating and analyzing data to synthesize insights and recommendations for clients in a fast-paced environment
+
+  **Skills:** generative research, contextual inquiries, usability testing, AB Testing
+  """
+
+
+[[experience]]
   title = "Student UX Researcher"
   company = "Alaska Airlines"
   company_url = "https://www.alaskaair.com"
@@ -26,14 +60,11 @@ date_format = "Jan 2006"
   date_start = "2020-07-01"
   date_end = "2020-10-01"
   description = """
-  • Moderated 30 remote qualitative interviews with users from six different airlines, and 
-  conducted competitive analysis to pair insights from user experience benchmarking
+  • Moderated 30 remote qualitative interviews with users from 6 different airlines, and conducted competitive analysis to pair insights from user experience benchmarking
 
- • Utilized interactive journey mapping to identify users’ core values and motivations at 
- different stages of their travel experiences
+ • Utilized interactive journey maps to identify users’ core values and motivations at different stages of their travel experience
 
- • Delivered four key insights and recommendations to improve users’ upgrade 
- experience to multiple stakeholders
+ • Delivered 4 key insights and recommendations to improve users’ upgrade experience to stakeholders including a research manager, designers, and e-commerce team
 
   **Skills:** generative research, interview, survey, journey mapping, personas, competitive analysis, UserTesting.com, Figma
   """
@@ -46,17 +77,11 @@ date_format = "Jan 2006"
   date_start = "2020-06-01"
   date_end = "2020-09-01"
   description = """
-  • Ideated new features based on user stories generated from surveys and interviews 
-with two cancer patients and four cancer survivors
+  • Ideated new features based on user stories prioritized from surveys and qualitative interviews with 6 cancer patients and survivors
 
-  • Validated prototype iterations through expert evaluations and concept-testing with 
-eight users including clinicians and patients
+  • Validated prototype iterations through expert evaluations and concept-testing with 8 users including clinicians and patients
 
-  • Collaborated with an internationally-distributed, cross-functional team of 
-researchers, designers, and a product manager to improve patients’ symptom 
-management and engagement with the health tracker
-
-  • Evangelized the impact of research by presenting findings to the leaders
+  • Collaborated with an internationally-distributed, cross-functional team of researchers, designers, and a product manager to improve patients’ symptom management and engagement with the health tracker
 
   **Skills:** qualitative research, interview, survey, concept-testing, expert evaluations, Figma
   """
@@ -82,55 +107,6 @@ textual data, analyzes task performance, and builds dataframe to summarize resul
 their own experiments
 
   **Skills:** Python, data science, MATLAB, ML, NLP, data preprocessing, data visualization, experimental design
-  """
-
-[[experience]]
-  title = "Research Assistant"
-  company = "Whitney Perception Lab"
-  company_url = "https://whitneylab.berkeley.edu"
-  location = "Berkeley, CA"
-  date_start = "2017-02-25"
-  date_end = "2017-12-31"
-  description = """
-
-  • Spearheaded preliminary research in auditory perception. Contributions included: 
-experimental design, coding, running subjects, and processing data for statistical  analysis using bootstrapping and psychometric inferential curves
-
-  **Skills:** MATLAB, PsychoPy, experimental design, statistical analysis
-  """
-
-
-[[experience]]
-  title = "Product Management Intern"
-  company = "Fronto, Android Ads Platform"
-  company_url = "http://www.fronto.co"
-  location = "San Francisco, CA"
-  date_start = "2017-02-25"
-  date_end = "2017-08-31"
-  description = """
-
-  • Identified usability issues by engaging with users and the customer success team
-
-  • Communicated directly with the CEO, developer and design teams to deliver 
-  solutions to the usability issues that led to 90% decrease in incoming tickets and  quicker response time
-
-  **Skills:** usability testing, product management, agile, MySQL, Jira, Mixpanel, Zendesk
-  """
-
-
-[[experience]]
-  title = "Project Management Intern"
-  company = "AKA AI - Musio, AI Robot"
-  company_url = "https://themusio.com/home"
-  location = "Seoul, Korea"
-  date_start = "2016-05-01"
-  date_end = "2016-08-31"
-  description = """
-  • Organized and led a task force for generative research, competitive analysis, and viral marketing strategies
-
-  • Leveraged communication between software and hardware teams to define and assess product requirements
-
-  **Skills:** project management, HTML/CSS/Javascript/Bootstrap, agile, Google Analytics
   """
 
 +++
