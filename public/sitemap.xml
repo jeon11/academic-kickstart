@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jinjeon.me/project/sap/</loc>
-    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jinjeon.me/tags/affinity-diagrams/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://jinjeon.me/tags/contextual-inquiries/</loc>
+    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/project/sap/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url>
   
