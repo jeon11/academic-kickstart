@@ -1,12 +1,13 @@
 ---
-title: SAP Generative research in sourcing data comparison (NDA)
-summary: "Owned the project and initiative to integrate user research into design process"
+title: "[SAP] Generative research in sourcing data comparison (NDA)"
+summary: "Owned the project and initiative to integrate user research into SAP's design process"
 tags:
 - highlights
 - research
+- generative-research
 - preliminary-research
 - contextual-inquiries
-- interview
+- qualitative-interviews
 - affinity-diagrams
 - journey-mapping
 
@@ -20,6 +21,10 @@ image:
   caption: ""
   focal_point: Smart
   preview_only: true
+
+# header:
+#  image: '/headers/SAP-header.svg'
+#  caption: ''
 
 url_code: ""
 url_pdf: ""
@@ -134,13 +139,13 @@ The purpose of the study was **generative** to understand users' behaviors, need
 {{< figure src="data-analysis2.png" title="" width=full >}}
 
 - Each sticky was broken down by corresponding themes.
-- By visually laying out the participants' workflow from start to end in sourcing, it helped understand the journey of each participant.
+- Visually laying out the participants' sourcing workflow from start to end helped understand the journey of each participant.
 - I was able to identify emerging patterns, characterizing behaviors, needs, and major paint points at each touchpoint in the journey.
 
-### 3.3 Collaborative Synthesis Workshop:
+### 3.3 Collaborative Data Synthesis Workshop:
 {{< figure src="workshop.png" title="" width=full >}}
 
-- Over two days, my supervising mentor and I facilitated a data synthesis workshop to onboard stakeholders with research findings. In order to make the data more digestible, I made sure the data was organized and presented concisely.
+- Over two days, my supervisor/mentor and I facilitated data synthesis workshops to onboard stakeholders with the research findings. In order to make the data more digestible, I made sure the data was organized and presented concisely.
 - Through affinity mapping, we had two groups of stakeholders move stickies by topics and discuss emerging patterns.
 
 ___

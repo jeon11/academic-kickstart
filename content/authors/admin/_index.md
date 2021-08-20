@@ -23,7 +23,7 @@ bio: ""
 interests:
 - UX Research
 - UX Design | HCI
-- AI | Cognition
+- ML | Cognition
 
 education:
   courses:
@@ -73,7 +73,7 @@ user_groups:
 
 I am a 2nd year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington.
 
-I am a **curious-minded, data enthusiast** passionate in <mark>**UX research & design**</mark>. I believe that data-driven insights are at the heart of unveiling users' underlying needs and delivering meaningful experiences.
+I am a **curious-minded, data enthusiast** passionate in <mark>**UX research**</mark>. I believe that data-driven insights are at the heart of unveiling users' underlying needs and delivering meaningful experiences.
 
 See my projects [>> HERE <<](#projects).
 <!-- I come with a background in psychology and data science for several years. and have been working with data for several years. I My previous experiences range from research in academia to project management in various startups. -->

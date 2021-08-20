@@ -2,7 +2,12 @@
 title: WA COVID Exposure Notification Usability Study
 summary: "Coming soon"
 tags:
+# - highlights
 - research
+- usability-testing
+- qualitative-interviews
+- affinity-diagrams
+- ABTesting
 
 date: "2021-03-31T00:00:00Z"
 

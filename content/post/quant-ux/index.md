@@ -7,7 +7,7 @@ lastmod: "2021-03-22T00:00:00Z"
 
 tags:
 - python
-- data
+- quant-ux
 
 image:
   placement: 2
