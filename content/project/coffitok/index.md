@@ -1,6 +1,6 @@
 ---
-title: Coffitok
-summary: "From identifying user needs to iterating prototypes, a 10-week project in user centered design <br>**(opens external project link)**"
+title: Coffitok (Graduate course project)
+summary: "From identifying user needs to iterating prototypes, a 10-week project in user centered design  <br> **(opens external project link)**"
 tags:
 - side-projects
 date: "2020-12-10T00:00:00Z"

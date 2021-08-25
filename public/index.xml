@@ -44,7 +44,7 @@
 
 &lt;h2 id=&#34;h-style-font-family-georgia-overview-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Overview &lt;/h&gt;&lt;/h2&gt;
 
-&lt;p&gt;SAP provides various products and software for enterprise resource planning. &lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, this project is an initiative to integrate user research into the design process so that design decisions are informed and inspired by user data&lt;/strong&gt;&lt;/mark&gt;. As a starting point, the research focuses on comparison patterns in sourcing product domain.&lt;/p&gt;
+&lt;p&gt;SAP provides various products and software for enterprise resource planning. &lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, this project was an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data&lt;/strong&gt;&lt;/mark&gt;. As a starting point, the research focused on comparison patterns in sourcing product domain.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Disclaimer:&lt;/strong&gt; Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.&lt;/em&gt;&lt;/p&gt;
 
@@ -61,7 +61,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Validated&lt;/strong&gt; major research findings that matched with previous research.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Provided high-level recommendations&lt;/strong&gt; to address major pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Set the foundation&lt;/strong&gt; for the next stage of the design process which involves ideating and concept testing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Set the foundation&lt;/strong&gt; for the next stage of the design process which involves ideation and concept testing.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;h-style-font-family-georgia-research-question-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Question &lt;/h&gt;&lt;/h2&gt;
@@ -924,7 +924,7 @@ sm.stats.anova_lm(model, typ=2)
     </item>
     
     <item>
-      <title>Visualizing users&#39; travel experiences during the pandemic (Company sponsored project/ NDA)</title>
+      <title>Visualizing travel experiences through interactive journey mapping (Company sponsored project/ NDA)</title>
       <link>https://jinjeon.me/project/alaska-airlines/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/alaska-airlines/</guid>
@@ -1512,7 +1512,7 @@ When presenting the different demographic groups, it can be as easy as describin
     </item>
     
     <item>
-      <title>Generative research to ideating, prototyping, concept-testing, and validating (NDA)</title>
+      <title>End-to-end design process of improving the health tracker (NDA)</title>
       <link>https://jinjeon.me/project/navigating-cancer/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/navigating-cancer/</guid>
