@@ -1,6 +1,7 @@
 ---
 title: "Generative research in sourcing data comparison (NDA)"
-summary: "Owned the project and initiative to integrate user research into SAP's design process"
+summary: "As a part of an initiative to integrate user research into SAP's design process, examined users' data comparison habits"
+
 tags:
 - highlights
 - research
@@ -61,7 +62,7 @@ slides: ""
 ___
 
 ## <h style="font-family:georgia"> Overview </h>
-SAP provides various products and software for enterprise resource planning. <mark>**In order to deliver consistent and coherent user experience across SAP products, this project is an initiative to integrate user research into the design process so that design decisions are informed and inspired by user data**</mark>. As a starting point, the research focuses on comparison patterns in sourcing product domain.
+SAP provides various products and software for enterprise resource planning. <mark>**In order to deliver consistent and coherent user experience across SAP products, this project was an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data**</mark>. As a starting point, the research focused on comparison patterns in sourcing product domain.
 
 **<em>Disclaimer:** Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.</em>
 
@@ -73,7 +74,7 @@ SAP provides various products and software for enterprise resource planning. <ma
 ## <h style="font-family:georgia"> Impact </h>
 - **Validated** major research findings that matched with previous research.
 - **Provided high-level recommendations** to address major pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.
-- **Set the foundation** for the next stage of the design process which involves ideating and concept testing.
+- **Set the foundation** for the next stage of the design process which involves ideation and concept testing.
 
 ## <h style="font-family:georgia"> Research Question </h>
 > <p style="font-size: 16pt"><mark><em>"What are the different use cases that involve comparing data in sourcing?"<br><br>

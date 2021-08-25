@@ -1,6 +1,6 @@
 ---
-title: "Generative research to ideating, prototyping, concept-testing, and validating (NDA)"
-summary: "Conducted user research to identify problems and recommended features to enhance the health tracker"
+title: "End-to-end design process of improving the health tracker (NDA)"
+summary: "Conducted user research to identify user needs and recommended features to enhance its health tracker"
 tags:
 - highlights
 - research

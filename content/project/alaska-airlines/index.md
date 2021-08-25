@@ -1,6 +1,6 @@
 ---
-title: "Visualizing users' travel experiences during the pandemic (Company sponsored project/ NDA)"
-summary: "Moderated interviews and visualized users' travel experience through journey mapping"
+title: "Visualizing travel experiences through interactive journey mapping (Company sponsored project/ NDA)"
+summary: "From research planning to moderating interviews, delivered design recommendations based on research findings and user journey maps"
 tags:
 - highlights
 - research

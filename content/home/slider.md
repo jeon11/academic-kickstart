@@ -41,7 +41,7 @@ height = "calc(100vh - 70px)"
 
 [[item]]
   title = "**Latest Project - SAP**"
-  content = "<br>As an initiative to integrate user research into the design process and establish a UX framework library so that design decisions are informed and inspired by user data. <br><br> As a UX researcher, I spearheaded the generative stdy to identify user needs and pain points, and visualize them through journey maps.<br><br>"
+  content = "<br>As an initiative to integrate user research into the design process and establish a UX framework library so that design decisions are informed and inspired by user data. <br><br> As a UX researcher, I spearheaded the generative study to identify user needs and pain points, and visualize them through journey maps.<br><br>"
   align = "left"
 
   overlay_color = "#B5CEEF"  # An HTML color value.
