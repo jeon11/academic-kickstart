@@ -1,5 +1,5 @@
 ---
-title: 'Quantitative Data Analysis with Statistical Testing'
+title: 'Statistical Data Analysis of Cross-Cultural Research'
 summary: Example codes used for running basic t-test to one-way and two-way ANOVA
 
 date: "2021-03-22T00:00:00Z"
@@ -7,7 +7,8 @@ lastmod: "2021-03-22T00:00:00Z"
 
 tags:
 - python
-- quant-ux
+- quantitative-ux
+- cross-cultural
 
 image:
   placement: 2

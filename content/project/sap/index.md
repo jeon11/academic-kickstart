@@ -76,7 +76,7 @@ SAP provides various products and software for enterprise resource planning. <ma
 - **Provided high-level recommendations** to address major pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.
 - **Set the foundation** for the next stage of the design process which involves ideation and concept testing.
 
-## <h style="font-family:georgia"> Research Question </h>
+## <h style="font-family:georgia"> Research Questions </h>
 > <p style="font-size: 16pt"><mark><em>"What are the different use cases that involve comparing data in sourcing?"<br><br>
 <mark<em>"How does typical workflow look like, and what are the needs and pain points at each touchpoint?"</em></mark><br><br>
 
@@ -99,7 +99,7 @@ ___
 
 ### Outcomes:
 - Examined 5+ past research work and findings, and **organized into an affinity map to identify knowledge gaps.**
-- Studies were from 2018-2019, involving evaluative research, testing design iterations and concepts. **Because past work often dealt with specific design concepts, it was difficult to generalize findings across different studies.**
+- Studies were from 2018-2019, involving evaluative research, testing design iterations and concepts. **Because past work all dealt with specific design concepts and evaluative research, it was difficult to generalize findings across different studies.**
 - Lot of data was missing or not as well organized.
 
 ### Insights:
@@ -163,7 +163,7 @@ ___
   - **Recommendations for each pain point** to improve the experience
   - Showcasing examples of **data manipulation workflow step by step**
 
-### Example of Journey Map #1 (Redacted):
+### Example of Journey Map #1 of 3 (Redacted):
 {{< figure src="journey-map.png" title="<b>Example of journey map of use case #1.</b> Total 3 use cases were presented to the stakeholders. They highlighted the corresponding user story, key descriptions of the persona, behaviors, needs and pain points, quotes, and emotion scale." width=full >}}
 
 ---

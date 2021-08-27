@@ -65,7 +65,8 @@ To improve patients' experiences with symptom management and engagement with the
 With COVID-19, the team was working remotely as an international, cross-functional team with each of us in different time zones. I was also flying around being in the US and my hometown Korea, making the project more dynamic.
 
 ## <h style="font-family:georgia"> Impact </h>
-- **Delivered research findings and 4 major feature recommendations** to leaders and multiple stakeholders.
+- **Delivered research findings and 4 major feature recommendations** to leaders and multiple stakeholders, including CEO, product team, and designers.
+- Evangelized the impact of research through adaptation of design framework throughout the research process.
 - Received **strong positive feedbacks** from the stakeholders, and recommendations aligned with company's future milestones.
 
 <br>
