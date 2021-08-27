@@ -55,7 +55,7 @@ slides: ""
 <br><small>Jan 2021 - March 2021 (~10 week graduate course project)</small><br><br>
 
 <b><h style="font-family:georgia">Stakeholders:</h></b>
-<br><small> Apple/Google program managers, WA DOH, UW professor and research unit, designers </small>
+<br><small> Apple/Google program managers, WA DOH, UW professor and research lab, designers </small>
 </div>
 ___
 
@@ -88,7 +88,7 @@ Three specific areas were assessed in the study:
 
 
 ## <h style="font-family:georgia"> Impact </h>
-- The project was spotlighted in our HCDE program's [website newsletter](https://www.hcde.washington.edu/news/hcde-students-work-with-wa-department-of-health-to-study-covid–19-exposure-notification-app).
+- The project was spotlighted in HCDE department's <a href="https://www.hcde.washington.edu/news/hcde-students-work-with-wa-department-of-health-to-study-covid–19-exposure-notification-app" target="_blank"> **website newsletter**</a>
 - **Ensured research deliverables meet the stakeholders' expectations** by checking in weekly since the planning stage.
 - **Provided prioritized list of recommendations** for the three areas of focus, and assessed the experience gaps between the OS to the stakeholders.
 
