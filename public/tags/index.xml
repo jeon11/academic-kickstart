@@ -77,18 +77,34 @@
     </item>
     
     <item>
-      <title>ABTesting</title>
-      <link>https://jinjeon.me/tags/abtesting/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/abtesting/</guid>
+      <title>machine-learning</title>
+      <link>https://jinjeon.me/tags/machine-learning/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://jinjeon.me/tags/python/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>quantitative-ux</title>
       <link>https://jinjeon.me/tags/quantitative-ux/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/quantitative-ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ABTesting</title>
+      <link>https://jinjeon.me/tags/abtesting/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/tags/abtesting/</guid>
       <description></description>
     </item>
     
@@ -105,14 +121,6 @@
       <link>https://jinjeon.me/tags/cross-cultural/</link>
       <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/cross-cultural/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://jinjeon.me/tags/python/</link>
-      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/python/</guid>
       <description></description>
     </item>
     
@@ -137,14 +145,6 @@
       <link>https://jinjeon.me/tags/academia/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/tags/academia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine-learning</title>
-      <link>https://jinjeon.me/tags/machine-learning/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://jinjeon.me/tags/machine-learning/</guid>
       <description></description>
     </item>
     

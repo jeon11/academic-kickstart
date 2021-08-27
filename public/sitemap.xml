@@ -63,12 +63,32 @@
   </url>
   
   <url>
-    <loc>https://jinjeon.me/tags/abtesting/</loc>
-    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+    <loc>https://jinjeon.me/tags/machine-learning/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/post/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/tags/python/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://jinjeon.me/tags/quantitative-ux/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/post/textual-data-analysis/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/tags/abtesting/</loc>
     <lastmod>2021-03-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -84,16 +104,6 @@
   
   <url>
     <loc>https://jinjeon.me/tags/cross-cultural/</loc>
-    <lastmod>2021-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/post/</loc>
-    <lastmod>2021-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/tags/python/</loc>
     <lastmod>2021-03-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -155,11 +165,6 @@
   <url>
     <loc>https://jinjeon.me/project-archives/</loc>
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/tags/machine-learning/</loc>
-    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

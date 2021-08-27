@@ -9,6 +9,7 @@ tags:
 - python
 - quantitative-ux
 - cross-cultural
+- statistics
 
 image:
   placement: 2
@@ -19,6 +20,7 @@ image:
 url_code: "https://github.com/jeon11/quant-ux"
 url_pdf: ""
 ---
+<body style="font-family:Arial; font-size: 12pt">
 
 I use survey data collected from Amazon Mechanical Turk and Reddit user groups (all personal data  have been removed) in a study to examine the impact of cultural localization on web-based account creation between American and Korean users. I use the experiment data to display basic statistical tests in Python.
 
@@ -28,11 +30,11 @@ I use survey data collected from Amazon Mechanical Turk and Reddit user groups (
 
 I use the following tests:
 
-1. **[Pearson Correlation Coefficient](#1.-Pearson-Correlation-Coefficient)**
-2. **[T-Test](#2.-T-Test)**
-3. **[Mann-Whitney Test](#3.-Mann-Whitney-Test)**
-4. **[One-Way Analysis of Variance (ANOVA)](#4.-One-Way-Analysis-of-Variance-(ANOVA))**
-5. **[Two-Way ANOVA](#5.-Two-Way-ANOVA)**
+1. **[Pearson Correlation Coefficient](#link1)**
+2. **[T-Test](#link2)**
+3. **[Mann-Whitney Test](#link3)**
+4. **[One-Way Analysis of Variance (ANOVA)](#link4)**
+5. **[Two-Way ANOVA](#link5)**
 
 
 
@@ -258,7 +260,7 @@ usa.head()
 
 
 ---------------------------
-## 1. Pearson Correlation Coefficient
+## <a name="link1"> 1. Pearson Correlation Coefficient </a>
 
 When we want to ask _"how strongly correlated are the two variables?"_, we can use **Perason's Correlation**. It is used to measure statistical relationship or association between two **_continuous variables_** that are linearly related to each other. The coefficient value _"r"_ ranges from -1 (negative relation) to 1 (perfectly positive). 0 would mean that there is no relationship at all.
 
@@ -290,7 +292,7 @@ print('p: ' + str(p.round(4)))
 From the results above, we can see **there is a strong positive relationship between the amount of information provided in banking and shopping.** i.e. Providing information in banking would affect how a user provides personal information in shopping.
 
 ----------------------------------
-## 2. T-Test
+## <a name="link2"> 2. T-Test </a>
 When comparing the means of two groups, we can use a **t-test**. It takes into account of the means and the spread of the data to determine **_whether a difference between the two would occur by chance or not_** (determined by the p-value being less than 0.05 usually). In a t-test, there should be only two independent variables (categorical/nominal variables) and one dependent continuous variable.
 
 ### Properties of t-test
@@ -384,7 +386,7 @@ ax_box2.set(xlabel='')
 From the graph above, we see that the mean of the banking is greater than the mean of shopping. This shows us that regardless of cultural background, users are more likely to provide personal information in the banking scenario.
 
 -------------------------------
-## 3. Mann-Whitney Test
+## <a name="link3"> 3. Mann-Whitney Test </a>
 The Mann-Whitney Test allows you to determine if the observed difference is statistically significant without making the assumption that the values are normally distributed. You should have two independent variables and one continuous dependent variable.
 
 ### Code Implementation
@@ -402,7 +404,7 @@ print('p: ' + str(p.round(6)))
 
 
 ----------------------------
-## 4. One-Way Analysis of Variance (ANOVA)
+## <a name="link4"> 4. One-Way Analysis of Variance (ANOVA) </a>
 ANOVA is similar to a t-test, but it is used when there are three or more independent variables (categorical). It assumes normal distribution (use Kruskal-Wallis if abnormal?). One-way ANOVA compares the means between the variables to test whether the difference is statistically significant. However, it does not tell you which specific groups were statistically different from one another. Thus, a post-hoc analysis is required.
 
 
@@ -424,7 +426,7 @@ scipy.stats.f_oneway(banking, shopping, var3)
 
 
 -----------------------------------
-## 5. Two-Way ANOVA
+## <a name="link5"> 5. Two-Way ANOVA </a>
 A two-way ANOVA can be used when you want to know how two independent variables have an interaction effect on a dependent variable. CAVEAT: a two-way ANOVA does not tell which variable is dominant.
 
 ### Code Implementation
@@ -505,3 +507,5 @@ sm.stats.anova_lm(model, typ=2)
 From the table above, only scenario has a sole effect on the total amount of information provided (depicted as `percent` in the dataframe). We see culture, and the interaction of culture and scenario do not have an effect on the amount of information that users provided.
 
 The finding matches with the previous t-test and graph results, where users provided more information in the banking than they would in shopping.
+
+</body>

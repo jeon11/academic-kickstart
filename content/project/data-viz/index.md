@@ -1,8 +1,10 @@
 ---
-title: Coding & Data Visualizations
-summary: "**//Currently under construction//**<br> Examples of graphs created using Python, and their source codes"
+title: Statistical Analysis & Data Visualization
+summary: Examples of graphs created using Python, and their source codes"
 tags:
 - side-projects
+- data-visualization
+
 date: "2020-05-31T00:00:00Z"
 
 
@@ -27,7 +29,15 @@ url_video: ""
 slides: ""
 ---
 <body style="font-family:Arial; font-size: 12pt">
-## Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)
+
+See related work:
+
+
+1. <a href="/post/textual-data-analysis">Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API </a>
+
+2. <a href="/post/quant-ux">Statistical Data Analysis in Cross Cultural Research </a>
+
+3. Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)
 </div><iframe src="https://editor.p5js.org/jeon11/embed/w2Ugnl4dR" width="760" height="600">Image Reconstruction using Perlin Noise (Javascript- p5.js) </iframe>
 
 The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.
@@ -36,8 +46,6 @@ The image above uses Perlin Noise to reconstruct old classic artworks, which is 
 
 - Drag the mouse to draw circles on top of the noises.
 
-
-## Page is currently under development
 ---
 <br>
 </body>
