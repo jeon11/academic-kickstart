@@ -1,5 +1,5 @@
 ---
-title: 'Statistical Data Analysis of Cross-Cultural Research'
+title: 'Statistical Data Analysis in Cross-Cultural Research'
 summary: Example codes used for running basic t-test to one-way and two-way ANOVA
 
 date: "2021-03-22T00:00:00Z"

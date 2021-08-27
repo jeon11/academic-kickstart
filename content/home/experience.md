@@ -32,7 +32,7 @@ date_format = "Jan 2006"
 
  • Spearheaded user research initiative in building a UX framework library and actively engaged the stakeholders by facilitating collaborative whiteboard workshops
 
-  **Skills:** generative research, contextual inquiries, journey mapping, personas, preliminary research
+  **Skills:** generative research, contextual inquiries, journey mapping, personas, preliminary research, respondent.io
   """
 
 
@@ -70,7 +70,7 @@ date_format = "Jan 2006"
   """
 
 [[experience]]
-  title = "UX Research Intern (Remote)"
+  title = "UX Research Intern"
   company = "Navigating Cancer"
   company_url = "https://www.navigatingcancer.com"
   location = "Seattle, WA"
