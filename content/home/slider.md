@@ -11,20 +11,20 @@ interval = '18000'  # 18000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
-height = "calc(100vh - 70px)"
+height = "calc(100vh - 70px)" #calc(100vh - 70px)
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
   title = "👋 Hello, I'm Jin!"
-  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in <mark>**UX research**</mark>. <br>I'm inquisitive 🧐, data-driven 📊, and empathetic ❤️. <br><br>"
+  content = "<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in <mark>**UX research**</mark>. <br><br>"
   align = "right"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#B5CEEF"  # An HTML color value.
-  overlay_img = "uxr_10fr184.gif"  # Image path relative to your `static/img/` folder.  uxr_10fr184.gif
-  overlay_filter = 0.2  # Darken the image. Value in range 0-1.
+  overlay_img = "uxr_10fr184.gif"  # uxr_10fr184.gif Image path relative to your `static/img/` folder.  uxr_10fr184.gif
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
@@ -40,7 +40,7 @@ height = "calc(100vh - 70px)"
   cta_alt = "See me "
 
 [[item]]
-  title = "**Latest Project - SAP**"
+  title = "<mark>**Latest Project - SAP** </mark>"
   content = "<br>As an initiative to integrate user research into the design process and establish a UX framework library so that design decisions are informed and inspired by user data. <br><br> As a UX researcher, I spearheaded a generative study to identify user needs and pain points, and visualize them through journey maps.<br><br>"
   align = "left"
 
