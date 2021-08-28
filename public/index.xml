@@ -416,78 +416,388 @@ My way around the challenge was to not only study hard, but also to acknowledge 
     </item>
     
     <item>
-      <title>Sentiment Analysis, Textual Data Analysis, and Visualization using Natural Language API</title>
+      <title>Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API</title>
       <link>https://jinjeon.me/post/textual-data-analysis/</link>
       <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/post/textual-data-analysis/</guid>
       <description>
 
-&lt;p&gt;I use survey data collected from Amazon Mechanical Turk and Reddit user groups (all personal data  have been removed) in a study to examine the impact of cultural localization on web-based account creation between American and Korean users. I use the experiment data to display basic statistical tests in Python.&lt;/p&gt;
+&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;research-question&#34;&gt;Research Question:&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Is there a difference in providing personal information between USA and Korean Internet users &lt;br&gt;
-within two different use scenarios: online banking and shopping?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I use the following tests:&lt;/p&gt;
+&lt;h3 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#1.-Pearson-Correlation-Coefficient&#34;&gt;Pearson Correlation Coefficient&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#2.-T-Test&#34;&gt;T-Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#3.-Mann-Whitney-Test&#34;&gt;Mann-Whitney Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#4.-One-Way-Analysis-of-Variance-(ANOVA)&#34;&gt;One-Way Analysis of Variance (ANOVA)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;#5.-Two-Way-ANOVA&#34;&gt;Two-Way ANOVA&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import scipy
-from matplotlib import pyplot
-import matplotlib.pyplot as plt
-from statsmodels.formula.api import ols
-import statsmodels.formula.api as smf
-import statsmodels.api as sm
-from statsmodels.stats.anova import AnovaRM
-import pdb  # for debugging
-import warnings
-warnings.simplefilter(action=&#39;ignore&#39;, category=FutureWarning)
-
-# set color
-sns.set_color_codes(&#39;pastel&#39;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link1&#34;&gt;What is Google Cloud API?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link2&#34;&gt;Survey Data in User Research&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link3&#34;&gt;Natural Language API Features&lt;/a&gt;&lt;br&gt;
+3.1 &lt;a href=&#34;#link3.1&#34;&gt;Entity Analysis&lt;/a&gt;&lt;br&gt;
+3.2 &lt;a href=&#34;#link3.2&#34;&gt;Sentiment Analysis&lt;/a&gt;&lt;br&gt;
+3.3 &lt;a href=&#34;#link3.3&#34;&gt;Entity Sentiment Analysis&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link4&#34;&gt;Loading in data using Google Sheets API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link5&#34;&gt;Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link6&#34;&gt;Data Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link7&#34;&gt;Research Question&lt;/a&gt;&lt;br&gt;
+7.1 &lt;a href=&#34;#link7.1&#34;&gt;A. Health Rating by Gender&lt;/a&gt;&lt;br&gt;
+7.2 &lt;a href=&#34;#link7.2&#34;&gt;B. Health Rating by Age Group&lt;/a&gt;&lt;br&gt;
+7.3 &lt;a href=&#34;#link7.3&#34;&gt;C. T-test for Statistical Signifcance&lt;/a&gt;&lt;br&gt;
+7.4 &lt;a href=&#34;#link7.4&#34;&gt;D. Health Rating by Age &amp;amp; Gender Group&lt;/a&gt;&lt;br&gt;
+7.5 &lt;a href=&#34;#link7.5&#34;&gt;E. Iteratively Running t-test Within Each Age Group&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link8&#34;&gt;Data Visualization&lt;/a&gt;&lt;br&gt;
+8.1 &lt;a href=&#34;#link8.1&#34;&gt;Characterizing Textual Data Through Wordcloud&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link9&#34;&gt;Conclusion&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;setup-querying-data&#34;&gt;Setup &amp;amp; Querying Data&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;It is first critical to understand the dataframe to play around and make analysis. Usually, &lt;strong&gt;&lt;em&gt;long-format&lt;/em&gt;&lt;/strong&gt; data is desired (or at least I&amp;rsquo;m used to it) for using Python and Seaborn for data visualization. Long format is basically when each variable is represented as a column, and each observation or event is a row. Below, we read in, and query the data.&lt;/p&gt;
+&lt;h3 id=&#34;a-name-link1-what-is-google-cloud-api-a&#34;&gt;&lt;a name=&#34;link1&#34;&gt; What is Google Cloud API? &lt;/a&gt;&lt;/h3&gt;
 
-&lt;h4 id=&#34;useful-commands&#34;&gt;Useful commands:&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Google Cloud Platform&lt;/strong&gt; is a suite of cloud computing services that lets developers interact with APIs that involve data storage, data analytics, and machine learning. In this notebook, I build on to the previous notebook to call in the spreadsheets from Google Drive, and run textual data analysis using the Cloud Natural Language API and vector space models.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cloud.google.com/natural-language&#34; target=&#34;_blank&#34;&gt;Natural Language AI&lt;/a&gt;&lt;/strong&gt; is an API available in Google Cloud. It uses machine learning to analyze texts through sentiment analysis and extract information about the text itself. It offers three types of models:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;df.head()&lt;/code&gt;: by default, shows first five rows of df&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;df.columns()&lt;/code&gt;: prints all the columns in df&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;df.describe()&lt;/code&gt;: provides summary description of df&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto ML&lt;/strong&gt;: that allows you to train your own model&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;mark&gt;Natural Language API&lt;/mark&gt;&lt;/strong&gt;: that offers pre-trained models to quickly boot up NLP.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Healthcare Natural Language AI&lt;/strong&gt;: that is specific for medical texts.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;code&gt;pd.read_csv(data, usecols=[&#39;col1&#39;, &#39;col2&#39;, ...,])&lt;/code&gt;: can be used to filter columns&lt;/p&gt;
+&lt;p&gt;For the sake of time scope and complexity of the project, let&amp;rsquo;s use the Natural Language API to call in a pre-trained model to analyze textual data. The demo of the model can be found online here: &lt;a href=&#34;https://cloud.google.com/natural-language&#34; target=&#34;_blank&#34;&gt;https://cloud.google.com/natural-language&lt;/a&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# read in data.csv file as df &amp;amp; see data structure
-df = pd.read_csv(&#39;data.csv&#39;)
+&lt;h3 id=&#34;a-name-link2-survey-data-in-user-research-a&#34;&gt;&lt;a name=&#34;link2&#34;&gt; Survey Data in User Research &lt;/a&gt;&lt;/h3&gt;
 
-# query data by scenario and culture
-bank = df.query(&amp;quot;scenario == &#39;Bank&#39;&amp;quot;).copy()
-shop = df.query(&amp;quot;scenario == &#39;Shop&#39;&amp;quot;).copy()
-kor = df.query(&amp;quot;culture == &#39;Korea&#39;&amp;quot;).copy()
-usa = df.query(&amp;quot;culture == &#39;USA&#39;&amp;quot;).copy()
+&lt;p&gt;As a UX researcher, survey studies are essential for understanding the users because they can be quickly developed and sent out to receive a good amount of sample in a short period of time. &lt;strong&gt;Surveys are powerful tools to be utilized for conducting preliminary research at the discovery stage to explore the general problem space and user behaviors.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the free and efficient tools is the Google Forms. While it can automatically generate pie graphs and bar graphs to summarize the survey results, the results are often too limited. &lt;strong&gt;As researchers, we might be interested in learning more in depth about the data. After all, it is researchers&amp;rsquo; role to develop a keen sense to analyze the data and drive insights.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For instance, the screenshots below show sample summaries of what Google Form summary is capable of doing.&lt;/p&gt;
+
+&lt;h4 id=&#34;breakdown-of-participants-age-range&#34;&gt;Breakdown of participants&amp;rsquo; age range&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;./age.png&#34; alt=&#34;Age Breakdown&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;participants-self-perception-of-their-health-wellness&#34;&gt;Participants&amp;rsquo; self perception of their health wellness&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;./rating.png&#34; alt=&#34;Rating by Participants&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The graphs above do not show any relationship between the data.&lt;/strong&gt; To drive more meaningful insights, we would want to explore if there are any relationships between the data. For example, we would want to know how self perception of health wellness varies by different age groups. Do older people perceive themselves to be less healthy than young people do? While the ratings are subjective, the analysis itself can hint towards meaningful insights.&lt;/p&gt;
+
+&lt;h4 id=&#34;objectives&#34;&gt;Objectives&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;I use GoogleSheets API to call in the data and analyze the survey results to visualize the relationship between data and test statistical significance. I also incorporate Natural Language API to analyze textual data collected from the survey, and visualize them through violin graphs and word cloud.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;br&#34;&gt;&lt;br&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;a-name-link3-natural-language-api-features-a&#34;&gt;&lt;a name=&#34;link3&#34;&gt; Natural Language API Features &lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Before diving straight to working with data, let&amp;rsquo;s take a look at some of the features of NL API.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Imports the Google Cloud client library
+import os
+from google.cloud import language_v1
+
+# set environment for credentials (need to be called with every start of instance)
+# refer the reference tab for setting credentials
+os.environ[&amp;quot;GOOGLE_APPLICATION_CREDENTIALS&amp;quot;] = &amp;quot;/Users/Jin/google-cloud-sdk/natural-language-api.json&amp;quot;
+
+# Instantiates a client
+client = language_v1.LanguageServiceClient()
+
+# Available types: PLAIN_TEXT, HTML
+type_ = language_v1.Document.Type.PLAIN_TEXT
+
+encoding_type = language_v1.EncodingType.UTF8
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# an example of the data structure
-usa.head()
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;For the scope of this project, let&amp;rsquo;s look at some specific methods that NL API offers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Entity analysis&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;2. Sentiment analysis&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;3. Entity Sentiment analysis&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-link3-1-1-entity-analysis-a&#34;&gt;&lt;a name=&#34;link3.1&#34;&gt; 1. Entity analysis &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;analyze_entities&lt;/code&gt;: inspects the given text for known entities (proper nouns such as public figures, landmarks, etc.), and returns information about those entities.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# grab a random text from wikipedia
+text = u&amp;quot;The University of Washington is a public research university in Seattle, Washington.\
+        Ana Mari Cauce is the president.&amp;quot;
+
+document = {&amp;quot;content&amp;quot;: text, &amp;quot;type_&amp;quot;: type_}
+
+response = client.analyze_entities(request = {&#39;document&#39;: document, &#39;encoding_type&#39;: encoding_type})
+
+# Loop through entitites returned from the API
+for entity in response.entities:
+    print(u&amp;quot;Entity name: {}&amp;quot;.format(entity.name))
+
+    # Get entity type, e.g. PERSON, LOCATION, ADDRESS, NUMBER, et al
+    print(u&amp;quot;Entity type: {}&amp;quot;.format(language_v1.Entity.Type(entity.type_).name))
+
+    # Get the salience score associated with the entity in the [0, 1.0] range
+    print(u&amp;quot;Salience score: {}&amp;quot;.format(entity.salience) + &#39;\n&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Entity name: University of Washington
+Entity type: ORGANIZATION
+Salience score: 0.7374827265739441
+
+Entity name: Ana Mari Cauce
+Entity type: PERSON
+Salience score: 0.11040862649679184
+
+Entity name: Washington
+Entity type: LOCATION
+Salience score: 0.07763731479644775
+
+Entity name: Seattle
+Entity type: LOCATION
+Salience score: 0.07447130978107452
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;a-name-link3-2-2-sentiment-analysis-a&#34;&gt;&lt;a name=&#34;link3.2&#34;&gt; 2. Sentiment analysis &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;analyze_sentiment&lt;/code&gt;: inspects the given text and identifies the prevailing emotional opinion within the text, especially to determine a writer&amp;rsquo;s attitude as positive, negative, or neutral.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def analyze_sentiment(text):
+    &amp;quot;&amp;quot;&amp;quot;
+    a simple function created to run sentiment analysis for a given text.
+
+    Parameters
+    ----------
+    text : str
+        string of text to be analyzed
+
+    Returns
+    -------
+    sentiment.score: float
+        sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
+
+    sentiment.magnitude: float
+        a non-negative number in the [0, +inf) range, which represents the absolute \
+        magnitude of sentiment regardless of score (positive or negative).
+    &amp;quot;&amp;quot;&amp;quot;
+    document = language_v1.Document(content=text, type_=language_v1.Document.Type.PLAIN_TEXT)
+
+    # Detects the sentiment of the text
+    sentiment = client.analyze_sentiment(request={&#39;document&#39;: document}).document_sentiment
+
+    print(&amp;quot;Text: {}&amp;quot;.format(text))
+    print(&amp;quot;Sentiment: {}, {}&amp;quot;.format(sentiment.score, sentiment.magnitude))
+
+    return sentiment.score, sentiment.magnitude
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let&amp;rsquo;s try feeding in some random sentences and see how sentiments come out.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# The text to analyze
+text = u&amp;quot;The dish was delightfully surprising.&amp;quot;
+text2 = u&amp;quot;The overall experience was terrible.&amp;quot;
+
+analyze_sentiment(text)
+print(&#39;\n&#39;)
+_, _ = analyze_sentiment(text2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Text: The dish was delightfully surprising.
+Sentiment: 0.8999999761581421, 0.8999999761581421
+
+
+Text: The overall experience was terrible.
+Sentiment: -0.800000011920929, 0.800000011920929
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;a-name-link3-3-3-entity-sentiment-analysis-a&#34;&gt;&lt;a name=&#34;link3.3&#34;&gt; 3. Entity sentiment analysis &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;analyze_entity_sentiment&lt;/code&gt;: combines both entity analysis and sentiment analysis and attempts to determine the sentiment (positive or negative) expressed about entities within the text.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def analyze_entity_sentiment(text):
+    &amp;quot;&amp;quot;&amp;quot;
+    a simple function to run entity sentiment analysis for a given text.
+
+    Parameters
+    ----------
+    text : str
+        string of text to be analyzed
+
+    Returns
+    -------
+    entity.name: str
+        name of the entity identified
+
+    entity.type.name: str
+        type of the entity identified
+
+    sentiment.score: float
+        sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
+
+    sentiment.magnitude: float
+        a non-negative number in the [0, +inf) range, which represents the absolute \
+        magnitude of sentiment regardless of score (positive or negative).
+    &amp;quot;&amp;quot;&amp;quot;
+    document = {&amp;quot;content&amp;quot;: text, &amp;quot;type_&amp;quot;: type_}
+
+    encoding_type = language_v1.EncodingType.UTF8
+
+    response = client.analyze_entity_sentiment(request = {&#39;document&#39;: document, &#39;encoding_type&#39;: encoding_type})
+    # Loop through entitites returned from the API
+    for entity in response.entities:
+        print(u&amp;quot;Entity name: {}&amp;quot;.format(entity.name))
+
+        # Get entity type, e.g. PERSON, LOCATION, ADDRESS, NUMBER, et al
+        print(u&amp;quot;Entity type: {}&amp;quot;.format(language_v1.Entity.Type(entity.type_).name))
+
+        # Get the salience score associated with the entity in the [0, 1.0] range
+        print(u&amp;quot;Salience score: {}&amp;quot;.format(entity.salience))
+
+        # Get the aggregate sentiment expressed for this entity in the provided document.
+        sentiment = entity.sentiment
+        print(u&amp;quot;Entity sentiment score: {}&amp;quot;.format(sentiment.score))
+        print(u&amp;quot;Entity sentiment magnitude: {}&amp;quot;.format(sentiment.magnitude))
+        print(&#39;\n&#39;)
+
+    return entity.name, language_v1.Entity.Type(entity.type_).name, sentiment.score, sentiment.magnitude
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let&amp;rsquo;s try feeding in one neutral sentence, and a positive sentence.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = u&amp;quot;The University of Washington is a public research university in Seattle, Washington.\
+        The HCDE Department offers amazing opportunities to study UX and HCI.&amp;quot;
+
+_, _, _, _ = analyze_entity_sentiment(text)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Entity name: University of Washington
+Entity type: ORGANIZATION
+Salience score: 0.7403186559677124
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: Washington
+Entity type: LOCATION
+Salience score: 0.07140954583883286
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: Seattle
+Entity type: LOCATION
+Salience score: 0.06301160156726837
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: HCDE Department
+Entity type: ORGANIZATION
+Salience score: 0.04862694814801216
+Entity sentiment score: 0.8999999761581421
+Entity sentiment magnitude: 0.8999999761581421
+
+
+Entity name: UX
+Entity type: OTHER
+Salience score: 0.03587672486901283
+Entity sentiment score: 0.699999988079071
+Entity sentiment magnitude: 0.699999988079071
+
+
+Entity name: HCI
+Entity type: OTHER
+Salience score: 0.025248046964406967
+Entity sentiment score: 0.800000011920929
+Entity sentiment magnitude: 0.800000011920929
+
+
+Entity name: opportunities
+Entity type: OTHER
+Salience score: 0.015508485026657581
+Entity sentiment score: 0.8999999761581421
+Entity sentiment magnitude: 0.8999999761581421
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From the result above, we can see that the first sentiment of the entities identified in the first sentence, such as &amp;lsquo;University of Washington&amp;rsquo; or &amp;lsquo;Seattle&amp;rsquo; has a sentiment score of 0.0 which means neutral. This makes sense because the sentence was directly pulled from Wikipedia. On the other hand, the second sentence I wrote highlights &amp;lsquo;HCDE Department&amp;rsquo; as an entity with positive sentiment score of 0.8999.&lt;/p&gt;
+
+&lt;h4 id=&#34;so-what-s-next&#34;&gt;So what&amp;rsquo;s next?&lt;/h4&gt;
+
+&lt;p&gt;We can interchangeably use the two functions defined &lt;code&gt;analyze_sentiment&lt;/code&gt; and &lt;code&gt;analyze_entity_sentiment&lt;/code&gt; to identify the overall sentiment of a given text or entity if specified in the data analysis process.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-link4-loading-in-data-using-google-sheets-api-a&#34;&gt;&lt;a name=&#34;link4&#34;&gt; Loading in data using Google Sheets API &lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;The following code will only run if you have your Google &lt;code&gt;credential.json&lt;/code&gt; and &lt;code&gt;token.json&lt;/code&gt; within the working directory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from __future__ import print_function
+import os.path
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+
+SCOPES = [&#39;https://www.googleapis.com/auth/spreadsheets.readonly&#39;]
+SPREADSHEET_ID = &#39;11Den6g5nuR4B2CCUML1KrA0bEZXRpPZ7t83Ieyi7NJ4&#39;
+
+# Specify which sheet or row/column of data to call in
+# refer to https://developers.google.com/sheets/api/guides/concepts#a1_notation for detail
+RANGE_NAME = &#39;health_data&#39;
+
+creds = Credentials.from_authorized_user_file(&#39;token.json&#39;, SCOPES)
+service = build(&#39;sheets&#39;, &#39;v4&#39;, credentials=creds)
+
+# Call the Sheets API to read in the data
+sheet = service.spreadsheets()
+result = sheet.values().get(spreadsheetId = SPREADSHEET_ID,
+                            range = RANGE_NAME).execute()
+values = result.get(&#39;values&#39;, [])
+
+# convert the sheet to pandas dataframe so we can easily manipulate the data
+import pandas as pd
+
+data = pd.DataFrame(values[1:], columns=values[0])
+
+# let&#39;s confirm
+print(type(data))
+
+data.shape
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt;
+
+(71, 27)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-link5-dataset-a&#34;&gt;&lt;a name=&#34;link5&#34;&gt; Dataset &lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;From the code above, we translated the data into pandas dataframe. Using &lt;code&gt;data.shape&lt;/code&gt;, we know that there are total 27 questions collected from 71 participants. For simplicity, I remove any data that does not prefer to disclose gender. This brings the data size to 68. Due to the extensive length and branching logic within the survey, the data becomes more textual and qualitative for questions or columns in the back. I will primarily use selected columns that are of interest.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s have a quick glance at the dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# for simplicity, let&#39;s constrain the gender option to only two
+gender_options = [&#39;Man&#39;, &#39;Woman&#39;]
+data = data[data[&#39;What is your gender?&#39;].isin(gender_options)]
+
+print(&#39;There are total &#39; + str(len(data)) + &#39; participants.&#39;)
+print(&#39;The survey consists of &#39; + str(data.shape[1]) + &#39; questions (columns in the dataframe).&#39;)
+
+# convert the column string values to integers
+data[&#39;How would you rate your health?&#39;] = data[&#39;How would you rate your health?&#39;].astype(int)
+
+data.head(3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;There are total 69 participants.
+The survey consists of 27 questions (columns in the dataframe).
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div&gt;
 &lt;style scoped&gt;
@@ -507,390 +817,457 @@ usa.head()
   &lt;thead&gt;
     &lt;tr style=&#34;text-align: right;&#34;&gt;
       &lt;th&gt;&lt;/th&gt;
-      &lt;th&gt;UserGuid&lt;/th&gt;
-      &lt;th&gt;culture&lt;/th&gt;
-      &lt;th&gt;scenario&lt;/th&gt;
-      &lt;th&gt;interface&lt;/th&gt;
-      &lt;th&gt;complete&lt;/th&gt;
-      &lt;th&gt;first&lt;/th&gt;
-      &lt;th&gt;last&lt;/th&gt;
-      &lt;th&gt;phone&lt;/th&gt;
-      &lt;th&gt;dob&lt;/th&gt;
-      &lt;th&gt;sex&lt;/th&gt;
+      &lt;th&gt;Timestamp&lt;/th&gt;
+      &lt;th&gt;What age range are you?&lt;/th&gt;
+      &lt;th&gt;What is your gender?&lt;/th&gt;
+      &lt;th&gt;What actions do you take regarding your health?&lt;/th&gt;
+      &lt;th&gt;How would you rate your health?&lt;/th&gt;
+      &lt;th&gt;Have you ever tracked your health and/or fitness?&lt;/th&gt;
+      &lt;th&gt;Why do you not track your health and/or fitness?&lt;/th&gt;
+      &lt;th&gt;How do you generally like to keep track of activities?&lt;/th&gt;
+      &lt;th&gt;Which of the following did you keep track of? (Select all that apply.)&lt;/th&gt;
+      &lt;th&gt;What did you use to record your health and/or fitness? (Select all that apply.)&lt;/th&gt;
       &lt;th&gt;...&lt;/th&gt;
-      &lt;th&gt;address&lt;/th&gt;
-      &lt;th&gt;citizenship&lt;/th&gt;
-      &lt;th&gt;website&lt;/th&gt;
-      &lt;th&gt;password&lt;/th&gt;
-      &lt;th&gt;username&lt;/th&gt;
-      &lt;th&gt;relationship&lt;/th&gt;
-      &lt;th&gt;reason&lt;/th&gt;
-      &lt;th&gt;total&lt;/th&gt;
-      &lt;th&gt;total_possible&lt;/th&gt;
-      &lt;th&gt;percent&lt;/th&gt;
+      &lt;th&gt;Which of the following do you keep track of? (Select all that apply.)&lt;/th&gt;
+      &lt;th&gt;What do you use to record your health and/or fitness? (Select all that apply.)&lt;/th&gt;
+      &lt;th&gt;If you use any app or device, could you tell us which one(s)?&lt;/th&gt;
+      &lt;th&gt;Why do you track your health and/or fitness?&lt;/th&gt;
+      &lt;th&gt;Is there anything you like about your current health and/or fitness tracking method?&lt;/th&gt;
+      &lt;th&gt;In the last 30 days, how often have you tracked your health and/or fitness?&lt;/th&gt;
+      &lt;th&gt;Who views your health and/or fitness information?&lt;/th&gt;
+      &lt;th&gt;How is your health and/or fitness information being used?&lt;/th&gt;
+      &lt;th&gt;What, if anything, has been helpful about the information you tracked?&lt;/th&gt;
+      &lt;th&gt;Is there anything that could be better about your current health and/or fitness tracking method?&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;th&gt;0&lt;/th&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;USA&lt;/td&gt;
-      &lt;td&gt;Bank&lt;/td&gt;
-      &lt;td&gt;A&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2020/07/18 9:59:33 AM EST&lt;/td&gt;
+      &lt;td&gt;Under 18&lt;/td&gt;
+      &lt;td&gt;Man&lt;/td&gt;
+      &lt;td&gt;Exercise;Learn more about your health (e.g. fr...&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Yes and I am currently still tracking&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
       &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;0.518519&lt;/td&gt;
+      &lt;td&gt;Exercise (e.g. Steps taken, Distance, Calories...&lt;/td&gt;
+      &lt;td&gt;Mobile App&lt;/td&gt;
+      &lt;td&gt;Google fit and Pixels&lt;/td&gt;
+      &lt;td&gt;It&#39;s interesting to look back at the data I ha...&lt;/td&gt;
+      &lt;td&gt;My mood tracking method is very useful for dis...&lt;/td&gt;
+      &lt;td&gt;Everyday&lt;/td&gt;
+      &lt;td&gt;Myself&lt;/td&gt;
+      &lt;td&gt;It&#39;s only used by me. It simply interests me.&lt;/td&gt;
+      &lt;td&gt;I have concluded that I am prone to mood swing...&lt;/td&gt;
+      &lt;td&gt;It could be more extensive.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;th&gt;1&lt;/th&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;USA&lt;/td&gt;
-      &lt;td&gt;Shop&lt;/td&gt;
-      &lt;td&gt;A&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2020/07/18 10:15:07 AM EST&lt;/td&gt;
+      &lt;td&gt;25 - 34&lt;/td&gt;
+      &lt;td&gt;Man&lt;/td&gt;
+      &lt;td&gt;Exercise&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Yes, I have tracked before but not in the last...&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;Cardiovascular (e.g. Heart rate, Blood pressur...&lt;/td&gt;
+      &lt;td&gt;Wearable;Mobile App&lt;/td&gt;
       &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;24&lt;/td&gt;
-      &lt;td&gt;0.208333&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;th&gt;2&lt;/th&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;USA&lt;/td&gt;
-      &lt;td&gt;Bank&lt;/td&gt;
-      &lt;td&gt;B&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2020/07/18 10:32:24 AM EST&lt;/td&gt;
+      &lt;td&gt;18 - 24&lt;/td&gt;
+      &lt;td&gt;Man&lt;/td&gt;
+      &lt;td&gt;None of the above&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;No&lt;/td&gt;
+      &lt;td&gt;I eat very little junk food, and am very thin....&lt;/td&gt;
+      &lt;td&gt;To do lists and notes&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
       &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;0.518519&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;3&lt;/th&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;USA&lt;/td&gt;
-      &lt;td&gt;Shop&lt;/td&gt;
-      &lt;td&gt;B&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;24&lt;/td&gt;
-      &lt;td&gt;0.208333&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;4&lt;/th&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;USA&lt;/td&gt;
-      &lt;td&gt;Bank&lt;/td&gt;
-      &lt;td&gt;A&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;0.037037&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
+      &lt;td&gt;None&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;5 rows × 24 columns&lt;/p&gt;
+&lt;p&gt;3 rows × 27 columns&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;1-pearson-correlation-coefficient&#34;&gt;1. Pearson Correlation Coefficient&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;When we want to ask &lt;em&gt;&amp;ldquo;how strongly correlated are the two variables?&amp;rdquo;&lt;/em&gt;, we can use &lt;strong&gt;Perason&amp;rsquo;s Correlation&lt;/strong&gt;. It is used to measure statistical relationship or association between two &lt;strong&gt;&lt;em&gt;continuous variables&lt;/em&gt;&lt;/strong&gt; that are linearly related to each other. The coefficient value &lt;em&gt;&amp;ldquo;r&amp;rdquo;&lt;/em&gt; ranges from -1 (negative relation) to 1 (perfectly positive). 0 would mean that there is no relationship at all.&lt;/p&gt;
+&lt;h2 id=&#34;a-name-link6-data-analysis-a&#34;&gt;&lt;a name=&#34;link6&#34;&gt; Data Analysis &lt;/a&gt;&lt;/h2&gt;
 
-&lt;h3 id=&#34;properties-of-pearson-correlation&#34;&gt;Properties of Pearson Correlation&lt;/h3&gt;
+&lt;p&gt;Now that we have seen the general dataframe structure, let&amp;rsquo;s explore probing the data for analysis.&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;The units of the values do not affect the Pearson Correlation.
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
+import pandas as pd
+from collections import Counter
+import re
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from nltk.corpus import stopwords
+import warnings
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+import scipy
+from tabulate import tabulate
 
-&lt;ul&gt;
-&lt;li&gt;i.e. Changing the unit of value from cm to inches do not affect the r value&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;The correlation between the two variables is symmetric:
-
-&lt;ul&gt;
-&lt;li&gt;i.e. A -&amp;gt; B is equal to B -&amp;gt; A&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;** Use &lt;strong&gt;&lt;em&gt;Spearman&amp;rsquo;s Correlation&lt;/em&gt;&lt;/strong&gt; when the two variables have non-linear relationship (e.g. a curve instead of a straight line).&lt;/p&gt;
-
-&lt;h3 id=&#34;code-implementation&#34;&gt;Code Implementation&lt;/h3&gt;
-
-&lt;p&gt;We use scipy package to calculate the Pearson Correlation. The method will return two values: &lt;strong&gt;&lt;em&gt;r&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt; value.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# let&#39;s look at the correlation of information provided by different scenarios: online banking vs. shopping
-# bank[&#39;percent&#39;] will return an array of percentage values
-
-r, p = scipy.stats.pearsonr(bank[&#39;percent&#39;], shop[&#39;percent&#39;])  
-print(&#39;r: &#39; + str(r.round(4)))
-print(&#39;p: &#39; + str(p.round(4)))
+warnings.simplefilter(action=&#39;ignore&#39;, category=FutureWarning)  # suppress any warning
+sns.set_color_codes(&#39;pastel&#39;)  # set color
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;r: 0.7592
-p: 0.0
+&lt;h3 id=&#34;querying-data&#34;&gt;Querying data&lt;/h3&gt;
+
+&lt;p&gt;Before we play around with data, let&amp;rsquo;s query out the data that are of interest. This way we can manipulate the data more effectively without having to call on the entire dataset &lt;code&gt;data&lt;/code&gt; everytime.&lt;/p&gt;
+
+&lt;p&gt;There are total 7 different age groups.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# let&#39;s divde the data by gender first
+females = data.loc[data[&#39;What is your gender?&#39;] == &#39;Woman&#39;]
+males = data.loc[data[&#39;What is your gender?&#39;] == &#39;Man&#39;]
+
+# let&#39;s also create dataset divided by age group
+age_under18 = data.loc[data[&#39;What age range are you?&#39;] == &#39;Under 18&#39;]
+age_18to24 = data.loc[data[&#39;What age range are you?&#39;] == &#39;18 - 24&#39;]
+age_25to34 = data.loc[data[&#39;What age range are you?&#39;] == &#39;25 - 34&#39;]
+age_35to44 = data.loc[data[&#39;What age range are you?&#39;] == &#39;35 - 44&#39;]
+age_45to54 = data.loc[data[&#39;What age range are you?&#39;] == &#39;45 - 54&#39;]
+age_55to64 = data.loc[data[&#39;What age range are you?&#39;] == &#39;55 - 64&#39;]
+age_over65 = data.loc[data[&#39;What age range are you?&#39;] == &#39;65 or older&#39;]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;From the results above, we can see &lt;strong&gt;there is a strong positive relationship between the amount of information provided in banking and shopping.&lt;/strong&gt; i.e. Providing information in banking would affect how a user provides personal information in shopping.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;2-t-test&#34;&gt;2. T-Test&lt;/h2&gt;
-
-&lt;p&gt;When comparing the means of two groups, we can use a &lt;strong&gt;t-test&lt;/strong&gt;. It takes into account of the means and the spread of the data to determine &lt;strong&gt;&lt;em&gt;whether a difference between the two would occur by chance or not&lt;/em&gt;&lt;/strong&gt; (determined by the p-value being less than 0.05 usually). In a t-test, there should be only two independent variables (categorical/nominal variables) and one dependent continuous variable.&lt;/p&gt;
-
-&lt;h3 id=&#34;properties-of-t-test&#34;&gt;Properties of t-test&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;The data is assumed to be &lt;strong&gt;normal&lt;/strong&gt; (If the distribution is skewed, use Mann-Whitney test). &lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;T-test yields &lt;strong&gt;&lt;em&gt;t&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt; value:&lt;br&gt;
-2a. &lt;strong&gt;The higher the t, the more difference there is between the two groups.&lt;/strong&gt; The lower the t, the more similar the two groups are.&lt;br&gt;
-2b. T-value of 2 means the groups are twice as different from each other than they are within each other&lt;br&gt;
-2c. &lt;strong&gt;The lower the p-value, the better&lt;/strong&gt; (meaning that it is significant and the difference did not occure by chance). P-value of 0.05 means that there is 5 percent happening by chance&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;code-implementation-1&#34;&gt;Code Implementation&lt;/h3&gt;
-
-&lt;p&gt;We use scipy package again to run a t-test. Before we decide which test to run, we can quickly plot and see the distribution like below.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sns.distplot(df[df[&#39;scenario&#39;] == &#39;Bank&#39;].percent)
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(len(males))
+print(len(females))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x1c238f61d0&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;./output_10_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The distribution looks relatively normal. We can run a t-test to see whether there is a difference between the total amount of information provided by the users from each use scenario: i.e. banking vs. shopping&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# we run a t-test to see whether there ia a difference in the amount of information provided in each scenario
-t, p = scipy.stats.ttest_ind(df[df[&#39;scenario&#39;] == &#39;Bank&#39;].percent, df[df[&#39;scenario&#39;] == &#39;Shop&#39;].percent)
-print(&#39;t: &#39; + str(t.round(4)))
-print(&#39;p: &#39; + str(p.round(6)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;t: 4.8203
-p: 2e-06
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The result above shows that there is a significant difference in the amount of information provided between two use scenarios with t-value being high, and p-value being very small. However, we don&amp;rsquo;t actually know which scenario yields more information than the other. The t-test only tells there is a significant difference.&lt;/p&gt;
-
-&lt;p&gt;To find out, we can create a little fancy distribution plot with some box plots:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;banking = df[df[&#39;scenario&#39;] == &#39;Bank&#39;].percent
-shopping = df[df[&#39;scenario&#39;] == &#39;Shop&#39;].percent
-
-# let&#39;s plot box-dist plot combined
-f, (ax_box1, ax_box2, ax_dist) = plt.subplots(3, sharex=True,
-                                              gridspec_kw= {&amp;quot;height_ratios&amp;quot;: (0.3, 0.3, 1)})
-
-# add boxplots at the top
-sns.boxplot(banking, ax=ax_box1, color=&#39;g&#39;)
-sns.boxplot(shopping, ax=ax_box2, color=&#39;m&#39;)
-ax_box1.axvline(np.mean(banking), color=&#39;g&#39;, linestyle=&#39;--&#39;)
-ax_box2.axvline(np.mean(shopping), color=&#39;m&#39;, linestyle=&#39;--&#39;)
-plt.subplots_adjust(top=0.87)
-plt.suptitle(&#39;Amount of information provided by use scenario&#39;, fontsize = 17)
-
-# add distplots below
-sns.distplot(banking, ax=ax_dist, label=&#39;Banking&#39;, kde=True, rug=True, color=&#39;g&#39;, norm_hist=True, bins=2)
-sns.distplot(shopping, ax=ax_dist, label=&#39;Shopping&#39;, kde=True, rug=True, color=&#39;m&#39;, norm_hist=True, bins=2)
-
-ax_dist.axvline(np.mean(banking), color=&#39;g&#39;, linestyle=&#39;--&#39;)
-ax_dist.axvline(np.mean(shopping), color=&#39;m&#39;, linestyle=&#39;--&#39;)
-plt.legend()
-plt.xlabel(&#39;Percentage of information&#39;, fontsize=16)
-ax_box1.set(xlabel=&#39;&#39;)
-ax_box2.set(xlabel=&#39;&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;[Text(0.5, 0, &#39;&#39;)]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;./output_14_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;From the graph above, we see that the mean of the banking is greater than the mean of shopping. This shows us that regardless of cultural background, users are more likely to provide personal information in the banking scenario.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;3-mann-whitney-test&#34;&gt;3. Mann-Whitney Test&lt;/h2&gt;
-
-&lt;p&gt;The Mann-Whitney Test allows you to determine if the observed difference is statistically significant without making the assumption that the values are normally distributed. You should have two independent variables and one continuous dependent variable.&lt;/p&gt;
-
-&lt;h3 id=&#34;code-implementation-2&#34;&gt;Code Implementation&lt;/h3&gt;
-
-&lt;p&gt;We can run the test on the same banking vs. shopping scenario.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;t, p = scipy.stats.mannwhitneyu(df[df[&#39;scenario&#39;] == &#39;Bank&#39;].percent, df[df[&#39;scenario&#39;] == &#39;Shop&#39;].percent)
-print(&#39;t: &#39; + str(t.round(4)))
-print(&#39;p: &#39; + str(p.round(6)))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;t: 14795.5
-p: 4.1e-05
+&lt;pre&gt;&lt;code&gt;31
+38
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;4-one-way-analysis-of-variance-anova&#34;&gt;4. One-Way Analysis of Variance (ANOVA)&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;ANOVA is similar to a t-test, but it is used when there are three or more independent variables (categorical). It assumes normal distribution (use Kruskal-Wallis if abnormal?). One-way ANOVA compares the means between the variables to test whether the difference is statistically significant. However, it does not tell you which specific groups were statistically different from one another. Thus, a post-hoc analysis is required.&lt;/p&gt;
+&lt;h2 id=&#34;a-name-link7-research-question-a&#34;&gt;&lt;a name=&#34;link7&#34;&gt; Research Question &lt;/a&gt;&lt;/h2&gt;
 
-&lt;h3 id=&#34;code-implementation-3&#34;&gt;Code Implementation&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;mark&gt;&lt;em&gt;How does self-perception of health rating differ by gender and age?&lt;/em&gt;&lt;/mark&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;The result below suggests that there is a statistical difference in the means of the three variables.&lt;/p&gt;
+&lt;p&gt;Participants were asked, How would you rate your health? (5 being healthy, 1 being not healthy).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# we can create a third variable, and compare the var1, var2, and var3 with one-way ANOVA
-var3 = df[df[&#39;culture&#39;] == &#39;USA&#39;].percent
-scipy.stats.f_oneway(banking, shopping, var3)
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-link7-1-a-health-rating-by-gender-a&#34;&gt;&lt;a name=&#34;link7.1&#34;&gt; A. Health rating by gender &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s breakdown the data to see how self-perception of health wellness varies by gender and different age groups. In the code below, I first quary females and males from the data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# columns[4] is the column for health rating
+mean_males = np.mean(males[males.columns[4]])
+mean_females = np.mean(females[females.columns[4]])
+
+print(&amp;quot;Mean of males&#39; self-health wellness: &amp;quot; + str(mean_males))
+print(&amp;quot;Mean of females&#39; self-health wellness: &amp;quot; + str(mean_females))
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;F_onewayResult(statistic=11.171874914065159, pvalue=1.7072783704546878e-05)
+&lt;pre&gt;&lt;code&gt;Mean of males&#39; self-health wellness: 3.5161290322580645
+Mean of females&#39; self-health wellness: 3.4473684210526314
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-link7-2-b-health-rating-by-age-group-a&#34;&gt;&lt;a name=&#34;link7.2&#34;&gt; B. Health rating by age group &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s breakdown the data to see how self-perception of health wellness varies by different age groups.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;age = data.groupby(&#39;What age range are you?&#39;)[&#39;How would you rate your health?&#39;].mean()
+age
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;What age range are you?
+18 - 24        3.615385
+25 - 34        3.285714
+35 - 44        3.500000
+45 - 54        3.375000
+55 - 64        3.600000
+65 or older    4.000000
+Under 18       3.000000
+Name: How would you rate your health?, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Conversely, the age group 65 or older actually has the highest self-perception of wellness.&lt;/strong&gt; The youngest group (age under 18) rated the lowest.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-link7-3-c-t-test-for-statistical-signifcance-a&#34;&gt;&lt;a name=&#34;link7.3&#34;&gt; C. T-test for statistical signifcance &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;With small samples of the two demographic groups &lt;code&gt;65 or older&lt;/code&gt; and &lt;code&gt;Under 18&lt;/code&gt;, we are not sure if the difference we see here is significant. &lt;strong&gt;Let&amp;rsquo;s run a quick t-test to see if the difference we are seeing is statistically significant.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;t, p = scipy.stats.ttest_ind(age_over65[&#39;How would you rate your health?&#39;], age_under18[&#39;How would you rate your health?&#39;])
+
+print(&#39;t: &#39; + str(t.round(4)))  
+print(&#39;p: &#39; + str(p.round(4)))  # the p-val should be less than 0.05 in general to assume the difference we observe is signifcant
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;t: 2.8983
+p: 0.0199
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We see the p-value is 0.01 which is signifcant, which is one interesting find! So we can say that within this dataset, the people age over 65 perceive themselves to be more healthy than teenagers would do.&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-link7-4-d-health-rating-by-age-gender-group-a&#34;&gt;&lt;a name=&#34;link7.4&#34;&gt; D. Health rating by age &amp;amp; gender group &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s breakdown by both gender and different age groups to look at how the self perception of health wellness change.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;age_gender = data.groupby([&#39;What age range are you?&#39;, &#39;What is your gender?&#39;])[&#39;How would you rate your health?&#39;].mean().round(2)
+
+age_gender
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;What age range are you?  What is your gender?
+18 - 24                  Man                     3.43
+                         Woman                   3.83
+25 - 34                  Man                     3.43
+                         Woman                   3.21
+35 - 44                  Man                     3.80
+                         Woman                   3.29
+45 - 54                  Man                     3.40
+                         Woman                   3.33
+55 - 64                  Man                     3.33
+                         Woman                   4.00
+65 or older              Man                     4.00
+                         Woman                   4.00
+Under 18                 Man                     3.00
+                         Woman                   3.00
+Name: How would you rate your health?, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;a-name-link7-5-e-iteratively-running-t-test-within-each-age-group-a&#34;&gt;&lt;a name=&#34;link7.5&#34;&gt; E. Iteratively running t-test within each age group &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;We have several different age groups with each male and female gender group. Within each age group, let&amp;rsquo;s run a t-test to see if there are any significant observed differences.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;gender_options = [&#39;Man&#39;, &#39;Woman&#39;]
+age_groups = [&#39;age_under18&#39;, &#39;age_18to24&#39;, &#39;age_25to34&#39;, &#39;age_35to44&#39;, &#39;age_45to54&#39;, &#39;age_55to64&#39;, &#39;age_over65&#39;]
+
+table = []
+table.append([&#39;age group&#39;, &#39;t value&#39;, &#39;p value&#39;])
+
+# iteratively run for t-tests within each age group defined in the list variable &#39;age_groups&#39;
+for i in range(0, len(age_groups)):
+    data_string = &amp;quot;[&#39;How would you rate your health?&#39;]&amp;quot;
+    eval_string1 = age_groups[i] + &#39;.loc[&#39; + age_groups[i] + &amp;quot;[&#39;What is your gender?&#39;] == &#39;Man&#39;]&amp;quot;
+    a = eval(eval_string1 + data_string)
+    eval_string2 = age_groups[i] + &#39;.loc[&#39; + age_groups[i] + &amp;quot;[&#39;What is your gender?&#39;] == &#39;Woman&#39;]&amp;quot;
+    b = eval(eval_string2 + data_string)
+#     strings_combined = &#39;scipy.stats.ttest_ind(a, b)&#39;
+
+    t, p = eval(&#39;scipy.stats.ttest_ind(a, b)&#39;)
+
+    # we use a package called tabulate to print out a formatted table
+    table.append([age_groups[i], t.round(4) ,p.round(4)])
+
+print(tabulate(table, headers=&#39;firstrow&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;age group      t value    p value
+-----------  ---------  ---------
+age_under18   nan        nan
+age_18to24     -1.1315     0.2819
+age_25to34      0.4504     0.6575
+age_35to44      0.9682     0.3558
+age_45to54      0.1637     0.8754
+age_55to64     -0.7746     0.495
+age_over65      0          1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;We see that the p-values are all above 0.05 which means that there are no observed significant differences in gender within each age group.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;5-two-way-anova&#34;&gt;5. Two-Way ANOVA&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;A two-way ANOVA can be used when you want to know how two independent variables have an interaction effect on a dependent variable. CAVEAT: a two-way ANOVA does not tell which variable is dominant.&lt;/p&gt;
+&lt;h2 id=&#34;a-name-link8-data-visualization-a&#34;&gt;&lt;a name=&#34;link8&#34;&gt; Data Visualization &lt;/a&gt;&lt;/h2&gt;
 
-&lt;h3 id=&#34;code-implementation-4&#34;&gt;Code Implementation&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s first try plotting a simple visual violin plot.&lt;/p&gt;
 
-&lt;p&gt;Below in the code, we see &lt;strong&gt;&lt;em&gt;if there is an interaction effect between culture and scenario use cases on the total amount of information provided.&lt;/em&gt;&lt;/strong&gt; For example, would Americans be more willing to provide personal information than Koreans? If so, does the use case (either banking vs. shopping) affect at all?&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# we give in a string value of each variable, and the interaction variable &#39;culture:scenario&#39;
-
-model = ols(&#39;percent ~ culture + scenario + culture:scenario&#39;, data=df).fit()
-sm.stats.anova_lm(model, typ=2)
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;age_plot = sns.catplot(x=&#39;What age range are you?&#39;, y=&#39;How would you rate your health?&#39;, \
+                       hue=&#39;What is your gender?&#39;, kind=&amp;quot;violin&amp;quot;, data=data);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div&gt;
-&lt;style scoped&gt;
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_39_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+&lt;h2 id=&#34;a-name-link8-1-characterizing-textual-data-through-wordcloud-a&#34;&gt;&lt;a name=&#34;link8.1&#34;&gt; Characterizing textual data through wordcloud &lt;/a&gt;&lt;/h2&gt;
 
-    .dataframe thead th {
-        text-align: right;
-    }
-&lt;/style&gt;
-&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
-  &lt;thead&gt;
-    &lt;tr style=&#34;text-align: right;&#34;&gt;
-      &lt;th&gt;&lt;/th&gt;
-      &lt;th&gt;sum_sq&lt;/th&gt;
-      &lt;th&gt;df&lt;/th&gt;
-      &lt;th&gt;F&lt;/th&gt;
-      &lt;th&gt;PR(&amp;gt;F)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;culture&lt;/th&gt;
-      &lt;td&gt;0.000344&lt;/td&gt;
-      &lt;td&gt;1.0&lt;/td&gt;
-      &lt;td&gt;0.007439&lt;/td&gt;
-      &lt;td&gt;0.931312&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;scenario&lt;/th&gt;
-      &lt;td&gt;1.070130&lt;/td&gt;
-      &lt;td&gt;1.0&lt;/td&gt;
-      &lt;td&gt;23.159298&lt;/td&gt;
-      &lt;td&gt;0.000002&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;culture:scenario&lt;/th&gt;
-      &lt;td&gt;0.032834&lt;/td&gt;
-      &lt;td&gt;1.0&lt;/td&gt;
-      &lt;td&gt;0.710576&lt;/td&gt;
-      &lt;td&gt;0.399772&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Residual&lt;/th&gt;
-      &lt;td&gt;17.928461&lt;/td&gt;
-      &lt;td&gt;388.0&lt;/td&gt;
-      &lt;td&gt;NaN&lt;/td&gt;
-      &lt;td&gt;NaN&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
+&lt;p&gt;Let&amp;rsquo;s change focus and try analyzing textual inputs from the participants. We will analyze the column How is your health and/or fitness information being used? question to identify any emerging keywords using the word cloud representation. Disclaimer: The result here is not such a useful or accurate representation as the stopwords did not clearly filter out.&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We first call in a list of stopwords to filter out any unnecessary words, such as &amp;lsquo;I&amp;rsquo;, &amp;lsquo;and&amp;rsquo;, and etc. We then flatten out all the responses into a single list of words.&lt;/p&gt;
 
-&lt;p&gt;From the table above, only scenario has a sole effect on the total amount of information provided (depicted as &lt;code&gt;percent&lt;/code&gt; in the dataframe). We see culture, and the interaction of culture and scenario do not have an effect on the amount of information that users provided.&lt;/p&gt;
+&lt;h3 id=&#34;is-there-gender-difference-in-how-they-use-health-data-text-responses&#34;&gt;Is there gender difference in how they use health data (text responses)?&lt;/h3&gt;
 
-&lt;p&gt;The finding matches with the previous t-test and graph results, where users provided more information in the banking than they would in shopping.&lt;/p&gt;
+&lt;p&gt;Participants were asked, &amp;ldquo;How is your health and/or fitness information being used?&amp;rdquo; Here, I try to breakdown the text data through representation of wordcloud, and see if there any characteristics found in each gender.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# builtin stopword sets from nltk
+stop = set(stopwords.words(&#39;english&#39;))
+
+
+def plot_wordcloud(df, col, separator=None):
+    &amp;quot;&amp;quot;&amp;quot;
+    Plots a wordcloud of given dataframe and specific column. The text is counted at word level.
+
+    Parameters
+    ----------
+    df: pandas dataframe
+        dataframe that contains textual data
+    col: int
+        integer that points to the specific column with textual data
+    separator: str (default: None)
+        string specified to breakdown the text by. Default is empty space
+
+    Returns
+    -------
+    Wordcloud plot
+
+    list of most common words in the dataframe
+
+    &amp;quot;&amp;quot;&amp;quot;
+    # filter out any NaNs
+    response = [x for x in df[df.columns[col]] if x == x]
+    # filter out any None
+    response = [x for x in response if x != None]
+
+    word_dict = []
+    for i in range(0, len(response)):
+        if separator == None:
+            word_dict.append(response[i].split())
+        else:
+            word_dict.append(response[i].split(separator))
+    word_filtered = []
+
+    # flatten the list and lower all letter cases
+    for sublist in word_dict:
+        for item in sublist:
+            word_filtered.append(item.lower())
+
+    # remove stopwords
+    word_filtered = [x for x in word_filtered if x not in stop]
+
+    word_filtered = [word.replace(&#39;.&#39;,&#39;&#39;).replace(&#39;,&#39;, &#39;&#39;).replace(&amp;quot;&#39;&amp;quot;,&#39;&#39;) for word in word_filtered]
+
+    # print most common words
+    most_common_words = Counter(word_filtered).most_common(10)
+    print(most_common_words)
+
+    # plot wordcloud
+    texts = &amp;quot; &amp;quot;.join(word for word in word_filtered)
+    cloud = WordCloud(max_font_size=50, max_words=100, background_color=&amp;quot;white&amp;quot;).generate(texts)
+    plt.imshow(cloud, interpolation=&#39;bilinear&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# plot wordcloud for Man
+plot_wordcloud(males, 24)  # 24 specifies the column number
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;[(&#39;me&#39;, 2), (&#39;adjust&#39;, 2), (&#39;overall&#39;, 2), (&#39;personal&#39;, 2), (&#39;im&#39;, 2), (&#39;its&#39;, 1), (&#39;used&#39;, 1), (&#39;simply&#39;, 1), (&#39;interests&#39;, 1), (&#39;food&#39;, 1)]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_42_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# plot wordcloud for Woman
+plot_wordcloud(females, 24)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;[(&#39;use&#39;, 4), (&#39;see&#39;, 4), (&#39;im&#39;, 4), (&#39;bit&#39;, 3), (&#39;more&#39;, 3), (&#39;less&#39;, 3), (&#39;food&#39;, 3), (&#39;know&#39;, 3), (&#39;sleep&#39;, 2), (&#39;information&#39;, 2)]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_43_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The top image is the wordcloud of male participants and the bottom is that of female participants. We see that some words are not as meaningful and that one critical fault to this approach is that breaking down the responses into word level can misrepresent the meaning of their responses. For example, &amp;lsquo;exercise&amp;rsquo; and &amp;lsquo;not exercise&amp;rsquo; have two opposing ideas but here, it would count &amp;lsquo;not&amp;rsquo; and &amp;lsquo;exercise&amp;rsquo; as two seperate ideas.&lt;/p&gt;
+
+&lt;p&gt;Even though the word counts are small, we see more &amp;lsquo;food&amp;rsquo; and &amp;lsquo;sleep&amp;rsquo; for female participants, leading to an assumption that it could be related to going on diets.&lt;/p&gt;
+
+&lt;h3 id=&#34;analyzing-categorical-data-using-wordcloud&#34;&gt;Analyzing categorical data using wordcloud&lt;/h3&gt;
+
+&lt;p&gt;Participants were also asked, &amp;ldquo;what actions do you take regarding your health?&amp;rdquo; with multiple choices answer selections that include&amp;hellip;
+1. &amp;lsquo;exercise&amp;rsquo;
+2. &amp;lsquo;take medication or health supplements&amp;rsquo;
+3. &amp;lsquo;track health or fitness&amp;rsquo;
+4. &amp;lsquo;learn more about health&amp;rsquo;
+5. &amp;lsquo;receive regular treatment at clinic&amp;rsquo;
+6. &amp;lsquo;maintain a diet&amp;rsquo;
+7. &amp;lsquo;receive mental counseling.&amp;rsquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plot_wordcloud(males, 3, &#39;;&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;[(&#39;exercise&#39;, 29), (&#39;take medication and/or health supplements&#39;, 10), (&#39;track your health and/or fitness&#39;, 9), (&#39;learn more about your health (eg from online friends or community)&#39;, 8), (&#39;maintain a diet&#39;, 8), (&#39;receive regular treatment and/or consultation at clinic&#39;, 3), (&#39;none of the above&#39;, 2)]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_46_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plot_wordcloud(females, 3, &#39;;&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;[(&#39;exercise&#39;, 30), (&#39;take medication and/or health supplements&#39;, 27), (&#39;track your health and/or fitness&#39;, 24), (&#39;learn more about your health (eg from online friends or community)&#39;, 17), (&#39;receive regular treatment and/or consultation at clinic&#39;, 17), (&#39;maintain a diet&#39;, 16), (&#39;receive mental counseling&#39;, 7)]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_47_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the two results above, we see that exercise is the most common practice for keeping up health in both genders. However, we see that in general, women tend to do more activities or attempts to maintain their health e.g. by more frequently visiting a clinic or receive counseling, whereas two men responded they simply do nothing at all.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-link9-conclusion-thoughts-a&#34;&gt;&lt;a name=&#34;link9&#34;&gt; Conclusion &amp;amp; Thoughts &lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Wordcloud is a fun, engaging representation of textual data. However, more caution and consideration are needed because it can also tweak how the data is represented. For example, I coded the function so that it would breakdown any sentences or phrases into word level. This means that if someone does &amp;lsquo;not exercise&amp;rsquo;, it would still count &amp;lsquo;exercise&amp;rsquo; and the end result would show &amp;lsquo;exercise&amp;rsquo; being emphasized more. While the context of exercise is present, the meaning is totally the opposite.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;GoogleSheets API v4: &lt;a href=&#34;https://developers.google.com/sheets/api/samples/reading&#34; target=&#34;_blank&#34;&gt;https://developers.google.com/sheets/api/samples/reading&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Google Oauth: &lt;a href=&#34;https://developers.google.com/identity/protocols/oauth2/service-account#python&#34; target=&#34;_blank&#34;&gt;https://developers.google.com/identity/protocols/oauth2/service-account#python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Google API Python Client: &lt;a href=&#34;https://github.com/googleapis/google-api-python-client/blob/master/docs/oauth.md&#34; target=&#34;_blank&#34;&gt;https://github.com/googleapis/google-api-python-client/blob/master/docs/oauth.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Credentials: &lt;a href=&#34;https://developers.google.com/workspace/guides/create-credentials&#34; target=&#34;_blank&#34;&gt;https://developers.google.com/workspace/guides/create-credentials&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1393,6 +1770,8 @@ sm.stats.anova_lm(model, typ=2)
       <guid>https://jinjeon.me/post/quant-ux/</guid>
       <description>
 
+&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
+
 &lt;p&gt;I use survey data collected from Amazon Mechanical Turk and Reddit user groups (all personal data  have been removed) in a study to examine the impact of cultural localization on web-based account creation between American and Korean users. I use the experiment data to display basic statistical tests in Python.&lt;/p&gt;
 
 &lt;h3 id=&#34;research-question&#34;&gt;Research Question:&lt;/h3&gt;
@@ -1405,12 +1784,12 @@ within two different use scenarios: online banking and shopping?&lt;/em&gt;&lt;/
 &lt;p&gt;I use the following tests:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#1.-Pearson-Correlation-Coefficient&#34;&gt;Pearson Correlation Coefficient&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#2.-T-Test&#34;&gt;T-Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#3.-Mann-Whitney-Test&#34;&gt;Mann-Whitney Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#4.-One-Way-Analysis-of-Variance-(ANOVA)&#34;&gt;One-Way Analysis of Variance (ANOVA)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link1&#34;&gt;Pearson Correlation Coefficient&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link2&#34;&gt;T-Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link3&#34;&gt;Mann-Whitney Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link4&#34;&gt;One-Way Analysis of Variance (ANOVA)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;#5.-Two-Way-ANOVA&#34;&gt;Two-Way ANOVA&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;#link5&#34;&gt;Two-Way ANOVA&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
 import pandas as pd
@@ -1629,7 +2008,7 @@ usa.head()
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;1-pearson-correlation-coefficient&#34;&gt;1. Pearson Correlation Coefficient&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-link1-1-pearson-correlation-coefficient-a&#34;&gt;&lt;a name=&#34;link1&#34;&gt; 1. Pearson Correlation Coefficient &lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;When we want to ask &lt;em&gt;&amp;ldquo;how strongly correlated are the two variables?&amp;rdquo;&lt;/em&gt;, we can use &lt;strong&gt;Perason&amp;rsquo;s Correlation&lt;/strong&gt;. It is used to measure statistical relationship or association between two &lt;strong&gt;&lt;em&gt;continuous variables&lt;/em&gt;&lt;/strong&gt; that are linearly related to each other. The coefficient value &lt;em&gt;&amp;ldquo;r&amp;rdquo;&lt;/em&gt; ranges from -1 (negative relation) to 1 (perfectly positive). 0 would mean that there is no relationship at all.&lt;/p&gt;
 
@@ -1670,7 +2049,7 @@ p: 0.0
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;2-t-test&#34;&gt;2. T-Test&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-link2-2-t-test-a&#34;&gt;&lt;a name=&#34;link2&#34;&gt; 2. T-Test &lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;When comparing the means of two groups, we can use a &lt;strong&gt;t-test&lt;/strong&gt;. It takes into account of the means and the spread of the data to determine &lt;strong&gt;&lt;em&gt;whether a difference between the two would occur by chance or not&lt;/em&gt;&lt;/strong&gt; (determined by the p-value being less than 0.05 usually). In a t-test, there should be only two independent variables (categorical/nominal variables) and one dependent continuous variable.&lt;/p&gt;
 
@@ -1749,7 +2128,7 @@ ax_box2.set(xlabel=&#39;&#39;)
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;3-mann-whitney-test&#34;&gt;3. Mann-Whitney Test&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-link3-3-mann-whitney-test-a&#34;&gt;&lt;a name=&#34;link3&#34;&gt; 3. Mann-Whitney Test &lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;The Mann-Whitney Test allows you to determine if the observed difference is statistically significant without making the assumption that the values are normally distributed. You should have two independent variables and one continuous dependent variable.&lt;/p&gt;
 
@@ -1768,7 +2147,7 @@ p: 4.1e-05
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;4-one-way-analysis-of-variance-anova&#34;&gt;4. One-Way Analysis of Variance (ANOVA)&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-link4-4-one-way-analysis-of-variance-anova-a&#34;&gt;&lt;a name=&#34;link4&#34;&gt; 4. One-Way Analysis of Variance (ANOVA) &lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;ANOVA is similar to a t-test, but it is used when there are three or more independent variables (categorical). It assumes normal distribution (use Kruskal-Wallis if abnormal?). One-way ANOVA compares the means between the variables to test whether the difference is statistically significant. However, it does not tell you which specific groups were statistically different from one another. Thus, a post-hoc analysis is required.&lt;/p&gt;
 
@@ -1786,7 +2165,7 @@ scipy.stats.f_oneway(banking, shopping, var3)
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;5-two-way-anova&#34;&gt;5. Two-Way ANOVA&lt;/h2&gt;
+&lt;h2 id=&#34;a-name-link5-5-two-way-anova-a&#34;&gt;&lt;a name=&#34;link5&#34;&gt; 5. Two-Way ANOVA &lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;A two-way ANOVA can be used when you want to know how two independent variables have an interaction effect on a dependent variable. CAVEAT: a two-way ANOVA does not tell which variable is dominant.&lt;/p&gt;
 
@@ -1862,6 +2241,8 @@ sm.stats.anova_lm(model, typ=2)
 &lt;p&gt;From the table above, only scenario has a sole effect on the total amount of information provided (depicted as &lt;code&gt;percent&lt;/code&gt; in the dataframe). We see culture, and the interaction of culture and scenario do not have an effect on the amount of information that users provided.&lt;/p&gt;
 
 &lt;p&gt;The finding matches with the previous t-test and graph results, where users provided more information in the banking than they would in shopping.&lt;/p&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -3005,17 +3386,22 @@ When presenting the different demographic groups, it can be as easy as describin
     </item>
     
     <item>
-      <title>Coding &amp; Data Visualizations</title>
+      <title>Statistical Analysis &amp; Data Visualization</title>
       <link>https://jinjeon.me/project/data-viz/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/data-viz/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
+&lt;p&gt;See related work:&lt;/p&gt;
 
-&lt;h2 id=&#34;interactive-art-image-reconstruction-using-perlin-noise-p5-js-javascript&#34;&gt;Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://jinjeon.me/post/textual-data-analysis&#34;&gt;Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://jinjeon.me/post/quant-ux&#34;&gt;Statistical Data Analysis in Cross Cultural Research &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)
+&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.&lt;/p&gt;
 
@@ -3024,8 +3410,6 @@ When presenting the different demographic groups, it can be as easy as describin
 
 &lt;li&gt;&lt;p&gt;Drag the mouse to draw circles on top of the noises.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;page-is-currently-under-development&#34;&gt;Page is currently under development&lt;/h2&gt;
 
 &lt;hr /&gt;
 

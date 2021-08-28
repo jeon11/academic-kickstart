@@ -2047,17 +2047,22 @@ When presenting the different demographic groups, it can be as easy as describin
     </item>
     
     <item>
-      <title>Coding &amp; Data Visualizations</title>
+      <title>Statistical Analysis &amp; Data Visualization</title>
       <link>https://jinjeon.me/project/data-viz/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/data-viz/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
+&lt;p&gt;See related work:&lt;/p&gt;
 
-&lt;h2 id=&#34;interactive-art-image-reconstruction-using-perlin-noise-p5-js-javascript&#34;&gt;Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://jinjeon.me/post/textual-data-analysis&#34;&gt;Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://jinjeon.me/post/quant-ux&#34;&gt;Statistical Data Analysis in Cross Cultural Research &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)
+&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.&lt;/p&gt;
 
@@ -2066,8 +2071,6 @@ When presenting the different demographic groups, it can be as easy as describin
 
 &lt;li&gt;&lt;p&gt;Drag the mouse to draw circles on top of the noises.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;page-is-currently-under-development&#34;&gt;Page is currently under development&lt;/h2&gt;
 
 &lt;hr /&gt;
 
