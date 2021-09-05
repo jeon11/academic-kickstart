@@ -1,6 +1,6 @@
 ---
 title: "Generative research in sourcing data comparison (NDA)"
-summary: "As a part of an initiative to integrate user research into SAP's design process, examined users' data comparison habits"
+summary: "As an initiative to integrate user research into SAP's design process, examined users' data comparison habits"
 
 tags:
 - highlights
@@ -62,7 +62,12 @@ slides: ""
 ___
 
 ## <h style="font-family:georgia"> Overview </h>
-SAP provides various products and software for enterprise resource planning. <mark>**In order to deliver consistent and coherent user experience across SAP products, this project was an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data**</mark>. As a starting point, the research focused on comparison patterns in sourcing product domain.
+
+### Problem Space:
+Because SAP provided vast variety of products and software for enterprise resource planning, there was a lack of consistency in UI throughout the different products. Each UX team working on its own product resulted in incoherent design systems that only amplified confusion to the end users.
+
+<mark>**In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles in UX pattern library.
+This project was also an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data.**</mark> As a starting point, the research focused on comparison patterns in sourcing product domain.
 
 **<em>Disclaimer:** Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.</em>
 
@@ -72,9 +77,11 @@ SAP provides various products and software for enterprise resource planning. <ma
 - Serve research findings to better **inform design decisions** in building comparison pattern.
 
 ## <h style="font-family:georgia"> Impact </h>
+- **Provided high-level recommendations** to address major user needs and pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.
+- **Set the foundation** for the next step of research that involves ideation and concept testing.
+- **Established user-data driven design principles** for data comparison framework.
+- **Evangelized the user research process** by constantly involving stakeholders in regular meetings, user interviews, and collaborative workshops.
 - **Validated** major research findings that matched with previous research.
-- **Provided high-level recommendations** to address major pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.
-- **Set the foundation** for the next stage of the design process which involves ideation and concept testing.
 
 ## <h style="font-family:georgia"> Research Questions </h>
 > <p style="font-size: 16pt"><mark><em>"What are the different use cases that involve comparing data in sourcing?"<br><br>
@@ -89,23 +96,18 @@ ___
 
 ### Goals:
 
-- To first better understand the product space in procurement and sourcing
-- To understand what has been done in the past to avoid overlapping work
-- Identify knowledge gaps
-- Use the preliminary research findings as a guide for designing preliminary research
+- To first understand the product space in procurement and sourcing
+- Use the preliminary research findings as a **guide for designing preliminary research**
+- To explore what has been done in the past to avoid overlapping work
 
 ### At a Glance (Intentionally not readable):
-{{< figure src="preliminary-research.png" title="Using FigJam, I visually laid out findings from past research. <br> **The white empty spaces indicated potential knowledge gaps.**" caption="Preliminary Research" width=full >}}
+{{< figure src="preliminary-research.png" title="Using FigJam, I visually laid out findings from examining 5+ past research work. <br> **The white empty spaces indicated potential knowledge gaps.**" caption="Preliminary Research" width=full >}}
 
 ### Outcomes:
-- Examined 5+ past research work and findings, and **organized into an affinity map to identify knowledge gaps.**
-- Studies were from 2018-2019, involving evaluative research, testing design iterations and concepts. **Because past work all dealt with specific design concepts and evaluative research, it was difficult to generalize findings across different studies.**
-- Lot of data was missing or not as well organized.
+- Identified knowledge gaps and lack of understanding of end-users **because all of the past work were evaluative research focusing on specific design concepts and usability studies.**
+- Pivoted the focus of the study to establish stakeholders' better understanding of the users.
+  - **In order to inform future design decisions, the primary user research was designed to focus on foundational research to understand users' needs, behaviors, pain points, and typical use cases in their sourcing workflow.**
 
-### Insights:
-1. Preliminary research revealed the knowledge gaps and how past work has been mainly focused on testing design iterations with lack of understanding of the users.
-
-2. In order to inform future design decisions, the primary user research was designed to focus on foundational research to understand users' needs, behaviors, pain points, and typical use cases in their sourcing workflow.
 
 ---
 <br>
@@ -140,14 +142,15 @@ The purpose of the study was **generative** to understand users' behaviors, need
 {{< figure src="data-analysis2.png" title="" width=full >}}
 
 - Each sticky was broken down by corresponding themes.
-- Visually laying out the participants' sourcing workflow from start to end helped understand the journey of each participant.
+- **Visually laying out the participants' sourcing workflow from start to end helped understand the journey of each participant.**
 - I was able to identify emerging patterns, characterizing behaviors, needs, and major paint points at each touchpoint in the journey.
 
 ### 3.3 Collaborative Data Synthesis Workshop:
 {{< figure src="workshop.png" title="" width=full >}}
 
 - Over two days, my supervisor/mentor and I facilitated data synthesis workshops to onboard stakeholders with the research findings. In order to make the data more digestible, I made sure the data was organized and presented concisely.
-- Through affinity mapping, we had two groups of stakeholders move stickies by topics and discuss emerging patterns.
+- For every stakeholder to participate, we broke into two groups: one group discussed about the findings at high level, and the other group (which I moderated) was focused on detailed step-by-step of data comparison workflow.
+- After group affinity diagramming, we discussed and presented emerging themes and patterns to each group.
 
 ___
 <br>
@@ -171,7 +174,7 @@ ___
 ## <h style="font-family:georgia"> Limitations & Challenges </h>
 1. None of the participants were able to share their interactions in the e-procurement tools due to company compliance reasons. As the moderator of the interview sessions, it was my responsibility to maneuver and extract the information needed to address the research questions that have been set out.
 
-2. Because of time constraints, the scope of the project was focused on the "buyer" side of the procurement process. To have a better holistic understanding of the entire process, "supplier" side of research needs to be done.
+2. Because of time constraints, the scope of the project was focused on the "buyer" side of the procurement process. To have a better holistic understanding of the process, "supplier" side of research needs to be done.
 
 <br>
 
