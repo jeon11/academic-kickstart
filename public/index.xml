@@ -44,7 +44,12 @@
 
 &lt;h2 id=&#34;h-style-font-family-georgia-overview-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Overview &lt;/h&gt;&lt;/h2&gt;
 
-&lt;p&gt;SAP provides various products and software for enterprise resource planning. &lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, this project was an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data&lt;/strong&gt;&lt;/mark&gt;. As a starting point, the research focused on comparison patterns in sourcing product domain.&lt;/p&gt;
+&lt;h3 id=&#34;problem-space&#34;&gt;Problem Space:&lt;/h3&gt;
+
+&lt;p&gt;Because SAP provided vast variety of products and software for enterprise resource planning, there was a lack of consistency in UI throughout the different products. Each UX team working on its own product resulted in incoherent design systems that only amplified confusion to the end users.&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles in UX pattern library.
+This project was also an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data.&lt;/strong&gt;&lt;/mark&gt; As a starting point, the research focused on comparison patterns in sourcing product domain.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Disclaimer:&lt;/strong&gt; Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.&lt;/em&gt;&lt;/p&gt;
 
@@ -59,9 +64,11 @@
 &lt;h2 id=&#34;h-style-font-family-georgia-impact-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Impact &lt;/h&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Provided high-level recommendations&lt;/strong&gt; to address major user needs and pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Set the foundation&lt;/strong&gt; for the next step of research that involves ideation and concept testing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Established user-data driven design principles&lt;/strong&gt; for data comparison framework.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evangelized the user research process&lt;/strong&gt; by constantly involving stakeholders in regular meetings, user interviews, and collaborative workshops.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Validated&lt;/strong&gt; major research findings that matched with previous research.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Provided high-level recommendations&lt;/strong&gt; to address major pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Set the foundation&lt;/strong&gt; for the next stage of the design process which involves ideation and concept testing.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;h-style-font-family-georgia-research-questions-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Questions &lt;/h&gt;&lt;/h2&gt;
@@ -112,10 +119,9 @@
 &lt;h3 id=&#34;goals&#34;&gt;Goals:&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;To first better understand the product space in procurement and sourcing&lt;/li&gt;
-&lt;li&gt;To understand what has been done in the past to avoid overlapping work&lt;/li&gt;
-&lt;li&gt;Identify knowledge gaps&lt;/li&gt;
-&lt;li&gt;Use the preliminary research findings as a guide for designing preliminary research&lt;/li&gt;
+&lt;li&gt;To first understand the product space in procurement and sourcing&lt;/li&gt;
+&lt;li&gt;Use the preliminary research findings as a &lt;strong&gt;guide for designing preliminary research&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;To explore what has been done in the past to avoid overlapping work&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;at-a-glance-intentionally-not-readable&#34;&gt;At a Glance (Intentionally not readable):&lt;/h3&gt;
@@ -136,14 +142,14 @@
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;preliminary-research.png&#34; data-caption=&#34;Using FigJam, I visually laid out findings from past research.  The white empty spaces indicated potential knowledge gaps.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;preliminary-research.png&#34; data-caption=&#34;Using FigJam, I visually laid out findings from examining 5&amp;#43; past research work.  The white empty spaces indicated potential knowledge gaps.&#34;&gt;
 &lt;img src=&#34;preliminary-research.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Using FigJam, I visually laid out findings from past research. &lt;br&gt; &lt;strong&gt;The white empty spaces indicated potential knowledge gaps.&lt;/strong&gt;
+    Using FigJam, I visually laid out findings from examining 5+ past research work. &lt;br&gt; &lt;strong&gt;The white empty spaces indicated potential knowledge gaps.&lt;/strong&gt;
   &lt;/figcaption&gt;
 
 
@@ -153,18 +159,13 @@
 &lt;h3 id=&#34;outcomes&#34;&gt;Outcomes:&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Examined 5+ past research work and findings, and &lt;strong&gt;organized into an affinity map to identify knowledge gaps.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Studies were from 2018-2019, involving evaluative research, testing design iterations and concepts. &lt;strong&gt;Because past work all dealt with specific design concepts and evaluative research, it was difficult to generalize findings across different studies.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Lot of data was missing or not as well organized.&lt;/li&gt;
+&lt;li&gt;Identified knowledge gaps and lack of understanding of end-users &lt;strong&gt;because all of the past work were evaluative research focusing on specific design concepts and usability studies.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Pivoted the focus of the study to establish stakeholders&amp;rsquo; better understanding of the users.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;In order to inform future design decisions, the primary user research was designed to focus on foundational research to understand users&amp;rsquo; needs, behaviors, pain points, and typical use cases in their sourcing workflow.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;insights&#34;&gt;Insights:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Preliminary research revealed the knowledge gaps and how past work has been mainly focused on testing design iterations with lack of understanding of the users.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In order to inform future design decisions, the primary user research was designed to focus on foundational research to understand users&amp;rsquo; needs, behaviors, pain points, and typical use cases in their sourcing workflow.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;hr /&gt;
 
@@ -292,7 +293,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;Each sticky was broken down by corresponding themes.&lt;/li&gt;
-&lt;li&gt;Visually laying out the participants&amp;rsquo; sourcing workflow from start to end helped understand the journey of each participant.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visually laying out the participants&amp;rsquo; sourcing workflow from start to end helped understand the journey of each participant.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;I was able to identify emerging patterns, characterizing behaviors, needs, and major paint points at each touchpoint in the journey.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -324,7 +325,8 @@
 
 &lt;ul&gt;
 &lt;li&gt;Over two days, my supervisor/mentor and I facilitated data synthesis workshops to onboard stakeholders with the research findings. In order to make the data more digestible, I made sure the data was organized and presented concisely.&lt;/li&gt;
-&lt;li&gt;Through affinity mapping, we had two groups of stakeholders move stickies by topics and discuss emerging patterns.&lt;/li&gt;
+&lt;li&gt;For every stakeholder to participate, we broke into two groups: one group discussed about the findings at high level, and the other group (which I moderated) was focused on detailed step-by-step of data comparison workflow.&lt;/li&gt;
+&lt;li&gt;After group affinity diagramming, we discussed and presented emerging themes and patterns to each group.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -389,7 +391,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;None of the participants were able to share their interactions in the e-procurement tools due to company compliance reasons. As the moderator of the interview sessions, it was my responsibility to maneuver and extract the information needed to address the research questions that have been set out.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Because of time constraints, the scope of the project was focused on the &amp;ldquo;buyer&amp;rdquo; side of the procurement process. To have a better holistic understanding of the entire process, &amp;ldquo;supplier&amp;rdquo; side of research needs to be done.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Because of time constraints, the scope of the project was focused on the &amp;ldquo;buyer&amp;rdquo; side of the procurement process. To have a better holistic understanding of the process, &amp;ldquo;supplier&amp;rdquo; side of research needs to be done.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;

@@ -28,9 +28,9 @@ date_format = "Jan 2006"
   description = """
   • Owned the end-to-end generative research from initial planning, recruiting, moderating contextual inquiries, analyzing the data, and reporting the findings to UX managers, designers, product, and developer teams
 
- • Visualized key pain points, needs, and behaviors at each touchpoint in user journey maps of 3 personas developed from research findings
+  • Informed the stakeholders about the key user needs, pain points, and behaviors at each touchpoint in user journey maps of 3 typical use cases
 
- • Spearheaded user research initiative in building a UX framework library and actively engaged the stakeholders by facilitating collaborative whiteboard workshops
+  • Spearheaded the user research initiative to building a UX framework library and evangelized the process by actively engaging the stakeholders through collaborative whiteboard workshops
 
   **Skills:** generative research, contextual inquiries, journey mapping, personas, preliminary research, respondent.io
   """
@@ -44,9 +44,9 @@ date_format = "Jan 2006"
   date_start = "2021-04-01"
   date_end = "2021-06-06"
   description = """
-  • Facilitated a total of 76 sessions of contextual inquiries and usability testing across 7 different projects from WA state government agencies, Facebook, and Instagram
+  • Improved web and mobile usability across 7 different projects through comparative usability studies and interviews for WA state agencies, Facebook, and Instagram
 
- • Assisted senior UX researchers in moderating and analyzing data to synthesize insights and recommendations for clients in a fast-paced environment
+• Assisted senior UX researchers in facilitating a total of 76 sessions of moderating and analyzing data to synthesize insights and recommendations for clients
 
   **Skills:** generative research, contextual inquiries, usability testing, AB Testing
   """
