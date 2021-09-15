@@ -1,6 +1,6 @@
 ---
 title: WA COVID Exposure Notification Usability Study
-summary: "Task-based usability and AB testing on two versions of the COVID alert system in iOS and Android"
+summary: "Task-based, comparative usability study on the COVID alert systems in iOS and Android"
 tags:
 # - highlights
 - research
@@ -105,7 +105,7 @@ ___
 <br>
 ## <h style="font-family:georgia"> Design of the Study </h>
 
-{{< figure src="userflow.png" title="The team initially visually laid out the user flow for each OS. The overall steps were broken down into three parts: onboarding, receiving alerts, and entering the verification code for positive COVID test results." caption="User flow by OS" width=full >}}
+{{< figure src="userflow.png" title="The team initially laid out the user flow visually for each OS. The overall steps were broken down into three parts: onboarding, receiving alerts, and entering the verification code for positive COVID test results." caption="User flow by OS" width=full >}}
 
 ### Tasks:
 
