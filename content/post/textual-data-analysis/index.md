@@ -18,6 +18,10 @@ image:
   focal_point: ""
   preview_only: true
 
+header:
+  image: '/headers/textual-header.png'
+  caption: 'Wordcloud Representation of User Data'
+
 url_code: ""
 url_pdf: ""
 ---

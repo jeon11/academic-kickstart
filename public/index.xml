@@ -1398,14 +1398,14 @@ plot_wordcloud(females, 24)
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;userflow.png&#34; data-caption=&#34;The team initially visually laid out the user flow for each OS. The overall steps were broken down into three parts: onboarding, receiving alerts, and entering the verification code for positive COVID test results.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;userflow.png&#34; data-caption=&#34;The team initially laid out the user flow visually for each OS. The overall steps were broken down into three parts: onboarding, receiving alerts, and entering the verification code for positive COVID test results.&#34;&gt;
 &lt;img src=&#34;userflow.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    The team initially visually laid out the user flow for each OS. The overall steps were broken down into three parts: onboarding, receiving alerts, and entering the verification code for positive COVID test results.
+    The team initially laid out the user flow visually for each OS. The overall steps were broken down into three parts: onboarding, receiving alerts, and entering the verification code for positive COVID test results.
   &lt;/figcaption&gt;
 
 
