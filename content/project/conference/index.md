@@ -1,9 +1,11 @@
 ---
-title: Conference Presentations
+title: Conference presentations
 summary: Posters presented at international conferences
 tags:
 - academia
-- side-projects
+- quant-data
+- data-visualization
+
 date: "2020-05-01T00:00:00Z"
 
 

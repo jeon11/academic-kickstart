@@ -3,7 +3,8 @@ title: "End-to-end design process of improving the health tracker (NDA)"
 summary: "Conducted user research to identify user needs and recommended features to enhance its health tracker"
 tags:
 - highlights
-- research
+- generative-research
+- evaluative-research
 - preliminary-research
 - qualitative-interviews
 - affinity-diagrams

@@ -123,7 +123,12 @@
   </url>
   
   <url>
-    <loc>https://jinjeon.me/project/coffitok/</loc>
+    <loc>https://jinjeon.me/project-archives/coffitok/</loc>
+    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jinjeon.me/project-archives/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -169,11 +174,6 @@
   
   <url>
     <loc>https://jinjeon.me/project-archives/fmri/</loc>
-    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jinjeon.me/project-archives/</loc>
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url>
   

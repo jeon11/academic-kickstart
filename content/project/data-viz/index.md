@@ -1,8 +1,8 @@
 ---
-title: Statistical Analysis & Data Visualization
-summary: Examples of graphs created using Python, and their source codes"
+title: Statistical data analysis & visualization
+summary: "Analyzing data through t-test, ANOVA, sentiment analysis and more to visualize the data"
 tags:
-- side-projects
+- quant-data
 - data-visualization
 
 date: "2020-05-31T00:00:00Z"

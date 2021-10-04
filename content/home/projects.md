@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 20  # Order that this section will appear.
 
 title = "Projects"
-subtitle = ""
+subtitle = "Filter projects by study types and methods"
 
 [content]
   # Page type to display. E.g. project.
@@ -26,12 +26,28 @@ subtitle = ""
     tag = "highlights"
 
   [[content.filter_button]]
-    name = "Research"
-    tag = "research"
+    name = "Generative"
+    tag = "generative-research"
 
   [[content.filter_button]]
-    name = "Side Projects"
-    tag = "side-projects"
+    name = "Evaluative"
+    tag = "evaluative-research"
+
+  [[content.filter_button]]
+    name = "Contextual Interviews"
+    tag = "qualitative-interviews"
+
+  [[content.filter_button]]
+    name = "Journey Mapping"
+    tag = "journey-mapping"
+
+  [[content.filter_button]]
+    name = "Usability Testing"
+    tag = "usability-testing"
+
+  [[content.filter_button]]
+    name = "Quant"
+    tag = "quant-data"
 
   [[content.filter_button]]
     name = "All"

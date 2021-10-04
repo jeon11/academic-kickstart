@@ -1,6 +1,6 @@
 ---
-title: "Generative research in sourcing data comparison (NDA)"
-summary: "As an initiative to integrate user research into SAP's design process, examined users' data comparison habits"
+title: "Generative research in procurement data comparison (NDA)"
+summary: "Examined users' data comparison habits as an initiative to actively integrate user research into SAP's design process"
 
 tags:
 - highlights

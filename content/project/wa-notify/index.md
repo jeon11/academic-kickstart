@@ -4,6 +4,7 @@ summary: "Task-based, comparative usability study on the COVID alert systems in 
 tags:
 # - highlights
 - research
+- evaluative-research
 - usability-testing
 - qualitative-interviews
 - affinity-diagrams
