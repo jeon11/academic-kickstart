@@ -53,4 +53,4 @@ height = "calc(100vh - 70px)"
   label = '<a class="js-github-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">Latest release<!-- V --></a>'
 +++
 
-<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in <mark>**UX research**</mark>. <br>I'm inquisitive 🧐, data-driven 📊, and empathetic ❤️. <br><br><u>[• More About Me](#about)</u><br><u>[• See My Projects](#projects)</u>
+<br>I'm a graduate student at the Human Centered Design and Engineering (HCDE) program at the University of Washington.<br><br>I'm a **data enthusiast** passionate in **UX research**. <br>I'm inquisitive 🧐, data-driven 📊, and empathetic ❤️. <br><br><u>[• More About Me](#about)</u><br><u>[• See My Projects](#projects)</u>

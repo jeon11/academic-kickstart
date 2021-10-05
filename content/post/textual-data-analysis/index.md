@@ -1,6 +1,6 @@
 ---
 title: 'Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API'
-summary: I analyze textual data collected from survey to drive insights
+summary: Analyzing textual data from Google survey to drive insights through NLP and visualization
 
 date: "2021-05-01T00:00:00Z"
 lastmod: "2021-05-01T00:00:00Z"

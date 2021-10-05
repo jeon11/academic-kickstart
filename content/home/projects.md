@@ -3,10 +3,10 @@
 widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 20  # Order that this section will appear.
+weight = 10  # Order that this section will appear.
 
 title = "Projects"
-subtitle = "Filter projects by study types and methods"
+subtitle = ""
 
 [content]
   # Page type to display. E.g. project.
@@ -34,20 +34,8 @@ subtitle = "Filter projects by study types and methods"
     tag = "evaluative-research"
 
   [[content.filter_button]]
-    name = "Contextual Interviews"
-    tag = "qualitative-interviews"
-
-  [[content.filter_button]]
-    name = "Journey Mapping"
-    tag = "journey-mapping"
-
-  [[content.filter_button]]
-    name = "Usability Testing"
-    tag = "usability-testing"
-
-  [[content.filter_button]]
     name = "Quant"
-    tag = "quant-data"
+    tag = "quantitative-ux"
 
   [[content.filter_button]]
     name = "All"

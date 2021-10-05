@@ -1,6 +1,6 @@
 ---
 title: 'Statistical Data Analysis in Cross-Cultural Research'
-summary: Example codes used for running basic t-test to one-way and two-way ANOVA
+summary: Compares survey data to run t-test, 1-, 2-way ANOVA, and more
 
 date: "2021-03-22T00:00:00Z"
 lastmod: "2021-03-22T00:00:00Z"

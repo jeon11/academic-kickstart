@@ -3,7 +3,7 @@ title: Conference presentations
 summary: Posters presented at international conferences
 tags:
 - academia
-- quant-data
+- quantitative-ux
 - data-visualization
 
 date: "2020-05-01T00:00:00Z"

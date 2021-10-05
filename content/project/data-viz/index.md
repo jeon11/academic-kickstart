@@ -2,7 +2,7 @@
 title: Statistical data analysis & visualization
 summary: "Analyzing data through t-test, ANOVA, sentiment analysis and more to visualize the data"
 tags:
-- quant-data
+- quantitative-ux
 - data-visualization
 
 date: "2020-05-31T00:00:00Z"

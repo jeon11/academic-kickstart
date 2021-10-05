@@ -3,7 +3,6 @@ title: "Visualizing travel experiences through interactive journey mapping (Comp
 summary: "From research planning to moderating interviews, delivered design recommendations based on research findings and user journey maps"
 tags:
 - highlights
-- research
 - generative-research
 - preliminary-research
 - qualitative-interviews

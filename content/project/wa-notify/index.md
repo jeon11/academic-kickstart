@@ -3,13 +3,12 @@ title: WA COVID Exposure Notification Usability Study
 summary: "Task-based, comparative usability study on the COVID alert systems in iOS and Android"
 tags:
 # - highlights
-- research
 - evaluative-research
 - usability-testing
 - qualitative-interviews
 - affinity-diagrams
 - ABTesting
-- quantitative-ux
+# - quantitative-ux
 
 date: "2021-03-31T00:00:00Z"
 

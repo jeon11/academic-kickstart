@@ -4,7 +4,6 @@ summary: "Examined users' data comparison habits as an initiative to actively in
 
 tags:
 - highlights
-- research
 - generative-research
 - preliminary-research
 - contextual-inquiries
