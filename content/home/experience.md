@@ -26,12 +26,15 @@ date_format = "Jan 2006"
   date_start = "2021-06-07"
   date_end = "2021-08-13"
   description = """
-  • Owned the end-to-end generative research from initial planning, recruiting, moderating contextual inquiries, analyzing the data, and reporting the findings to UX managers, designers, product, and developer teams
+  <details>
+  <summary> Expand detail </summary>
 
-  • Informed the stakeholders about the key user needs, pain points, and behaviors at each touchpoint in user journey maps of 3 typical use cases
+- Owned the generative research in B2B product from initial study planning, recruiting, moderating contextual inquiries, analyzing data, and delivering recommendations to UX managers, designers, product and developer team
 
-  • Spearheaded the user research initiative to building a UX framework library and evangelized the process by actively engaging the stakeholders through collaborative whiteboard workshops
+- Informed the stakeholders about the key user needs and pain points through journey maps, which served as the foundation for ideating and concept-testing as next step
 
+- Spearheaded in building a UX framework, adopted by the product team, to evangelize research within the design process by actively engaging the stakeholders through collaborative workshops
+</details><br>
   **Skills:** generative research, contextual inquiries, journey mapping, personas, preliminary research, respondent.io
   """
 
@@ -44,10 +47,14 @@ date_format = "Jan 2006"
   date_start = "2021-04-01"
   date_end = "2021-06-06"
   description = """
-  • Improved web and mobile usability across 7 different projects through comparative usability studies and interviews for WA state agencies, Facebook, and Instagram
+  <details>
+  <summary> Expand detail </summary>
 
-• Assisted senior UX researchers in facilitating a total of 76 sessions of moderating and analyzing data to synthesize insights and recommendations for clients
+- Improved web and mobile usability across 7 different projects with a 2-week turnover through comparative usability studies and interviews
 
+- Collaborated with senior researchers in moderating and analyzing data to synthesize insights and recommendations for clients including WA state agencies and Facebook
+
+</details><br>
   **Skills:** generative research, contextual inquiries, usability testing, AB Testing
   """
 
@@ -60,12 +67,15 @@ date_format = "Jan 2006"
   date_start = "2020-07-01"
   date_end = "2020-10-01"
   description = """
-  • Moderated 30 remote qualitative interviews with users from 6 different airlines, and conducted competitive analysis to pair insights from user experience benchmarking
+  <details>
+  <summary> Expand detail </summary>
 
- • Utilized interactive journey maps to identify users’ core values and motivations at different stages of their travel experience
+- Moderated 30 qualitative interviews with users from 6 different airlines, and conducted competitive analysis to benchmark the travel experience during the pandemic
 
- • Delivered 4 key insights and recommendations to improve users’ upgrade experience to stakeholders including a research manager, designers, and e-commerce team
+- Visualized users’ core values and motivations at different touch points in the travel experiences through interactive journey mapping
 
+- Delivered 4 key insights and recommendations to improve users’ upgrade experience to stakeholders including a research manager, designers, and e-commerce team
+</details><br>
   **Skills:** generative research, interview, survey, journey mapping, personas, competitive analysis, UserTesting.com, Figma
   """
 
@@ -77,12 +87,15 @@ date_format = "Jan 2006"
   date_start = "2020-06-01"
   date_end = "2020-09-01"
   description = """
-  • Ideated new features based on user stories prioritized from surveys and qualitative interviews with 6 cancer patients and survivors
+  <details>
+  <summary> Expand detail </summary>
 
-  • Validated prototype iterations through expert evaluations and concept-testing with 8 users including clinicians and patients
+  - Ideated new features based on user stories prioritized from surveys and qualitative interviews with 6 cancer patients and survivors
 
-  • Collaborated with an internationally-distributed, cross-functional team of researchers, designers, and a product manager to improve patients’ symptom management and engagement with the health tracker
+  - Iterated prototype through expert evaluations and concept-testing with 8 users including clinicians and patients
 
+  - Collaborated with an internationally-distributed, cross-functional team of researchers, designers, and a product manager to improve patients’ symptom management and engagement with the health tracker
+</details><br>
   **Skills:** qualitative research, interview, survey, concept-testing, expert evaluations, Figma
   """
 
@@ -94,18 +107,15 @@ date_format = "Jan 2006"
   date_start = "2018-04-01"
   date_end = "2020-07-15"
   description = """
-  • Administered over 200 experiments that examines the dynamics of temporal and 
-semantic structures in human memory
+  <details><summary> Expand detail </summary>
 
-  • Conducted quantitative research (t-test, correlation, ML, NLP) and data visualization 
-to present findings at international conferences
+- Conducted quantitative research (t-test, regression, correlation, ML, NLP) and data visualization to present findings at international conferences
 
-  • Devised automated data processing pipeline that converts participants’ speech to 
-textual data, analyzes task performance, and builds dataframe to summarize results
+- Devised automated data processing pipeline that converts participants’ speech to textual data, analyzes task performance, builds data frame, and summarizes results
 
- • Mentored undergraduates in coding, data processing, analysis, and designing   
-their own experiments
+- Administered over 200 experiments and mentored undergraduates in coding, data processing and analysis and designing their own experiments
 
+</details><br>
   **Skills:** Python, data science, MATLAB, ML, NLP, data preprocessing, data visualization, experimental design
   """
 
