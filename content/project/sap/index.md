@@ -47,7 +47,7 @@ slides: ""
 <body style="font-family:Arial; font-size: 12pt">
 <div class="introduction">
 <b><h style="font-family:georgia">My Role:</h></b>
-<br><small>UX researcher owning the comparison pattern research project </small><br><br>
+<br><small>UX researcher in a team of product manager, researcher, and<br> UX designers </small><br><br>
 
 <b><h style="font-family:georgia">Methods:</h></b>
 <br><small>**Contextual inquiries**, **journey maps**, collaborative workshop facilitation, generative research, preliminary research </small><br><br>
