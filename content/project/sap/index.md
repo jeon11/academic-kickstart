@@ -47,7 +47,7 @@ slides: ""
 <body style="font-family:Arial; font-size: 12pt">
 <div class="introduction">
 <b><h style="font-family:georgia">My Role:</h></b>
-<br><small>UX researcher in a team of product manager, researcher, and<br> UX designers </small><br><br>
+<br><small>UX researcher in a cross-functional team of product manager, researcher, and UX designers </small><br><br>
 
 <b><h style="font-family:georgia">Methods:</h></b>
 <br><small>**Contextual inquiries**, **journey maps**, collaborative workshop facilitation, generative research, preliminary research </small><br><br>
@@ -63,10 +63,10 @@ ___
 ## <h style="font-family:georgia"> Overview </h>
 
 ### Problem Space:
-Because SAP provided vast variety of products and software for enterprise resource planning, there was a lack of consistency in UI throughout the different products. Each UX team working on its own product resulted in incoherent design systems that only amplified confusion to the end users.
+While SAP provided vast variety of products and software for enterprise resource planning, there was a lack of UI consistency throughout its different products. <mark>**In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles for the UX pattern library.**</mark>
 
-<mark>**In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles in UX pattern library.
-This project was also an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data.**</mark> As a starting point, the research focused on comparison patterns in sourcing product domain.
+<!-- The scope of the project focused on understanding how procurement experts analyze their data. As their main work responsibilities involved comparing data with hundreds of rows and columns, the objective was to understand their start to end journey of comparing data: From getting the data to drilling down to make sense of data and
+ load data, drill-down.  -->
 
 **<em>Disclaimer:** Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.</em>
 
@@ -75,6 +75,8 @@ This project was also an initiative to integrate user research into the design p
 - **Visualize** users' touchpoints of typical use cases through **journey mapping**.
 - Serve research findings to better **inform design decisions** in building comparison pattern.
 
+<br>
+
 ## <h style="font-family:georgia"> Impact </h>
 - **Provided high-level recommendations** to address major user needs and pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.
 - **Set the foundation** for the next step of research that involves ideation and concept testing.
@@ -82,9 +84,13 @@ This project was also an initiative to integrate user research into the design p
 - **Evangelized the user research process** by constantly involving stakeholders in regular meetings, user interviews, and collaborative workshops.
 - **Validated** major research findings that matched with previous research.
 
+<br>
+
 ## <h style="font-family:georgia"> Research Questions </h>
 > <p style="font-size: 16pt"><mark><em>"What are the different use cases that involve comparing data in sourcing?"<br><br>
 <mark<em>"How does typical workflow look like, and what are the needs and pain points at each touchpoint?"</em></mark><br><br>
+
+<br>
 
 ## <h style="font-family:georgia"> High Level Research Process </h>
 {{< figure src="research-process.png" title="The project began with preliminary research, examining what has been done in the past. It served as a guide for designing primary user research. Through a collaborative data synthesis workshop, I was able to engage different stakeholders onboard with the key research findings and deliver recommendations."  caption="High level research process" width=full >}}
