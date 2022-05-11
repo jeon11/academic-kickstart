@@ -28,7 +28,7 @@
 &lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
 &lt;div class=&#34;introduction&#34;&gt;
 &lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;My Role:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;UX researcher in a team of product manager, researcher, and&lt;br&gt; UX designers &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;&lt;small&gt;UX researcher in a cross-functional team of product manager, researcher, and UX designers &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Methods:&lt;/h&gt;&lt;/b&gt;
 &lt;br&gt;&lt;small&gt;&lt;strong&gt;Contextual inquiries&lt;/strong&gt;, &lt;strong&gt;journey maps&lt;/strong&gt;, collaborative workshop facilitation, generative research, preliminary research &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
@@ -46,10 +46,10 @@
 
 &lt;h3 id=&#34;problem-space&#34;&gt;Problem Space:&lt;/h3&gt;
 
-&lt;p&gt;Because SAP provided vast variety of products and software for enterprise resource planning, there was a lack of consistency in UI throughout the different products. Each UX team working on its own product resulted in incoherent design systems that only amplified confusion to the end users.&lt;/p&gt;
+&lt;p&gt;While SAP provided vast variety of products and software for enterprise resource planning, there was a lack of UI consistency throughout its different products. &lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles for the UX pattern library.&lt;/strong&gt;&lt;/mark&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles in UX pattern library.
-This project was also an initiative to integrate user research into the design process so that design decisions were informed and inspired by user data.&lt;/strong&gt;&lt;/mark&gt; As a starting point, the research focused on comparison patterns in sourcing product domain.&lt;/p&gt;
+&lt;!-- The scope of the project focused on understanding how procurement experts analyze their data. As their main work responsibilities involved comparing data with hundreds of rows and columns, the objective was to understand their start to end journey of comparing data: From getting the data to drilling down to make sense of data and
+ load data, drill-down.  --&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Disclaimer:&lt;/strong&gt; Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.&lt;/em&gt;&lt;/p&gt;
 
@@ -61,6 +61,8 @@ This project was also an initiative to integrate user research into the design p
 &lt;li&gt;Serve research findings to better &lt;strong&gt;inform design decisions&lt;/strong&gt; in building comparison pattern.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;h-style-font-family-georgia-impact-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Impact &lt;/h&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -71,12 +73,16 @@ This project was also an initiative to integrate user research into the design p
 &lt;li&gt;&lt;strong&gt;Validated&lt;/strong&gt; major research findings that matched with previous research.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;h-style-font-family-georgia-research-questions-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Questions &lt;/h&gt;&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;What are the different use cases that involve comparing data in sourcing?&amp;rdquo;&lt;br&gt;&lt;br&gt;
 &lt;mark&lt;em&gt;&amp;ldquo;How does typical workflow look like, and what are the needs and pain points at each touchpoint?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;h-style-font-family-georgia-high-level-research-process-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; High Level Research Process &lt;/h&gt;&lt;/h2&gt;
 
