@@ -10,11 +10,11 @@ authors:
 superuser: true
 
 # Role/position
-role: UX Researcher /<br> Graduate Student
+role: UX Researcher
 
 # Organizations/Affiliations
 organizations:
-- name: University of Washington, Seattle
+- name: Microsoft
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -29,7 +29,7 @@ education:
   courses:
   - course: M.S. in Human Centered Design and Engineering
     institution: University of Washington, Seattle  # M.S. in Human Centered Design and Engineering
-    year: 2022
+    year: 2022.06
 
   - course: B.A. in Cognitive Science
     institution: University of California, Berkeley
@@ -42,7 +42,7 @@ education:
 social:
 - icon: cv
   icon_pack: ai
-  link: "https://drive.google.com/file/d/0B9S8oX9rcjjjMDY3ZlVxczlReVk/view?usp=sharing"
+  link: "pdf/JinJeon_Resume.pdf"
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/jinjeon/

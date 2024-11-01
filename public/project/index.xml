@@ -17,54 +17,30 @@
       <link>https://jinjeon.me/project/sap/</link>
       <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/sap/</guid>
-      <description>
-
-&lt;style&gt;
-.introduction {
-  column-count: 2;
-}
-&lt;/style&gt;
-
-&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
-&lt;div class=&#34;introduction&#34;&gt;
-&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;My Role:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;UX researcher in a cross-functional team of product manager, researcher, and UX designers &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Methods:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;&lt;strong&gt;Contextual inquiries&lt;/strong&gt;, &lt;strong&gt;journey maps&lt;/strong&gt;, collaborative workshop facilitation, generative research, preliminary research &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Timeline: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;June 2021 - Aug 2021 (~3 months)&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Stakeholders:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt; UX manager, UX designers and researchers, dev team, PM and product team &lt;/small&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-overview-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Overview &lt;/h&gt;&lt;/h2&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Methods:&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Contextual inquiries&lt;/strong&gt;, &lt;strong&gt;journey maps&lt;/strong&gt;, collaborative workshop facilitation, generative research, preliminary research &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Timeline: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;June 2021 - Aug 2021 (~3 months)&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Stakeholders:&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; UX manager, UX designers and researchers, dev team, PM and product team &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-overview-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Overview &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;problem-space&#34;&gt;Problem Space:&lt;/h3&gt;
-
-&lt;p&gt;While SAP provided vast variety of products and software for enterprise resource planning, there was a lack of UI consistency throughout its different products. &lt;mark&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles for the UX pattern library.&lt;/strong&gt;&lt;/mark&gt;&lt;/p&gt;
-
-&lt;!-- The scope of the project focused on understanding how procurement experts analyze their data. As their main work responsibilities involved comparing data with hundreds of rows and columns, the objective was to understand their start to end journey of comparing data: From getting the data to drilling down to make sense of data and
- load data, drill-down.  --&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Disclaimer:&lt;/strong&gt; Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-objectives-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Objectives &lt;/h&gt;&lt;/h2&gt;
-
+&lt;p&gt;While SAP provided vast variety of products and software for enterprise resource planning, there was a lack of UI consistency throughout its different products. &lt;!-- raw HTML omitted --&gt;&lt;strong&gt;In order to deliver consistent and coherent user experience across SAP products, I collaborated with the UX framework team to establish design principles for the UX pattern library.&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Disclaimer:&lt;/strong&gt; Due to NDA, the page primarily highlights the research process, decision making, reasoning and generalized outcomes.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-objectives-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Objectives &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Identify user needs&lt;/strong&gt; and &lt;strong&gt;pain points&lt;/strong&gt; when comparing data in a procurement process.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Visualize&lt;/strong&gt; users&amp;rsquo; touchpoints of typical use cases through &lt;strong&gt;journey mapping&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visualize&lt;/strong&gt; users&#39; touchpoints of typical use cases through &lt;strong&gt;journey mapping&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Serve research findings to better &lt;strong&gt;inform design decisions&lt;/strong&gt; in building comparison pattern.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-impact-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Impact &lt;/h&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-impact-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Impact &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Provided high-level recommendations&lt;/strong&gt; to address major user needs and pain points to stakeholders involving UX framework team, sourcing product team, procurement organization, PM, and dev team.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Set the foundation&lt;/strong&gt; for the next step of research that involves ideation and concept testing.&lt;/li&gt;
@@ -72,20 +48,14 @@
 &lt;li&gt;&lt;strong&gt;Evangelized the user research process&lt;/strong&gt; by constantly involving stakeholders in regular meetings, user interviews, and collaborative workshops.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Validated&lt;/strong&gt; major research findings that matched with previous research.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-research-questions-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Questions &lt;/h&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-research-questions-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Research Questions &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;What are the different use cases that involve comparing data in sourcing?&amp;rdquo;&lt;br&gt;&lt;br&gt;
-&lt;mark&lt;em&gt;&amp;ldquo;How does typical workflow look like, and what are the needs and pain points at each touchpoint?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-high-level-research-process-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; High Level Research Process &lt;/h&gt;&lt;/h2&gt;
-
+&lt;p&gt;&amp;lt;mark&lt;!-- raw HTML omitted --&gt;&amp;ldquo;How does typical workflow look like, and what are the needs and pain points at each touchpoint?&amp;quot;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-high-level-research-process-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; High Level Research Process &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 
 
 
@@ -115,23 +85,15 @@
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-1-preliminary-research-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; 1. Preliminary Research &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;goals&#34;&gt;Goals:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;To first understand the product space in procurement and sourcing&lt;/li&gt;
 &lt;li&gt;Use the preliminary research findings as a &lt;strong&gt;guide for designing preliminary research&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;To explore what has been done in the past to avoid overlapping work&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;at-a-glance-intentionally-not-readable&#34;&gt;At a Glance (Intentionally not readable):&lt;/h3&gt;
-
 
 
 
@@ -155,54 +117,41 @@
   
   
   &lt;figcaption&gt;
-    Using FigJam, I visually laid out findings from examining 5+ past research work. &lt;br&gt; &lt;strong&gt;The white empty spaces indicated potential knowledge gaps.&lt;/strong&gt;
+    Using FigJam, I visually laid out findings from examining 5+ past research work. &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;The white empty spaces indicated potential knowledge gaps.&lt;/strong&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
 &lt;h3 id=&#34;outcomes&#34;&gt;Outcomes:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Identified knowledge gaps and lack of understanding of end-users &lt;strong&gt;because all of the past work were evaluative research focusing on specific design concepts and usability studies.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Pivoted the focus of the study to establish stakeholders&amp;rsquo; better understanding of the users.
-
+&lt;li&gt;Pivoted the focus of the study to establish stakeholders&#39; better understanding of the users.
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;In order to inform future design decisions, the primary user research was designed to focus on foundational research to understand users&amp;rsquo; needs, behaviors, pain points, and typical use cases in their sourcing workflow.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In order to inform future design decisions, the primary user research was designed to focus on foundational research to understand users&#39; needs, behaviors, pain points, and typical use cases in their sourcing workflow.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-2-primary-user-research-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; 2. Primary User Research &lt;/h&gt;&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;goals-1&#34;&gt;Goals:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Identify major use cases and touchpoints in sourcing and data comparison&lt;/li&gt;
-&lt;li&gt;Understand users&amp;rsquo; behaviors and pain points&lt;/li&gt;
+&lt;li&gt;Understand users&#39; behaviors and pain points&lt;/li&gt;
 &lt;li&gt;Develop user journey map of typical use cases&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;study-design&#34;&gt;Study Design:&lt;/h3&gt;
-
-&lt;p&gt;The purpose of the study was &lt;strong&gt;generative&lt;/strong&gt; to understand users&amp;rsquo; behaviors, needs, and pain points.&lt;/p&gt;
-
+&lt;p&gt;The purpose of the study was &lt;strong&gt;generative&lt;/strong&gt; to understand users&#39; behaviors, needs, and pain points.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;60 minutes of &lt;strong&gt;qualitative&lt;/strong&gt; remotely-moderated &lt;strong&gt;contextual inquiries&lt;/strong&gt; and &lt;strong&gt;interviews&lt;/strong&gt; via Respondent.io&lt;/li&gt;
 &lt;li&gt;Design of the study was 2 folds:
-
 &lt;ol&gt;
 &lt;li&gt;High level start to end process of sourcing&lt;/li&gt;
 &lt;li&gt;Detailed step by step of data comparison process from analyzing bids to making decisions&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;study-demographics-at-a-glance&#34;&gt;Study Demographics at a Glance:&lt;/h3&gt;
-
 
 
 
@@ -226,21 +175,15 @@
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Participant criteria were strictly controlled to ensure that I spoke with the participants that best matches with the current users. &lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;Participant criteria were strictly controlled to ensure that I spoke with the participants that best matches with the current users. &lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-3-data-analysis-collaborative-workshop-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; 3. Data Analysis &amp;amp; Collaborative Workshop &lt;/h&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;3-1-data-analysis&#34;&gt;3.1 Data Analysis:&lt;/h3&gt;
-
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;31-data-analysis&#34;&gt;3.1 Data Analysis:&lt;/h3&gt;
 
 
 
@@ -264,15 +207,13 @@
   
   
   &lt;figcaption&gt;
-    &lt;b&gt; For the initial data analysis, notes from Excel was converted to Mural whiteboard, and was organized into high level themes. Each participant was color-coded. &lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt; For the initial data analysis, notes from Excel was converted to Mural whiteboard, and was organized into high level themes. Each participant was color-coded. &lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;h3 id=&#34;3-2-thematic-analysis-and-journey-mapping&#34;&gt;3.2 Thematic Analysis and Journey Mapping:&lt;/h3&gt;
-
+&lt;h3 id=&#34;32-thematic-analysis-and-journey-mapping&#34;&gt;3.2 Thematic Analysis and Journey Mapping:&lt;/h3&gt;
 
 
 
@@ -296,15 +237,12 @@
 
 &lt;/figure&gt;
 
-
 &lt;ul&gt;
 &lt;li&gt;Each sticky was broken down by corresponding themes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Visually laying out the participants&amp;rsquo; sourcing workflow from start to end helped understand the journey of each participant.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visually laying out the participants&#39; sourcing workflow from start to end helped understand the journey of each participant.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;I was able to identify emerging patterns, characterizing behaviors, needs, and major paint points at each touchpoint in the journey.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h3 id=&#34;3-3-collaborative-data-synthesis-workshop&#34;&gt;3.3 Collaborative Data Synthesis Workshop:&lt;/h3&gt;
-
+&lt;h3 id=&#34;33-collaborative-data-synthesis-workshop&#34;&gt;3.3 Collaborative Data Synthesis Workshop:&lt;/h3&gt;
 
 
 
@@ -328,36 +266,27 @@
 
 &lt;/figure&gt;
 
-
 &lt;ul&gt;
 &lt;li&gt;Over two days, my supervisor/mentor and I facilitated data synthesis workshops to onboard stakeholders with the research findings. In order to make the data more digestible, I made sure the data was organized and presented concisely.&lt;/li&gt;
 &lt;li&gt;For every stakeholder to participate, we broke into two groups: one group discussed about the findings at high level, and the other group (which I moderated) was focused on detailed step-by-step of data comparison workflow.&lt;/li&gt;
 &lt;li&gt;After group affinity diagramming, we discussed and presented emerging themes and patterns to each group.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-research-findings-deliverables-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Findings &amp;amp; Deliverables &lt;/h&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;outcomes-deliverables&#34;&gt;Outcomes &amp;amp; Deliverables:&lt;/h3&gt;
-
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;outcomes--deliverables&#34;&gt;Outcomes &amp;amp; Deliverables:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Identified three major use cases in sourcing&lt;/li&gt;
 &lt;li&gt;Developed persona, user story, and journey map for each use case highlighting actions taken, pain points, quotes, and emotions at each touch point.&lt;/li&gt;
 &lt;li&gt;Delivered general findings related to sourcing, and data comparison habits
-
 &lt;ul&gt;
 &lt;li&gt;Including &lt;strong&gt;high level objectives&lt;/strong&gt; in sourcing and data comparison&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Major pain points&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Recommendations for each pain point&lt;/strong&gt; to improve the experience&lt;/li&gt;
 &lt;li&gt;Showcasing examples of &lt;strong&gt;data manipulation workflow step by step&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;example-of-journey-map-1-of-3-redacted&#34;&gt;Example of Journey Map #1 of 3 (Redacted):&lt;/h3&gt;
-
 
 
 
@@ -381,45 +310,37 @@
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Example of journey map of use case #1.&lt;/b&gt; Total 3 use cases were presented to the stakeholders. They highlighted the corresponding user story, key descriptions of the persona, behaviors, needs and pain points, quotes, and emotion scale.
+    &lt;!-- raw HTML omitted --&gt;Example of journey map of use case #1.&lt;!-- raw HTML omitted --&gt; Total 3 use cases were presented to the stakeholders. They highlighted the corresponding user story, key descriptions of the persona, behaviors, needs and pain points, quotes, and emotion scale.
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-limitations-challenges-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Limitations &amp;amp; Challenges &lt;/h&gt;&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;None of the participants were able to share their interactions in the e-procurement tools due to company compliance reasons. As the moderator of the interview sessions, it was my responsibility to maneuver and extract the information needed to address the research questions that have been set out.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Because of time constraints, the scope of the project was focused on the &amp;ldquo;buyer&amp;rdquo; side of the procurement process. To have a better holistic understanding of the process, &amp;ldquo;supplier&amp;rdquo; side of research needs to be done.&lt;/p&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Because of time constraints, the scope of the project was focused on the &amp;ldquo;buyer&amp;rdquo; side of the procurement process. To have a better holistic understanding of the process, &amp;ldquo;supplier&amp;rdquo; side of research needs to be done.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-lessons-reflections-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Lessons &amp;amp; Reflections &lt;/h&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-lessons--reflections-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Lessons &amp;amp; Reflections &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;I learned to engage with stakeholders as early as the project planning stage.&lt;/strong&gt;&lt;br&gt; By weekly updating the stakeholders and asking for their feedback, I was able to plan and develop a research plan that addresses their needs. Moreover, facilitating a collaborative data synthesis workshop session helped better synchronize the stakeholders as a team to share key findings and results.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Knowledge of product domain is essential especially in the B2B space.&lt;/strong&gt;&lt;br&gt; My initial challenge was to get my head around the B2B space and procurement processes within a short period of time. Despite studying the terms, watching tutorial videos, and reading, it took time to really soak the information in.
-My way around the challenge was to not only study hard, but also to acknowledge that I am new to the field and asking follow-up clarifying questions during the user interviews.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;It was fascinating to speak to users from all over the world from different industries.&lt;/strong&gt;&lt;br&gt; One major reason that I love user research is being able to speak with users and approaching a problem from users&amp;rsquo; perspectives. During the interview sessions, I was speaking to a consultant in Belgium one day and to a procurement executive in India the next day.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Last but not least, I had fun with amazing mentorship, rich resources, and owning the project.&lt;/strong&gt; &lt;br&gt;The lessons I learned were not limited specifically to user research, but also taught me how to navigate myself through the corporate organization and personal networking.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;I learned to engage with stakeholders as early as the project planning stage.&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt; By weekly updating the stakeholders and asking for their feedback, I was able to plan and develop a research plan that addresses their needs. Moreover, facilitating a collaborative data synthesis workshop session helped better synchronize the stakeholders as a team to share key findings and results.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Knowledge of product domain is essential especially in the B2B space.&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt; My initial challenge was to get my head around the B2B space and procurement processes within a short period of time. Despite studying the terms, watching tutorial videos, and reading, it took time to really soak the information in.
+My way around the challenge was to not only study hard, but also to acknowledge that I am new to the field and asking follow-up clarifying questions during the user interviews.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It was fascinating to speak to users from all over the world from different industries.&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt; One major reason that I love user research is being able to speak with users and approaching a problem from users&#39; perspectives. During the interview sessions, I was speaking to a consultant in Belgium one day and to a procurement executive in India the next day.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Last but not least, I had fun with amazing mentorship, rich resources, and owning the project.&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;The lessons I learned were not limited specifically to user research, but also taught me how to navigate myself through the corporate organization and personal networking.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;back-to-top&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;back-to-top-&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
@@ -428,80 +349,53 @@ My way around the challenge was to not only study hard, but also to acknowledge 
       <link>https://jinjeon.me/project/wa-notify/</link>
       <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/wa-notify/</guid>
-      <description>
-
-&lt;style&gt;
-.introduction {
-  column-count: 2;
-}
-&lt;/style&gt;
-
-&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
-&lt;div class=&#34;introduction&#34;&gt;
-&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;My Role:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;UX researcher in a group of 4 graduate students &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Methods:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;&lt;strong&gt;Usability testing&lt;/strong&gt;, &lt;strong&gt;AB testing&lt;/strong&gt;, qualitative interviews, affinity mapping &lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Timeline: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;Jan 2021 - March 2021 (~10 week graduate course project)&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt;Stakeholders:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt; Apple/Google program managers, WA DOH, UW professor and research lab, designers &lt;/small&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-background-what-is-wa-notify-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Background: What is WA Notify? &lt;/h&gt;&lt;/h2&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Methods:&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Usability testing&lt;/strong&gt;, &lt;strong&gt;AB testing&lt;/strong&gt;, qualitative interviews, affinity mapping &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Timeline: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Jan 2021 - March 2021 (~10 week graduate course project)&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Stakeholders:&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Apple/Google program managers, WA DOH, UW professor and research lab, designers &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-background-what-is-wa-notify-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Background: What is WA Notify? &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Washington Exposure Notifications (ENX, also known as WA Notify)&lt;/strong&gt; is a tool that works through smartphones to &lt;strong&gt;alert users if they may have been exposed to COVID-19.&lt;/strong&gt; Using Bluetooth, it allows smartphones to exchange randomly generated codes &lt;strong&gt;without revealing any personal information&lt;/strong&gt;. &lt;strong&gt;As of August of 2021, there are more than 2.31 million users.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;If another user you&amp;rsquo;ve been near in the last two weeks tested positive for COVID-19 and added his verification code, anyone who was in close contact will receive an exposure alert.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;If you are an iPhone user, you might have easily encountered this through your settings menu.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If another user you&amp;rsquo;ve been near in the last two weeks tested positive for COVID-19 and added his verification code, anyone who was in close contact will receive an exposure alert.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;If you are an iPhone user, you might have easily encountered this through your settings menu.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-overview-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Overview &lt;/h&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;h-stylefont-familygeorgia-overview-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Overview &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;The usability study combined qualitative pre and post-task interview questions and quantitative post-task usability metrics, such as Likert scales and NPS ratings.&lt;/p&gt;
-
 &lt;p&gt;Because majority of interaction happens once receiving an alert or testing positive for COVID, the study involved hypothetical situations, where users engaged with mockups of the interface. Having WA Notify available in two different versions for each OS (iOS and Android), AB testing was used to assess the experiences for each.&lt;/p&gt;
-
 &lt;p&gt;Three specific areas were assessed in the study:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Onboarding and enabling the notification&lt;/li&gt;
 &lt;li&gt;Receiving an exposure alert (hypothetical)&lt;/li&gt;
 &lt;li&gt;Entering a verification code once tested positive (hypothetical)&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-objectives-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Objectives &lt;/h&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;h-stylefont-familygeorgia-objectives-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Objectives &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Understand first reactions&lt;/strong&gt; to the app, DOH website&amp;rsquo;s information page, exposure alert, and overall user experience.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Provide evidence-based suggestions to improve the interaction&lt;/strong&gt; (not about the specific UIs).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Identify the experience gaps&lt;/strong&gt; that could be present in the different OS since there has been a significant churn rate for Android users.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-impact-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Impact &lt;/h&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;h-stylefont-familygeorgia-impact-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Impact &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;The project was spotlighted in HCDE department&amp;rsquo;s &lt;a href=&#34;https://www.hcde.washington.edu/news/hcde-students-work-with-wa-department-of-health-to-study-covid–19-exposure-notification-app&#34; target=&#34;_blank&#34;&gt; &lt;strong&gt;website newsletter&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ensured research deliverables meet the stakeholders&amp;rsquo; expectations&lt;/strong&gt; by checking in weekly since the planning stage.&lt;/li&gt;
+&lt;li&gt;The project was spotlighted in HCDE department&amp;rsquo;s &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;website newsletter&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ensured research deliverables meet the stakeholders&#39; expectations&lt;/strong&gt; by checking in weekly since the planning stage.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Provided prioritized list of recommendations&lt;/strong&gt; for the three areas of focus, and assessed the experience gaps between the OS to the stakeholders.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-research-questions-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Questions &lt;/h&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;h-stylefont-familygeorgia-research-questions-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Research Questions &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;What are the first impressions of using WA Notify, and the overall experience?&amp;rdquo;&lt;br&gt;&lt;br&gt;
-&lt;mark&lt;em&gt;&amp;ldquo;Are there any perceived differences between the iOS and Android, and the usefulness of the resources provided on the DOH website?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;/blockquote&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-research-process-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Process &lt;/h&gt;&lt;/h2&gt;
-
+&lt;p&gt;&amp;lt;mark&lt;!-- raw HTML omitted --&gt;&amp;ldquo;Are there any perceived differences between the iOS and Android, and the usefulness of the resources provided on the DOH website?&amp;quot;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-research-process-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Research Process &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 
 
 
@@ -525,13 +419,8 @@ My way around the challenge was to not only study hard, but also to acknowledge 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-design-of-the-study-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Design of the Study &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
 
 
 
@@ -561,68 +450,62 @@ My way around the challenge was to not only study hard, but also to acknowledge 
 
 &lt;/figure&gt;
 
-
 &lt;h3 id=&#34;tasks&#34;&gt;Tasks:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;The study was broken down into &lt;strong&gt;3 major tasks:&lt;/strong&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Task A:&lt;/strong&gt; Finding the instructions, and enabling the notification
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Using a DOH resource link provided, enable WA Notify on your device&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Task B:&lt;/strong&gt; Receiving an exposure alert, and deciding what actions to take next
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;You received a text from the DOH that you may have been exposed. What do you do now?&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Task C:&lt;/strong&gt; Receiving a text message for testing positive from COVID, and deciding what to do next
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;You tested positive for COVID and received a text from DOH. What do you do now?&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;ul&gt;
 &lt;li&gt;After each task:
-
 &lt;ul&gt;
 &lt;li&gt;a confidence score rating question was assessed.&lt;/li&gt;
 &lt;li&gt;probed for areas of confusion, recommendations, and how the experiences in the two flows differed if any.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Each participant was tested with both versions of the WA Notify.
-
-&lt;ul&gt;
-&lt;li&gt;One entire flow of OS was presented before presenting the other.&lt;/li&gt;
-&lt;li&gt;For example, a participant first completed the iPhone version. Then, completed the Android flow.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;To avoid bias or familiarity of the OS and the phone type the participants use, the order was counterbalanced.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;li&gt;Each participant was tested with both versions of the WA Notify.
+&lt;ul&gt;
+&lt;li&gt;One entire flow of OS was presented before presenting the other.
+&lt;ul&gt;
+&lt;li&gt;For example, a participant first completed the iPhone version. Then, completed the Android flow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;To avoid bias or familiarity of the OS and the phone type the participants use, the order was counterbalanced.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;target-audience&#34;&gt;Target Audience:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;The target audience was broadly defined as anyone who resides in WA state who has an Android or iOS device. This included people of all backgrounds, education levels, and technology literacy.
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;The more people who enable and use WA Notify, the more effective the system is in tracing the COVID.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;For screener,&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;demographics&#34;&gt;Demographics:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;A total of 11 participants were tested.&lt;/li&gt;
 &lt;li&gt;Age range of 18-34.&lt;/li&gt;
-&lt;li&gt;During the screener, participants&amp;rsquo; information, such as phone types, whether they had previously enabled the notification, and tested for COVID, were identified.&lt;/li&gt;
+&lt;li&gt;During the screener, participants&#39; information, such as phone types, whether they had previously enabled the notification, and tested for COVID, were identified.&lt;/li&gt;
 &lt;/ul&gt;
-
 
 
 
@@ -652,9 +535,7 @@ My way around the challenge was to not only study hard, but also to acknowledge 
 
 &lt;/figure&gt;
 
-
 &lt;h3 id=&#34;data-analysis&#34;&gt;Data Analysis:&lt;/h3&gt;
-
 
 
 
@@ -678,23 +559,16 @@ My way around the challenge was to not only study hard, but also to acknowledge 
   
   
   &lt;figcaption&gt;
-    The team then took the data to do affinity mapping to search for patterns and common themes. &lt;br&gt;Each participant was color-coded.
+    The team then took the data to do affinity mapping to search for patterns and common themes. &lt;!-- raw HTML omitted --&gt;Each participant was color-coded.
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-research-findings-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Findings &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;For readability, I highlight findings from Task B only.&lt;/em&gt;&lt;/strong&gt; Please reach out for more information.&lt;/p&gt;
-
 &lt;h3 id=&#34;task-b-receiving-an-exposure-alert-and-deciding-what-to-do-next&#34;&gt;Task B. Receiving an exposure alert, and deciding what to do next:&lt;/h3&gt;
-
 
 
 
@@ -724,44 +598,39 @@ My way around the challenge was to not only study hard, but also to acknowledge 
 
 &lt;/figure&gt;
 
-
 &lt;h3 id=&#34;insight-1&#34;&gt;Insight #1:&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;After receiving the alert, participants&amp;rsquo; immediate reactions were to:
-
+&lt;li&gt;After receiving the alert, participants&#39; immediate reactions were to:
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Learn more about the details of the exposure.&lt;/strong&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Seeing where, when, and who, and even a map that pinpoints the possible exposure.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;I would be curious where I might have been exposed &amp;hellip; &lt;strong&gt;like a map that pinpoints the exposure.&lt;/strong&gt; (P1)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;I would be concerned. Where must have I gone? Who did I get in contact with? (P8)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;I would be curious where I might have been exposed &amp;hellip; &lt;strong&gt;like a map that pinpoints the exposure.&lt;/strong&gt; (P1)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;I would be concerned. Where must have I gone? Who did I get in contact with? (P8)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;See resources on getting tested.&lt;/strong&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;I expected to see more directions on testing sites and resources. (P11)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;I expected to see more directions on testing sites and resources. (P11)&amp;quot;&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;insight-2&#34;&gt;Insight #2:&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Both flows were perceived as similar: &lt;strong&gt;&amp;ldquo;simple&amp;rdquo;&lt;/strong&gt; and &lt;strong&gt;&amp;ldquo;straightforward.&amp;rdquo;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Both flows were perceived as similar: &lt;strong&gt;&amp;ldquo;simple&amp;rdquo;&lt;/strong&gt; and &lt;strong&gt;&amp;ldquo;straightforward.&amp;quot;&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Android&amp;rsquo;s landing screen was preferred&lt;/strong&gt; because it showed a summary and possible exposure data, whereas iPhone initially shows a heavy text upfront.
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;&lt;strong&gt;[Android] makes it more clear about the exposure data&lt;/strong&gt; and what to do next. (P7)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Experiences in both versions made sense to the participants. Most concerns were raised in the DOH&amp;rsquo;s &amp;lsquo;What to do Next&amp;rsquo; resource web page.
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;Good until the point of clicking the link to &amp;lsquo;Learn More.&amp;rsquo; (P4)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;quot;&lt;strong&gt;[Android] makes it more clear about the exposure data&lt;/strong&gt; and what to do next. (P7)&amp;quot;&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;li&gt;Experiences in both versions made sense to the participants. Most concerns were raised in the DOH&amp;rsquo;s &amp;lsquo;What to do Next&amp;rsquo; resource web page.
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;Good until the point of clicking the link to &amp;lsquo;Learn More.&amp;rsquo; (P4)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 
 
 
@@ -791,13 +660,10 @@ My way around the challenge was to not only study hard, but also to acknowledge 
 
 &lt;/figure&gt;
 
-
 &lt;h3 id=&#34;insight-3&#34;&gt;Insight #3:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Once the participants reached the page, they were asked series of questions on the overall impression and finding specific information on what to do next within the DOH&amp;rsquo;s website.&lt;/li&gt;
 &lt;/ul&gt;
-
 
 
 
@@ -827,91 +693,75 @@ My way around the challenge was to not only study hard, but also to acknowledge 
 
 &lt;/figure&gt;
 
-
 &lt;h4 id=&#34;pros&#34;&gt;Pros:&lt;/h4&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Comprehensive of the information in the page&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h4 id=&#34;cons&#34;&gt;Cons:&lt;/h4&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Difficult to find relevant information&lt;/li&gt;
 &lt;li&gt;Contents seem useful, but &lt;strong&gt;too generic&lt;/strong&gt; that &lt;strong&gt;doesn&amp;rsquo;t meet the expectations&lt;/strong&gt; of the users that just received the exposure alert would look for&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h4 id=&#34;confidence-rating&#34;&gt;Confidence Rating:&lt;/h4&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;At the end of the task, participants were asked, &lt;br&gt; &lt;strong&gt;&lt;em&gt;&amp;ldquo;How confident do you feel on what to do next upon possible exposure?&amp;rdquo;&lt;/em&gt;&lt;/strong&gt; (5 being most confident)&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;At the end of the task, participants were asked, &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;&lt;em&gt;&amp;ldquo;How confident do you feel on what to do next upon possible exposure?&amp;quot;&lt;/em&gt;&lt;/strong&gt; (5 being most confident)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Flow 1.&lt;/strong&gt; iPhone settings to the DOH Website: 3: &lt;strong&gt;3.5&lt;/strong&gt;/5.0&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Flow 2.&lt;/strong&gt; Android App to the DOH Website: 3: &lt;strong&gt;4.0&lt;/strong&gt;/5.0&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Confidence rating in the Android version scored highly possibly due to the &lt;strong&gt;better summary page that was provided.&lt;/strong&gt; However, with our sample size, &lt;strong&gt;the rating should be taken as a grain of salt&lt;/strong&gt; at the stage.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-recommendations-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Recommendations &lt;/h&gt;&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Confidence rating in the Android version scored highly possibly due to the &lt;strong&gt;better summary page that was provided.&lt;/strong&gt; However, with our sample size, &lt;strong&gt;the rating should be taken as a grain of salt&lt;/strong&gt; at the stage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Based on the feedbacks provided from the participants and insights, I came up with 3 recommendations:&lt;/p&gt;
-
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Prioritize more ACTIONABLE information&lt;/strong&gt;&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Prioritize more ACTIONABLE information&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Information, such as COVID symptoms, were considered common sense at this point&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;To me, it feels like it&amp;rsquo;s common knowledge, such as symptoms (P1)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;I expected to see more simplified summary. &lt;strong&gt;It&amp;rsquo;s 2021 and I already have context of COVID&lt;/strong&gt; (P11)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;Guidelines seem informational. Nothing to act on. (P4)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Make information about testing sites more available&lt;/strong&gt;&lt;/p&gt;
-
+&lt;li&gt;&lt;em&gt;&amp;ldquo;To me, it feels like it&amp;rsquo;s common knowledge, such as symptoms (P1)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;I expected to see more simplified summary. &lt;strong&gt;It&amp;rsquo;s 2021 and I already have context of COVID&lt;/strong&gt; (P11)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;Guidelines seem informational. Nothing to act on. (P4)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Make information about testing sites more available&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;After seeing the exposure notification, most participants wanted and expected to immediately get tested, but had hard time finding the correct information&lt;/li&gt;
 &lt;li&gt;Show information about nearby clinics or how to get scheduled for a test&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;Does it have information on testing sites? I would like to know what steps to take next. (P9)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Less text and more visuals&lt;/strong&gt;&lt;/p&gt;
-
+&lt;li&gt;&lt;em&gt;&amp;ldquo;Does it have information on testing sites? I would like to know what steps to take next. (P9)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Less text and more visuals&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A lot of word and information were provided upfront while participants were going under stress from the alert&lt;/li&gt;
 &lt;li&gt;Visuals or infographics can better direct them to relevant information&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;It feels really wordy and it&amp;rsquo;s &lt;strong&gt;too much all at once.&lt;/strong&gt; (P8)&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;It feels really wordy and it&amp;rsquo;s &lt;strong&gt;too much all at once.&lt;/strong&gt; (P8)&amp;quot;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-limitations-challenges-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Limitations &amp;amp; Challenges &lt;/h&gt;&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Due to the sample size, the usability metrics collected were not examined for any &lt;strong&gt;statistical significance.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Recruiting was mainly convenience sampling:&lt;/strong&gt; More than half of the participants were affiliated with the University of Washington, which may not be fully representative of the general public of WA state.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The usability tasks were limited to remotely observing participants&amp;rsquo; interactions within the prototype as the tasks involved hypothetical situations, such as getting an exposure or positive test alert.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;For the scope of the project, only limited DOH webpages were tested.&lt;/p&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Recruiting was mainly convenience sampling:&lt;/strong&gt; More than half of the participants were affiliated with the University of Washington, which may not be fully representative of the general public of WA state.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The usability tasks were limited to remotely observing participants&#39; interactions within the prototype as the tasks involved hypothetical situations, such as getting an exposure or positive test alert.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the scope of the project, only limited DOH webpages were tested.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Have any questions? Please reach out!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;back-to-top&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;back-to-top-&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
@@ -920,57 +770,30 @@ My way around the challenge was to not only study hard, but also to acknowledge 
       <link>https://jinjeon.me/project/alaska-airlines/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/alaska-airlines/</guid>
-      <description>
-
-&lt;style&gt;
-.introduction {
-  column-count: 2;
-}
-&lt;/style&gt;
-
-&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
-&lt;div class=&#34;introduction&#34;&gt;
-&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; My Role: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;UX researcher in a 4-person team of researchers and designers&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Methods: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;generative research, competitive analysis, remote qualitative interview, journey map, affinity diagram&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Timeline: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;June 2020 - Oct 2020 (~4 months)&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt; &lt;h style=&#34;font-family:georgia&#34;&gt; Stakeholders:&lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;Research manager, product designers, &lt;br&gt;brand manager, eCommerce team&lt;/small&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-overview-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Overview &lt;/h&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;To help Alaska Airlines flexibly adapt to the COVID-19 pandemic and improve its upsell strategies&lt;/strong&gt;, the team conducted user research &lt;strong&gt;to understand users&amp;rsquo; behaviors, values, and motivations at different stages of their flight travel experiences.&lt;/strong&gt; We studied Alaska Airlines and five other major airlines operating in the US to conduct competitive analysis and pair insights from user experience benchmarking.&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-impact-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Impact &lt;/h&gt;&lt;/h2&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Methods: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;generative research, competitive analysis, remote qualitative interview, journey map, affinity diagram&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Timeline: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;June 2020 - Oct 2020 (~4 months)&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt; Stakeholders:&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Research manager, product designers, &lt;!-- raw HTML omitted --&gt;brand manager, eCommerce team&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-impact-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Impact &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Presented four major recommendations&lt;/strong&gt; to research managers, product and eCommerce teams.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Validated research findings&lt;/strong&gt; by discovering results that match with other ongoing research.&lt;/li&gt;
 &lt;li&gt;Provided both &lt;strong&gt;design recommendations&lt;/strong&gt; and &lt;strong&gt;strategies&lt;/strong&gt; on how the company in the travel industry can &lt;strong&gt;adapt and strive during the pandemic.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-research-question-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Question &lt;/h&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-research-question-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Research Question &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;What are the motivations for upgrading throughout the booking and overall flight experience with Alaska and its competitors? Additionally, has the current pandemic affected this experience?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-project-timeline-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Project Timeline &lt;/h&gt;&lt;/h2&gt;
-
-&lt;!-- ![Project Timeline](./timeline.svg) --&gt;
-
+&lt;hr&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-project-timeline-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Project Timeline &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
 
 
 
@@ -1000,21 +823,14 @@ My way around the challenge was to not only study hard, but also to acknowledge 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-user-research-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; User Research &lt;/h&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;1-preliminary-competitive-analysis&#34;&gt;1. Preliminary &amp;amp; Competitive Analysis&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-user-research-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; User Research &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;1-preliminary--competitive-analysis&#34;&gt;1. Preliminary &amp;amp; Competitive Analysis&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;
 To first better understand the competitive landscape of the airline industries, we examined the websites of the six airlines to visualize the user flow of booking a flight.&lt;/p&gt;
-
-&lt;p&gt;💡 &lt;strong&gt;Key/fun Fact:&lt;/strong&gt;&lt;br&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key/fun Fact:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;
 Despite the industry standard of generalizing the classification of seat types into economy, business, and first class, we noticed that each airline had different ways of classifying, naming, and promoting the different fare classes. We searched for areas that could be confusing and be improved for the users.&lt;/p&gt;
-
 
 
 
@@ -1038,110 +854,30 @@ Despite the industry standard of generalizing the classification of seat types i
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Each airline had its own ways of classifying and naming the seats. Even though the perks that came along with each fare type were quite consistent throughout, low-cost airline, such as Southwest, had a uniquely different seating plan.&lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;Each airline had its own ways of classifying and naming the seats. Even though the perks that came along with each fare type were quite consistent throughout, low-cost airline, such as Southwest, had a uniquely different seating plan.&lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
 &lt;h4 id=&#34;insights&#34;&gt;Insights&lt;/h4&gt;
-
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Alaska Airlines&lt;/strong&gt;&amp;rsquo; fare types were straightforward and transparent. The seat names were in consistent ascending order: &lt;br&gt;i.e. saver → economy → premium → first class.&lt;/li&gt;
-&lt;li&gt;Fare types and their associated perks can become very unclear:&lt;br&gt;
-e.g. &lt;strong&gt;JetBlue&lt;/strong&gt;&amp;rsquo;s first class name was &amp;ldquo;Mint&amp;rdquo; which has no association with Blue.&lt;br&gt;
+&lt;li&gt;&lt;strong&gt;Alaska Airlines&lt;/strong&gt;&#39; fare types were straightforward and transparent. The seat names were in consistent ascending order: &lt;!-- raw HTML omitted --&gt;i.e. saver → economy → premium → first class.&lt;/li&gt;
+&lt;li&gt;Fare types and their associated perks can become very unclear:&lt;!-- raw HTML omitted --&gt;
+e.g. &lt;strong&gt;JetBlue&lt;/strong&gt;&amp;rsquo;s first class name was &amp;ldquo;Mint&amp;rdquo; which has no association with Blue.&lt;!-- raw HTML omitted --&gt;
 e.g. &lt;strong&gt;SouthWest&lt;/strong&gt;&amp;rsquo;s distinction between basic economy and economy was vague.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;United&lt;/strong&gt; had the most visually busy interface and complex fare types, leading to a poor booking experience.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h3 id=&#34;2-qualitative-interviews&#34;&gt;2. Qualitative Interviews&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt;&lt;br&gt;
-To understand users&amp;rsquo;:
-&lt;ol&gt;
-  &lt;li&gt;General flight behavior&lt;/li&gt;
-  &lt;li&gt;Top values&lt;br&gt;&lt;/li&gt;
-  &lt;li&gt;Pain points&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;br&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;b&gt;Remote Qualitative Interview: &lt;/b&gt;&lt;br&gt;
-We conducted a total of 30 interviews (5 participants from 6 different airlines) remotely over UserTesting.com and Zoom. We probed for their general flying behaviors and preferences, and narrowed down to their most recent flight experience (considering both pre-COVID &amp;amp; post-COVID).&lt;/li&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;demographics.svg&#34; data-caption=&#34;We accounted for various factors, including age, gender, income range, and travel behaviors, during our interview to capture the holistic view of participants&amp;rsquo; travel experiences.&#34;&gt;
-&lt;img src=&#34;demographics.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    &lt;b&gt;We accounted for various factors, including age, gender, income range, and travel behaviors, during our interview to capture the holistic view of participants&amp;rsquo; travel experiences.&lt;/b&gt;
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;li&gt;&lt;b&gt;Interactive Journey Maps:&lt;/b&gt;&lt;br&gt;
-We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session in each interview to have participants walkthrough their most recent experience and capture their moment-to-moment emotions and actions.&lt;/li&gt;&lt;/p&gt;
-
-&lt;p&gt;To capture their moment-to-moment emotions and actions, we divided the entire flight experience into 5 phases:
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;booking the flight ticket&lt;/strong&gt; (e.g. web vs. mobile vs. phone)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;before 24 hours of travel&lt;/strong&gt; (includes preparation and traveling to the airport)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;being at the airport&lt;/strong&gt; (checking-in, luggage, security checks, and so on)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;in-flight&lt;/strong&gt; (seat space, perks, food &amp;amp; beverage, etc)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;arrival&lt;/strong&gt; (post travel experience)&lt;/li&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;journeymapping.svg&#34; data-caption=&#34;A simplified abstract example of the interactive journey map: Participants can vertically toggle each action item (as shown in the red arrows) based on their overall experience of that particular event (Good to Poor).&#34;&gt;
-&lt;img src=&#34;journeymapping.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    &lt;b&gt;A simplified abstract example of the interactive journey map: Participants can vertically toggle each action item (as shown in the red arrows) based on their overall experience of that particular event (Good to Poor).&lt;/b&gt;
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
-&lt;/ol&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;
+To understand users&#39;:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Methods:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;To capture their moment-to-moment emotions and actions, we divided the entire flight experience into 5 phases:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;3-thematic-analysis&#34;&gt;3. Thematic Analysis&lt;/h2&gt;
-
 
 
 
@@ -1165,12 +901,11 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;We explored multi-facets of the travel experience to search for emerging themes from the qualitative data we collected from interviews and journey maps.&lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;We explored multi-facets of the travel experience to search for emerging themes from the qualitative data we collected from interviews and journey maps.&lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
-
 
 
 
@@ -1195,53 +930,19 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Overview of our affinity map. We inductively searched for overarching themes by&amp;hellip;&lt;br&gt;Participant journey map → airline journey map → all airline journey map. &lt;br&gt;From each participant&amp;rsquo;s journey map, we combined them to characterize the overall experience of each airline. We then combined all airlines to identify any patterns.&lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;Overview of our affinity map. We inductively searched for overarching themes by&amp;hellip;&lt;!-- raw HTML omitted --&gt;Participant journey map → airline journey map → all airline journey map. &lt;!-- raw HTML omitted --&gt;From each participant&amp;rsquo;s journey map, we combined them to characterize the overall experience of each airline. We then combined all airlines to identify any patterns.&lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-key-insights-results-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Key Insights &amp;amp; Results &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-key-insights--results-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Key Insights &amp;amp; Results &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Please note that below are &lt;strong&gt;&lt;em&gt;filtered results&lt;/em&gt;&lt;/strong&gt; due to NDA.&lt;/p&gt;
-
-&lt;h3 id=&#34;personas-highlights&#34;&gt;Personas / Highlights&lt;/h3&gt;
-
-&lt;p&gt;Three prototypical personas were developed. The information provides &lt;strong&gt;basic demographic&lt;/strong&gt; information, a hypothetical trip destination, &lt;strong&gt;quotes&lt;/strong&gt;, &lt;strong&gt;means used to book and upgrade the seat.&lt;/strong&gt; It also identifies &lt;strong&gt;top values, pain points, and motivations&lt;/strong&gt; for upgrading a seat. Only 1 of the 3 is shown here.
- &lt;!-- (**we intentionally used the term &#34;highlight&#34; instead of &#34;persona&#34; because they were modeled after participants that stood out with clear preference of values and motivations**) --&gt;
-&lt;!-- 
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;persona1.svg&#34; data-caption=&#34;This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.&#34;&gt;
-&lt;img src=&#34;persona1.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    &lt;b&gt;This first type of personas is characterized by how upgrading a seat is mandatory due to his large body size. With his tall height and broad shoulders, upgrading a seat is a necessity.&lt;/b&gt;
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
- --&gt;&lt;/p&gt;
-
+&lt;h3 id=&#34;personas--highlights&#34;&gt;Personas / Highlights&lt;/h3&gt;
+&lt;p&gt;Three prototypical personas were developed. The information provides &lt;strong&gt;basic demographic&lt;/strong&gt; information, a hypothetical trip destination, &lt;strong&gt;quotes&lt;/strong&gt;, &lt;strong&gt;means used to book and upgrade the seat.&lt;/strong&gt; It also identifies &lt;strong&gt;top values, pain points, and motivations&lt;/strong&gt; for upgrading a seat. Only 1 of the 3 is shown here.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 
 
 
@@ -1271,39 +972,8 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 &lt;/figure&gt;
 
-
-&lt;!-- 
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;persona3.svg&#34; data-caption=&#34;This person is characterized as a bargain hunter, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&#34;&gt;
-&lt;img src=&#34;persona3.svg&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    &lt;b&gt;This person is characterized as a &lt;i&gt;bargain hunter&lt;/i&gt;, constantly looking for deals and offers. The person is unique in that he is tech savvy and even conscious about which aircraft type he would be flying in.&lt;/b&gt;
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
- --&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;characterizing-the-travel-experience&#34;&gt;Characterizing the Travel Experience&lt;/h3&gt;
-
 
 
 
@@ -1327,23 +997,18 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;An overall experience of Airline X:&lt;/b&gt; &lt;br&gt; Visualizing the travel experience through a journey map helped identify values, emotions, and user quotes at each touchpoint in the journey.
+    &lt;!-- raw HTML omitted --&gt;An overall experience of Airline X:&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt; Visualizing the travel experience through a journey map helped identify values, emotions, and user quotes at each touchpoint in the journey.
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
 &lt;p&gt;We then devised step-by-step recommendations for each travel stage (NDA).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-recommendations-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Recommendations &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-recommendations-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Recommendations &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Based on the key insights and results synthesized from the data, four major recommendations were made.&lt;/li&gt;
 &lt;/ul&gt;
-
 
 
 
@@ -1367,31 +1032,24 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;The four high level recommendations&lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;The four high level recommendations&lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;p&gt;💡 &lt;strong&gt;Key Fact:&lt;/strong&gt;&lt;br&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;TRANSPARENCY MATTERS&lt;/strong&gt;: it is a critical factor in the overall experience especially due to COVID. Users desire clear communication on what services and ancillaries to expect when flying during this pandemic era.&lt;/li&gt;&lt;/p&gt;
-
+&lt;p&gt;💡 &lt;strong&gt;Key Fact:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;ul&gt;
 &lt;li&gt;Quantitative metrics, such as &lt;strong&gt;time to complete a booking&lt;/strong&gt;, are &lt;strong&gt;less important&lt;/strong&gt; than &lt;strong&gt;transparency&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Transparency translates to expectations. When expectations are not met, the overall experience worsens.&lt;/li&gt;
-&lt;li&gt;Clear communication on what each seat upgrade entails can entice users. &lt;br&gt;e.g. &lt;strong&gt;&amp;ldquo;upgrading a seat will get you a 7-inch wider leg room&amp;rdquo;&lt;/strong&gt;.
-&lt;!-- &lt;li&gt;**Users don&#39;t mind receiving few more notifications** for clarifying and communicating the travel information (especially if contains deals). &lt;/li&gt; --&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Clear communication on what each seat upgrade entails can entice users. &lt;!-- raw HTML omitted --&gt;e.g. &lt;strong&gt;&amp;ldquo;upgrading a seat will get you a 7-inch wider leg room&amp;rdquo;&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h3 id=&#34;design-recommendations&#34;&gt;Design Recommendations&lt;/h3&gt;
-
 &lt;p&gt;Based on the four recommendations, additional elements in the websites were modified to deliver transparency.&lt;/p&gt;
-
 &lt;h4 id=&#34;1-show-what-services-are-suspended&#34;&gt;1. Show what services are suspended&lt;/h4&gt;
-
 
 
 
@@ -1421,9 +1079,7 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 &lt;/figure&gt;
 
-
 &lt;h4 id=&#34;2-clearly-communicate-the-perks-of-upgrading&#34;&gt;2. Clearly communicate the perks of upgrading&lt;/h4&gt;
-
 
 
 
@@ -1453,20 +1109,20 @@ We incorporated an &lt;strong&gt;interactive journey map&lt;/strong&gt; session 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-limitations-lessons-learned-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Limitations &amp;amp; Lessons Learned &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-limitations--lessons-learned-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Limitations &amp;amp; Lessons Learned &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;The participants were not racially diverse as recruitment of participants were automatically done via UserTesting.com.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Majority of participants&amp;rsquo; recent travels occurred 6 months ago, in which they may have distorted memory of their travel experiences.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In a qualitative research, it&amp;rsquo;s more about finding about the big buckets &amp;amp; themes unlike a quant research. &lt;br&gt;
-When presenting the different demographic groups, it can be as easy as describing &amp;ldquo;we examined a wide income group&amp;rdquo; instead of graphing out all the different income groups. If all the demographic information was graphically presented, it can convey the different stakeholders, esp. data scientists, that the results and insights will be quant focused when the research is actually qualitative.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The participants were not racially diverse as recruitment of participants were automatically done via UserTesting.com.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Majority of participants&#39; recent travels occurred 6 months ago, in which they may have distorted memory of their travel experiences.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In a qualitative research, it&amp;rsquo;s more about finding about the big buckets &amp;amp; themes unlike a quant research. &lt;!-- raw HTML omitted --&gt;
+When presenting the different demographic groups, it can be as easy as describing &amp;ldquo;we examined a wide income group&amp;rdquo; instead of graphing out all the different income groups. If all the demographic information was graphically presented, it can convey the different stakeholders, esp. data scientists, that the results and insights will be quant focused when the research is actually qualitative.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
 
 
 
@@ -1490,16 +1146,14 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;With that, I end with a fun quote from one of our participants&lt;/b&gt; 😄
+    &lt;!-- raw HTML omitted --&gt;With that, I end with a fun quote from one of our participants&lt;!-- raw HTML omitted --&gt; 😄
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;h2 id=&#34;back-to-top&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+&lt;h2 id=&#34;back-to-top-&#34;&gt;&lt;a href=&#34;#&#34;&gt;Back to top ^&lt;/a&gt;&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
@@ -1508,63 +1162,36 @@ When presenting the different demographic groups, it can be as easy as describin
       <link>https://jinjeon.me/project/navigating-cancer/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/navigating-cancer/</guid>
-      <description>
-
-&lt;style&gt;
-.introduction {
-  column-count: 2;
-}
-&lt;/style&gt;
-
-&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;
-&lt;div class=&#34;introduction&#34;&gt;
-&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; My Role: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;UX researcher in a 4-person team of researchers and designers&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Methods: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;survey, interview, affinity diagram, prototyping, heuristic evaluation, usability testing&lt;/small&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Timeline: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;Jul 2020 - Sep 2020 (~3 months)&lt;/small&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Stakeholders: &lt;/h&gt;&lt;/b&gt;
-&lt;br&gt;&lt;small&gt;product manager, senior designer, clinicians, patients&lt;/small&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-overview-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Overview &lt;/h&gt;&lt;/h2&gt;
-
-&lt;p&gt;To improve patients&amp;rsquo; experiences with symptom management and engagement with the health tracker, the team conducted &lt;strong&gt;user research to identify user needs&lt;/strong&gt;, &lt;strong&gt;concept-tested prototypes&lt;/strong&gt;, and &lt;strong&gt;delivered a high-fidelity prototype&lt;/strong&gt; to the leaders and multiple stakeholders.&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Methods: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;survey, interview, affinity diagram, prototyping, heuristic evaluation, usability testing&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Timeline: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Jul 2020 - Sep 2020 (~3 months)&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Stakeholders: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;product manager, senior designer, clinicians, patients&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-overview-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Overview &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;To improve patients&#39; experiences with symptom management and engagement with the health tracker, the team conducted &lt;strong&gt;user research to identify user needs&lt;/strong&gt;, &lt;strong&gt;concept-tested prototypes&lt;/strong&gt;, and &lt;strong&gt;delivered a high-fidelity prototype&lt;/strong&gt; to the leaders and multiple stakeholders.&lt;/p&gt;
 &lt;p&gt;With COVID-19, the team was working remotely as an international, cross-functional team with each of us in different time zones. I was also flying around being in the US and my hometown Korea, making the project more dynamic.&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-impact-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Impact &lt;/h&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;h-stylefont-familygeorgia-impact-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Impact &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Delivered research findings and 4 major feature recommendations&lt;/strong&gt; to leaders and multiple stakeholders, including CEO, product team, and designers.&lt;/li&gt;
 &lt;li&gt;Evangelized the impact of research through adaptation of design framework throughout the research process.&lt;/li&gt;
 &lt;li&gt;Received &lt;strong&gt;strong positive feedbacks&lt;/strong&gt; from the stakeholders, and recommendations aligned with company&amp;rsquo;s future milestones.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-research-question-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Research Question &lt;/h&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-research-question-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Research Question &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;p style=&#34;font-size: 16pt&#34;&gt;&lt;mark&gt;&lt;em&gt;&amp;ldquo;How might we increase patient engagement with health tracker?&amp;rdquo;&lt;/em&gt;&lt;/mark&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-the-design-process-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; The Design Process &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-the-design-process-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; The Design Process &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;unfolding-the-research-through-design-framework&#34;&gt;Unfolding the Research through Design Framework&lt;/h3&gt;
-
-&lt;p&gt;Part of our team&amp;rsquo;s mission was to &lt;strong&gt;evangelize the impact of research&lt;/strong&gt; as the company lacked a dedicated research team. We incorporated the &lt;a href=&#34;https://www.designcouncil.org.uk/news-opinion/what-framework-innovation-design-councils-evolved-double-diamond&#34; target=&#34;_blank&#34;&gt;Double Diamond&lt;/a&gt; design framework to help us guide our research focus by better framing the problem and solving the users&amp;rsquo; underlying needs.&lt;/p&gt;
-
-&lt;p&gt;&lt;mark&gt;This case study will unfold along with the different stages of the Double Diamond.&lt;/mark&gt;&lt;/p&gt;
-
+&lt;p&gt;Part of our team&amp;rsquo;s mission was to &lt;strong&gt;evangelize the impact of research&lt;/strong&gt; as the company lacked a dedicated research team. We incorporated the &lt;a href=&#34;https://www.designcouncil.org.uk/news-opinion/what-framework-innovation-design-councils-evolved-double-diamond&#34;&gt;Double Diamond&lt;/a&gt; design framework to help us guide our research focus by better framing the problem and solving the users&#39; underlying needs.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;This case study will unfold along with the different stages of the Double Diamond.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h3 id=&#34;the-ideal-double-diamond&#34;&gt;The Ideal Double Diamond&lt;/h3&gt;
-
 
 
 
@@ -1588,15 +1215,13 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;The ideal double diamond. Design frameworks help organize the design thinking process by helping researchers better frame the problem and focus on identifying and solving the users’ underlying needs.&lt;br&gt;The model, divided into 4 phases (discover, define, develop, and deliver), maps the divergent and convergent stages of the design process.&lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;The ideal double diamond. Design frameworks help organize the design thinking process by helping researchers better frame the problem and focus on identifying and solving the users’ underlying needs.&lt;!-- raw HTML omitted --&gt;The model, divided into 4 phases (discover, define, develop, and deliver), maps the divergent and convergent stages of the design process.&lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
 &lt;h4 id=&#34;but-the-reality&#34;&gt;but the Reality&amp;hellip;&lt;/h4&gt;
-
 
 
 
@@ -1620,19 +1245,15 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;The deformed double diamond. While the ideal model is a perfectly-shaped two diamonds, the reality of our research journey was a deformed diamond process. We made multiple pivots along the research, which ended up being a valuable process as we gained greater insights to the problem space.&lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;The deformed double diamond. While the ideal model is a perfectly-shaped two diamonds, the reality of our research journey was a deformed diamond process. We made multiple pivots along the research, which ended up being a valuable process as we gained greater insights to the problem space.&lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-user-research-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; User Research &lt;/h&gt;&lt;/h2&gt;
-
+&lt;hr&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-user-research-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; User Research &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Please note that below are &lt;strong&gt;&lt;em&gt;summarized insights&lt;/em&gt;&lt;/strong&gt; our team had during the user research process.&lt;/p&gt;
-
 
 
 
@@ -1656,33 +1277,26 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;strong&gt;Click to see in large view&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;Overall high-level research process.&lt;/strong&gt; We began our research with a general survey. From the insights from the general survey and existing survey results from the company, we conducted interviews with cancer patients and survivors.
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt; &lt;strong&gt;Overall high-level research process.&lt;/strong&gt; We began our research with a general survey. From the insights from the general survey and existing survey results from the company, we conducted interviews with cancer patients and survivors.
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;mark-1-discover-mark&#34;&gt;&lt;mark&gt; 1. Discover&lt;/mark&gt;&lt;/h3&gt;
-
+&lt;hr&gt;
+&lt;h3 id=&#34;mark-1-discovermark&#34;&gt;&lt;!-- raw HTML omitted --&gt; 1. Discover&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;We initiated our research with a general survey sent out online (n=72) to understand the general space of health care and health trackers. It helped us &lt;strong&gt;identify people&amp;rsquo;s health goals and tracking habits.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;From the general survey results, we devised a remote moderated &lt;strong&gt;interview plan to better understand what it feels like to undergo cancer treatments and how they manage their symptoms.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;From the interview with cancer patients and survivors, &lt;strong&gt;affinity mapping helped us categorize their responses&lt;/strong&gt; into various sections, such as their emotions throughout the oncology journey, how they track and manage their symptoms, interaction with the care team and caregivers, and so on.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h4 id=&#34;key-insights&#34;&gt;Key Insights&lt;/h4&gt;
-
 &lt;p&gt;Interview with the patients and survivors shed light to clearly understand not just how they manage their symptoms, but &lt;strong&gt;empathize with their adjusted lifestyles and daily challenges.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Through quantitative analysis of the self-reported metrics, I identified that &amp;ldquo;older people&amp;rsquo;s self perception of health level is higher than that of younger people&amp;rdquo;&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Cancer oncology treatments were perceived as &lt;strong&gt;long &amp;ldquo;journeys&amp;rdquo;&lt;/strong&gt; even sometimes with no end.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Symptom management varies by each individual, severity, and cancer types.&lt;/strong&gt; As a researcher and designer, another design challenge was how we can deliver a solution that addresses all cancer types and patients.&lt;/li&gt;
 &lt;/ul&gt;
-
 
 
 
@@ -1706,27 +1320,24 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Click to see large view. &lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;Click to see large view. &lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;mark-2-define-mark&#34;&gt;&lt;mark&gt; 2. Define&lt;/mark&gt;&lt;/h3&gt;
-
-&lt;p&gt;Below are only partial insights synthesized.&lt;br&gt;&lt;/p&gt;
-
+&lt;hr&gt;
+&lt;h3 id=&#34;mark-2-definemark&#34;&gt;&lt;!-- raw HTML omitted --&gt; 2. Define&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;Below are only partial insights synthesized.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;💡 &lt;strong&gt;Key Insight:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Identifying the user needs and listing out the stories in a prioritized order immensely helped the team properly guide to the next steps.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;We synthesized potential features that would address the user needs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Identifying the user needs and listing out the stories in a prioritized order immensely helped the team properly guide to the next steps.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We synthesized potential features that would address the user needs.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 
 
 
@@ -1750,30 +1361,27 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;User Stories. These are partial high-level user stories synthesized from the research. &lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;User Stories. These are partial high-level user stories synthesized from the research. &lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;mark-3-develop-mark&#34;&gt;&lt;mark&gt; 3. Develop &lt;/mark&gt;&lt;/h3&gt;
-
-&lt;p&gt;💡 &lt;strong&gt;Key Insights:&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
-
+&lt;hr&gt;
+&lt;h3 id=&#34;mark-3-develop-mark&#34;&gt;&lt;!-- raw HTML omitted --&gt; 3. Develop &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Insights:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;With my background in data visualization, &lt;strong&gt;I was particularly fascinated in developing visual dashboards and data visualization to help patients track their symptoms.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;One key lesson I learned was: &lt;mark&gt;&lt;strong&gt;Designing should always consider the target audience first.&lt;/strong&gt;&lt;/mark&gt;&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;With my background in data visualization, &lt;strong&gt;I was particularly fascinated in developing visual dashboards and data visualization to help patients track their symptoms.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One key lesson I learned was: &lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Designing should always consider the target audience first.&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Excited to develop data visualization screens, &lt;strong&gt;I initially thought that the more diverse, interactive, and comprehensive graphs are, the better.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Nevertheless, during the expert evaluation and concept-testing, I realized that the screens were simply too busy and users (particularly the old population that are less tech savvy) find the &lt;strong&gt;visuals to be too complicated and less informative.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 
 
 
@@ -1797,15 +1405,13 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Click to see in large view. &lt;br&gt; Developing prototypes. We began our development with quick sketches using Google&amp;rsquo;s Crazy 8&amp;rsquo;s methodology. We used Figma to develop into a high-fidelity prototypes, which were later concept-tested in the deliver phase &lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;Click to see in large view. &lt;!-- raw HTML omitted --&gt; Developing prototypes. We began our development with quick sketches using Google&amp;rsquo;s Crazy 8&amp;rsquo;s methodology. We used Figma to develop into a high-fidelity prototypes, which were later concept-tested in the deliver phase &lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;h4 id=&#34;3-1-concept-testing&#34;&gt;3.1. Concept-testing&lt;/h4&gt;
-
+&lt;h4 id=&#34;31-concept-testing&#34;&gt;3.1. Concept-testing&lt;/h4&gt;
 
 
 
@@ -1829,12 +1435,11 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;We conducted concept-testing with 8 users, and organized by each participant. We then categorized by themes and features. &lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;We conducted concept-testing with 8 users, and organized by each participant. We then categorized by themes and features. &lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
-
 
 
 
@@ -1859,24 +1464,18 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Concept-testing helped us narrow down our scope, and focus on key 3 areas, and specifically 4 feature design recommendations. &lt;/b&gt;
+    &lt;!-- raw HTML omitted --&gt;Concept-testing helped us narrow down our scope, and focus on key 3 areas, and specifically 4 feature design recommendations. &lt;!-- raw HTML omitted --&gt;
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;mark-4-deliver-mark-design-recommendations&#34;&gt;&lt;mark&gt; 4. Deliver&lt;/mark&gt; (Design Recommendations)&lt;/h3&gt;
-
+&lt;hr&gt;
+&lt;h3 id=&#34;mark-4-delivermark-design-recommendations&#34;&gt;&lt;!-- raw HTML omitted --&gt; 4. Deliver&lt;!-- raw HTML omitted --&gt; (Design Recommendations)&lt;/h3&gt;
 &lt;p&gt;** &lt;strong&gt;Disclaimer: Below displays only 2 of the total 4 final design recommendations&lt;/strong&gt; **&lt;/p&gt;
-
 &lt;p&gt;In order to ensure that our design solutions stem to delivering the actual user needs, we explicitly stated the user needs that are being met with each design recommendation.&lt;/p&gt;
-
-&lt;h4 id=&#34;4-1-dashboard-and-data-visualization&#34;&gt;** 4.1. Dashboard and Data Visualization**&lt;/h4&gt;
-
-&lt;p&gt;Personalized dashboard provides a way to effectively track users&amp;rsquo; past symptoms and even compare and predict how they would feel in the next few days.
+&lt;h4 id=&#34;-41-dashboard-and-data-visualization&#34;&gt;** 4.1. Dashboard and Data Visualization**&lt;/h4&gt;
+&lt;p&gt;Personalized dashboard provides a way to effectively track users&#39; past symptoms and even compare and predict how they would feel in the next few days.
 
 
 
@@ -1913,7 +1512,6 @@ When presenting the different demographic groups, it can be as easy as describin
 
 
 
-
 &lt;figure&gt;
 
 
@@ -1923,7 +1521,6 @@ When presenting the different demographic groups, it can be as easy as describin
 
 
 &lt;/figure&gt;
-
 
 
 
@@ -1948,11 +1545,8 @@ When presenting the different demographic groups, it can be as easy as describin
 
 &lt;/figure&gt;
 
-
-&lt;h4 id=&#34;4-2-journal&#34;&gt;** 4.2. Journal**&lt;/h4&gt;
-
+&lt;h4 id=&#34;-42-journal&#34;&gt;** 4.2. Journal**&lt;/h4&gt;
 &lt;p&gt;Journal feature lets users record their symptoms through various means. &lt;strong&gt;Considering accessibility and finger &amp;ldquo;tickling&amp;rdquo; &amp;amp; &amp;ldquo;numbness&amp;rdquo; being a common symptom of cancer, we include voice memo, photo upload, and emotion scale&lt;/strong&gt; to faciliate their input.&lt;/p&gt;
-
 
 
 
@@ -1975,7 +1569,6 @@ When presenting the different demographic groups, it can be as easy as describin
 
 
 &lt;/figure&gt;
-
 
 
 
@@ -2013,7 +1606,6 @@ When presenting the different demographic groups, it can be as easy as describin
 
 
 
-
 &lt;figure&gt;
 
 
@@ -2024,22 +1616,19 @@ When presenting the different demographic groups, it can be as easy as describin
 
 &lt;/figure&gt;
 
-
 &lt;p&gt;To learn more about this project, please reach out to me!&lt;/p&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;h-style-font-family-georgia-reflections-h&#34;&gt;&lt;h style=&#34;font-family:georgia&#34;&gt; Reflections &lt;/h&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;h-stylefont-familygeorgia-reflections-h&#34;&gt;&lt;!-- raw HTML omitted --&gt; Reflections &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Interviewing cancer patients could be overwhelming at first. I thought I needed to know all the terminologies, the process that patients go through, treatment cycles, and so on. &lt;strong&gt;Acknowledging that I am &amp;ldquo;learning&amp;rdquo; from them at the beginning of user sessions&lt;/strong&gt; not only helped lighten the atmosphere but also gave patients more confidence to share their stories.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Always think who the users are&lt;/strong&gt;: When I was ideating and designing features for dashboard and data visualization, my initial thought was having comprehensive data and being able to interactively manipulate the data was the best way to go. However, it turned out that I was not thinking about the patients who would be the actual users for the new features.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Interviewing cancer patients could be overwhelming at first. I thought I needed to know all the terminologies, the process that patients go through, treatment cycles, and so on. &lt;strong&gt;Acknowledging that I am &amp;ldquo;learning&amp;rdquo; from them at the beginning of user sessions&lt;/strong&gt; not only helped lighten the atmosphere but also gave patients more confidence to share their stories.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Always think who the users are&lt;/strong&gt;: When I was ideating and designing features for dashboard and data visualization, my initial thought was having comprehensive data and being able to interactively manipulate the data was the best way to go. However, it turned out that I was not thinking about the patients who would be the actual users for the new features.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;hr /&gt;
+&lt;hr&gt;
 </description>
     </item>
     
@@ -2048,31 +1637,31 @@ When presenting the different demographic groups, it can be as easy as describin
       <link>https://jinjeon.me/project/data-viz/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       <guid>https://jinjeon.me/project/data-viz/</guid>
-      <description>&lt;p&gt;&lt;body style=&#34;font-family:Arial; font-size: 12pt&#34;&gt;&lt;/p&gt;
-
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;See related work:&lt;/p&gt;
-
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://jinjeon.me/post/textual-data-analysis&#34;&gt;Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://jinjeon.me/post/quant-ux&#34;&gt;Statistical Data Analysis in Cross Cultural Research &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)
-&lt;/div&gt;&lt;iframe src=&#34;https://editor.p5js.org/jeon11/embed/w2Ugnl4dR&#34; width=&#34;760&#34; height=&#34;600&#34;&gt;Image Reconstruction using Perlin Noise (Javascript- p5.js) &lt;/iframe&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Statistical Data Analysis in Cross Cultural Research &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Interactive Art: Image Reconstruction using Perlin Noise (p5.js Javascript)&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;The image above uses Perlin Noise to reconstruct old classic artworks, which is useful for generating patterns. Starting from a blank screen, it creates thousands of random noises that start recovering the image. They do so by reading the color of the image coordinates. The noises diffuse by generating random polygons spreading around, filling in the gap.&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Refresh the page to see different image creations (total 4 images).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Drag the mouse to draw circles on top of the noises.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Refresh the page to see different image creations (total 4 images).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Drag the mouse to draw circles on top of the noises.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;/body&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
@@ -2104,12 +1693,11 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Click to see in large view&lt;/b&gt;&lt;br&gt;Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual
+    &lt;!-- raw HTML omitted --&gt;Click to see in large view&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Cutler RA, Jeon J, Polyn SM. Characterizing the interaction of temporal and semantic information in categorized memory search. Poster presented at: Cognitive Neuroscience Society; 2020 May 2-5; Virtual
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
-
 
 
 
@@ -2134,16 +1722,14 @@ When presenting the different demographic groups, it can be as easy as describin
   
   
   &lt;figcaption&gt;
-    &lt;b&gt;Click to see in large view&lt;/b&gt;&lt;br&gt;Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC
+    &lt;!-- raw HTML omitted --&gt;Click to see in large view&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Cutler RA, Jeon J, Brown-Schmidt S, Polyn SM. Semantic and temporal structure in memory for narratives: A benefit for semantically congruent ideas. Poster presented at: Psychonomic Society; 2019 Nov 14-17; Montreal, QC
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
     </item>
     
