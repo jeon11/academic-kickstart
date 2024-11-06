@@ -42,11 +42,11 @@ education:
 social:
 - icon: cv
   icon_pack: ai
-<<<<<<< HEAD
+# <<<<<<< HEAD
   link: "pdf/JinJeon_Resume.pdf"
-=======
+# =======
   link: "https://jinjeon.me/pdf/JinJeon_Resume.pdf"
->>>>>>> 1c6023a730305456961deb427ed03fb81c2785c4
+# >>>>>>> 1c6023a730305456961deb427ed03fb81c2785c4
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/jinjeon/
