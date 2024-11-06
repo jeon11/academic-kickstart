@@ -42,7 +42,11 @@ education:
 social:
 - icon: cv
   icon_pack: ai
+<<<<<<< HEAD
   link: "pdf/JinJeon_Resume.pdf"
+=======
+  link: "https://jinjeon.me/pdf/JinJeon_Resume.pdf"
+>>>>>>> 1c6023a730305456961deb427ed03fb81c2785c4
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/jinjeon/
@@ -71,7 +75,7 @@ user_groups:
 - []
 ---
 
-I am a 2nd year graduate student at Human Centered Design and Engineering (HCDE) program at the University of Washington (graduating June 2022).
+I am a UX researcher at Microsoft's Developer Division, collaborating across multiple product teams to improve developer experience in Azure. I am simultaneously completing my master's degree in Human Centered Design and Engineering at the University of Washington.
 
 I am an **inquisitive, detail-oriented, data enthusiast** passionate in **UX research**. I believe that data-driven insights are at the heart of unveiling users' underlying needs and delivering meaningful experiences.
 
