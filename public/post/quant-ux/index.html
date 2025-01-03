@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jin Jeon">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Compares survey data to run t-test, 1-, 2-way ANOVA, and more">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jinjeon.me/post/quant-ux/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jinjeon.me/post/quant-ux/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jin Jeon">
+  <meta property="og:url" content="https://jinjeon.me/post/quant-ux/">
+  <meta property="og:title" content="Statistical Data Analysis in Cross-Cultural Research | Jin Jeon">
+  <meta property="og:description" content="Compares survey data to run t-test, 1-, 2-way ANOVA, and more"><meta property="og:image" content="https://jinjeon.me/img/icon.png">
+  <meta property="twitter:image" content="https://jinjeon.me/img/icon.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-03-22T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-03-22T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jinjeon.me/post/quant-ux/"
+  },
+  "headline": "Statistical Data Analysis in Cross-Cultural Research",
+  
+  "datePublished": "2021-03-22T00:00:00Z",
+  "dateModified": "2021-03-22T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jin Jeon"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jin Jeon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jinjeon.me/img/icon.png"
+    }
+  },
+  "description": "Compares survey data to run t-test, 1-, 2-way ANOVA, and more"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Statistical Data Analysis in Cross-Cultural Research | Jin Jeon</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/icon.png" alt="Jin Jeon"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About Me</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span></span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Statistical Data Analysis in Cross-Cultural Research</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mon, Mar 22, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/jeon11/quant-ux" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <!-- raw HTML omitted -->
+<p>I use survey data collected from Amazon Mechanical Turk and Reddit user groups (all personal data  have been removed) in a study to examine the impact of cultural localization on web-based account creation between American and Korean users. I use the experiment data to display basic statistical tests in Python.</p>
+<h3 id="research-question">Research Question:</h3>
+<blockquote>
+<p><strong><em>Is there a difference in providing personal information between USA and Korean Internet users <!-- raw HTML omitted -->
+within two different use scenarios: online banking and shopping?</em></strong></p>
+</blockquote>
+<p>I use the following tests:</p>
+<ol>
+<li><strong><a href="#link1">Pearson Correlation Coefficient</a></strong></li>
+<li><strong><a href="#link2">T-Test</a></strong></li>
+<li><strong><a href="#link3">Mann-Whitney Test</a></strong></li>
+<li><strong><a href="#link4">One-Way Analysis of Variance (ANOVA)</a></strong></li>
+<li><strong><a href="#link5">Two-Way ANOVA</a></strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+<span style="color:#f92672">import</span> scipy
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+<span style="color:#f92672">from</span> statsmodels.formula.api <span style="color:#f92672">import</span> ols
+<span style="color:#f92672">import</span> statsmodels.formula.api <span style="color:#66d9ef">as</span> smf
+<span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
+<span style="color:#f92672">from</span> statsmodels.stats.anova <span style="color:#f92672">import</span> AnovaRM
+<span style="color:#f92672">import</span> pdb  <span style="color:#75715e"># for debugging</span>
+<span style="color:#f92672">import</span> warnings
+warnings<span style="color:#f92672">.</span>simplefilter(action<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ignore&#39;</span>, category<span style="color:#f92672">=</span><span style="color:#a6e22e">FutureWarning</span>)
+
+<span style="color:#75715e"># set color</span>
+sns<span style="color:#f92672">.</span>set_color_codes(<span style="color:#e6db74">&#39;pastel&#39;</span>)
+</code></pre></div><h2 id="setup--querying-data">Setup &amp; Querying Data</h2>
+<p>It is first critical to understand the dataframe to play around and make analysis. Usually, <strong><em>long-format</em></strong> data is desired (or at least I&rsquo;m used to it) for using Python and Seaborn for data visualization. Long format is basically when each variable is represented as a column, and each observation or event is a row. Below, we read in, and query the data.</p>
+<h4 id="useful-commands">Useful commands:</h4>
+<ol>
+<li><code>df.head()</code>: by default, shows first five rows of df</li>
+<li><code>df.columns()</code>: prints all the columns in df</li>
+<li><code>df.describe()</code>: provides summary description of df</li>
+<li><code>pd.read_csv(data, usecols=['col1', 'col2', ...,])</code>: can be used to filter columns</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># read in data.csv file as df &amp; see data structure</span>
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;data.csv&#39;</span>)
+
+<span style="color:#75715e"># query data by scenario and culture</span>
+bank <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#34;scenario == &#39;Bank&#39;&#34;</span>)<span style="color:#f92672">.</span>copy()
+shop <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#34;scenario == &#39;Shop&#39;&#34;</span>)<span style="color:#f92672">.</span>copy()
+kor <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#34;culture == &#39;Korea&#39;&#34;</span>)<span style="color:#f92672">.</span>copy()
+usa <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>query(<span style="color:#e6db74">&#34;culture == &#39;USA&#39;&#34;</span>)<span style="color:#f92672">.</span>copy()
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># an example of the data structure</span>
+usa<span style="color:#f92672">.</span>head()
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<hr>
+<h2 id="a-namelink1-1-pearson-correlation-coefficient-a"><!-- raw HTML omitted --> 1. Pearson Correlation Coefficient <!-- raw HTML omitted --></h2>
+<p>When we want to ask <em>&ldquo;how strongly correlated are the two variables?&quot;</em>, we can use <strong>Perason&rsquo;s Correlation</strong>. It is used to measure statistical relationship or association between two <strong><em>continuous variables</em></strong> that are linearly related to each other. The coefficient value <em>&ldquo;r&rdquo;</em> ranges from -1 (negative relation) to 1 (perfectly positive). 0 would mean that there is no relationship at all.</p>
+<h3 id="properties-of-pearson-correlation">Properties of Pearson Correlation</h3>
+<ol>
+<li>The units of the values do not affect the Pearson Correlation.
+<ul>
+<li>i.e. Changing the unit of value from cm to inches do not affect the r value</li>
+</ul>
+</li>
+<li>The correlation between the two variables is symmetric:
+<ul>
+<li>i.e. A -&gt; B is equal to B -&gt; A</li>
+</ul>
+</li>
+</ol>
+<p>** Use <strong><em>Spearman&rsquo;s Correlation</em></strong> when the two variables have non-linear relationship (e.g. a curve instead of a straight line).</p>
+<h3 id="code-implementation">Code Implementation</h3>
+<p>We use scipy package to calculate the Pearson Correlation. The method will return two values: <strong><em>r</em></strong> and <strong><em>p</em></strong> value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># let&#39;s look at the correlation of information provided by different scenarios: online banking vs. shopping</span>
+<span style="color:#75715e"># bank[&#39;percent&#39;] will return an array of percentage values</span>
+
+r, p <span style="color:#f92672">=</span> scipy<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>pearsonr(bank[<span style="color:#e6db74">&#39;percent&#39;</span>], shop[<span style="color:#e6db74">&#39;percent&#39;</span>])  
+print(<span style="color:#e6db74">&#39;r: &#39;</span> <span style="color:#f92672">+</span> str(r<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>)))
+print(<span style="color:#e6db74">&#39;p: &#39;</span> <span style="color:#f92672">+</span> str(p<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>)))
+</code></pre></div><pre><code>r: 0.7592
+p: 0.0
+</code></pre>
+<p>From the results above, we can see <strong>there is a strong positive relationship between the amount of information provided in banking and shopping.</strong> i.e. Providing information in banking would affect how a user provides personal information in shopping.</p>
+<hr>
+<h2 id="a-namelink2-2-t-test-a"><!-- raw HTML omitted --> 2. T-Test <!-- raw HTML omitted --></h2>
+<p>When comparing the means of two groups, we can use a <strong>t-test</strong>. It takes into account of the means and the spread of the data to determine <strong><em>whether a difference between the two would occur by chance or not</em></strong> (determined by the p-value being less than 0.05 usually). In a t-test, there should be only two independent variables (categorical/nominal variables) and one dependent continuous variable.</p>
+<h3 id="properties-of-t-test">Properties of t-test</h3>
+<ol>
+<li>
+<p>The data is assumed to be <strong>normal</strong> (If the distribution is skewed, use Mann-Whitney test). <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>T-test yields <strong><em>t</em></strong> and <strong><em>p</em></strong> value:<!-- raw HTML omitted -->
+2a. <strong>The higher the t, the more difference there is between the two groups.</strong> The lower the t, the more similar the two groups are.<!-- raw HTML omitted -->
+2b. T-value of 2 means the groups are twice as different from each other than they are within each other<!-- raw HTML omitted -->
+2c. <strong>The lower the p-value, the better</strong> (meaning that it is significant and the difference did not occure by chance). P-value of 0.05 means that there is 5 percent happening by chance</p>
+</li>
+</ol>
+<h3 id="code-implementation-1">Code Implementation</h3>
+<p>We use scipy package again to run a t-test. Before we decide which test to run, we can quickly plot and see the distribution like below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>distplot(df[df[<span style="color:#e6db74">&#39;scenario&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bank&#39;</span>]<span style="color:#f92672">.</span>percent)
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1c238f61d0&gt;
+</code></pre>
+<p><img src="./output_10_1.png" alt="png"></p>
+<p>The distribution looks relatively normal. We can run a t-test to see whether there is a difference between the total amount of information provided by the users from each use scenario: i.e. banking vs. shopping</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># we run a t-test to see whether there ia a difference in the amount of information provided in each scenario</span>
+t, p <span style="color:#f92672">=</span> scipy<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>ttest_ind(df[df[<span style="color:#e6db74">&#39;scenario&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bank&#39;</span>]<span style="color:#f92672">.</span>percent, df[df[<span style="color:#e6db74">&#39;scenario&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Shop&#39;</span>]<span style="color:#f92672">.</span>percent)
+print(<span style="color:#e6db74">&#39;t: &#39;</span> <span style="color:#f92672">+</span> str(t<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>)))
+print(<span style="color:#e6db74">&#39;p: &#39;</span> <span style="color:#f92672">+</span> str(p<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">6</span>)))
+</code></pre></div><pre><code>t: 4.8203
+p: 2e-06
+</code></pre>
+<p>The result above shows that there is a significant difference in the amount of information provided between two use scenarios with t-value being high, and p-value being very small. However, we don&rsquo;t actually know which scenario yields more information than the other. The t-test only tells there is a significant difference.</p>
+<p>To find out, we can create a little fancy distribution plot with some box plots:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">banking <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#39;scenario&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bank&#39;</span>]<span style="color:#f92672">.</span>percent
+shopping <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#39;scenario&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Shop&#39;</span>]<span style="color:#f92672">.</span>percent
+
+<span style="color:#75715e"># let&#39;s plot box-dist plot combined</span>
+f, (ax_box1, ax_box2, ax_dist) <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">3</span>, sharex<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+                                              gridspec_kw<span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;height_ratios&#34;</span>: (<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">1</span>)})
+
+<span style="color:#75715e"># add boxplots at the top</span>
+sns<span style="color:#f92672">.</span>boxplot(banking, ax<span style="color:#f92672">=</span>ax_box1, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>)
+sns<span style="color:#f92672">.</span>boxplot(shopping, ax<span style="color:#f92672">=</span>ax_box2, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>)
+ax_box1<span style="color:#f92672">.</span>axvline(np<span style="color:#f92672">.</span>mean(banking), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+ax_box2<span style="color:#f92672">.</span>axvline(np<span style="color:#f92672">.</span>mean(shopping), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+plt<span style="color:#f92672">.</span>subplots_adjust(top<span style="color:#f92672">=</span><span style="color:#ae81ff">0.87</span>)
+plt<span style="color:#f92672">.</span>suptitle(<span style="color:#e6db74">&#39;Amount of information provided by use scenario&#39;</span>, fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">17</span>)
+
+<span style="color:#75715e"># add distplots below</span>
+sns<span style="color:#f92672">.</span>distplot(banking, ax<span style="color:#f92672">=</span>ax_dist, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Banking&#39;</span>, kde<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, rug<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>, norm_hist<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+sns<span style="color:#f92672">.</span>distplot(shopping, ax<span style="color:#f92672">=</span>ax_dist, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Shopping&#39;</span>, kde<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, rug<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>, norm_hist<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+
+ax_dist<span style="color:#f92672">.</span>axvline(np<span style="color:#f92672">.</span>mean(banking), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+ax_dist<span style="color:#f92672">.</span>axvline(np<span style="color:#f92672">.</span>mean(shopping), color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+plt<span style="color:#f92672">.</span>legend()
+plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Percentage of information&#39;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+ax_box1<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+ax_box2<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+</code></pre></div><pre><code>[Text(0.5, 0, '')]
+</code></pre>
+<p><img src="./output_14_1.png" alt="png"></p>
+<p>From the graph above, we see that the mean of the banking is greater than the mean of shopping. This shows us that regardless of cultural background, users are more likely to provide personal information in the banking scenario.</p>
+<hr>
+<h2 id="a-namelink3-3-mann-whitney-test-a"><!-- raw HTML omitted --> 3. Mann-Whitney Test <!-- raw HTML omitted --></h2>
+<p>The Mann-Whitney Test allows you to determine if the observed difference is statistically significant without making the assumption that the values are normally distributed. You should have two independent variables and one continuous dependent variable.</p>
+<h3 id="code-implementation-2">Code Implementation</h3>
+<p>We can run the test on the same banking vs. shopping scenario.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t, p <span style="color:#f92672">=</span> scipy<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>mannwhitneyu(df[df[<span style="color:#e6db74">&#39;scenario&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bank&#39;</span>]<span style="color:#f92672">.</span>percent, df[df[<span style="color:#e6db74">&#39;scenario&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Shop&#39;</span>]<span style="color:#f92672">.</span>percent)
+print(<span style="color:#e6db74">&#39;t: &#39;</span> <span style="color:#f92672">+</span> str(t<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>)))
+print(<span style="color:#e6db74">&#39;p: &#39;</span> <span style="color:#f92672">+</span> str(p<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">6</span>)))
+</code></pre></div><pre><code>t: 14795.5
+p: 4.1e-05
+</code></pre>
+<hr>
+<h2 id="a-namelink4-4-one-way-analysis-of-variance-anova-a"><!-- raw HTML omitted --> 4. One-Way Analysis of Variance (ANOVA) <!-- raw HTML omitted --></h2>
+<p>ANOVA is similar to a t-test, but it is used when there are three or more independent variables (categorical). It assumes normal distribution (use Kruskal-Wallis if abnormal?). One-way ANOVA compares the means between the variables to test whether the difference is statistically significant. However, it does not tell you which specific groups were statistically different from one another. Thus, a post-hoc analysis is required.</p>
+<h3 id="code-implementation-3">Code Implementation</h3>
+<p>The result below suggests that there is a statistical difference in the means of the three variables.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># we can create a third variable, and compare the var1, var2, and var3 with one-way ANOVA</span>
+var3 <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#39;culture&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;USA&#39;</span>]<span style="color:#f92672">.</span>percent
+scipy<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>f_oneway(banking, shopping, var3)
+</code></pre></div><pre><code>F_onewayResult(statistic=11.171874914065159, pvalue=1.7072783704546878e-05)
+</code></pre>
+<hr>
+<h2 id="a-namelink5-5-two-way-anova-a"><!-- raw HTML omitted --> 5. Two-Way ANOVA <!-- raw HTML omitted --></h2>
+<p>A two-way ANOVA can be used when you want to know how two independent variables have an interaction effect on a dependent variable. CAVEAT: a two-way ANOVA does not tell which variable is dominant.</p>
+<h3 id="code-implementation-4">Code Implementation</h3>
+<p>Below in the code, we see <strong><em>if there is an interaction effect between culture and scenario use cases on the total amount of information provided.</em></strong> For example, would Americans be more willing to provide personal information than Koreans? If so, does the use case (either banking vs. shopping) affect at all?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># we give in a string value of each variable, and the interaction variable &#39;culture:scenario&#39;</span>
+
+model <span style="color:#f92672">=</span> ols(<span style="color:#e6db74">&#39;percent ~ culture + scenario + culture:scenario&#39;</span>, data<span style="color:#f92672">=</span>df)<span style="color:#f92672">.</span>fit()
+sm<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>anova_lm(model, typ<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<h2 id="conclusion">Conclusion</h2>
+<p>From the table above, only scenario has a sole effect on the total amount of information provided (depicted as <code>percent</code> in the dataframe). We see culture, and the interaction of culture and scenario do not have an effect on the amount of information that users provided.</p>
+<p>The finding matches with the previous t-test and graph results, where users provided more information in the banking than they would in shopping.</p>
+<!-- raw HTML omitted -->
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
+  
+  <a class="badge badge-light" href="/tags/quantitative-ux/">quantitative-ux</a>
+  
+  <a class="badge badge-light" href="/tags/cross-cultural/">cross-cultural</a>
+  
+  <a class="badge badge-light" href="/tags/statistics/">statistics</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://jinjeon.me/post/quant-ux/&amp;text=Statistical%20Data%20Analysis%20in%20Cross-Cultural%20Research" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://jinjeon.me/post/quant-ux/&amp;t=Statistical%20Data%20Analysis%20in%20Cross-Cultural%20Research" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Statistical%20Data%20Analysis%20in%20Cross-Cultural%20Research&amp;body=https://jinjeon.me/post/quant-ux/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://jinjeon.me/post/quant-ux/&amp;title=Statistical%20Data%20Analysis%20in%20Cross-Cultural%20Research" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_huf5029b22bbb9407d45fad41834988009_176697_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://jinjeon.me/">Jin Jeon</a></h5>
+      <h6 class="card-subtitle">UX Researcher</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://jinjeon.me/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jinjeon/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/jeon11" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:jinjeon@berkeley.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/data-viz/">Statistical data analysis &amp; visualization</a></li>
+      
+      <li><a href="/project/conference/">Conference presentations</a></li>
+      
+      <li><a href="/post/mutual-info/">Information Theory: Mutual Information</a></li>
+      
+      <li><a href="/post/vectorspace/">Universal Sentence Encoder and GloVe on Narrative Semantic Representation</a></li>
+      
+      <li><a href="/post/eeg-advanced/">EEG/Signal Processing--Advanced Part 2</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python,%20r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.b59fdb6275ef5e6e2859c30582fc271a.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2024 developed by Jin with HTML/CSS/Markdown and ☕️ <!-- raw HTML omitted --> &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

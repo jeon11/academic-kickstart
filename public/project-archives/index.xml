@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project-archives | Jin Jeon</title>
+    <link>https://jinjeon.me/project-archives/</link>
+      <atom:link href="https://jinjeon.me/project-archives/index.xml" rel="self" type="application/rss+xml" />
+    <description>Project-archives</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 developed by Jin with HTML/CSS/Markdown and ☕️ </copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jinjeon.me/img/icon.png</url>
+      <title>Project-archives</title>
+      <link>https://jinjeon.me/project-archives/</link>
+    </image>
+    
+    <item>
+      <title>Coffitok (Graduate course project)</title>
+      <link>https://jinjeon.me/project-archives/coffitok/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project-archives/coffitok/</guid>
+      <description>&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>fMRI Neuroimaging &amp; Classifier Coming Soon...</title>
+      <link>https://jinjeon.me/project-archives/fmri/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project-archives/fmri/</guid>
+      <description>&lt;p&gt;In prep for fMRI neuroimaging processing and building classifier&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tangible UI: Augmented Shadow Play</title>
+      <link>https://jinjeon.me/project-archives/shadowplay/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project-archives/shadowplay/</guid>
+      <description>&lt;p&gt;Shadow casting possess different physical affordances that follow the laws of physics. Different shadow shapes and patterns can be created by manipulating the shadow’s light source direction and intensity, the physical object’s distance and angle, and the texture of the surface in which the shadow is casted. These physical properties can be used by the operator to create creative patterns with the projected shadows. Some of these physical affordances include playing with the shadow’s movement, superposing different object’s shadows and scaling the shadow’s size by moving the physical object closer or further from the light source. As aesthetically pleasing with its unique black and white contrast, shadows are a fascinating form of media that can create different textures and details based on the skill of the user.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;img src=&#34;https://jinjeon.me/img/shadowplay/test.gif&#34; alt=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt; Shadow Play aims to enhance such a playful shadow experience to more advanced creative form of art by allowing users digitally manipulate their shadows. By adding new digital affordances Shadow Play, users can print and add layers of multiple shadows onto the screen, and invigorate them with animated effects and motions. With such various mix of augmented shadow effects, users can utilize their body as a tool for creating their own unique shadow artwork and animations.&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://jinjeon.me/pdf/ShadowPlay.pdf&#34;&gt;See full paper&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Summary of interaction:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Input/Output:&lt;/strong&gt; Shadow Play requires ample activity space for interaction. The system recognizes the user within the activity space, and then displays the digitally augmented shadow onto the projected screen. Optimizing the interaction was one of our key concerns. With camera as an input device for users to communicate with Shadow Play, we wanted to depict the metaphor of users &lt;em&gt;taking pictures&lt;/em&gt; and &lt;em&gt;filming&lt;/em&gt; the creation. By selecting different features, such as snapshot, mirror, effects, and loop, users can create unique patterns and artwork. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/setup.jpg&#34; alt=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Interaction:&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;1. Setting the environment:&lt;/strong&gt; With the shoot feature, users can add layers of current shadows to the previous ones. Users can create static shadows, in which we refer to as background/environment of the artwork. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/env.gif&#34; alt=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;2. Adding in motion and effects:&lt;/strong&gt; After the environment has been set, users can enliven the shadow by adding in animated motions and effects. The loop feature, mainly inspired by Instagram, records the motion of shadows and then is automatically looped. By adding in the fireball effect, Shadow Play recognizes the hand motion of reaching out, which then shoots out a fireball from the tip of the hand. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/motion.gif&#34; alt=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;3. Advanced: Mirror and Patterns:&lt;/strong&gt; The mirror feature allows users to create symmetrical images and animation. The mirror feature is especially useful for creating patterns and symmetrical image, such as butterfly. &lt;img src=&#34;https://jinjeon.me/img/shadowplay/mirror.gif&#34; alt=&#34;&#34;&gt;&lt;!-- raw HTML omitted --&gt;With the mix of these features, users can create shadow artwork in playful environment. Shadow Play resembles the thought process and planning of an actual painting. Just as an artist would plan ahead where certain objects would be placed within the space before making the strokes, Shadow Play users have to deliberately organize the angle and distance of their body in order to perfect the layers of shadow into a single object shape. Such deliberation allows for more playful and interactive activity. By having the augmented shadows displayed on the screen, there is a loop of feedback and manipulation as users constantly refer to the captured shadow to make adjustments accordingly.&amp;quot;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Prioritization in Classification of Novel Objects</title>
+      <link>https://jinjeon.me/project-archives/featureprioritization/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project-archives/featureprioritization/</guid>
+      <description>&lt;p&gt;Object classification is essential to human learning as it helps us cope with various stimulus around the world. Regardless of multiple features within a single object, object classification seems to occur seamlessly within our cognitive process. In this experiment, we test how we prioritize each feature within an object and how these features are weighted when we categorize a certain object. Test subjects were given novel shapes that each featured either size, color, or orientation, and had to determine whether the shape belongs to a category of a given prototypical shape. &lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt; The preliminary result showed that color was the single most determining feature when categorizing an object, showing 72.6% of incorporation in all trials, while orientation was the least with 60.7%, but the differences were not statistically significant. We further went on to use logistic regression to analyze the result, which showed thresholds for identifying a novel object to be in a certain category. However, these thresholds for each feature was not significantly different. The experiment suggests that categorization is more of an elaborate and holistic process that combines different features when categorizing a novel object.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Yelp Dataset Challenge</title>
+      <link>https://jinjeon.me/project-archives/yelp/</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project-archives/yelp/</guid>
+      <description>&lt;p&gt;By analyzing Yelp’s dataset, specifically star ratings and text reviews, we created a classifier that predicts whether reviews are positive (star ratings of four or five) or negative (star ratings of one or two). We excluded star ratings of three because we weren’t sure whether they were positive or negative. While Yelp’s star ratings are helpful for concise overview of local businesses, they are also crucial metrics for businesses as the ratings reflect their reputations. However, we realized that star ratings are often misleading as they are subject to user bias and preference. Thus, we wanted to predict ratings solely based on textual features of the reviews and exclude any potential human errors and biases. Performing logistic regression with the combined five features, we were able to correctly predict the reviews with an overall accuracy of 79%.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Homy, private social network for families</title>
+      <link>https://jinjeon.me/project-archives/homy/</link>
+      <pubDate>Tue, 10 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/project-archives/homy/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Timeline: &lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;June 2015 - Nov 2015 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;impact&#34;&gt;Impact&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I received 5K funding from Rehoboth Business Idea Competition&lt;/li&gt;
+&lt;li&gt;State government support with free office space in the tech hub valley&lt;/li&gt;
+&lt;li&gt;Developed storyboard and high fidelity prototype through iterations of market research, surveys, and user testing&lt;/li&gt;
+&lt;li&gt;Hired a software engineer to develop into an app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;p&gt;We are spending the least time with the most important people in our lives, family, while spending more and more time with strangers, coworkers and friends. The cause of the problem has been generally identified as increased work and commute time, and busier individual routines.&lt;/p&gt;
+&lt;h2 id=&#34;design-question&#34;&gt;Design Question&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;
+&lt;p&gt;Homy attempts to solve this growing social problem by recreating online home and allowing families to seamlessly connect. With unique post-it style fridge page, Homy wants to encourage families to communicate more often. The mission is &lt;em&gt;to provide emotional communication service to enrich family’s real, offline relationship.&lt;/em&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;homyui.png&#34; data-caption=&#34;Click to see in large view.  My initial iteration of the prototype using Proto.io The Fridge, the landing page, recreates the experience of having post-it notes on the kitchen fridge&#34;&gt;
+&lt;img src=&#34;homyui.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view. &lt;!-- raw HTML omitted --&gt; My initial iteration of the prototype using Proto.io&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;The Fridge, the landing page, recreates the experience of having post-it notes on the kitchen fridge
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-1.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-1.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-2.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-2.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-3.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-3.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-4.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-4.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;Homy_A2-5.png&#34; data-caption=&#34;Click to see in large view&#34;&gt;
+&lt;img src=&#34;Homy_A2-5.png&#34; alt=&#34;&#34; width=&#34;full&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    &lt;strong&gt;Click to see in large view&lt;/strong&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Check more at:&lt;!-- raw HTML omitted --&gt;
+&amp;lt;a href=&amp;quot;/pdf/Homy_A1.pdf&amp;quot; target=&amp;quot;&lt;em&gt;blank&amp;quot;&lt;/em&gt;&amp;gt; &lt;strong&gt;Defining Market Opportunity.pdf&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

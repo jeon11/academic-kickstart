@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cross-cultural | Jin Jeon</title>
+    <link>https://jinjeon.me/tags/cross-cultural/</link>
+      <atom:link href="https://jinjeon.me/tags/cross-cultural/index.xml" rel="self" type="application/rss+xml" />
+    <description>cross-cultural</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 developed by Jin with HTML/CSS/Markdown and ☕️ </copyright><lastBuildDate>Mon, 22 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jinjeon.me/img/icon.png</url>
+      <title>cross-cultural</title>
+      <link>https://jinjeon.me/tags/cross-cultural/</link>
+    </image>
+    
+    <item>
+      <title>Statistical Data Analysis in Cross-Cultural Research</title>
+      <link>https://jinjeon.me/post/quant-ux/</link>
+      <pubDate>Mon, 22 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/post/quant-ux/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;I use survey data collected from Amazon Mechanical Turk and Reddit user groups (all personal data  have been removed) in a study to examine the impact of cultural localization on web-based account creation between American and Korean users. I use the experiment data to display basic statistical tests in Python.&lt;/p&gt;
+&lt;h3 id=&#34;research-question&#34;&gt;Research Question:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Is there a difference in providing personal information between USA and Korean Internet users &lt;!-- raw HTML omitted --&gt;
+within two different use scenarios: online banking and shopping?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I use the following tests:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link1&#34;&gt;Pearson Correlation Coefficient&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link2&#34;&gt;T-Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link3&#34;&gt;Mann-Whitney Test&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link4&#34;&gt;One-Way Analysis of Variance (ANOVA)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;#link5&#34;&gt;Two-Way ANOVA&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; seaborn &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; sns
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; scipy
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; matplotlib &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pyplot
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; plt
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; statsmodels.formula.api &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; ols
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; statsmodels.formula.api &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; smf
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; statsmodels.api &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; sm
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; statsmodels.stats.anova &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; AnovaRM
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pdb  &lt;span style=&#34;color:#75715e&#34;&gt;# for debugging&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; warnings
+warnings&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;simplefilter(action&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ignore&amp;#39;&lt;/span&gt;, category&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FutureWarning&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# set color&lt;/span&gt;
+sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_color_codes(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pastel&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup--querying-data&#34;&gt;Setup &amp;amp; Querying Data&lt;/h2&gt;
+&lt;p&gt;It is first critical to understand the dataframe to play around and make analysis. Usually, &lt;strong&gt;&lt;em&gt;long-format&lt;/em&gt;&lt;/strong&gt; data is desired (or at least I&amp;rsquo;m used to it) for using Python and Seaborn for data visualization. Long format is basically when each variable is represented as a column, and each observation or event is a row. Below, we read in, and query the data.&lt;/p&gt;
+&lt;h4 id=&#34;useful-commands&#34;&gt;Useful commands:&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;df.head()&lt;/code&gt;: by default, shows first five rows of df&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df.columns()&lt;/code&gt;: prints all the columns in df&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df.describe()&lt;/code&gt;: provides summary description of df&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pd.read_csv(data, usecols=[&#39;col1&#39;, &#39;col2&#39;, ...,])&lt;/code&gt;: can be used to filter columns&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# read in data.csv file as df &amp;amp; see data structure&lt;/span&gt;
+df &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# query data by scenario and culture&lt;/span&gt;
+bank &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;query(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scenario == &amp;#39;Bank&amp;#39;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
+shop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;query(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scenario == &amp;#39;Shop&amp;#39;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
+kor &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;query(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;culture == &amp;#39;Korea&amp;#39;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
+usa &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;query(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;culture == &amp;#39;USA&amp;#39;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# an example of the data structure&lt;/span&gt;
+usa&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-namelink1-1-pearson-correlation-coefficient-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 1. Pearson Correlation Coefficient &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;When we want to ask &lt;em&gt;&amp;ldquo;how strongly correlated are the two variables?&amp;quot;&lt;/em&gt;, we can use &lt;strong&gt;Perason&amp;rsquo;s Correlation&lt;/strong&gt;. It is used to measure statistical relationship or association between two &lt;strong&gt;&lt;em&gt;continuous variables&lt;/em&gt;&lt;/strong&gt; that are linearly related to each other. The coefficient value &lt;em&gt;&amp;ldquo;r&amp;rdquo;&lt;/em&gt; ranges from -1 (negative relation) to 1 (perfectly positive). 0 would mean that there is no relationship at all.&lt;/p&gt;
+&lt;h3 id=&#34;properties-of-pearson-correlation&#34;&gt;Properties of Pearson Correlation&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;The units of the values do not affect the Pearson Correlation.
+&lt;ul&gt;
+&lt;li&gt;i.e. Changing the unit of value from cm to inches do not affect the r value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The correlation between the two variables is symmetric:
+&lt;ul&gt;
+&lt;li&gt;i.e. A -&amp;gt; B is equal to B -&amp;gt; A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;** Use &lt;strong&gt;&lt;em&gt;Spearman&amp;rsquo;s Correlation&lt;/em&gt;&lt;/strong&gt; when the two variables have non-linear relationship (e.g. a curve instead of a straight line).&lt;/p&gt;
+&lt;h3 id=&#34;code-implementation&#34;&gt;Code Implementation&lt;/h3&gt;
+&lt;p&gt;We use scipy package to calculate the Pearson Correlation. The method will return two values: &lt;strong&gt;&lt;em&gt;r&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt; value.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# let&amp;#39;s look at the correlation of information provided by different scenarios: online banking vs. shopping&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# bank[&amp;#39;percent&amp;#39;] will return an array of percentage values&lt;/span&gt;
+
+r, p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scipy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stats&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pearsonr(bank[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;percent&amp;#39;&lt;/span&gt;], shop[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;percent&amp;#39;&lt;/span&gt;])  
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;r: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(r&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)))
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;p: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(p&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;r: 0.7592
+p: 0.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From the results above, we can see &lt;strong&gt;there is a strong positive relationship between the amount of information provided in banking and shopping.&lt;/strong&gt; i.e. Providing information in banking would affect how a user provides personal information in shopping.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-namelink2-2-t-test-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 2. T-Test &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;When comparing the means of two groups, we can use a &lt;strong&gt;t-test&lt;/strong&gt;. It takes into account of the means and the spread of the data to determine &lt;strong&gt;&lt;em&gt;whether a difference between the two would occur by chance or not&lt;/em&gt;&lt;/strong&gt; (determined by the p-value being less than 0.05 usually). In a t-test, there should be only two independent variables (categorical/nominal variables) and one dependent continuous variable.&lt;/p&gt;
+&lt;h3 id=&#34;properties-of-t-test&#34;&gt;Properties of t-test&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The data is assumed to be &lt;strong&gt;normal&lt;/strong&gt; (If the distribution is skewed, use Mann-Whitney test). &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;T-test yields &lt;strong&gt;&lt;em&gt;t&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt; value:&lt;!-- raw HTML omitted --&gt;
+2a. &lt;strong&gt;The higher the t, the more difference there is between the two groups.&lt;/strong&gt; The lower the t, the more similar the two groups are.&lt;!-- raw HTML omitted --&gt;
+2b. T-value of 2 means the groups are twice as different from each other than they are within each other&lt;!-- raw HTML omitted --&gt;
+2c. &lt;strong&gt;The lower the p-value, the better&lt;/strong&gt; (meaning that it is significant and the difference did not occure by chance). P-value of 0.05 means that there is 5 percent happening by chance&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;code-implementation-1&#34;&gt;Code Implementation&lt;/h3&gt;
+&lt;p&gt;We use scipy package again to run a t-test. Before we decide which test to run, we can quickly plot and see the distribution like below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distplot(df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scenario&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Bank&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x1c238f61d0&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./output_10_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The distribution looks relatively normal. We can run a t-test to see whether there is a difference between the total amount of information provided by the users from each use scenario: i.e. banking vs. shopping&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# we run a t-test to see whether there ia a difference in the amount of information provided in each scenario&lt;/span&gt;
+t, p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scipy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stats&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ttest_ind(df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scenario&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Bank&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent, df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scenario&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Shop&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent)
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(t&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)))
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;p: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(p&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;t: 4.8203
+p: 2e-06
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The result above shows that there is a significant difference in the amount of information provided between two use scenarios with t-value being high, and p-value being very small. However, we don&amp;rsquo;t actually know which scenario yields more information than the other. The t-test only tells there is a significant difference.&lt;/p&gt;
+&lt;p&gt;To find out, we can create a little fancy distribution plot with some box plots:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;banking &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scenario&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Bank&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent
+shopping &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scenario&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Shop&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# let&amp;#39;s plot box-dist plot combined&lt;/span&gt;
+f, (ax_box1, ax_box2, ax_dist) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;subplots(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, sharex&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;,
+                                              gridspec_kw&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;height_ratios&amp;#34;&lt;/span&gt;: (&lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)})
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# add boxplots at the top&lt;/span&gt;
+sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;boxplot(banking, ax&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ax_box1, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;)
+sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;boxplot(shopping, ax&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ax_box2, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;)
+ax_box1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;axvline(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean(banking), color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;, linestyle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--&amp;#39;&lt;/span&gt;)
+ax_box2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;axvline(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean(shopping), color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;, linestyle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;subplots_adjust(top&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.87&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;suptitle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Amount of information provided by use scenario&amp;#39;&lt;/span&gt;, fontsize &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;17&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# add distplots below&lt;/span&gt;
+sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distplot(banking, ax&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ax_dist, label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Banking&amp;#39;&lt;/span&gt;, kde&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, rug&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;, norm_hist&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, bins&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;distplot(shopping, ax&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ax_dist, label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Shopping&amp;#39;&lt;/span&gt;, kde&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, rug&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;, norm_hist&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, bins&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+
+ax_dist&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;axvline(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean(banking), color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;, linestyle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--&amp;#39;&lt;/span&gt;)
+ax_dist&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;axvline(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean(shopping), color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;, linestyle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;--&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;legend()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Percentage of information&amp;#39;&lt;/span&gt;, fontsize&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;)
+ax_box1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set(xlabel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;)
+ax_box2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set(xlabel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[Text(0.5, 0, &#39;&#39;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./output_14_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;From the graph above, we see that the mean of the banking is greater than the mean of shopping. This shows us that regardless of cultural background, users are more likely to provide personal information in the banking scenario.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-namelink3-3-mann-whitney-test-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 3. Mann-Whitney Test &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;The Mann-Whitney Test allows you to determine if the observed difference is statistically significant without making the assumption that the values are normally distributed. You should have two independent variables and one continuous dependent variable.&lt;/p&gt;
+&lt;h3 id=&#34;code-implementation-2&#34;&gt;Code Implementation&lt;/h3&gt;
+&lt;p&gt;We can run the test on the same banking vs. shopping scenario.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;t, p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scipy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stats&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mannwhitneyu(df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scenario&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Bank&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent, df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scenario&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Shop&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent)
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(t&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)))
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;p: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(p&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;t: 14795.5
+p: 4.1e-05
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-namelink4-4-one-way-analysis-of-variance-anova-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 4. One-Way Analysis of Variance (ANOVA) &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;ANOVA is similar to a t-test, but it is used when there are three or more independent variables (categorical). It assumes normal distribution (use Kruskal-Wallis if abnormal?). One-way ANOVA compares the means between the variables to test whether the difference is statistically significant. However, it does not tell you which specific groups were statistically different from one another. Thus, a post-hoc analysis is required.&lt;/p&gt;
+&lt;h3 id=&#34;code-implementation-3&#34;&gt;Code Implementation&lt;/h3&gt;
+&lt;p&gt;The result below suggests that there is a statistical difference in the means of the three variables.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# we can create a third variable, and compare the var1, var2, and var3 with one-way ANOVA&lt;/span&gt;
+var3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;culture&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;USA&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;percent
+scipy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stats&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;f_oneway(banking, shopping, var3)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;F_onewayResult(statistic=11.171874914065159, pvalue=1.7072783704546878e-05)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-namelink5-5-two-way-anova-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 5. Two-Way ANOVA &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;A two-way ANOVA can be used when you want to know how two independent variables have an interaction effect on a dependent variable. CAVEAT: a two-way ANOVA does not tell which variable is dominant.&lt;/p&gt;
+&lt;h3 id=&#34;code-implementation-4&#34;&gt;Code Implementation&lt;/h3&gt;
+&lt;p&gt;Below in the code, we see &lt;strong&gt;&lt;em&gt;if there is an interaction effect between culture and scenario use cases on the total amount of information provided.&lt;/em&gt;&lt;/strong&gt; For example, would Americans be more willing to provide personal information than Koreans? If so, does the use case (either banking vs. shopping) affect at all?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# we give in a string value of each variable, and the interaction variable &amp;#39;culture:scenario&amp;#39;&lt;/span&gt;
+
+model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ols(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;percent ~ culture + scenario + culture:scenario&amp;#39;&lt;/span&gt;, data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;df)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit()
+sm&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stats&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;anova_lm(model, typ&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;From the table above, only scenario has a sole effect on the total amount of information provided (depicted as &lt;code&gt;percent&lt;/code&gt; in the dataframe). We see culture, and the interaction of culture and scenario do not have an effect on the amount of information that users provided.&lt;/p&gt;
+&lt;p&gt;The finding matches with the previous t-test and graph results, where users provided more information in the banking than they would in shopping.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

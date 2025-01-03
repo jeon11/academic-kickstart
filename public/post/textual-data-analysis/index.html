@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jin Jeon">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Analyzing textual data from Google survey to drive insights through NLP and visualization">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jinjeon.me/post/textual-data-analysis/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jinjeon.me/post/textual-data-analysis/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Jin Jeon">
+  <meta property="og:url" content="https://jinjeon.me/post/textual-data-analysis/">
+  <meta property="og:title" content="Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API | Jin Jeon">
+  <meta property="og:description" content="Analyzing textual data from Google survey to drive insights through NLP and visualization"><meta property="og:image" content="https://jinjeon.me/img/headers/textual-header.png">
+  <meta property="twitter:image" content="https://jinjeon.me/img/headers/textual-header.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-05-01T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-05-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jinjeon.me/post/textual-data-analysis/"
+  },
+  "headline": "Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API",
+  
+  "datePublished": "2021-05-01T00:00:00Z",
+  "dateModified": "2021-05-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jin Jeon"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jin Jeon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jinjeon.me/img/icon.png"
+    }
+  },
+  "description": "Analyzing textual data from Google survey to drive insights through NLP and visualization"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API | Jin Jeon</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/icon.png" alt="Jin Jeon"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About Me</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span></span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+<div class="article-header">
+  
+  
+  <img src="/img/headers/textual-header.png" class="article-banner" alt="">
+  
+
+  <span class="article-header-caption">Wordcloud Representation of User Data</span>
+</div>
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sat, May 1, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    17 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <!-- raw HTML omitted -->
+<h3 id="table-of-contents">Table of Contents</h3>
+<ol>
+<li><a href="#link1">What is Google Cloud API?</a></li>
+<li><a href="#link2">Survey Data in User Research</a></li>
+<li><a href="#link3">Natural Language API Features</a><!-- raw HTML omitted -->
+3.1 <a href="#link3.1">Entity Analysis</a><!-- raw HTML omitted -->
+3.2 <a href="#link3.2">Sentiment Analysis</a><!-- raw HTML omitted -->
+3.3 <a href="#link3.3">Entity Sentiment Analysis</a><!-- raw HTML omitted --></li>
+<li><a href="#link4">Loading in data using Google Sheets API</a></li>
+<li><a href="#link5">Dataset</a></li>
+<li><a href="#link6">Data Analysis</a></li>
+<li><a href="#link7">Research Question</a><!-- raw HTML omitted -->
+7.1 <a href="#link7.1">A. Health Rating by Gender</a><!-- raw HTML omitted -->
+7.2 <a href="#link7.2">B. Health Rating by Age Group</a><!-- raw HTML omitted -->
+7.3 <a href="#link7.3">C. T-test for Statistical Signifcance</a><!-- raw HTML omitted -->
+7.4 <a href="#link7.4">D. Health Rating by Age &amp; Gender Group</a><!-- raw HTML omitted -->
+7.5 <a href="#link7.5">E. Iteratively Running t-test Within Each Age Group</a><!-- raw HTML omitted --></li>
+<li><a href="#link8">Data Visualization</a><!-- raw HTML omitted -->
+8.1 <a href="#link8.1">Characterizing Textual Data Through Wordcloud</a><!-- raw HTML omitted --></li>
+<li><a href="#link9">Conclusion</a><!-- raw HTML omitted --></li>
+</ol>
+<!-- raw HTML omitted -->
+<h3 id="a-namelink1-what-is-google-cloud-api-a"><!-- raw HTML omitted --> What is Google Cloud API? <!-- raw HTML omitted --></h3>
+<p><strong>Google Cloud Platform</strong> is a suite of cloud computing services that lets developers interact with APIs that involve data storage, data analytics, and machine learning. In this notebook, I build on to the previous notebook to call in the spreadsheets from Google Drive, and run textual data analysis using the Cloud Natural Language API and vector space models.</p>
+<p><strong><a href="https://cloud.google.com/natural-language">Natural Language AI</a></strong> is an API available in Google Cloud. It uses machine learning to analyze texts through sentiment analysis and extract information about the text itself. It offers three types of models:</p>
+<ol>
+<li><strong>Auto ML</strong>: that allows you to train your own model</li>
+<li><strong><!-- raw HTML omitted -->Natural Language API<!-- raw HTML omitted --></strong>: that offers pre-trained models to quickly boot up NLP.</li>
+<li><strong>Healthcare Natural Language AI</strong>: that is specific for medical texts.</li>
+</ol>
+<p>For the sake of time scope and complexity of the project, let&rsquo;s use the Natural Language API to call in a pre-trained model to analyze textual data. The demo of the model can be found online here: <a href="https://cloud.google.com/natural-language">https://cloud.google.com/natural-language</a>.</p>
+<h3 id="a-namelink2-survey-data-in-user-research-a"><!-- raw HTML omitted --> Survey Data in User Research <!-- raw HTML omitted --></h3>
+<p>As a UX researcher, survey studies are essential for understanding the users because they can be quickly developed and sent out to receive a good amount of sample in a short period of time. <strong>Surveys are powerful tools to be utilized for conducting preliminary research at the discovery stage to explore the general problem space and user behaviors.</strong></p>
+<p>One of the free and efficient tools is the Google Forms. While it can automatically generate pie graphs and bar graphs to summarize the survey results, the results are often too limited. <strong>As researchers, we might be interested in learning more in depth about the data. After all, it is researchers' role to develop a keen sense to analyze the data and drive insights.</strong></p>
+<p>For instance, the screenshots below show sample summaries of what Google Form summary is capable of doing.</p>
+<h4 id="breakdown-of-participants-age-range">Breakdown of participants' age range</h4>
+<p><img src="./age.png" alt="Age Breakdown"></p>
+<h4 id="participants-self-perception-of-their-health-wellness">Participants' self perception of their health wellness</h4>
+<p><img src="./rating.png" alt="Rating by Participants"></p>
+<p><strong>The graphs above do not show any relationship between the data.</strong> To drive more meaningful insights, we would want to explore if there are any relationships between the data. For example, we would want to know how self perception of health wellness varies by different age groups. Do older people perceive themselves to be less healthy than young people do? While the ratings are subjective, the analysis itself can hint towards meaningful insights.</p>
+<h4 id="objectives">Objectives</h4>
+<p><strong>I use GoogleSheets API to call in the data and analyze the survey results to visualize the relationship between data and test statistical significance. I also incorporate Natural Language API to analyze textual data collected from the survey, and visualize them through violin graphs and word cloud.</strong></p>
+<!-- raw HTML omitted -->
+<h2 id="a-namelink3-natural-language-api-features-a"><!-- raw HTML omitted --> Natural Language API Features <!-- raw HTML omitted --></h2>
+<p><strong>Before diving straight to working with data, let&rsquo;s take a look at some of the features of NL API.</strong></p>
+<h3 id="setup">Setup</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Imports the Google Cloud client library</span>
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">from</span> google.cloud <span style="color:#f92672">import</span> language_v1
+
+<span style="color:#75715e"># set environment for credentials (need to be called with every start of instance)</span>
+<span style="color:#75715e"># refer the reference tab for setting credentials</span>
+os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;GOOGLE_APPLICATION_CREDENTIALS&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/Users/Jin/google-cloud-sdk/natural-language-api.json&#34;</span>
+
+<span style="color:#75715e"># Instantiates a client</span>
+client <span style="color:#f92672">=</span> language_v1<span style="color:#f92672">.</span>LanguageServiceClient()
+
+<span style="color:#75715e"># Available types: PLAIN_TEXT, HTML</span>
+type_ <span style="color:#f92672">=</span> language_v1<span style="color:#f92672">.</span>Document<span style="color:#f92672">.</span>Type<span style="color:#f92672">.</span>PLAIN_TEXT
+
+encoding_type <span style="color:#f92672">=</span> language_v1<span style="color:#f92672">.</span>EncodingType<span style="color:#f92672">.</span>UTF8
+</code></pre></div><p>For the scope of this project, let&rsquo;s look at some specific methods that NL API offers.</p>
+<p><strong>1. Entity analysis</strong><!-- raw HTML omitted -->
+<strong>2. Sentiment analysis</strong><!-- raw HTML omitted -->
+<strong>3. Entity Sentiment analysis</strong></p>
+<h3 id="a-namelink31-1-entity-analysis-a"><!-- raw HTML omitted --> 1. Entity analysis <!-- raw HTML omitted --></h3>
+<p><code>analyze_entities</code>: inspects the given text for known entities (proper nouns such as public figures, landmarks, etc.), and returns information about those entities.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># grab a random text from wikipedia</span>
+text <span style="color:#f92672">=</span> <span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;The University of Washington is a public research university in Seattle, Washington.</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">        Ana Mari Cauce is the president.&#34;</span>
+
+document <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;content&#34;</span>: text, <span style="color:#e6db74">&#34;type_&#34;</span>: type_}
+
+response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>analyze_entities(request <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;document&#39;</span>: document, <span style="color:#e6db74">&#39;encoding_type&#39;</span>: encoding_type})
+
+<span style="color:#75715e"># Loop through entitites returned from the API</span>
+<span style="color:#66d9ef">for</span> entity <span style="color:#f92672">in</span> response<span style="color:#f92672">.</span>entities:
+    print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Entity name: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(entity<span style="color:#f92672">.</span>name))
+
+    <span style="color:#75715e"># Get entity type, e.g. PERSON, LOCATION, ADDRESS, NUMBER, et al</span>
+    print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Entity type: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(language_v1<span style="color:#f92672">.</span>Entity<span style="color:#f92672">.</span>Type(entity<span style="color:#f92672">.</span>type_)<span style="color:#f92672">.</span>name))
+
+    <span style="color:#75715e"># Get the salience score associated with the entity in the [0, 1.0] range</span>
+    print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Salience score: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(entity<span style="color:#f92672">.</span>salience) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div><pre><code>Entity name: University of Washington
+Entity type: ORGANIZATION
+Salience score: 0.7374827265739441
+
+Entity name: Ana Mari Cauce
+Entity type: PERSON
+Salience score: 0.11040862649679184
+
+Entity name: Washington
+Entity type: LOCATION
+Salience score: 0.07763731479644775
+
+Entity name: Seattle
+Entity type: LOCATION
+Salience score: 0.07447130978107452
+</code></pre>
+<h3 id="a-namelink32-2-sentiment-analysis-a"><!-- raw HTML omitted --> 2. Sentiment analysis <!-- raw HTML omitted --></h3>
+<p><code>analyze_sentiment</code>: inspects the given text and identifies the prevailing emotional opinion within the text, especially to determine a writer&rsquo;s attitude as positive, negative, or neutral.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyze_sentiment</span>(text):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    a simple function created to run sentiment analysis for a given text.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    text : str
+</span><span style="color:#e6db74">        string of text to be analyzed
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    sentiment.score: float
+</span><span style="color:#e6db74">        sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    sentiment.magnitude: float
+</span><span style="color:#e6db74">        a non-negative number in the [0, +inf) range, which represents the absolute </span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">        magnitude of sentiment regardless of score (positive or negative).
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    document <span style="color:#f92672">=</span> language_v1<span style="color:#f92672">.</span>Document(content<span style="color:#f92672">=</span>text, type_<span style="color:#f92672">=</span>language_v1<span style="color:#f92672">.</span>Document<span style="color:#f92672">.</span>Type<span style="color:#f92672">.</span>PLAIN_TEXT)
+
+    <span style="color:#75715e"># Detects the sentiment of the text</span>
+    sentiment <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>analyze_sentiment(request<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;document&#39;</span>: document})<span style="color:#f92672">.</span>document_sentiment
+
+    print(<span style="color:#e6db74">&#34;Text: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(text))
+    print(<span style="color:#e6db74">&#34;Sentiment: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(sentiment<span style="color:#f92672">.</span>score, sentiment<span style="color:#f92672">.</span>magnitude))
+
+    <span style="color:#66d9ef">return</span> sentiment<span style="color:#f92672">.</span>score, sentiment<span style="color:#f92672">.</span>magnitude
+</code></pre></div><p>Let&rsquo;s try feeding in some random sentences and see how sentiments come out.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># The text to analyze</span>
+text <span style="color:#f92672">=</span> <span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;The dish was delightfully surprising.&#34;</span>
+text2 <span style="color:#f92672">=</span> <span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;The overall experience was terrible.&#34;</span>
+
+analyze_sentiment(text)
+print(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+_, _ <span style="color:#f92672">=</span> analyze_sentiment(text2)
+</code></pre></div><pre><code>Text: The dish was delightfully surprising.
+Sentiment: 0.8999999761581421, 0.8999999761581421
+
+
+Text: The overall experience was terrible.
+Sentiment: -0.800000011920929, 0.800000011920929
+</code></pre>
+<h3 id="a-namelink33-3-entity-sentiment-analysis-a"><!-- raw HTML omitted --> 3. Entity sentiment analysis <!-- raw HTML omitted --></h3>
+<p><code>analyze_entity_sentiment</code>: combines both entity analysis and sentiment analysis and attempts to determine the sentiment (positive or negative) expressed about entities within the text.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyze_entity_sentiment</span>(text):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    a simple function to run entity sentiment analysis for a given text.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    text : str
+</span><span style="color:#e6db74">        string of text to be analyzed
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    entity.name: str
+</span><span style="color:#e6db74">        name of the entity identified
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    entity.type.name: str
+</span><span style="color:#e6db74">        type of the entity identified
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    sentiment.score: float
+</span><span style="color:#e6db74">        sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    sentiment.magnitude: float
+</span><span style="color:#e6db74">        a non-negative number in the [0, +inf) range, which represents the absolute </span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">        magnitude of sentiment regardless of score (positive or negative).
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    document <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;content&#34;</span>: text, <span style="color:#e6db74">&#34;type_&#34;</span>: type_}
+
+    encoding_type <span style="color:#f92672">=</span> language_v1<span style="color:#f92672">.</span>EncodingType<span style="color:#f92672">.</span>UTF8
+
+    response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>analyze_entity_sentiment(request <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;document&#39;</span>: document, <span style="color:#e6db74">&#39;encoding_type&#39;</span>: encoding_type})
+    <span style="color:#75715e"># Loop through entitites returned from the API</span>
+    <span style="color:#66d9ef">for</span> entity <span style="color:#f92672">in</span> response<span style="color:#f92672">.</span>entities:
+        print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Entity name: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(entity<span style="color:#f92672">.</span>name))
+
+        <span style="color:#75715e"># Get entity type, e.g. PERSON, LOCATION, ADDRESS, NUMBER, et al</span>
+        print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Entity type: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(language_v1<span style="color:#f92672">.</span>Entity<span style="color:#f92672">.</span>Type(entity<span style="color:#f92672">.</span>type_)<span style="color:#f92672">.</span>name))
+
+        <span style="color:#75715e"># Get the salience score associated with the entity in the [0, 1.0] range</span>
+        print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Salience score: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(entity<span style="color:#f92672">.</span>salience))
+
+        <span style="color:#75715e"># Get the aggregate sentiment expressed for this entity in the provided document.</span>
+        sentiment <span style="color:#f92672">=</span> entity<span style="color:#f92672">.</span>sentiment
+        print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Entity sentiment score: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(sentiment<span style="color:#f92672">.</span>score))
+        print(<span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;Entity sentiment magnitude: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(sentiment<span style="color:#f92672">.</span>magnitude))
+        print(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+
+    <span style="color:#66d9ef">return</span> entity<span style="color:#f92672">.</span>name, language_v1<span style="color:#f92672">.</span>Entity<span style="color:#f92672">.</span>Type(entity<span style="color:#f92672">.</span>type_)<span style="color:#f92672">.</span>name, sentiment<span style="color:#f92672">.</span>score, sentiment<span style="color:#f92672">.</span>magnitude
+</code></pre></div><p>Let&rsquo;s try feeding in one neutral sentence, and a positive sentence.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">text <span style="color:#f92672">=</span> <span style="color:#e6db74">u</span><span style="color:#e6db74">&#34;The University of Washington is a public research university in Seattle, Washington.</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">        The HCDE Department offers amazing opportunities to study UX and HCI.&#34;</span>
+
+_, _, _, _ <span style="color:#f92672">=</span> analyze_entity_sentiment(text)
+</code></pre></div><pre><code>Entity name: University of Washington
+Entity type: ORGANIZATION
+Salience score: 0.7403186559677124
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: Washington
+Entity type: LOCATION
+Salience score: 0.07140954583883286
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: Seattle
+Entity type: LOCATION
+Salience score: 0.06301160156726837
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: HCDE Department
+Entity type: ORGANIZATION
+Salience score: 0.04862694814801216
+Entity sentiment score: 0.8999999761581421
+Entity sentiment magnitude: 0.8999999761581421
+
+
+Entity name: UX
+Entity type: OTHER
+Salience score: 0.03587672486901283
+Entity sentiment score: 0.699999988079071
+Entity sentiment magnitude: 0.699999988079071
+
+
+Entity name: HCI
+Entity type: OTHER
+Salience score: 0.025248046964406967
+Entity sentiment score: 0.800000011920929
+Entity sentiment magnitude: 0.800000011920929
+
+
+Entity name: opportunities
+Entity type: OTHER
+Salience score: 0.015508485026657581
+Entity sentiment score: 0.8999999761581421
+Entity sentiment magnitude: 0.8999999761581421
+</code></pre>
+<p>From the result above, we can see that the first sentiment of the entities identified in the first sentence, such as &lsquo;University of Washington&rsquo; or &lsquo;Seattle&rsquo; has a sentiment score of 0.0 which means neutral. This makes sense because the sentence was directly pulled from Wikipedia. On the other hand, the second sentence I wrote highlights &lsquo;HCDE Department&rsquo; as an entity with positive sentiment score of 0.8999.</p>
+<h4 id="so-whats-next">So what&rsquo;s next?</h4>
+<p>We can interchangeably use the two functions defined <code>analyze_sentiment</code> and <code>analyze_entity_sentiment</code> to identify the overall sentiment of a given text or entity if specified in the data analysis process.</p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="a-namelink4-loading-in-data-using-google-sheets-api-a"><!-- raw HTML omitted --> Loading in data using Google Sheets API <!-- raw HTML omitted --></h2>
+<p>The following code will only run if you have your Google <code>credential.json</code> and <code>token.json</code> within the working directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> print_function
+<span style="color:#f92672">import</span> os.path
+<span style="color:#f92672">from</span> googleapiclient.discovery <span style="color:#f92672">import</span> build
+<span style="color:#f92672">from</span> google_auth_oauthlib.flow <span style="color:#f92672">import</span> InstalledAppFlow
+<span style="color:#f92672">from</span> google.auth.transport.requests <span style="color:#f92672">import</span> Request
+<span style="color:#f92672">from</span> google.oauth2.credentials <span style="color:#f92672">import</span> Credentials
+
+SCOPES <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;https://www.googleapis.com/auth/spreadsheets.readonly&#39;</span>]
+SPREADSHEET_ID <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;11Den6g5nuR4B2CCUML1KrA0bEZXRpPZ7t83Ieyi7NJ4&#39;</span>
+
+<span style="color:#75715e"># Specify which sheet or row/column of data to call in</span>
+<span style="color:#75715e"># refer to https://developers.google.com/sheets/api/guides/concepts#a1_notation for detail</span>
+RANGE_NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;health_data&#39;</span>
+
+creds <span style="color:#f92672">=</span> Credentials<span style="color:#f92672">.</span>from_authorized_user_file(<span style="color:#e6db74">&#39;token.json&#39;</span>, SCOPES)
+service <span style="color:#f92672">=</span> build(<span style="color:#e6db74">&#39;sheets&#39;</span>, <span style="color:#e6db74">&#39;v4&#39;</span>, credentials<span style="color:#f92672">=</span>creds)
+
+<span style="color:#75715e"># Call the Sheets API to read in the data</span>
+sheet <span style="color:#f92672">=</span> service<span style="color:#f92672">.</span>spreadsheets()
+result <span style="color:#f92672">=</span> sheet<span style="color:#f92672">.</span>values()<span style="color:#f92672">.</span>get(spreadsheetId <span style="color:#f92672">=</span> SPREADSHEET_ID,
+                            range <span style="color:#f92672">=</span> RANGE_NAME)<span style="color:#f92672">.</span>execute()
+values <span style="color:#f92672">=</span> result<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;values&#39;</span>, [])
+
+<span style="color:#75715e"># convert the sheet to pandas dataframe so we can easily manipulate the data</span>
+<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+
+data <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(values[<span style="color:#ae81ff">1</span>:], columns<span style="color:#f92672">=</span>values[<span style="color:#ae81ff">0</span>])
+
+<span style="color:#75715e"># let&#39;s confirm</span>
+print(type(data))
+
+data<span style="color:#f92672">.</span>shape
+</code></pre></div><pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+
+(71, 27)
+</code></pre>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="a-namelink5-dataset-a"><!-- raw HTML omitted --> Dataset <!-- raw HTML omitted --></h2>
+<p>From the code above, we translated the data into pandas dataframe. Using <code>data.shape</code>, we know that there are total 27 questions collected from 71 participants. For simplicity, I remove any data that does not prefer to disclose gender. This brings the data size to 68. Due to the extensive length and branching logic within the survey, the data becomes more textual and qualitative for questions or columns in the back. I will primarily use selected columns that are of interest.</p>
+<p>Let&rsquo;s have a quick glance at the dataset.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># for simplicity, let&#39;s constrain the gender option to only two</span>
+gender_options <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Man&#39;</span>, <span style="color:#e6db74">&#39;Woman&#39;</span>]
+data <span style="color:#f92672">=</span> data[data[<span style="color:#e6db74">&#39;What is your gender?&#39;</span>]<span style="color:#f92672">.</span>isin(gender_options)]
+
+print(<span style="color:#e6db74">&#39;There are total &#39;</span> <span style="color:#f92672">+</span> str(len(data)) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; participants.&#39;</span>)
+print(<span style="color:#e6db74">&#39;The survey consists of &#39;</span> <span style="color:#f92672">+</span> str(data<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; questions (columns in the dataframe).&#39;</span>)
+
+<span style="color:#75715e"># convert the column string values to integers</span>
+data[<span style="color:#e6db74">&#39;How would you rate your health?&#39;</span>] <span style="color:#f92672">=</span> data[<span style="color:#e6db74">&#39;How would you rate your health?&#39;</span>]<span style="color:#f92672">.</span>astype(int)
+
+data<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">3</span>)
+</code></pre></div><pre><code>There are total 69 participants.
+The survey consists of 27 questions (columns in the dataframe).
+</code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="a-namelink6-data-analysis-a"><!-- raw HTML omitted --> Data Analysis <!-- raw HTML omitted --></h2>
+<p>Now that we have seen the general dataframe structure, let&rsquo;s explore probing the data for analysis.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+<span style="color:#f92672">import</span> re
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+<span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+<span style="color:#f92672">from</span> nltk.corpus <span style="color:#f92672">import</span> stopwords
+<span style="color:#f92672">import</span> warnings
+<span style="color:#f92672">from</span> wordcloud <span style="color:#f92672">import</span> WordCloud, STOPWORDS, ImageColorGenerator
+<span style="color:#f92672">import</span> scipy
+<span style="color:#f92672">from</span> tabulate <span style="color:#f92672">import</span> tabulate
+
+warnings<span style="color:#f92672">.</span>simplefilter(action<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ignore&#39;</span>, category<span style="color:#f92672">=</span><span style="color:#a6e22e">FutureWarning</span>)  <span style="color:#75715e"># suppress any warning</span>
+sns<span style="color:#f92672">.</span>set_color_codes(<span style="color:#e6db74">&#39;pastel&#39;</span>)  <span style="color:#75715e"># set color</span>
+</code></pre></div><h3 id="querying-data">Querying data</h3>
+<p>Before we play around with data, let&rsquo;s query out the data that are of interest. This way we can manipulate the data more effectively without having to call on the entire dataset <code>data</code> everytime.</p>
+<p>There are total 7 different age groups.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># let&#39;s divde the data by gender first</span>
+females <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What is your gender?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Woman&#39;</span>]
+males <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What is your gender?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Man&#39;</span>]
+
+<span style="color:#75715e"># let&#39;s also create dataset divided by age group</span>
+age_under18 <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What age range are you?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Under 18&#39;</span>]
+age_18to24 <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What age range are you?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;18 - 24&#39;</span>]
+age_25to34 <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What age range are you?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;25 - 34&#39;</span>]
+age_35to44 <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What age range are you?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;35 - 44&#39;</span>]
+age_45to54 <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What age range are you?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;45 - 54&#39;</span>]
+age_55to64 <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What age range are you?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;55 - 64&#39;</span>]
+age_over65 <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>loc[data[<span style="color:#e6db74">&#39;What age range are you?&#39;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;65 or older&#39;</span>]
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(len(males))
+print(len(females))
+</code></pre></div><pre><code>31
+38
+</code></pre>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="a-namelink7-research-question-a"><!-- raw HTML omitted --> Research Question <!-- raw HTML omitted --></h2>
+<blockquote>
+<p><!-- raw HTML omitted --><em>How does self-perception of health rating differ by gender and age?</em><!-- raw HTML omitted --></p>
+</blockquote>
+<p>Participants were asked, How would you rate your health? (5 being healthy, 1 being not healthy).</p>
+<!-- raw HTML omitted -->
+<h3 id="a-namelink71-a-health-rating-by-gender-a"><!-- raw HTML omitted --> A. Health rating by gender <!-- raw HTML omitted --></h3>
+<p>Let&rsquo;s breakdown the data to see how self-perception of health wellness varies by gender and different age groups. In the code below, I first quary females and males from the data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># columns[4] is the column for health rating</span>
+mean_males <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(males[males<span style="color:#f92672">.</span>columns[<span style="color:#ae81ff">4</span>]])
+mean_females <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(females[females<span style="color:#f92672">.</span>columns[<span style="color:#ae81ff">4</span>]])
+
+print(<span style="color:#e6db74">&#34;Mean of males&#39; self-health wellness: &#34;</span> <span style="color:#f92672">+</span> str(mean_males))
+print(<span style="color:#e6db74">&#34;Mean of females&#39; self-health wellness: &#34;</span> <span style="color:#f92672">+</span> str(mean_females))
+</code></pre></div><pre><code>Mean of males' self-health wellness: 3.5161290322580645
+Mean of females' self-health wellness: 3.4473684210526314
+</code></pre>
+<!-- raw HTML omitted -->
+<h3 id="a-namelink72-b-health-rating-by-age-group-a"><!-- raw HTML omitted --> B. Health rating by age group <!-- raw HTML omitted --></h3>
+<p>Now let&rsquo;s breakdown the data to see how self-perception of health wellness varies by different age groups.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">age <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;What age range are you?&#39;</span>)[<span style="color:#e6db74">&#39;How would you rate your health?&#39;</span>]<span style="color:#f92672">.</span>mean()
+age
+</code></pre></div><pre><code>What age range are you?
+18 - 24        3.615385
+25 - 34        3.285714
+35 - 44        3.500000
+45 - 54        3.375000
+55 - 64        3.600000
+65 or older    4.000000
+Under 18       3.000000
+Name: How would you rate your health?, dtype: float64
+</code></pre>
+<p><strong>Conversely, the age group 65 or older actually has the highest self-perception of wellness.</strong> The youngest group (age under 18) rated the lowest.</p>
+<!-- raw HTML omitted -->
+<h3 id="a-namelink73-c-t-test-for-statistical-signifcance-a"><!-- raw HTML omitted --> C. T-test for statistical signifcance <!-- raw HTML omitted --></h3>
+<p>With small samples of the two demographic groups <code>65 or older</code> and <code>Under 18</code>, we are not sure if the difference we see here is significant. <strong>Let&rsquo;s run a quick t-test to see if the difference we are seeing is statistically significant.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">t, p <span style="color:#f92672">=</span> scipy<span style="color:#f92672">.</span>stats<span style="color:#f92672">.</span>ttest_ind(age_over65[<span style="color:#e6db74">&#39;How would you rate your health?&#39;</span>], age_under18[<span style="color:#e6db74">&#39;How would you rate your health?&#39;</span>])
+
+print(<span style="color:#e6db74">&#39;t: &#39;</span> <span style="color:#f92672">+</span> str(t<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>)))  
+print(<span style="color:#e6db74">&#39;p: &#39;</span> <span style="color:#f92672">+</span> str(p<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>)))  <span style="color:#75715e"># the p-val should be less than 0.05 in general to assume the difference we observe is signifcant</span>
+</code></pre></div><pre><code>t: 2.8983
+p: 0.0199
+</code></pre>
+<p>We see the p-value is 0.01 which is signifcant, which is one interesting find! So we can say that within this dataset, the people age over 65 perceive themselves to be more healthy than teenagers would do.</p>
+<!-- raw HTML omitted -->
+<h3 id="a-namelink74-d-health-rating-by-age--gender-group-a"><!-- raw HTML omitted --> D. Health rating by age &amp; gender group <!-- raw HTML omitted --></h3>
+<p>Now let&rsquo;s breakdown by both gender and different age groups to look at how the self perception of health wellness change.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">age_gender <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#39;What age range are you?&#39;</span>, <span style="color:#e6db74">&#39;What is your gender?&#39;</span>])[<span style="color:#e6db74">&#39;How would you rate your health?&#39;</span>]<span style="color:#f92672">.</span>mean()<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">2</span>)
+
+age_gender
+</code></pre></div><pre><code>What age range are you?  What is your gender?
+18 - 24                  Man                     3.43
+                         Woman                   3.83
+25 - 34                  Man                     3.43
+                         Woman                   3.21
+35 - 44                  Man                     3.80
+                         Woman                   3.29
+45 - 54                  Man                     3.40
+                         Woman                   3.33
+55 - 64                  Man                     3.33
+                         Woman                   4.00
+65 or older              Man                     4.00
+                         Woman                   4.00
+Under 18                 Man                     3.00
+                         Woman                   3.00
+Name: How would you rate your health?, dtype: float64
+</code></pre>
+<!-- raw HTML omitted -->
+<h3 id="a-namelink75-e-iteratively-running-t-test-within-each-age-group-a"><!-- raw HTML omitted --> E. Iteratively running t-test within each age group <!-- raw HTML omitted --></h3>
+<p>We have several different age groups with each male and female gender group. Within each age group, let&rsquo;s run a t-test to see if there are any significant observed differences.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">gender_options <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Man&#39;</span>, <span style="color:#e6db74">&#39;Woman&#39;</span>]
+age_groups <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;age_under18&#39;</span>, <span style="color:#e6db74">&#39;age_18to24&#39;</span>, <span style="color:#e6db74">&#39;age_25to34&#39;</span>, <span style="color:#e6db74">&#39;age_35to44&#39;</span>, <span style="color:#e6db74">&#39;age_45to54&#39;</span>, <span style="color:#e6db74">&#39;age_55to64&#39;</span>, <span style="color:#e6db74">&#39;age_over65&#39;</span>]
+
+table <span style="color:#f92672">=</span> []
+table<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;age group&#39;</span>, <span style="color:#e6db74">&#39;t value&#39;</span>, <span style="color:#e6db74">&#39;p value&#39;</span>])
+
+<span style="color:#75715e"># iteratively run for t-tests within each age group defined in the list variable &#39;age_groups&#39;</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(age_groups)):
+    data_string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;[&#39;How would you rate your health?&#39;]&#34;</span>
+    eval_string1 <span style="color:#f92672">=</span> age_groups[i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.loc[&#39;</span> <span style="color:#f92672">+</span> age_groups[i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;[&#39;What is your gender?&#39;] == &#39;Man&#39;]&#34;</span>
+    a <span style="color:#f92672">=</span> eval(eval_string1 <span style="color:#f92672">+</span> data_string)
+    eval_string2 <span style="color:#f92672">=</span> age_groups[i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.loc[&#39;</span> <span style="color:#f92672">+</span> age_groups[i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;[&#39;What is your gender?&#39;] == &#39;Woman&#39;]&#34;</span>
+    b <span style="color:#f92672">=</span> eval(eval_string2 <span style="color:#f92672">+</span> data_string)
+<span style="color:#75715e">#     strings_combined = &#39;scipy.stats.ttest_ind(a, b)&#39;</span>
+
+    t, p <span style="color:#f92672">=</span> eval(<span style="color:#e6db74">&#39;scipy.stats.ttest_ind(a, b)&#39;</span>)
+
+    <span style="color:#75715e"># we use a package called tabulate to print out a formatted table</span>
+    table<span style="color:#f92672">.</span>append([age_groups[i], t<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>) ,p<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">4</span>)])
+
+print(tabulate(table, headers<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;firstrow&#39;</span>))
+</code></pre></div><pre><code>age group      t value    p value
+-----------  ---------  ---------
+age_under18   nan        nan
+age_18to24     -1.1315     0.2819
+age_25to34      0.4504     0.6575
+age_35to44      0.9682     0.3558
+age_45to54      0.1637     0.8754
+age_55to64     -0.7746     0.495
+age_over65      0          1
+</code></pre>
+<p><strong>We see that the p-values are all above 0.05 which means that there are no observed significant differences in gender within each age group.</strong></p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="a-namelink8-data-visualization-a"><!-- raw HTML omitted --> Data Visualization <!-- raw HTML omitted --></h2>
+<p>Let&rsquo;s first try plotting a simple visual violin plot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">age_plot <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;What age range are you?&#39;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;How would you rate your health?&#39;</span>, \
+                       hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;What is your gender?&#39;</span>, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;violin&#34;</span>, data<span style="color:#f92672">=</span>data);
+</code></pre></div><p><img src="./TextualDataAnalysis_39_0.png" alt="png"></p>
+<h2 id="a-namelink81-characterizing-textual-data-through-wordcloud-a"><!-- raw HTML omitted --> Characterizing textual data through wordcloud <!-- raw HTML omitted --></h2>
+<p>Let&rsquo;s change focus and try analyzing textual inputs from the participants. We will analyze the column How is your health and/or fitness information being used? question to identify any emerging keywords using the word cloud representation. Disclaimer: The result here is not such a useful or accurate representation as the stopwords did not clearly filter out.</p>
+<p>We first call in a list of stopwords to filter out any unnecessary words, such as &lsquo;I&rsquo;, &lsquo;and&rsquo;, and etc. We then flatten out all the responses into a single list of words.</p>
+<h3 id="is-there-gender-difference-in-how-they-use-health-data-text-responses">Is there gender difference in how they use health data (text responses)?</h3>
+<p>Participants were asked, &ldquo;How is your health and/or fitness information being used?&rdquo; Here, I try to breakdown the text data through representation of wordcloud, and see if there any characteristics found in each gender.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># builtin stopword sets from nltk</span>
+stop <span style="color:#f92672">=</span> set(stopwords<span style="color:#f92672">.</span>words(<span style="color:#e6db74">&#39;english&#39;</span>))
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_wordcloud</span>(df, col, separator<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Plots a wordcloud of given dataframe and specific column. The text is counted at word level.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    df: pandas dataframe
+</span><span style="color:#e6db74">        dataframe that contains textual data
+</span><span style="color:#e6db74">    col: int
+</span><span style="color:#e6db74">        integer that points to the specific column with textual data
+</span><span style="color:#e6db74">    separator: str (default: None)
+</span><span style="color:#e6db74">        string specified to breakdown the text by. Default is empty space
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    Wordcloud plot
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    list of most common words in the dataframe
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    <span style="color:#75715e"># filter out any NaNs</span>
+    response <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> df[df<span style="color:#f92672">.</span>columns[col]] <span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> x]
+    <span style="color:#75715e"># filter out any None</span>
+    response <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> response <span style="color:#66d9ef">if</span> x <span style="color:#f92672">!=</span> <span style="color:#66d9ef">None</span>]
+
+    word_dict <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(response)):
+        <span style="color:#66d9ef">if</span> separator <span style="color:#f92672">==</span> <span style="color:#66d9ef">None</span>:
+            word_dict<span style="color:#f92672">.</span>append(response[i]<span style="color:#f92672">.</span>split())
+        <span style="color:#66d9ef">else</span>:
+            word_dict<span style="color:#f92672">.</span>append(response[i]<span style="color:#f92672">.</span>split(separator))
+    word_filtered <span style="color:#f92672">=</span> []
+
+    <span style="color:#75715e"># flatten the list and lower all letter cases</span>
+    <span style="color:#66d9ef">for</span> sublist <span style="color:#f92672">in</span> word_dict:
+        <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> sublist:
+            word_filtered<span style="color:#f92672">.</span>append(item<span style="color:#f92672">.</span>lower())
+
+    <span style="color:#75715e"># remove stopwords</span>
+    word_filtered <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> word_filtered <span style="color:#66d9ef">if</span> x <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> stop]
+
+    word_filtered <span style="color:#f92672">=</span> [word<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;.&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;,&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;&#39;&#34;</span>,<span style="color:#e6db74">&#39;&#39;</span>) <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> word_filtered]
+
+    <span style="color:#75715e"># print most common words</span>
+    most_common_words <span style="color:#f92672">=</span> Counter(word_filtered)<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">10</span>)
+    print(most_common_words)
+
+    <span style="color:#75715e"># plot wordcloud</span>
+    texts <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(word <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> word_filtered)
+    cloud <span style="color:#f92672">=</span> WordCloud(max_font_size<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>, max_words<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>, background_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;white&#34;</span>)<span style="color:#f92672">.</span>generate(texts)
+    plt<span style="color:#f92672">.</span>imshow(cloud, interpolation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bilinear&#39;</span>)
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># plot wordcloud for Man</span>
+plot_wordcloud(males, <span style="color:#ae81ff">24</span>)  <span style="color:#75715e"># 24 specifies the column number</span>
+</code></pre></div><pre><code>[('me', 2), ('adjust', 2), ('overall', 2), ('personal', 2), ('im', 2), ('its', 1), ('used', 1), ('simply', 1), ('interests', 1), ('food', 1)]
+</code></pre>
+<p><img src="./TextualDataAnalysis_42_1.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># plot wordcloud for Woman</span>
+plot_wordcloud(females, <span style="color:#ae81ff">24</span>)
+</code></pre></div><pre><code>[('use', 4), ('see', 4), ('im', 4), ('bit', 3), ('more', 3), ('less', 3), ('food', 3), ('know', 3), ('sleep', 2), ('information', 2)]
+</code></pre>
+<p><img src="./TextualDataAnalysis_43_1.png" alt="png"></p>
+<p>The top image is the wordcloud of male participants and the bottom is that of female participants. We see that some words are not as meaningful and that one critical fault to this approach is that breaking down the responses into word level can misrepresent the meaning of their responses. For example, &lsquo;exercise&rsquo; and &lsquo;not exercise&rsquo; have two opposing ideas but here, it would count &lsquo;not&rsquo; and &lsquo;exercise&rsquo; as two seperate ideas.</p>
+<p>Even though the word counts are small, we see more &lsquo;food&rsquo; and &lsquo;sleep&rsquo; for female participants, leading to an assumption that it could be related to going on diets.</p>
+<h3 id="analyzing-categorical-data-using-wordcloud">Analyzing categorical data using wordcloud</h3>
+<p>Participants were also asked, &ldquo;what actions do you take regarding your health?&rdquo; with multiple choices answer selections that include&hellip;</p>
+<ol>
+<li>&lsquo;exercise&rsquo;</li>
+<li>&lsquo;take medication or health supplements&rsquo;</li>
+<li>&lsquo;track health or fitness&rsquo;</li>
+<li>&lsquo;learn more about health&rsquo;</li>
+<li>&lsquo;receive regular treatment at clinic&rsquo;</li>
+<li>&lsquo;maintain a diet&rsquo;</li>
+<li>&lsquo;receive mental counseling.&rsquo;</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_wordcloud(males, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;;&#39;</span>)
+</code></pre></div><pre><code>[('exercise', 29), ('take medication and/or health supplements', 10), ('track your health and/or fitness', 9), ('learn more about your health (eg from online friends or community)', 8), ('maintain a diet', 8), ('receive regular treatment and/or consultation at clinic', 3), ('none of the above', 2)]
+</code></pre>
+<p><img src="./TextualDataAnalysis_46_1.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_wordcloud(females, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;;&#39;</span>)
+</code></pre></div><pre><code>[('exercise', 30), ('take medication and/or health supplements', 27), ('track your health and/or fitness', 24), ('learn more about your health (eg from online friends or community)', 17), ('receive regular treatment and/or consultation at clinic', 17), ('maintain a diet', 16), ('receive mental counseling', 7)]
+</code></pre>
+<p><img src="./TextualDataAnalysis_47_1.png" alt="png"></p>
+<p>From the two results above, we see that exercise is the most common practice for keeping up health in both genders. However, we see that in general, women tend to do more activities or attempts to maintain their health e.g. by more frequently visiting a clinic or receive counseling, whereas two men responded they simply do nothing at all.</p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="a-namelink9-conclusion--thoughts-a"><!-- raw HTML omitted --> Conclusion &amp; Thoughts <!-- raw HTML omitted --></h2>
+<p>Wordcloud is a fun, engaging representation of textual data. However, more caution and consideration are needed because it can also tweak how the data is represented. For example, I coded the function so that it would breakdown any sentences or phrases into word level. This means that if someone does &lsquo;not exercise&rsquo;, it would still count &lsquo;exercise&rsquo; and the end result would show &lsquo;exercise&rsquo; being emphasized more. While the context of exercise is present, the meaning is totally the opposite.</p>
+<hr>
+<!-- raw HTML omitted -->
+<h2 id="references">References</h2>
+<p>GoogleSheets API v4: <a href="https://developers.google.com/sheets/api/samples/reading">https://developers.google.com/sheets/api/samples/reading</a></p>
+<p>Google Oauth: <a href="https://developers.google.com/identity/protocols/oauth2/service-account#python">https://developers.google.com/identity/protocols/oauth2/service-account#python</a></p>
+<p>Google API Python Client: <a href="https://github.com/googleapis/google-api-python-client/blob/master/docs/oauth.md">https://github.com/googleapis/google-api-python-client/blob/master/docs/oauth.md</a></p>
+<p>Credentials: <a href="https://developers.google.com/workspace/guides/create-credentials">https://developers.google.com/workspace/guides/create-credentials</a></p>
+<!-- raw HTML omitted -->
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
+  
+  <a class="badge badge-light" href="/tags/quantitative-ux/">quantitative-ux</a>
+  
+  <a class="badge badge-light" href="/tags/machine-learning/">machine-learning</a>
+  
+  <a class="badge badge-light" href="/tags/data-visualization/">data-visualization</a>
+  
+  <a class="badge badge-light" href="/tags/statistics/">statistics</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://jinjeon.me/post/textual-data-analysis/&amp;text=Sentiment%20Analysis,%20Textual%20Data%20Analysis,%20and%20Visualization%20Using%20Natural%20Language%20API" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://jinjeon.me/post/textual-data-analysis/&amp;t=Sentiment%20Analysis,%20Textual%20Data%20Analysis,%20and%20Visualization%20Using%20Natural%20Language%20API" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Sentiment%20Analysis,%20Textual%20Data%20Analysis,%20and%20Visualization%20Using%20Natural%20Language%20API&amp;body=https://jinjeon.me/post/textual-data-analysis/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://jinjeon.me/post/textual-data-analysis/&amp;title=Sentiment%20Analysis,%20Textual%20Data%20Analysis,%20and%20Visualization%20Using%20Natural%20Language%20API" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_huf5029b22bbb9407d45fad41834988009_176697_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://jinjeon.me/">Jin Jeon</a></h5>
+      <h6 class="card-subtitle">UX Researcher</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://jinjeon.me/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jinjeon/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/jeon11" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:jinjeon@berkeley.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/quant-ux/">Statistical Data Analysis in Cross-Cultural Research</a></li>
+      
+      <li><a href="/project/data-viz/">Statistical data analysis &amp; visualization</a></li>
+      
+      <li><a href="/project/conference/">Conference presentations</a></li>
+      
+      <li><a href="/post/vectorspace/">Universal Sentence Encoder and GloVe on Narrative Semantic Representation</a></li>
+      
+      <li><a href="/project/navigating-cancer/">End-to-end design process of improving the health tracker (NDA)</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python,%20r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.b59fdb6275ef5e6e2859c30582fc271a.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2024 developed by Jin with HTML/CSS/Markdown and ☕️ <!-- raw HTML omitted --> &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

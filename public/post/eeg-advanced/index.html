@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jin Jeon">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Continuation from Part 1, the script runs independent component analysis and automatic epoch rejection, and plots improved ERP">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jinjeon.me/post/eeg-advanced/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jinjeon.me/post/eeg-advanced/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Jin Jeon">
+  <meta property="og:url" content="https://jinjeon.me/post/eeg-advanced/">
+  <meta property="og:title" content="EEG/Signal Processing--Advanced Part 2 | Jin Jeon">
+  <meta property="og:description" content="Continuation from Part 1, the script runs independent component analysis and automatic epoch rejection, and plots improved ERP"><meta property="og:image" content="https://jinjeon.me/post/eeg-advanced/featured.jpeg">
+  <meta property="twitter:image" content="https://jinjeon.me/post/eeg-advanced/featured.jpeg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-05-02T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-05-02T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jinjeon.me/post/eeg-advanced/"
+  },
+  "headline": "EEG/Signal Processing--Advanced Part 2",
+  
+  "image": [
+    "https://jinjeon.me/post/eeg-advanced/featured.jpeg"
+  ],
+  
+  "datePublished": "2018-05-02T00:00:00Z",
+  "dateModified": "2018-05-02T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jin Jeon"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jin Jeon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jinjeon.me/img/icon.png"
+    }
+  },
+  "description": "Continuation from Part 1, the script runs independent component analysis and automatic epoch rejection, and plots improved ERP"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>EEG/Signal Processing--Advanced Part 2 | Jin Jeon</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/icon.png" alt="Jin Jeon"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About Me</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span></span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>EEG/Signal Processing--Advanced Part 2</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Wed, May 2, 2018
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 530px; max-height: 500px;">
+  <div style="position: relative">
+    <img src="/post/eeg-advanced/featured.jpeg" alt="" class="featured-image">
+    <span class="article-header-caption">Looking over components</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h3 id="note">Note:</h3>
+<p>This post is a ported version of Jupyter Notebook from my mne-eeg project: <a href="https://github.com/jeon11/mne-egi/blob/master/walkthrough_advanced.ipynb/walkthrough_basics.ipynb">https://github.com/jeon11/mne-egi/blob/master/walkthrough_advanced.ipynb/walkthrough_basics.ipynb</a>
+<!-- raw HTML omitted --></p>
+<h2 id="advanced-processing">Advanced Processing</h2>
+<p>In the previous walkthrough notebook, we got to manually inspect raw instance and do some cleaning based on annotations and creating evoked responses from time-locked events.</p>
+<p>In this section, we run independent component analysis (ICA) on the epochs we had from the last notebook. We look in ICs to identify potentially bad components with eye related artifcats. Then, we implement autoreject (<a href="http://autoreject.github.io">http://autoreject.github.io</a>) which automatically attempts to find bad channels and interpolate those based on nearby channels. At the end, we plot the ERPs by channels that we are interested in looking and make comparison.</p>
+<p>Note that the plots below will be using <code>print</code> statements for demonstration purposes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> mne
+<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">from</span> matplotlib <span style="color:#f92672">import</span> pyplot <span style="color:#66d9ef">as</span> plt
+<span style="color:#f92672">import</span> Tkinter
+<span style="color:#f92672">from</span> autoreject <span style="color:#f92672">import</span> AutoReject
+<span style="color:#f92672">from</span> autoreject <span style="color:#f92672">import</span> get_rejection_threshold
+<span style="color:#f92672">from</span> mne.preprocessing <span style="color:#f92672">import</span> ICA
+</code></pre></div><h3 id="loading-epochs">Loading epochs</h3>
+<p>We imported all the necessary dependencies. Now we load the saved epochs from last notebook.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">epochs_tlstS <span style="color:#f92672">=</span> mne<span style="color:#f92672">.</span>read_epochs(<span style="color:#e6db74">&#39;/data/epochs_tlsts-epo.fif&#39;</span>, preload<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+print(epochs_tlstS)
+</code></pre></div><pre><code>&lt;EpochsFIF  |   388 events (all good), -0.25 - 0.8 sec, baseline [-0.25, 0], ~72.8 MB, data loaded, with metadata,
+ u'lstS': 388&gt;
+</code></pre>
+<h2 id="running-independent-component-analysis-ica">Running Independent Component Analysis (ICA)</h2>
+<p>ICA is a signal processing method to decompose signals into independent sources from a mixed signal. A representative example is the cocktail party effect, which is a phenomenon in which you are able to concentrate on the voice of the speaker  you are conversing with regardless of the various background noise in a party. Using ICA helps seperate the different sources of mixed sound, under the assumption that the sound components are linear. This method works for EEG signal preprocessing because we assume that each electrode is independent from the others. To think of it easily, I consider ICA as decomposing the data into multiple layers, and by excluding bad ICs, we filter the data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># the function calculates optimal reject threshold for ICA</span>
+reject <span style="color:#f92672">=</span> get_rejection_threshold(epochs_tlstS)
+print(reject)
+</code></pre></div><pre><code>Estimating rejection dictionary for eeg
+Estimating rejection dictionary for eog
+{'eeg': 0.0007759871430524497, 'eog': 5.903189072009943e-05}
+</code></pre>
+<h3 id="low-frequency-slow-drifts">Low-frequency slow drifts</h3>
+<p>Because ICA is sensitive to low-frequency slow drifts, it is recommended that 1Hz highpass filter is applied. Since this was already done to our raw instance in the previous notebook, it can be skipped. You can double check as below, or apply the highpass filter if you haven&rsquo;t already.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># double check highpass filter</span>
+print(epochs_tlstS<span style="color:#f92672">.</span>info[<span style="color:#e6db74">&#39;highpass&#39;</span>])
+
+<span style="color:#75715e"># epochs_tlstS.info[&#39;highpass&#39;] = 1</span>
+</code></pre></div><pre><code>1.0
+</code></pre>
+<h3 id="fit-ica">Fit ICA</h3>
+<p>Now we will run ICA on our epoch data. For simplicity and time sake, we will limit the number of components to 20 with fastICA method, which is the generally used one. The number of ICs can be created up to as many electrodes (in this case 128 - bad channels). In <code>ica1.fit</code>, we use the recommended reject threshold from Autoreject.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ica <span style="color:#f92672">=</span> ICA(n_components<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, max_pca_components<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, n_pca_components<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, noise_cov<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>,
+           random_state<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;fastica&#39;</span>, fit_params<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>, verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+print(<span style="color:#e6db74">&#39;fitting ica...&#39;</span>)
+ica<span style="color:#f92672">.</span>fit(epochs_tlstS, reject<span style="color:#f92672">=</span>reject)
+</code></pre></div><pre><code>fitting ica...
+
+
+/Users/Jin/Library/Python/2.7/lib/python/site-packages/scipy/linalg/basic.py:1321: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  x, resids, rank, s = lstsq(a, b, cond=cond, check_finite=False)
+
+
+
+
+
+&lt;ICA  |  epochs decomposition, fit (fastica): 81868 samples, 20 components, channels used: &quot;eeg&quot;&gt;
+</code></pre>
+<h2 id="artifact-detection-using-ica-correlation">Artifact detection using ICA correlation</h2>
+<p><code>plot_sources</code> can show the signals of each ICs. We can manually inspect for ICs with noise, or identify bad ICs that correlates with oscillations from eye-related channels. We use the builtin <code>find_bads_eog</code> from ICA class.</p>
+<p><code>plot_scores</code> will show the correlation values for each component, and mark the ones that are potentially bad with red. Note that because we only specified 20 components, the decomposition is rather compressed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">eog_inds, scores <span style="color:#f92672">=</span> ica<span style="color:#f92672">.</span>find_bads_eog(epochs_tlstS)
+print(<span style="color:#e6db74">&#39;suggested eog component: &#39;</span> <span style="color:#f92672">+</span> str(eog_inds))
+print(ica<span style="color:#f92672">.</span>plot_scores(scores, exclude<span style="color:#f92672">=</span>eog_inds, labels<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;eog&#39;</span>))
+</code></pre></div><pre><code>suggested eog component: [3]
+</code></pre>
+<p><img src="./walkthrough_advanced_11_1.png" alt="png"></p>
+<pre><code>Figure(460.8x194.4)
+</code></pre>
+<p>The <code>find_bads_eog</code> suggested that component &lsquo;3&rsquo; is bad IC related to eye-related artifact. We can plot that specific component to inspect manually.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(ica<span style="color:#f92672">.</span>plot_properties(epochs_tlstS, picks<span style="color:#f92672">=</span>eog_inds, psd_args<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;fmax&#39;</span>: <span style="color:#ae81ff">35.</span>}, image_args<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;sigma&#39;</span>: <span style="color:#ae81ff">1.</span>}))
+ica<span style="color:#f92672">.</span>exclude <span style="color:#f92672">+=</span> eog_inds
+print(ica<span style="color:#f92672">.</span>exclude)
+</code></pre></div><pre><code>/Users/Jin/Library/Python/2.7/lib/python/site-packages/mne/transforms.py:689: RuntimeWarning: invalid value encountered in divide
+  out[:, 2] = np.arccos(cart[:, 2] / out[:, 0])
+</code></pre>
+<p><img src="./walkthrough_advanced_13_1.png" alt="png"></p>
+<pre><code>[&lt;Figure size 504x432 with 5 Axes&gt;]
+[3]
+</code></pre>
+<p>Usually, eye blinks are characterized as having significantly polar activities between the frontal and the posterior regions with high activity in the frontal region (ie. eyes). Also, activities shown in the frontal region, especially near the eye area, would not be helpful in our analysis. Eye movements are characterized as having significantly split activities between left and right. Component above does seem containing eye blinks, we mark that component bad by <code>ica.exclude</code> and we can see that component has been added.</p>
+<p>We can also manually inspect for other components using <code>plot_components</code> besides the ones that the builtin method suggested. You can see that the component speficied above being grayed out as a bad IC. The plot prioritizes showing ICs with large activations and polarity, which means that most of the bad ICs could be found in the early ICs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(ica<span style="color:#f92672">.</span>plot_components(inst<span style="color:#f92672">=</span>epochs_tlstS))
+</code></pre></div><p><img src="./walkthrough_advanced_15_0.png" alt="png"></p>
+<pre><code>[&lt;Figure size 540x504 with 20 Axes&gt;]
+</code></pre>
+<p>When running the code on <code>ipython</code> as suggested in the previous notebook, the plot is actually interactive. By clicking on the component, it shows the component properties. Clicking on the name of the component will gray out the name and be marked as bad IC. Here, it seems components 2, 14, and 18 have high activation in the eye regions, which could be identified as components with eye blinks. Also, componnent 5 has activation in the frontal region, and has polar activities between left and right, which could potentially be eye movements. Because the plot above is not interactive, we will specify which ICs to exclude as a line of code.</p>
+<p>Since we&rsquo;ve identified the bad ICs, we can apply it to our epochs_tlstS, and proceed to autoreject.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ica<span style="color:#f92672">.</span>exclude <span style="color:#f92672">+=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">18</span>]
+print(ica<span style="color:#f92672">.</span>exclude)
+ica<span style="color:#f92672">.</span>apply(epochs_tlstS)
+print(<span style="color:#e6db74">&#39;number of ICs dropped: &#39;</span> <span style="color:#f92672">+</span> str(len(ica<span style="color:#f92672">.</span>exclude)))
+</code></pre></div><pre><code>[3, 0, 2, 5, 14, 18]
+number of ICs dropped: 6
+</code></pre>
+<h2 id="autoreject">Autoreject</h2>
+<p>Now that we have bad ICs identified, we try implementing autoreject for cleaning. Note that the step below may take some time as it tries find bad channels and fix them.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ar <span style="color:#f92672">=</span> AutoReject()
+epochs_clean <span style="color:#f92672">=</span> ar<span style="color:#f92672">.</span>fit_transform(epochs_tlstS)
+</code></pre></div><pre><code>Running autoreject on ch_type=eeg
+[........................................] 100.00% Creating augmented epochs \ Computing thresholds ...
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    2.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:    4.0s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:    5.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   4 out of   4 | elapsed:    7.3s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   10.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   6 out of   6 | elapsed:   13.2s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   7 out of   7 | elapsed:   16.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   8 out of   8 | elapsed:   19.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done   9 out of   9 | elapsed:   21.7s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  10 out of  10 | elapsed:   24.6s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  11 out of  11 | elapsed:   27.5s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:   30.3s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  13 out of  13 | elapsed:   33.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  14 out of  14 | elapsed:   35.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  15 out of  15 | elapsed:   36.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  16 out of  16 | elapsed:   38.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  17 out of  17 | elapsed:   40.2s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  18 out of  18 | elapsed:   42.2s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  19 out of  19 | elapsed:   44.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  20 out of  20 | elapsed:   47.0s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  21 out of  21 | elapsed:   48.7s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  22 out of  22 | elapsed:   50.1s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  23 out of  23 | elapsed:   51.6s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  24 out of  24 | elapsed:   53.1s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  25 out of  25 | elapsed:   54.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  26 out of  26 | elapsed:   56.4s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  27 out of  27 | elapsed:   57.9s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  28 out of  28 | elapsed:   59.8s remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  29 out of  29 | elapsed:  1.0min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  30 out of  30 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  31 out of  31 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  32 out of  32 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  33 out of  33 | elapsed:  1.1min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  34 out of  34 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  35 out of  35 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  36 out of  36 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  37 out of  37 | elapsed:  1.2min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  38 out of  38 | elapsed:  1.3min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  39 out of  39 | elapsed:  1.3min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  40 out of  40 | elapsed:  1.3min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  41 out of  41 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  42 out of  42 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  43 out of  43 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  44 out of  44 | elapsed:  1.4min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  45 out of  45 | elapsed:  1.5min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  46 out of  46 | elapsed:  1.5min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  47 out of  47 | elapsed:  1.5min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  48 out of  48 | elapsed:  1.6min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  49 out of  49 | elapsed:  1.6min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done  50 out of  50 | elapsed:  1.6min remaining:    0.0s
+[Parallel(n_jobs=1)]: Done 115 out of 115 | elapsed:  3.8min finished
+[........................................] 100.00% n_interp \   chs |   
+
+
+
+Estimated consensus=0.30 and n_interpolate=4
+[........................................] 100.00% Repairing epochs |   
+</code></pre>
+<p>The above created a new epochs called <code>epochs_clean</code>. We can compare how the epochs are cleaned by comparing the two plots. For demonstration, we only plot the <code>epochs_clean</code>. The plot shows individual epochs with green line being 0 (the onset of the word in the experiment). In the interactive plot mode, you can scroll vertically to see different channels and horizontally to search through epochs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(epochs_clean<span style="color:#f92672">.</span>plot())
+</code></pre></div><p><img src="./walkthrough_advanced_21_0.png" alt="png"></p>
+<pre><code>Figure(869.6x536.8)
+</code></pre>
+<h2 id="creating-evoked-response-from-epochs_clean">Creating evoked response from epochs_clean</h2>
+<p>Now that we have a new, ideally cleaner epochs, we create evoked response for each condition. Currently, <code>epochs_clean</code> contains all four conditions with approximately 100 epochs for each (less than 400 now because epochs been rejected). Note that the y-axis microvolt scale has been refined compared to our previous notebook.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># now let&#39;s create a new evoked responses (ie. the autoreject evoked)</span>
+arevoked_tlst_c1 <span style="color:#f92672">=</span> epochs_clean[<span style="color:#e6db74">&#34;label==&#39;lstS&#39; and cond==&#39;1&#39;&#34;</span>]<span style="color:#f92672">.</span>average()
+arevoked_tlst_c2 <span style="color:#f92672">=</span> epochs_clean[<span style="color:#e6db74">&#34;label==&#39;lstS&#39; and cond==&#39;2&#39;&#34;</span>]<span style="color:#f92672">.</span>average()
+arevoked_tlst_c3 <span style="color:#f92672">=</span> epochs_clean[<span style="color:#e6db74">&#34;label==&#39;lstS&#39; and cond==&#39;3&#39;&#34;</span>]<span style="color:#f92672">.</span>average()
+arevoked_tlst_c4 <span style="color:#f92672">=</span> epochs_clean[<span style="color:#e6db74">&#34;label==&#39;lstS&#39; and cond==&#39;4&#39;&#34;</span>]<span style="color:#f92672">.</span>average()
+
+<span style="color:#75715e"># let&#39;s see a sample evoked response</span>
+print(arevoked_tlst_c1<span style="color:#f92672">.</span>plot_joint(times<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;peaks&#39;</span>))
+</code></pre></div><p><img src="./walkthrough_advanced_23_0.png" alt="png"></p>
+<pre><code>Figure(576x302.4)
+</code></pre>
+<h2 id="plotting-erp-comparison">Plotting ERP comparison</h2>
+<p>Now that we have evoked response for each condition, we can look into specific channels of interest to see how the signals differ by conditions. For the selection list, we will only specify channel E92 as it will create 4 graphs for each channel.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># we specify which channels to look at</span>
+selection <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;E92&#39;</span>]  <span style="color:#75715e"># [&#39;EB&#39;,&#39;E11&#39;,&#39;E24&#39;,&#39;E124&#39;,&#39;E36&#39;,&#39;E104&#39;,&#39;E52&#39;,&#39;E62&#39;,&#39;E92&#39;]</span>
+picks_select <span style="color:#f92672">=</span> mne<span style="color:#f92672">.</span>pick_types(epochs_clean<span style="color:#f92672">.</span>info, meg<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, eeg<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, eog<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, stim<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>,
+                              exclude<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bads&#39;</span>, selection<span style="color:#f92672">=</span>selection)
+
+<span style="color:#75715e"># create dictionary for each condition</span>
+evoked_dict <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;highcosval&#39;</span>: arevoked_tlst_c1,
+                <span style="color:#e6db74">&#39;lowcosval&#39;</span>: arevoked_tlst_c2,
+                <span style="color:#e6db74">&#39;highcosinval&#39;</span>: arevoked_tlst_c3,
+                <span style="color:#e6db74">&#39;lowcosinval&#39;</span>: arevoked_tlst_c4}
+
+picks_select <span style="color:#f92672">=</span> mne<span style="color:#f92672">.</span>pick_types(arevoked_tlst_c1<span style="color:#f92672">.</span>info, meg<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, eeg<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, eog<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, stim<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>,
+                              exclude<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;bads&#39;</span>, selection<span style="color:#f92672">=</span>selection)
+
+
+<span style="color:#75715e"># this will plot each selected channel with comparison of two conditions</span>
+title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">_vs_</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">_E</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">.png&#39;</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(picks_select)):
+    fig1 <span style="color:#f92672">=</span> mne<span style="color:#f92672">.</span>viz<span style="color:#f92672">.</span>plot_compare_evokeds({<span style="color:#e6db74">&#39;highcos/val&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;highcosval&#39;</span>],
+                                         <span style="color:#e6db74">&#39;lowcos/val&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;lowcosval&#39;</span>]}, picks<span style="color:#f92672">=</span>picks_select[i])
+    fig2 <span style="color:#f92672">=</span> mne<span style="color:#f92672">.</span>viz<span style="color:#f92672">.</span>plot_compare_evokeds({<span style="color:#e6db74">&#39;highcos/inval&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;highcosinval&#39;</span>],
+                                         <span style="color:#e6db74">&#39;lowcos/inval&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;lowcosinval&#39;</span>]}, picks<span style="color:#f92672">=</span>picks_select[i])
+    fig3 <span style="color:#f92672">=</span> mne<span style="color:#f92672">.</span>viz<span style="color:#f92672">.</span>plot_compare_evokeds({<span style="color:#e6db74">&#39;highcos/val&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;highcosval&#39;</span>],
+                                         <span style="color:#e6db74">&#39;highcos/inval&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;highcosinval&#39;</span>]},picks<span style="color:#f92672">=</span>picks_select[i])
+    fig4 <span style="color:#f92672">=</span> mne<span style="color:#f92672">.</span>viz<span style="color:#f92672">.</span>plot_compare_evokeds({<span style="color:#e6db74">&#39;lowcos/val&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;lowcosval&#39;</span>],
+                                         <span style="color:#e6db74">&#39;lowcos/inval&#39;</span>:evoked_dict[<span style="color:#e6db74">&#39;lowcosinval&#39;</span>]}, picks<span style="color:#f92672">=</span>picks_select[i])
+
+    <span style="color:#75715e"># save figs</span>
+    <span style="color:#75715e"># fig1.savefig(title % (evoked_dict.keys()[0], evoked_dict.keys()[1], i))</span>
+    <span style="color:#75715e"># fig2.savefig(title % (evoked_dict.keys()[2], evoked_dict.keys()[3], i))</span>
+    <span style="color:#75715e"># fig3.savefig(title % (evoked_dict.keys()[0], evoked_dict.keys()[2], i))</span>
+    <span style="color:#75715e"># fig4.savefig(title % (evoked_dict.keys()[1], evoked_dict.keys()[3], i))</span>
+</code></pre></div><p><img src="./walkthrough_advanced_25_0.png" alt="png"></p>
+<p><img src="./walkthrough_advanced_25_1.png" alt="png"></p>
+<p><img src="./walkthrough_advanced_25_2.png" alt="png"></p>
+<p><img src="./walkthrough_advanced_25_3.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># this will plot just the evoked responses per conditions with all channels</span>
+fig5 <span style="color:#f92672">=</span> arevoked_tlst_c1<span style="color:#f92672">.</span>plot(titles<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cond1: high cos/val&#39;</span>)
+fig6 <span style="color:#f92672">=</span> arevoked_tlst_c2<span style="color:#f92672">.</span>plot(titles<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cond2: low cos/val&#39;</span>)
+fig7 <span style="color:#f92672">=</span> arevoked_tlst_c3<span style="color:#f92672">.</span>plot(titles<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cond3: high cos/inval&#39;</span>)
+fig8 <span style="color:#f92672">=</span> arevoked_tlst_c4<span style="color:#f92672">.</span>plot(titles<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cond4: low cos/inval&#39;</span>)
+
+<span style="color:#75715e"># save figs</span>
+<span style="color:#75715e"># fig5.savefig(&#39;c1all.png&#39;)</span>
+<span style="color:#75715e"># fig6.savefig(&#39;c2all.png&#39;)</span>
+<span style="color:#75715e"># fig7.savefig(&#39;c3all.png&#39;)</span>
+<span style="color:#75715e"># fig8.savefig(&#39;c4all.png&#39;)</span>
+</code></pre></div><p><img src="./walkthrough_advanced_26_0.png" alt="png"></p>
+<p><img src="./walkthrough_advanced_26_1.png" alt="png"></p>
+<p><img src="./walkthrough_advanced_26_2.png" alt="png"></p>
+<p><img src="./walkthrough_advanced_26_3.png" alt="png"></p>
+<h2 id="sources-and-useful-links">Sources and useful links</h2>
+<p>EEGLab ICA guide: <a href="https://sccn.ucsd.edu/wiki/Chapter_09:_Decomposing_Data_Using_ICA">https://sccn.ucsd.edu/wiki/Chapter_09:_Decomposing_Data_Using_ICA</a></p>
+<p>MNE ICA class: <a href="https://martinos.org/mne/stable/generated/mne.preprocessing.ICA.html">https://martinos.org/mne/stable/generated/mne.preprocessing.ICA.html</a></p>
+<p>autoreject: <a href="http://autoreject.github.io/auto_examples/plot_auto_repair.html#sphx-glr-auto-examples-plot-auto-repair-py">http://autoreject.github.io/auto_examples/plot_auto_repair.html#sphx-glr-auto-examples-plot-auto-repair-py</a></p>
+<p>Clemens Brunner&rsquo;s great guide on ICA: <a href="https://cbrnr.github.io/2018/01/29/removing-eog-ica/">https://cbrnr.github.io/2018/01/29/removing-eog-ica/</a></p>
+<p>Clemens Brunner&rsquo;s great guide on EOG detection using linear regression: <a href="https://cbrnr.github.io/2017/10/20/removing-eog-regression/">https://cbrnr.github.io/2017/10/20/removing-eog-regression/</a></p>
+<p>MNE stats: <a href="https://martinos.org/mne/stable/auto_tutorials/plot_stats_cluster_erp.html#sphx-glr-auto-tutorials-plot-stats-cluster-erp-py">https://martinos.org/mne/stable/auto_tutorials/plot_stats_cluster_erp.html#sphx-glr-auto-tutorials-plot-stats-cluster-erp-py</a></p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://jinjeon.me/post/eeg-advanced/&amp;text=EEG/Signal%20Processing--Advanced%20Part%202" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://jinjeon.me/post/eeg-advanced/&amp;t=EEG/Signal%20Processing--Advanced%20Part%202" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=EEG/Signal%20Processing--Advanced%20Part%202&amp;body=https://jinjeon.me/post/eeg-advanced/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://jinjeon.me/post/eeg-advanced/&amp;title=EEG/Signal%20Processing--Advanced%20Part%202" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_huf5029b22bbb9407d45fad41834988009_176697_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://jinjeon.me/">Jin Jeon</a></h5>
+      <h6 class="card-subtitle">UX Researcher</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://jinjeon.me/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jinjeon/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/jeon11" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:jinjeon@berkeley.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/eeg-basics/">EEG/Signal Processing--Basics Part 1</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python,%20r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.b59fdb6275ef5e6e2859c30582fc271a.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2024 developed by Jin with HTML/CSS/Markdown and ☕️ <!-- raw HTML omitted --> &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

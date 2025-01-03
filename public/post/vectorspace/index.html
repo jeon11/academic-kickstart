@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jin Jeon">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="From setting up TensorFlow to creating vectors and cosine similarity">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jinjeon.me/post/vectorspace/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jinjeon.me/post/vectorspace/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Jin Jeon">
+  <meta property="og:url" content="https://jinjeon.me/post/vectorspace/">
+  <meta property="og:title" content="Universal Sentence Encoder and GloVe on Narrative Semantic Representation | Jin Jeon">
+  <meta property="og:description" content="From setting up TensorFlow to creating vectors and cosine similarity"><meta property="og:image" content="https://jinjeon.me/post/vectorspace/featured.png">
+  <meta property="twitter:image" content="https://jinjeon.me/post/vectorspace/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-11-01T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-11-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jinjeon.me/post/vectorspace/"
+  },
+  "headline": "Universal Sentence Encoder and GloVe on Narrative Semantic Representation",
+  
+  "image": [
+    "https://jinjeon.me/post/vectorspace/featured.png"
+  ],
+  
+  "datePublished": "2018-11-01T00:00:00Z",
+  "dateModified": "2018-11-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jin Jeon"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jin Jeon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jinjeon.me/img/icon.png"
+    }
+  },
+  "description": "From setting up TensorFlow to creating vectors and cosine similarity"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Universal Sentence Encoder and GloVe on Narrative Semantic Representation | Jin Jeon</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/icon.png" alt="Jin Jeon"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About Me</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span></span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Universal Sentence Encoder and GloVe on Narrative Semantic Representation</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Thu, Nov 1, 2018
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 567px; max-height: 400px;">
+  <div style="position: relative">
+    <img src="/post/vectorspace/featured.png" alt="" class="featured-image">
+    <span class="article-header-caption">Pairwise similarity of sample vectors</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><strong>See full repo at <a href="https://github.com/jeon11/use-glove-narrative.git">https://github.com/jeon11/use-glove-narrative.git</a></strong>
+<!-- raw HTML omitted -->
+<strong>Note:</strong> The results are shown in the <a href="/#posters">poster</a></p>
+<h2 id="overview">Overview</h2>
+<p><strong>Google&rsquo;s Universal Sentence Encoder (USE)</strong> provides 512-dimension vectors for each input that are pre-trained on large corpus, and can be plugged into a variety of different task models, such as sentiment analysis, classification, and etc. It is speed-efficient without losing task accuracy, and also provides embeddings not just for word level, but also for phrases, sentences, and even paragraphs. However, the more the words are given as input, the more likely each word meaning gets diluted.</p>
+<p>This notebook is based on the Semantic Similarity with TF-Hub Universal Encoder tutorial, but uses a separate input from one of the projects. We will also use <strong>GloVe</strong> vectors to compare how the vectors and cosine similarity differ between the two models.</p>
+<ul>
+<li>
+<p>First, the notebook goes over setting up locally and use one sample data to create embeddings saved out as a separate csv file using Pandas.</p>
+</li>
+<li>
+<p>Then assuming you have cloned the repository, we call in custom functions to quickly extract vectors of given word, phrase, sentences in USE and GloVe.</p>
+</li>
+</ul>
+<h3 id="table-of-contentsshort-cuts">Table of Contents/Short-cuts:</h3>
+<ol>
+<li><a href="#About-USE-Models-and-Deep-Average-Network">About USE Models and Deep Average Network</a></li>
+<li><a href="#Installation-&amp;-Setup">Installation &amp; Setup</a></li>
+<li><a href="#Path-Setup">Path Setup</a></li>
+<li><a href="#Raw-Data-Format">Raw Data Format</a></li>
+<li><a href="#Get-USE-Embeddings">Get USE Embeddings</a></li>
+<li><a href="#Cosine-Similarity">Cosine Similarity</a></li>
+<li><a href="#Cosine-Similarity-Example">Cosine Similarity Examples</a></li>
+<li><a href="#Plotting-Similarity-Matrix">Plotting Similarity Matrix</a></li>
+</ol>
+<h3 id="about-use-models-and-deep-average-network">About USE Models and Deep Average Network</h3>
+<p>There are two types of models in <strong>USE</strong>: <strong>Transformer</strong> and <strong>Deep Averaging Network (DAN)</strong>. We will use DAN which is a lighter version for efficiency and speed in exchange for reduced accuracy (still accurate enough).</p>
+<p>DAN first averages the input word embeddings to create a sentence embedding. It uses PTB tokenizer, which divides a sentence into a sequence of tokens based on set of rules on  how to process punctuation, articles, etc, in order to create 512 dimension embeddings. This averaged 512 vector is passed to one or more feedforward layers. Then it is multi-task-trained on unsupervised data drawn from various internet sources,  Wikipedia, Stanford Natural Language Inference corpus, web news, and forums.</p>
+<ul>
+<li>Training  goals:
+<ul>
+<li>Uses skip-thought-like model that predicts the surrounding sentences of a given text (see below)</li>
+<li>Conversational response suggestion</li>
+<li>Classification task on supervised data</li>
+</ul>
+</li>
+</ul>
+<p>The intuition behind deep feedforward neural network is that each layer learns a more abstract representation of the input than the previous one. So its depth allows to capture subtle variations of the input with more depths. Also, each layer only involves a single matrix multiplication, allowing minimal computing time.</p>
+<p>See full USE paper: <a href="https://arxiv.org/pdf/1803.11175.pdf">https://arxiv.org/pdf/1803.11175.pdf</a>
+See full DAN paper: <a href="https://people.cs.umass.edu/~miyyer/pubs/2015_acl_dan.pdf">https://people.cs.umass.edu/~miyyer/pubs/2015_acl_dan.pdf</a></p>
+<hr>
+<h3 id="installation--setup">Installation &amp; Setup</h3>
+<p>I used Anaconda to create a TensorFlow-specific environment to customize the package versions. After installing Anaconda&hellip;</p>
+<ol>
+<li>Creating a new environment:</li>
+</ol>
+<pre tabindex="0"><code>conda create -n py3 python=3.6.8
+</code></pre><ol start="2">
+<li>
+<p>Activate the created environment by <code>conda activate py3</code></p>
+</li>
+<li>
+<p>Using pip, install packages for pandas, numpy, seaborn, tensorflow, tensorflow_hub. ie. <code>pip install pckge-name</code></p>
+</li>
+<li>
+<p>Then, let&rsquo;s make sure to set the packages to exact version:</p>
+</li>
+</ol>
+<pre tabindex="0"><code>pip install --upgrade tensorflow=1.15.0
+pip install --upgrade tensorflow-hub=0.7.0
+</code></pre><p>Once the steps are done, we should be able to run the codes locally.</p>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> absl <span style="color:#f92672">import</span> logging
+<span style="color:#f92672">import</span> tensorflow <span style="color:#66d9ef">as</span> tf
+<span style="color:#f92672">import</span> tensorflow_hub <span style="color:#66d9ef">as</span> hub
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">from</span> glob <span style="color:#f92672">import</span> glob
+<span style="color:#f92672">import</span> re
+<span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</code></pre></div><p><strong>Note:</strong>
+due to some depecrated methods and changes made with the tf version upgrade from tf1.X to tf2.0, here we use a specific set of Python and tf versions. You can check via <code>pip freeze</code></p>
+<ul>
+<li>tested on python == 3.6.8 | tensorflow == 1.15.0 | tensorflow_hub == 0.7.0</li>
+</ul>
+<p>Or you can check the version in Python via:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
+print(sys<span style="color:#f92672">.</span>version_info)  <span style="color:#75715e"># sys.version_info(major=3, minor=6, micro=8, releaselevel=&#39;final&#39;)</span>
+print(tf<span style="color:#f92672">.</span>__version__)    <span style="color:#75715e"># &#39;1.15.0&#39;</span>
+print(hub<span style="color:#f92672">.</span>__version__)   <span style="color:#75715e"># &#39;0.7.0&#39;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># script variables</span>
+
+<span style="color:#75715e"># for lite/DAN version:</span>
+module_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://tfhub.dev/google/universal-sentence-encoder/2&#34;</span>
+
+<span style="color:#75715e"># for heavy/Transformer version:</span>
+<span style="color:#75715e"># module_url = &#34;https://tfhub.dev/google/universal-sentence-encoder-large/3&#34;</span>
+
+baseDir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;use-glove-narrative&#39;</span>  <span style="color:#75715e"># repository/base folder name</span>
+embedding_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span>  <span style="color:#75715e"># base 512-dimension embedding</span>
+</code></pre></div><hr>
+<h3 id="path-setup">Path Setup</h3>
+<p>Assuming that you git cloned the project (which is for demo purposes) to your local directory, we set the path so the code knows where to look for certain data files using the <code>baseDir</code> specified above. We will mainly just work within the cloned folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pwd <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getcwd()
+<span style="color:#75715e"># recursively find absolute path</span>
+<span style="color:#66d9ef">while</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(pwd) <span style="color:#f92672">!=</span> baseDir:
+    os<span style="color:#f92672">.</span>chdir(<span style="color:#e6db74">&#39;..&#39;</span>)
+    pwd <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getcwd()
+baseDir <span style="color:#f92672">=</span> pwd
+dataDir <span style="color:#f92672">=</span> baseDir <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/data&#39;</span>
+
+<span style="color:#75715e"># recursively find all csv files. We will work with one file here</span>
+all_csvs <span style="color:#f92672">=</span> [y <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>walk(dataDir) <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> glob(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(x[<span style="color:#ae81ff">0</span>], <span style="color:#e6db74">&#39;*.csv&#39;</span>))]
+all_csvs<span style="color:#f92672">.</span>sort()
+all_csvs <span style="color:#f92672">=</span> all_csvs[<span style="color:#ae81ff">0</span>]  <span style="color:#75715e"># we will just use one sample data</span>
+</code></pre></div><h3 id="raw-data-format">Raw Data Format</h3>
+<p>To briefly show the data, the data is comprised of numerous idea units, or phrases of words with unique meanings. Here, we are only interested in the &lsquo;text&rsquo; column and &lsquo;index&rsquo; column. We will call in the text of the entire story to create embeddings for each idea unit. Below the example print out, we will loop over each story to create embeddings. Since we will use one story this time, it shouldn&rsquo;t take that long.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># an example print of data format</span>
+datafile <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(all_csvs)
+datafile<span style="color:#f92672">.</span>head()
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<hr>
+<h2 id="get-use-embeddings">Get USE Embeddings</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># let&#39;s read in the data file</span>
+textfile <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(all_csvs)
+<span style="color:#75715e"># get the title of the narrative story, cutting out the .csv extension</span>
+title <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(all_csvs)[:<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>]
+
+
+<span style="color:#75715e"># create df to save out at the end</span>
+vector_df_columns <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;paragraph&#39;</span>, <span style="color:#e6db74">&#39;index&#39;</span>, <span style="color:#e6db74">&#39;text&#39;</span>, <span style="color:#e6db74">&#39;size&#39;</span>]
+<span style="color:#75715e"># create column for each dimension (out of 512)</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, embedding_size <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+    vector_df_columns<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;dim&#39;</span> <span style="color:#f92672">+</span> str(i))
+vector_df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns<span style="color:#f92672">=</span>vector_df_columns)
+
+
+<span style="color:#75715e"># import the Universal Sentence Encoder&#39;s TF Hub module</span>
+embed <span style="color:#f92672">=</span> hub<span style="color:#f92672">.</span>Module(module_url)  <span style="color:#75715e"># hub.load(module_url) for tf==2.0.0</span>
+
+<span style="color:#75715e"># we call in the text column from data file</span>
+messages <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(textfile)):
+    messages<span style="color:#f92672">.</span>append(textfile<span style="color:#f92672">.</span>iloc[t][<span style="color:#e6db74">&#39;text&#39;</span>])
+
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Reduce logging output.</span>
+logging<span style="color:#f92672">.</span>set_verbosity(logging<span style="color:#f92672">.</span>ERROR)
+
+<span style="color:#66d9ef">with</span> tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>Session() <span style="color:#66d9ef">as</span> session:
+    session<span style="color:#f92672">.</span>run([tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>global_variables_initializer(), tf<span style="color:#f92672">.</span>compat<span style="color:#f92672">.</span>v1<span style="color:#f92672">.</span>tables_initializer()])
+    message_embeddings <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span>run(embed(messages))
+
+<span style="color:#75715e"># make sure all units are there/sanity check</span>
+<span style="color:#66d9ef">assert</span> len(message_embeddings) <span style="color:#f92672">==</span> len(textfile) <span style="color:#f92672">==</span> len(messages)
+
+<span style="color:#75715e"># loop over each vector value to corresponding text</span>
+<span style="color:#66d9ef">for</span> e <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(message_embeddings)):
+    vector_df<span style="color:#f92672">.</span>at[e, <span style="color:#e6db74">&#39;paragraph&#39;</span>] <span style="color:#f92672">=</span> textfile<span style="color:#f92672">.</span>iloc[e][<span style="color:#e6db74">&#39;paragraph&#39;</span>]
+    vector_df<span style="color:#f92672">.</span>at[e, <span style="color:#e6db74">&#39;index&#39;</span>] <span style="color:#f92672">=</span> textfile<span style="color:#f92672">.</span>iloc[e][<span style="color:#e6db74">&#39;index&#39;</span>]
+    vector_df<span style="color:#f92672">.</span>at[e, <span style="color:#e6db74">&#39;text&#39;</span>] <span style="color:#f92672">=</span> messages[e]
+    vector_df<span style="color:#f92672">.</span>at[e, <span style="color:#e6db74">&#39;size&#39;</span>] <span style="color:#f92672">=</span> len(message_embeddings[e])
+    <span style="color:#66d9ef">for</span> dim <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(message_embeddings[e])):
+        vector_df<span style="color:#f92672">.</span>at[e, <span style="color:#e6db74">&#39;dim&#39;</span><span style="color:#f92672">+</span>str(dim<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#f92672">=</span> message_embeddings[e][dim]
+
+<span style="color:#75715e"># display sample format</span>
+vector_df<span style="color:#f92672">.</span>head()
+
+</code></pre></div><pre><code>INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+</code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(np<span style="color:#f92672">.</span>shape(vector_df))
+</code></pre></div><pre><code>(0, 516)
+</code></pre>
+<p>The sample data shows each idea unit/text converted to 512 dimension vectors. <code>np.shape(vector_df)</code> will return a 41 total idea units/phrases to 516 columns (512 dimensions + custom columns (paragraph info, index, text, and size)). We then use these vectors to explore semantic similarity between text and phrases.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># run the code below to save out as csv file</span>
+vector_df<span style="color:#f92672">.</span>reindex(columns<span style="color:#f92672">=</span>vector_df_columns)
+vector_df<span style="color:#f92672">.</span>to_csv(title <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;_vectors.csv&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</code></pre></div><hr>
+<h2 id="cosine-similarity">Cosine Similarity</h2>
+<p>As a brief description, <strong>cosine similarity</strong> is basically the measure of cosine angle between the two vectors. Since we have USE and GloVe vectors that represent words into multidimensional vectors, we can apply these vector values to calculate how similar the two words are.</p>
+<p>It can be easily calculated in Python with its useful packages:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cos_sim <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>dot(vector1, vector2)<span style="color:#f92672">/</span>(numpy<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(vector1) <span style="color:#f92672">*</span> numpy<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>norm(vector2))
+</code></pre></div><p>Assuming we established some basic understanding, let&rsquo;s call in the functions I made so that we can easily get USE and GloVe vectors at multiple word level.</p>
+<p>I will highlight some of the functions below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> get_glove_use <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+help(glove_vec)
+help(use_vec)
+</code></pre></div><pre><code>Help on function glove_vec in module get_glove_use:
+
+glove_vec(item1, item2)
+    get vectors for given two words and calculate cosine similarity
+
+    Parameters
+    ----------
+    item1 : str
+        string in glove word pool vector to compare
+    item2 : str
+        string in glove word pool vector to compare
+
+    Returns
+    -------
+    item1_vector : array
+        item1 GloVe vector
+    item2_vector : array
+        item2 GloVe vector
+    cos_sim : float
+        cosine similarity of item1 and item2 vectors
+
+Help on function use_vec in module get_glove_use:
+
+use_vec(item1, item2)
+    get USE vectors and cosine similairty of the two items
+
+    Parameters
+    ----------
+    item1 : str, list
+        any word to compare, put in string for more than one word
+    item2 : str, list
+        any word to compare, put in string for more than one word
+
+    Returns
+    -------
+    item1_vector : array
+        item1 USE vector
+    item2_vector : array
+        item2 USE vector
+    cos_sim : float
+        cosine similarity of item1 and item2 vectors
+</code></pre>
+<h3 id="cosine-similarity-example">Cosine Similarity Example</h3>
+<p>Using the two functions above, and another function compare_word_vec (which basically uses the two functions), we can easily obtain cosine similarity of two words.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># using the two functions above, we can get</span>
+<span style="color:#75715e"># GloVe and USE vectors and cosine similarity of two input words</span>
+os<span style="color:#f92672">.</span>chdir(gloveDir)
+_, _, glove_sim <span style="color:#f92672">=</span> glove_vec(<span style="color:#e6db74">&#39;fish&#39;</span>,<span style="color:#e6db74">&#39;bear&#39;</span>)
+_, _, use_sim <span style="color:#f92672">=</span> use_vec(<span style="color:#e6db74">&#39;fish&#39;</span>,<span style="color:#e6db74">&#39;bear&#39;</span>)
+print(<span style="color:#e6db74">&#39;use cos: &#39;</span> <span style="color:#f92672">+</span> str(use_sim))
+print(<span style="color:#e6db74">&#39;glove cos: &#39;</span> <span style="color:#f92672">+</span> str(glove_sim))
+</code></pre></div><pre><code>INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+0.11964830574261577
+0.5305143
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># the two functions glove_vex and use_vec are use in compare_word_vec</span>
+compare_word_vec(<span style="color:#e6db74">&#39;man&#39;</span>,<span style="color:#e6db74">&#39;fish&#39;</span>)
+</code></pre></div><pre><code>INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+use cos: 0.49838725
+glove cos: 0.18601566881803455
+</code></pre>
+<p><strong>Note:</strong> From the example above, USE and GloVe similarly identy <em>fish</em> to be somewhat equally similar to <em>bear</em> and <em>man</em> (but just in different scale/degree).</p>
+<p>Now let&rsquo;s try comparing at multiple words or phrase level. We will use new functions and give in new inputs as strings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sentence1 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;old&#39;</span>, <span style="color:#e6db74">&#39;man&#39;</span>, <span style="color:#e6db74">&#39;caught&#39;</span>, <span style="color:#e6db74">&#39;fish&#39;</span>]
+sentence2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;bear&#39;</span>, <span style="color:#e6db74">&#39;hunted&#39;</span>, <span style="color:#e6db74">&#39;trout&#39;</span>]
+sentence3 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;bear&#39;</span>,<span style="color:#e6db74">&#39;eat&#39;</span>,<span style="color:#e6db74">&#39;six&#39;</span>,<span style="color:#e6db74">&#39;fish&#39;</span>]
+
+print(<span style="color:#e6db74">&#39;old man caught fish &amp; bear hunted trout:&#39;</span>)
+phrase_vec(sentence1, sentence2)
+
+print(<span style="color:#e6db74">&#39;old man caught fish &amp; bear eat six fish:&#39;</span>)
+phrase_vec(sentence1, sentence3)
+
+print(<span style="color:#e6db74">&#39;bear hunted trout &amp; bear eat six fish:&#39;</span>)
+phrase_vec(sentence2, sentence3)
+
+</code></pre></div><pre><code>old man caught fish &amp; bear hunted trout:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.36609688461789297
+USE sim: 0.50494814
+old man caught fish &amp; bear eat six fish:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.6818474640845398
+USE sim: 0.5896743
+bear hunted trout &amp; bear eat six fish:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.6082457470353315
+USE sim: 0.72352856
+</code></pre>
+<p><strong>Note:</strong> From the example above, we can see that USE and GloVe capture somewhat differently. We can see that <em>bear hunted trout</em> and <em>bear eat six fish</em> are the most similar to each other, whereas <em>old man caught fish</em> is also similar to the context of bear eating six fish.</p>
+<p>More detailed analysis is required, but the example above shows great possibilities to exploring semantics.</p>
+<h3 id="plotting-similarity-matrix">Plotting Similarity Matrix</h3>
+<p>Now that we can compare similarity of words and sentences, we can plot a simple pairwise matrix, which basically compares how similar each word is to another in the given list. Fortunately, we already have a plot for doing it (using Seaborn).</p>
+<p>I will only use few words as demonstration, since it&rsquo;s been slowing up my computer so much!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_sim_matrix([<span style="color:#e6db74">&#39;man&#39;</span>, <span style="color:#e6db74">&#39;bear&#39;</span>, <span style="color:#e6db74">&#39;fish&#39;</span>, <span style="color:#e6db74">&#39;trout&#39;</span>])
+</code></pre></div><pre><code>INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+</code></pre>
+<p><img src="./use_glove_cosine_similarity_25_2.png" alt="png"></p>
+<h2 id="ending-note">Ending Note</h2>
+<p>In the example above, we only used simple noun words. The stronger blue color, the more similar the two words are. Thus, the diagonal strip is deep blue (similarity of same two words is 1). You can see <em>fish</em> and <em>trout</em> are more similar to each other, than is <em>man</em> to <em>trout</em>.</p>
+<p>Keep in mind that you can feed in more words and sentences to create and visualize a larger matrix.</p>
+<p>We looked at setting up USE locally, and creating embeddings from USE. The cloned project also has sample version of GloVe vectors. We use the vectors from the two models to extract vectors and compare similarity of two texts.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
+  
+  <a class="badge badge-light" href="/tags/machine-learning/">machine-learning</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://jinjeon.me/post/vectorspace/&amp;text=Universal%20Sentence%20Encoder%20and%20GloVe%20on%20Narrative%20Semantic%20Representation" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://jinjeon.me/post/vectorspace/&amp;t=Universal%20Sentence%20Encoder%20and%20GloVe%20on%20Narrative%20Semantic%20Representation" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Universal%20Sentence%20Encoder%20and%20GloVe%20on%20Narrative%20Semantic%20Representation&amp;body=https://jinjeon.me/post/vectorspace/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://jinjeon.me/post/vectorspace/&amp;title=Universal%20Sentence%20Encoder%20and%20GloVe%20on%20Narrative%20Semantic%20Representation" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_huf5029b22bbb9407d45fad41834988009_176697_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://jinjeon.me/">Jin Jeon</a></h5>
+      <h6 class="card-subtitle">UX Researcher</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://jinjeon.me/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jinjeon/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/jeon11" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:jinjeon@berkeley.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/eeg-advanced/">EEG/Signal Processing--Advanced Part 2</a></li>
+      
+      <li><a href="/post/eeg-basics/">EEG/Signal Processing--Basics Part 1</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python,%20r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.b59fdb6275ef5e6e2859c30582fc271a.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2024 developed by Jin with HTML/CSS/Markdown and ☕️ <!-- raw HTML omitted --> &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

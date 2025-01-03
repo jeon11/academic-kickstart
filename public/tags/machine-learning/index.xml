@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine-learning | Jin Jeon</title>
+    <link>https://jinjeon.me/tags/machine-learning/</link>
+      <atom:link href="https://jinjeon.me/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>machine-learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 developed by Jin with HTML/CSS/Markdown and ☕️ </copyright><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jinjeon.me/img/icon.png</url>
+      <title>machine-learning</title>
+      <link>https://jinjeon.me/tags/machine-learning/</link>
+    </image>
+    
+    <item>
+      <title>Sentiment Analysis, Textual Data Analysis, and Visualization Using Natural Language API</title>
+      <link>https://jinjeon.me/post/textual-data-analysis/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/post/textual-data-analysis/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#link1&#34;&gt;What is Google Cloud API?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link2&#34;&gt;Survey Data in User Research&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link3&#34;&gt;Natural Language API Features&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+3.1 &lt;a href=&#34;#link3.1&#34;&gt;Entity Analysis&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+3.2 &lt;a href=&#34;#link3.2&#34;&gt;Sentiment Analysis&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+3.3 &lt;a href=&#34;#link3.3&#34;&gt;Entity Sentiment Analysis&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link4&#34;&gt;Loading in data using Google Sheets API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link5&#34;&gt;Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link6&#34;&gt;Data Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link7&#34;&gt;Research Question&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+7.1 &lt;a href=&#34;#link7.1&#34;&gt;A. Health Rating by Gender&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+7.2 &lt;a href=&#34;#link7.2&#34;&gt;B. Health Rating by Age Group&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+7.3 &lt;a href=&#34;#link7.3&#34;&gt;C. T-test for Statistical Signifcance&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+7.4 &lt;a href=&#34;#link7.4&#34;&gt;D. Health Rating by Age &amp;amp; Gender Group&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+7.5 &lt;a href=&#34;#link7.5&#34;&gt;E. Iteratively Running t-test Within Each Age Group&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link8&#34;&gt;Data Visualization&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;
+8.1 &lt;a href=&#34;#link8.1&#34;&gt;Characterizing Textual Data Through Wordcloud&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#link9&#34;&gt;Conclusion&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;a-namelink1-what-is-google-cloud-api-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; What is Google Cloud API? &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Google Cloud Platform&lt;/strong&gt; is a suite of cloud computing services that lets developers interact with APIs that involve data storage, data analytics, and machine learning. In this notebook, I build on to the previous notebook to call in the spreadsheets from Google Drive, and run textual data analysis using the Cloud Natural Language API and vector space models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cloud.google.com/natural-language&#34;&gt;Natural Language AI&lt;/a&gt;&lt;/strong&gt; is an API available in Google Cloud. It uses machine learning to analyze texts through sentiment analysis and extract information about the text itself. It offers three types of models:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Auto ML&lt;/strong&gt;: that allows you to train your own model&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Natural Language API&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;: that offers pre-trained models to quickly boot up NLP.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Healthcare Natural Language AI&lt;/strong&gt;: that is specific for medical texts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For the sake of time scope and complexity of the project, let&amp;rsquo;s use the Natural Language API to call in a pre-trained model to analyze textual data. The demo of the model can be found online here: &lt;a href=&#34;https://cloud.google.com/natural-language&#34;&gt;https://cloud.google.com/natural-language&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;a-namelink2-survey-data-in-user-research-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Survey Data in User Research &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;As a UX researcher, survey studies are essential for understanding the users because they can be quickly developed and sent out to receive a good amount of sample in a short period of time. &lt;strong&gt;Surveys are powerful tools to be utilized for conducting preliminary research at the discovery stage to explore the general problem space and user behaviors.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;One of the free and efficient tools is the Google Forms. While it can automatically generate pie graphs and bar graphs to summarize the survey results, the results are often too limited. &lt;strong&gt;As researchers, we might be interested in learning more in depth about the data. After all, it is researchers&#39; role to develop a keen sense to analyze the data and drive insights.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For instance, the screenshots below show sample summaries of what Google Form summary is capable of doing.&lt;/p&gt;
+&lt;h4 id=&#34;breakdown-of-participants-age-range&#34;&gt;Breakdown of participants&#39; age range&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;./age.png&#34; alt=&#34;Age Breakdown&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;participants-self-perception-of-their-health-wellness&#34;&gt;Participants&#39; self perception of their health wellness&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;./rating.png&#34; alt=&#34;Rating by Participants&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The graphs above do not show any relationship between the data.&lt;/strong&gt; To drive more meaningful insights, we would want to explore if there are any relationships between the data. For example, we would want to know how self perception of health wellness varies by different age groups. Do older people perceive themselves to be less healthy than young people do? While the ratings are subjective, the analysis itself can hint towards meaningful insights.&lt;/p&gt;
+&lt;h4 id=&#34;objectives&#34;&gt;Objectives&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;I use GoogleSheets API to call in the data and analyze the survey results to visualize the relationship between data and test statistical significance. I also incorporate Natural Language API to analyze textual data collected from the survey, and visualize them through violin graphs and word cloud.&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;a-namelink3-natural-language-api-features-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Natural Language API Features &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Before diving straight to working with data, let&amp;rsquo;s take a look at some of the features of NL API.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Imports the Google Cloud client library&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; google.cloud &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; language_v1
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# set environment for credentials (need to be called with every start of instance)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# refer the reference tab for setting credentials&lt;/span&gt;
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;GOOGLE_APPLICATION_CREDENTIALS&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/Users/Jin/google-cloud-sdk/natural-language-api.json&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Instantiates a client&lt;/span&gt;
+client &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;LanguageServiceClient()
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Available types: PLAIN_TEXT, HTML&lt;/span&gt;
+type_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Type&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;PLAIN_TEXT
+
+encoding_type &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;EncodingType&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;UTF8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For the scope of this project, let&amp;rsquo;s look at some specific methods that NL API offers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Entity analysis&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;strong&gt;2. Sentiment analysis&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;strong&gt;3. Entity Sentiment analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;a-namelink31-1-entity-analysis-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 1. Entity analysis &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;analyze_entities&lt;/code&gt;: inspects the given text for known entities (proper nouns such as public figures, landmarks, etc.), and returns information about those entities.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# grab a random text from wikipedia&lt;/span&gt;
+text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The University of Washington is a public research university in Seattle, Washington.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        Ana Mari Cauce is the president.&amp;#34;&lt;/span&gt;
+
+document &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: text, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type_&amp;#34;&lt;/span&gt;: type_}
+
+response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;analyze_entities(request &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;document&amp;#39;&lt;/span&gt;: document, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;encoding_type&amp;#39;&lt;/span&gt;: encoding_type})
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Loop through entitites returned from the API&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; entity &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;entities:
+    print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entity name: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name))
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# Get entity type, e.g. PERSON, LOCATION, ADDRESS, NUMBER, et al&lt;/span&gt;
+    print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entity type: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Type(entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;type_)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name))
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# Get the salience score associated with the entity in the [0, 1.0] range&lt;/span&gt;
+    print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Salience score: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;salience) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Entity name: University of Washington
+Entity type: ORGANIZATION
+Salience score: 0.7374827265739441
+
+Entity name: Ana Mari Cauce
+Entity type: PERSON
+Salience score: 0.11040862649679184
+
+Entity name: Washington
+Entity type: LOCATION
+Salience score: 0.07763731479644775
+
+Entity name: Seattle
+Entity type: LOCATION
+Salience score: 0.07447130978107452
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;a-namelink32-2-sentiment-analysis-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 2. Sentiment analysis &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;analyze_sentiment&lt;/code&gt;: inspects the given text and identifies the prevailing emotional opinion within the text, especially to determine a writer&amp;rsquo;s attitude as positive, negative, or neutral.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;analyze_sentiment&lt;/span&gt;(text):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    a simple function created to run sentiment analysis for a given text.
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Parameters
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    ----------
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    text : str
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        string of text to be analyzed
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Returns
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    -------
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    sentiment.score: float
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    sentiment.magnitude: float
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        a non-negative number in the [0, +inf) range, which represents the absolute &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        magnitude of sentiment regardless of score (positive or negative).
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    document &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Document(content&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;text, type_&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Type&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;PLAIN_TEXT)
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# Detects the sentiment of the text&lt;/span&gt;
+    sentiment &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;analyze_sentiment(request&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;document&amp;#39;&lt;/span&gt;: document})&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;document_sentiment
+
+    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Text: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(text))
+    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sentiment: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;score, sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;magnitude))
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;score, sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;magnitude
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s try feeding in some random sentences and see how sentiments come out.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# The text to analyze&lt;/span&gt;
+text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The dish was delightfully surprising.&amp;#34;&lt;/span&gt;
+text2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The overall experience was terrible.&amp;#34;&lt;/span&gt;
+
+analyze_sentiment(text)
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+_, _ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; analyze_sentiment(text2)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Text: The dish was delightfully surprising.
+Sentiment: 0.8999999761581421, 0.8999999761581421
+
+
+Text: The overall experience was terrible.
+Sentiment: -0.800000011920929, 0.800000011920929
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;a-namelink33-3-entity-sentiment-analysis-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; 3. Entity sentiment analysis &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;analyze_entity_sentiment&lt;/code&gt;: combines both entity analysis and sentiment analysis and attempts to determine the sentiment (positive or negative) expressed about entities within the text.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;analyze_entity_sentiment&lt;/span&gt;(text):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    a simple function to run entity sentiment analysis for a given text.
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Parameters
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    ----------
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    text : str
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        string of text to be analyzed
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Returns
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    -------
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    entity.name: str
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        name of the entity identified
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    entity.type.name: str
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        type of the entity identified
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    sentiment.score: float
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    sentiment.magnitude: float
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        a non-negative number in the [0, +inf) range, which represents the absolute &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        magnitude of sentiment regardless of score (positive or negative).
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    document &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: text, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type_&amp;#34;&lt;/span&gt;: type_}
+
+    encoding_type &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;EncodingType&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;UTF8
+
+    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;analyze_entity_sentiment(request &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;document&amp;#39;&lt;/span&gt;: document, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;encoding_type&amp;#39;&lt;/span&gt;: encoding_type})
+    &lt;span style=&#34;color:#75715e&#34;&gt;# Loop through entitites returned from the API&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; entity &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;entities:
+        print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entity name: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name))
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;# Get entity type, e.g. PERSON, LOCATION, ADDRESS, NUMBER, et al&lt;/span&gt;
+        print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entity type: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Type(entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;type_)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name))
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;# Get the salience score associated with the entity in the [0, 1.0] range&lt;/span&gt;
+        print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Salience score: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;salience))
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;# Get the aggregate sentiment expressed for this entity in the provided document.&lt;/span&gt;
+        sentiment &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sentiment
+        print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entity sentiment score: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;score))
+        print(&lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entity sentiment magnitude: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;magnitude))
+        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name, language_v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Type(entity&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;type_)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name, sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;score, sentiment&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;magnitude
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s try feeding in one neutral sentence, and a positive sentence.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;u&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The University of Washington is a public research university in Seattle, Washington.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        The HCDE Department offers amazing opportunities to study UX and HCI.&amp;#34;&lt;/span&gt;
+
+_, _, _, _ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; analyze_entity_sentiment(text)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Entity name: University of Washington
+Entity type: ORGANIZATION
+Salience score: 0.7403186559677124
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: Washington
+Entity type: LOCATION
+Salience score: 0.07140954583883286
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: Seattle
+Entity type: LOCATION
+Salience score: 0.06301160156726837
+Entity sentiment score: 0.0
+Entity sentiment magnitude: 0.0
+
+
+Entity name: HCDE Department
+Entity type: ORGANIZATION
+Salience score: 0.04862694814801216
+Entity sentiment score: 0.8999999761581421
+Entity sentiment magnitude: 0.8999999761581421
+
+
+Entity name: UX
+Entity type: OTHER
+Salience score: 0.03587672486901283
+Entity sentiment score: 0.699999988079071
+Entity sentiment magnitude: 0.699999988079071
+
+
+Entity name: HCI
+Entity type: OTHER
+Salience score: 0.025248046964406967
+Entity sentiment score: 0.800000011920929
+Entity sentiment magnitude: 0.800000011920929
+
+
+Entity name: opportunities
+Entity type: OTHER
+Salience score: 0.015508485026657581
+Entity sentiment score: 0.8999999761581421
+Entity sentiment magnitude: 0.8999999761581421
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From the result above, we can see that the first sentiment of the entities identified in the first sentence, such as &amp;lsquo;University of Washington&amp;rsquo; or &amp;lsquo;Seattle&amp;rsquo; has a sentiment score of 0.0 which means neutral. This makes sense because the sentence was directly pulled from Wikipedia. On the other hand, the second sentence I wrote highlights &amp;lsquo;HCDE Department&amp;rsquo; as an entity with positive sentiment score of 0.8999.&lt;/p&gt;
+&lt;h4 id=&#34;so-whats-next&#34;&gt;So what&amp;rsquo;s next?&lt;/h4&gt;
+&lt;p&gt;We can interchangeably use the two functions defined &lt;code&gt;analyze_sentiment&lt;/code&gt; and &lt;code&gt;analyze_entity_sentiment&lt;/code&gt; to identify the overall sentiment of a given text or entity if specified in the data analysis process.&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;a-namelink4-loading-in-data-using-google-sheets-api-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Loading in data using Google Sheets API &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;The following code will only run if you have your Google &lt;code&gt;credential.json&lt;/code&gt; and &lt;code&gt;token.json&lt;/code&gt; within the working directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; __future__ &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; print_function
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os.path
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; googleapiclient.discovery &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; build
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; google_auth_oauthlib.flow &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; InstalledAppFlow
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; google.auth.transport.requests &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; Request
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; google.oauth2.credentials &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; Credentials
+
+SCOPES &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://www.googleapis.com/auth/spreadsheets.readonly&amp;#39;&lt;/span&gt;]
+SPREADSHEET_ID &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;11Den6g5nuR4B2CCUML1KrA0bEZXRpPZ7t83Ieyi7NJ4&amp;#39;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Specify which sheet or row/column of data to call in&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# refer to https://developers.google.com/sheets/api/guides/concepts#a1_notation for detail&lt;/span&gt;
+RANGE_NAME &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;health_data&amp;#39;&lt;/span&gt;
+
+creds &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Credentials&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;from_authorized_user_file(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;token.json&amp;#39;&lt;/span&gt;, SCOPES)
+service &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; build(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;sheets&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;v4&amp;#39;&lt;/span&gt;, credentials&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;creds)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Call the Sheets API to read in the data&lt;/span&gt;
+sheet &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; service&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;spreadsheets()
+result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sheet&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;values()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(spreadsheetId &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SPREADSHEET_ID,
+                            range &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; RANGE_NAME)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;execute()
+values &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; result&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;values&amp;#39;&lt;/span&gt;, [])
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# convert the sheet to pandas dataframe so we can easily manipulate the data&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
+
+data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(values[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;values[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;])
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# let&amp;#39;s confirm&lt;/span&gt;
+print(type(data))
+
+data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt;
+
+(71, 27)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;a-namelink5-dataset-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Dataset &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;From the code above, we translated the data into pandas dataframe. Using &lt;code&gt;data.shape&lt;/code&gt;, we know that there are total 27 questions collected from 71 participants. For simplicity, I remove any data that does not prefer to disclose gender. This brings the data size to 68. Due to the extensive length and branching logic within the survey, the data becomes more textual and qualitative for questions or columns in the back. I will primarily use selected columns that are of interest.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s have a quick glance at the dataset.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# for simplicity, let&amp;#39;s constrain the gender option to only two&lt;/span&gt;
+gender_options &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Man&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Woman&amp;#39;&lt;/span&gt;]
+data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What is your gender?&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;isin(gender_options)]
+
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;There are total &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(len(data)) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; participants.&amp;#39;&lt;/span&gt;)
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;The survey consists of &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; questions (columns in the dataframe).&amp;#39;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# convert the column string values to integers&lt;/span&gt;
+data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;How would you rate your health?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;How would you rate your health?&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;astype(int)
+
+data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;There are total 69 participants.
+The survey consists of 27 questions (columns in the dataframe).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;a-namelink6-data-analysis-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Data Analysis &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Now that we have seen the general dataframe structure, let&amp;rsquo;s explore probing the data for analysis.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; collections &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; Counter
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; plt
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; seaborn &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; sns
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; nltk.corpus &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; stopwords
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; warnings
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; wordcloud &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; WordCloud, STOPWORDS, ImageColorGenerator
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; scipy
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; tabulate &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; tabulate
+
+warnings&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;simplefilter(action&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ignore&amp;#39;&lt;/span&gt;, category&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FutureWarning&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# suppress any warning&lt;/span&gt;
+sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_color_codes(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pastel&amp;#39;&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# set color&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;querying-data&#34;&gt;Querying data&lt;/h3&gt;
+&lt;p&gt;Before we play around with data, let&amp;rsquo;s query out the data that are of interest. This way we can manipulate the data more effectively without having to call on the entire dataset &lt;code&gt;data&lt;/code&gt; everytime.&lt;/p&gt;
+&lt;p&gt;There are total 7 different age groups.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# let&amp;#39;s divde the data by gender first&lt;/span&gt;
+females &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What is your gender?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Woman&amp;#39;&lt;/span&gt;]
+males &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What is your gender?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Man&amp;#39;&lt;/span&gt;]
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# let&amp;#39;s also create dataset divided by age group&lt;/span&gt;
+age_under18 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Under 18&amp;#39;&lt;/span&gt;]
+age_18to24 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;18 - 24&amp;#39;&lt;/span&gt;]
+age_25to34 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;25 - 34&amp;#39;&lt;/span&gt;]
+age_35to44 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;35 - 44&amp;#39;&lt;/span&gt;]
+age_45to54 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;45 - 54&amp;#39;&lt;/span&gt;]
+age_55to64 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;55 - 64&amp;#39;&lt;/span&gt;]
+age_over65 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;65 or older&amp;#39;&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(len(males))
+print(len(females))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;31
+38
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;a-namelink7-research-question-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Research Question &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;em&gt;How does self-perception of health rating differ by gender and age?&lt;/em&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Participants were asked, How would you rate your health? (5 being healthy, 1 being not healthy).&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;a-namelink71-a-health-rating-by-gender-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; A. Health rating by gender &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s breakdown the data to see how self-perception of health wellness varies by gender and different age groups. In the code below, I first quary females and males from the data.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# columns[4] is the column for health rating&lt;/span&gt;
+mean_males &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean(males[males&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns[&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]])
+mean_females &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean(females[females&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns[&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]])
+
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mean of males&amp;#39; self-health wellness: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(mean_males))
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mean of females&amp;#39; self-health wellness: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(mean_females))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Mean of males&#39; self-health wellness: 3.5161290322580645
+Mean of females&#39; self-health wellness: 3.4473684210526314
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;a-namelink72-b-health-rating-by-age-group-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; B. Health rating by age group &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;Now let&amp;rsquo;s breakdown the data to see how self-perception of health wellness varies by different age groups.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;age &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;)[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;How would you rate your health?&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean()
+age
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;What age range are you?
+18 - 24        3.615385
+25 - 34        3.285714
+35 - 44        3.500000
+45 - 54        3.375000
+55 - 64        3.600000
+65 or older    4.000000
+Under 18       3.000000
+Name: How would you rate your health?, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Conversely, the age group 65 or older actually has the highest self-perception of wellness.&lt;/strong&gt; The youngest group (age under 18) rated the lowest.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;a-namelink73-c-t-test-for-statistical-signifcance-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; C. T-test for statistical signifcance &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;With small samples of the two demographic groups &lt;code&gt;65 or older&lt;/code&gt; and &lt;code&gt;Under 18&lt;/code&gt;, we are not sure if the difference we see here is significant. &lt;strong&gt;Let&amp;rsquo;s run a quick t-test to see if the difference we are seeing is statistically significant.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;t, p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; scipy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;stats&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ttest_ind(age_over65[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;How would you rate your health?&amp;#39;&lt;/span&gt;], age_under18[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;How would you rate your health?&amp;#39;&lt;/span&gt;])
+
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(t&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)))  
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;p: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(p&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)))  &lt;span style=&#34;color:#75715e&#34;&gt;# the p-val should be less than 0.05 in general to assume the difference we observe is signifcant&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;t: 2.8983
+p: 0.0199
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We see the p-value is 0.01 which is signifcant, which is one interesting find! So we can say that within this dataset, the people age over 65 perceive themselves to be more healthy than teenagers would do.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;a-namelink74-d-health-rating-by-age--gender-group-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; D. Health rating by age &amp;amp; gender group &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;Now let&amp;rsquo;s breakdown by both gender and different age groups to look at how the self perception of health wellness change.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;age_gender &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What is your gender?&amp;#39;&lt;/span&gt;])[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;How would you rate your health?&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+
+age_gender
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;What age range are you?  What is your gender?
+18 - 24                  Man                     3.43
+                         Woman                   3.83
+25 - 34                  Man                     3.43
+                         Woman                   3.21
+35 - 44                  Man                     3.80
+                         Woman                   3.29
+45 - 54                  Man                     3.40
+                         Woman                   3.33
+55 - 64                  Man                     3.33
+                         Woman                   4.00
+65 or older              Man                     4.00
+                         Woman                   4.00
+Under 18                 Man                     3.00
+                         Woman                   3.00
+Name: How would you rate your health?, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;a-namelink75-e-iteratively-running-t-test-within-each-age-group-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; E. Iteratively running t-test within each age group &lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;We have several different age groups with each male and female gender group. Within each age group, let&amp;rsquo;s run a t-test to see if there are any significant observed differences.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;gender_options &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Man&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Woman&amp;#39;&lt;/span&gt;]
+age_groups &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age_under18&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age_18to24&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age_25to34&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age_35to44&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age_45to54&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age_55to64&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age_over65&amp;#39;&lt;/span&gt;]
+
+table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+table&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;age group&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t value&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;p value&amp;#39;&lt;/span&gt;])
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# iteratively run for t-tests within each age group defined in the list variable &amp;#39;age_groups&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len(age_groups)):
+    data_string &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[&amp;#39;How would you rate your health?&amp;#39;]&amp;#34;&lt;/span&gt;
+    eval_string1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; age_groups[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.loc[&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; age_groups[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[&amp;#39;What is your gender?&amp;#39;] == &amp;#39;Man&amp;#39;]&amp;#34;&lt;/span&gt;
+    a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; eval(eval_string1 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; data_string)
+    eval_string2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; age_groups[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.loc[&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; age_groups[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[&amp;#39;What is your gender?&amp;#39;] == &amp;#39;Woman&amp;#39;]&amp;#34;&lt;/span&gt;
+    b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; eval(eval_string2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; data_string)
+&lt;span style=&#34;color:#75715e&#34;&gt;#     strings_combined = &amp;#39;scipy.stats.ttest_ind(a, b)&amp;#39;&lt;/span&gt;
+
+    t, p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; eval(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;scipy.stats.ttest_ind(a, b)&amp;#39;&lt;/span&gt;)
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# we use a package called tabulate to print out a formatted table&lt;/span&gt;
+    table&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append([age_groups[i], t&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;) ,p&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;round(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)])
+
+print(tabulate(table, headers&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;firstrow&amp;#39;&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;age group      t value    p value
+-----------  ---------  ---------
+age_under18   nan        nan
+age_18to24     -1.1315     0.2819
+age_25to34      0.4504     0.6575
+age_35to44      0.9682     0.3558
+age_45to54      0.1637     0.8754
+age_55to64     -0.7746     0.495
+age_over65      0          1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;We see that the p-values are all above 0.05 which means that there are no observed significant differences in gender within each age group.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;a-namelink8-data-visualization-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Data Visualization &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s first try plotting a simple visual violin plot.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;age_plot &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;catplot(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What age range are you?&amp;#39;&lt;/span&gt;, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;How would you rate your health?&amp;#39;&lt;/span&gt;, \
+                       hue&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;What is your gender?&amp;#39;&lt;/span&gt;, kind&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;violin&amp;#34;&lt;/span&gt;, data&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;data);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_39_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;a-namelink81-characterizing-textual-data-through-wordcloud-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Characterizing textual data through wordcloud &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s change focus and try analyzing textual inputs from the participants. We will analyze the column How is your health and/or fitness information being used? question to identify any emerging keywords using the word cloud representation. Disclaimer: The result here is not such a useful or accurate representation as the stopwords did not clearly filter out.&lt;/p&gt;
+&lt;p&gt;We first call in a list of stopwords to filter out any unnecessary words, such as &amp;lsquo;I&amp;rsquo;, &amp;lsquo;and&amp;rsquo;, and etc. We then flatten out all the responses into a single list of words.&lt;/p&gt;
+&lt;h3 id=&#34;is-there-gender-difference-in-how-they-use-health-data-text-responses&#34;&gt;Is there gender difference in how they use health data (text responses)?&lt;/h3&gt;
+&lt;p&gt;Participants were asked, &amp;ldquo;How is your health and/or fitness information being used?&amp;rdquo; Here, I try to breakdown the text data through representation of wordcloud, and see if there any characteristics found in each gender.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# builtin stopword sets from nltk&lt;/span&gt;
+stop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; set(stopwords&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;words(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;english&amp;#39;&lt;/span&gt;))
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;plot_wordcloud&lt;/span&gt;(df, col, separator&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Plots a wordcloud of given dataframe and specific column. The text is counted at word level.
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Parameters
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    ----------
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    df: pandas dataframe
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        dataframe that contains textual data
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    col: int
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        integer that points to the specific column with textual data
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    separator: str (default: None)
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        string specified to breakdown the text by. Default is empty space
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Returns
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    -------
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Wordcloud plot
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    list of most common words in the dataframe
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;# filter out any NaNs&lt;/span&gt;
+    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [x &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; df[df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns[col]] &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; x]
+    &lt;span style=&#34;color:#75715e&#34;&gt;# filter out any None&lt;/span&gt;
+    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [x &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; response &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;]
+
+    word_dict &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len(response)):
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; separator &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;:
+            word_dict&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(response[i]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;split())
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            word_dict&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(response[i]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;split(separator))
+    word_filtered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# flatten the list and lower all letter cases&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; sublist &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; word_dict:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; item &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; sublist:
+            word_filtered&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(item&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lower())
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# remove stopwords&lt;/span&gt;
+    word_filtered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [x &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; word_filtered &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; stop]
+
+    word_filtered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [word&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;replace(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;replace(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;replace(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#39;&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; word &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; word_filtered]
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# print most common words&lt;/span&gt;
+    most_common_words &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Counter(word_filtered)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;most_common(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+    print(most_common_words)
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# plot wordcloud&lt;/span&gt;
+    texts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(word &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; word &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; word_filtered)
+    cloud &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; WordCloud(max_font_size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, max_words&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, background_color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;white&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;generate(texts)
+    plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;imshow(cloud, interpolation&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bilinear&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# plot wordcloud for Man&lt;/span&gt;
+plot_wordcloud(males, &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 24 specifies the column number&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[(&#39;me&#39;, 2), (&#39;adjust&#39;, 2), (&#39;overall&#39;, 2), (&#39;personal&#39;, 2), (&#39;im&#39;, 2), (&#39;its&#39;, 1), (&#39;used&#39;, 1), (&#39;simply&#39;, 1), (&#39;interests&#39;, 1), (&#39;food&#39;, 1)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_42_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# plot wordcloud for Woman&lt;/span&gt;
+plot_wordcloud(females, &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[(&#39;use&#39;, 4), (&#39;see&#39;, 4), (&#39;im&#39;, 4), (&#39;bit&#39;, 3), (&#39;more&#39;, 3), (&#39;less&#39;, 3), (&#39;food&#39;, 3), (&#39;know&#39;, 3), (&#39;sleep&#39;, 2), (&#39;information&#39;, 2)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_43_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The top image is the wordcloud of male participants and the bottom is that of female participants. We see that some words are not as meaningful and that one critical fault to this approach is that breaking down the responses into word level can misrepresent the meaning of their responses. For example, &amp;lsquo;exercise&amp;rsquo; and &amp;lsquo;not exercise&amp;rsquo; have two opposing ideas but here, it would count &amp;lsquo;not&amp;rsquo; and &amp;lsquo;exercise&amp;rsquo; as two seperate ideas.&lt;/p&gt;
+&lt;p&gt;Even though the word counts are small, we see more &amp;lsquo;food&amp;rsquo; and &amp;lsquo;sleep&amp;rsquo; for female participants, leading to an assumption that it could be related to going on diets.&lt;/p&gt;
+&lt;h3 id=&#34;analyzing-categorical-data-using-wordcloud&#34;&gt;Analyzing categorical data using wordcloud&lt;/h3&gt;
+&lt;p&gt;Participants were also asked, &amp;ldquo;what actions do you take regarding your health?&amp;rdquo; with multiple choices answer selections that include&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;lsquo;exercise&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;take medication or health supplements&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;track health or fitness&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;learn more about health&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;receive regular treatment at clinic&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;maintain a diet&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;receive mental counseling.&amp;rsquo;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;plot_wordcloud(males, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;;&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[(&#39;exercise&#39;, 29), (&#39;take medication and/or health supplements&#39;, 10), (&#39;track your health and/or fitness&#39;, 9), (&#39;learn more about your health (eg from online friends or community)&#39;, 8), (&#39;maintain a diet&#39;, 8), (&#39;receive regular treatment and/or consultation at clinic&#39;, 3), (&#39;none of the above&#39;, 2)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_46_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;plot_wordcloud(females, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;;&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[(&#39;exercise&#39;, 30), (&#39;take medication and/or health supplements&#39;, 27), (&#39;track your health and/or fitness&#39;, 24), (&#39;learn more about your health (eg from online friends or community)&#39;, 17), (&#39;receive regular treatment and/or consultation at clinic&#39;, 17), (&#39;maintain a diet&#39;, 16), (&#39;receive mental counseling&#39;, 7)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./TextualDataAnalysis_47_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;From the two results above, we see that exercise is the most common practice for keeping up health in both genders. However, we see that in general, women tend to do more activities or attempts to maintain their health e.g. by more frequently visiting a clinic or receive counseling, whereas two men responded they simply do nothing at all.&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;a-namelink9-conclusion--thoughts-a&#34;&gt;&lt;!-- raw HTML omitted --&gt; Conclusion &amp;amp; Thoughts &lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Wordcloud is a fun, engaging representation of textual data. However, more caution and consideration are needed because it can also tweak how the data is represented. For example, I coded the function so that it would breakdown any sentences or phrases into word level. This means that if someone does &amp;lsquo;not exercise&amp;rsquo;, it would still count &amp;lsquo;exercise&amp;rsquo; and the end result would show &amp;lsquo;exercise&amp;rsquo; being emphasized more. While the context of exercise is present, the meaning is totally the opposite.&lt;/p&gt;
+&lt;hr&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;GoogleSheets API v4: &lt;a href=&#34;https://developers.google.com/sheets/api/samples/reading&#34;&gt;https://developers.google.com/sheets/api/samples/reading&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google Oauth: &lt;a href=&#34;https://developers.google.com/identity/protocols/oauth2/service-account#python&#34;&gt;https://developers.google.com/identity/protocols/oauth2/service-account#python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google API Python Client: &lt;a href=&#34;https://github.com/googleapis/google-api-python-client/blob/master/docs/oauth.md&#34;&gt;https://github.com/googleapis/google-api-python-client/blob/master/docs/oauth.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Credentials: &lt;a href=&#34;https://developers.google.com/workspace/guides/create-credentials&#34;&gt;https://developers.google.com/workspace/guides/create-credentials&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Universal Sentence Encoder and GloVe on Narrative Semantic Representation</title>
+      <link>https://jinjeon.me/post/vectorspace/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://jinjeon.me/post/vectorspace/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;See full repo at &lt;a href=&#34;https://github.com/jeon11/use-glove-narrative.git&#34;&gt;https://github.com/jeon11/use-glove-narrative.git&lt;/a&gt;&lt;/strong&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;strong&gt;Note:&lt;/strong&gt; The results are shown in the &lt;a href=&#34;https://jinjeon.me/#posters&#34;&gt;poster&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Google&amp;rsquo;s Universal Sentence Encoder (USE)&lt;/strong&gt; provides 512-dimension vectors for each input that are pre-trained on large corpus, and can be plugged into a variety of different task models, such as sentiment analysis, classification, and etc. It is speed-efficient without losing task accuracy, and also provides embeddings not just for word level, but also for phrases, sentences, and even paragraphs. However, the more the words are given as input, the more likely each word meaning gets diluted.&lt;/p&gt;
+&lt;p&gt;This notebook is based on the Semantic Similarity with TF-Hub Universal Encoder tutorial, but uses a separate input from one of the projects. We will also use &lt;strong&gt;GloVe&lt;/strong&gt; vectors to compare how the vectors and cosine similarity differ between the two models.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First, the notebook goes over setting up locally and use one sample data to create embeddings saved out as a separate csv file using Pandas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then assuming you have cloned the repository, we call in custom functions to quickly extract vectors of given word, phrase, sentences in USE and GloVe.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;table-of-contentsshort-cuts&#34;&gt;Table of Contents/Short-cuts:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#About-USE-Models-and-Deep-Average-Network&#34;&gt;About USE Models and Deep Average Network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Installation-&amp;amp;-Setup&#34;&gt;Installation &amp;amp; Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Path-Setup&#34;&gt;Path Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Raw-Data-Format&#34;&gt;Raw Data Format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Get-USE-Embeddings&#34;&gt;Get USE Embeddings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Cosine-Similarity&#34;&gt;Cosine Similarity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Cosine-Similarity-Example&#34;&gt;Cosine Similarity Examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#Plotting-Similarity-Matrix&#34;&gt;Plotting Similarity Matrix&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;about-use-models-and-deep-average-network&#34;&gt;About USE Models and Deep Average Network&lt;/h3&gt;
+&lt;p&gt;There are two types of models in &lt;strong&gt;USE&lt;/strong&gt;: &lt;strong&gt;Transformer&lt;/strong&gt; and &lt;strong&gt;Deep Averaging Network (DAN)&lt;/strong&gt;. We will use DAN which is a lighter version for efficiency and speed in exchange for reduced accuracy (still accurate enough).&lt;/p&gt;
+&lt;p&gt;DAN first averages the input word embeddings to create a sentence embedding. It uses PTB tokenizer, which divides a sentence into a sequence of tokens based on set of rules on  how to process punctuation, articles, etc, in order to create 512 dimension embeddings. This averaged 512 vector is passed to one or more feedforward layers. Then it is multi-task-trained on unsupervised data drawn from various internet sources,  Wikipedia, Stanford Natural Language Inference corpus, web news, and forums.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Training  goals:
+&lt;ul&gt;
+&lt;li&gt;Uses skip-thought-like model that predicts the surrounding sentences of a given text (see below)&lt;/li&gt;
+&lt;li&gt;Conversational response suggestion&lt;/li&gt;
+&lt;li&gt;Classification task on supervised data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The intuition behind deep feedforward neural network is that each layer learns a more abstract representation of the input than the previous one. So its depth allows to capture subtle variations of the input with more depths. Also, each layer only involves a single matrix multiplication, allowing minimal computing time.&lt;/p&gt;
+&lt;p&gt;See full USE paper: &lt;a href=&#34;https://arxiv.org/pdf/1803.11175.pdf&#34;&gt;https://arxiv.org/pdf/1803.11175.pdf&lt;/a&gt;
+See full DAN paper: &lt;a href=&#34;https://people.cs.umass.edu/~miyyer/pubs/2015_acl_dan.pdf&#34;&gt;https://people.cs.umass.edu/~miyyer/pubs/2015_acl_dan.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;installation--setup&#34;&gt;Installation &amp;amp; Setup&lt;/h3&gt;
+&lt;p&gt;I used Anaconda to create a TensorFlow-specific environment to customize the package versions. After installing Anaconda&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creating a new environment:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda create -n py3 python=3.6.8
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Activate the created environment by &lt;code&gt;conda activate py3&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using pip, install packages for pandas, numpy, seaborn, tensorflow, tensorflow_hub. ie. &lt;code&gt;pip install pckge-name&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then, let&amp;rsquo;s make sure to set the packages to exact version:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install --upgrade tensorflow=1.15.0
+pip install --upgrade tensorflow-hub=0.7.0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once the steps are done, we should be able to run the codes locally.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; absl &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; logging
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; tensorflow &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; tf
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; tensorflow_hub &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; hub
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; plt
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; glob &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; glob
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; seaborn &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; sns
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;
+due to some depecrated methods and changes made with the tf version upgrade from tf1.X to tf2.0, here we use a specific set of Python and tf versions. You can check via &lt;code&gt;pip freeze&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tested on python == 3.6.8 | tensorflow == 1.15.0 | tensorflow_hub == 0.7.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or you can check the version in Python via:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sys
+print(sys&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;version_info)  &lt;span style=&#34;color:#75715e&#34;&gt;# sys.version_info(major=3, minor=6, micro=8, releaselevel=&amp;#39;final&amp;#39;)&lt;/span&gt;
+print(tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__version__)    &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#39;1.15.0&amp;#39;&lt;/span&gt;
+print(hub&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;__version__)   &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#39;0.7.0&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# script variables&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# for lite/DAN version:&lt;/span&gt;
+module_url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://tfhub.dev/google/universal-sentence-encoder/2&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# for heavy/Transformer version:&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# module_url = &amp;#34;https://tfhub.dev/google/universal-sentence-encoder-large/3&amp;#34;&lt;/span&gt;
+
+baseDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;use-glove-narrative&amp;#39;&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# repository/base folder name&lt;/span&gt;
+embedding_size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;512&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# base 512-dimension embedding&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;path-setup&#34;&gt;Path Setup&lt;/h3&gt;
+&lt;p&gt;Assuming that you git cloned the project (which is for demo purposes) to your local directory, we set the path so the code knows where to look for certain data files using the &lt;code&gt;baseDir&lt;/code&gt; specified above. We will mainly just work within the cloned folder.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;pwd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getcwd()
+&lt;span style=&#34;color:#75715e&#34;&gt;# recursively find absolute path&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;basename(pwd) &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; baseDir:
+    os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;chdir(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;..&amp;#39;&lt;/span&gt;)
+    pwd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getcwd()
+baseDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pwd
+dataDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; baseDir &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/data&amp;#39;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# recursively find all csv files. We will work with one file here&lt;/span&gt;
+all_csvs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [y &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;walk(dataDir) &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; glob(os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(x[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt;))]
+all_csvs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort()
+all_csvs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; all_csvs[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]  &lt;span style=&#34;color:#75715e&#34;&gt;# we will just use one sample data&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;raw-data-format&#34;&gt;Raw Data Format&lt;/h3&gt;
+&lt;p&gt;To briefly show the data, the data is comprised of numerous idea units, or phrases of words with unique meanings. Here, we are only interested in the &amp;lsquo;text&amp;rsquo; column and &amp;lsquo;index&amp;rsquo; column. We will call in the text of the entire story to create embeddings for each idea unit. Below the example print out, we will loop over each story to create embeddings. Since we will use one story this time, it shouldn&amp;rsquo;t take that long.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# an example print of data format&lt;/span&gt;
+datafile &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(all_csvs)
+datafile&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;get-use-embeddings&#34;&gt;Get USE Embeddings&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# let&amp;#39;s read in the data file&lt;/span&gt;
+textfile &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(all_csvs)
+&lt;span style=&#34;color:#75715e&#34;&gt;# get the title of the narrative story, cutting out the .csv extension&lt;/span&gt;
+title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;basename(all_csvs)[:&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]
+
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# create df to save out at the end&lt;/span&gt;
+vector_df_columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;paragraph&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;index&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;]
+&lt;span style=&#34;color:#75715e&#34;&gt;# create column for each dimension (out of 512)&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, embedding_size &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
+    vector_df_columns&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;dim&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(i))
+vector_df &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;vector_df_columns)
+
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# import the Universal Sentence Encoder&amp;#39;s TF Hub module&lt;/span&gt;
+embed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; hub&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Module(module_url)  &lt;span style=&#34;color:#75715e&#34;&gt;# hub.load(module_url) for tf==2.0.0&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# we call in the text column from data file&lt;/span&gt;
+messages &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; t &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len(textfile)):
+    messages&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(textfile&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[t][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;])
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Reduce logging output.&lt;/span&gt;
+logging&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_verbosity(logging&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ERROR)
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;compat&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Session() &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; session:
+    session&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run([tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;compat&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;global_variables_initializer(), tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;compat&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;v1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tables_initializer()])
+    message_embeddings &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; session&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;run(embed(messages))
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# make sure all units are there/sanity check&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; len(message_embeddings) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; len(textfile) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; len(messages)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# loop over each vector value to corresponding text&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; e &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len(message_embeddings)):
+    vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;at[e, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;paragraph&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; textfile&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[e][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;paragraph&amp;#39;&lt;/span&gt;]
+    vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;at[e, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;index&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; textfile&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[e][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;index&amp;#39;&lt;/span&gt;]
+    vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;at[e, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; messages[e]
+    vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;at[e, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(message_embeddings[e])
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; dim &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, len(message_embeddings[e])):
+        vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;at[e, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;dim&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;str(dim&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; message_embeddings[e][dim]
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# display sample format&lt;/span&gt;
+vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head()
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;print(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape(vector_df))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;(0, 516)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The sample data shows each idea unit/text converted to 512 dimension vectors. &lt;code&gt;np.shape(vector_df)&lt;/code&gt; will return a 41 total idea units/phrases to 516 columns (512 dimensions + custom columns (paragraph info, index, text, and size)). We then use these vectors to explore semantic similarity between text and phrases.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# run the code below to save out as csv file&lt;/span&gt;
+vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reindex(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;vector_df_columns)
+vector_df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_csv(title &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;_vectors.csv&amp;#39;&lt;/span&gt;, index&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;cosine-similarity&#34;&gt;Cosine Similarity&lt;/h2&gt;
+&lt;p&gt;As a brief description, &lt;strong&gt;cosine similarity&lt;/strong&gt; is basically the measure of cosine angle between the two vectors. Since we have USE and GloVe vectors that represent words into multidimensional vectors, we can apply these vector values to calculate how similar the two words are.&lt;/p&gt;
+&lt;p&gt;It can be easily calculated in Python with its useful packages:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;cos_sim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; numpy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dot(vector1, vector2)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;(numpy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;linalg&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;norm(vector1) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; numpy&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;linalg&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;norm(vector2))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Assuming we established some basic understanding, let&amp;rsquo;s call in the functions I made so that we can easily get USE and GloVe vectors at multiple word level.&lt;/p&gt;
+&lt;p&gt;I will highlight some of the functions below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; get_glove_use &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;
+help(glove_vec)
+help(use_vec)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Help on function glove_vec in module get_glove_use:
+
+glove_vec(item1, item2)
+    get vectors for given two words and calculate cosine similarity
+
+    Parameters
+    ----------
+    item1 : str
+        string in glove word pool vector to compare
+    item2 : str
+        string in glove word pool vector to compare
+
+    Returns
+    -------
+    item1_vector : array
+        item1 GloVe vector
+    item2_vector : array
+        item2 GloVe vector
+    cos_sim : float
+        cosine similarity of item1 and item2 vectors
+
+Help on function use_vec in module get_glove_use:
+
+use_vec(item1, item2)
+    get USE vectors and cosine similairty of the two items
+
+    Parameters
+    ----------
+    item1 : str, list
+        any word to compare, put in string for more than one word
+    item2 : str, list
+        any word to compare, put in string for more than one word
+
+    Returns
+    -------
+    item1_vector : array
+        item1 USE vector
+    item2_vector : array
+        item2 USE vector
+    cos_sim : float
+        cosine similarity of item1 and item2 vectors
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;cosine-similarity-example&#34;&gt;Cosine Similarity Example&lt;/h3&gt;
+&lt;p&gt;Using the two functions above, and another function compare_word_vec (which basically uses the two functions), we can easily obtain cosine similarity of two words.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# using the two functions above, we can get&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# GloVe and USE vectors and cosine similarity of two input words&lt;/span&gt;
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;chdir(gloveDir)
+_, _, glove_sim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; glove_vec(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fish&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bear&amp;#39;&lt;/span&gt;)
+_, _, use_sim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; use_vec(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fish&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bear&amp;#39;&lt;/span&gt;)
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;use cos: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(use_sim))
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;glove cos: &amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(glove_sim))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+0.11964830574261577
+0.5305143
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# the two functions glove_vex and use_vec are use in compare_word_vec&lt;/span&gt;
+compare_word_vec(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;man&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fish&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+use cos: 0.49838725
+glove cos: 0.18601566881803455
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; From the example above, USE and GloVe similarly identy &lt;em&gt;fish&lt;/em&gt; to be somewhat equally similar to &lt;em&gt;bear&lt;/em&gt; and &lt;em&gt;man&lt;/em&gt; (but just in different scale/degree).&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s try comparing at multiple words or phrase level. We will use new functions and give in new inputs as strings.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;sentence1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;old&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;man&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;caught&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fish&amp;#39;&lt;/span&gt;]
+sentence2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bear&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hunted&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;trout&amp;#39;&lt;/span&gt;]
+sentence3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bear&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;eat&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;six&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fish&amp;#39;&lt;/span&gt;]
+
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;old man caught fish &amp;amp; bear hunted trout:&amp;#39;&lt;/span&gt;)
+phrase_vec(sentence1, sentence2)
+
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;old man caught fish &amp;amp; bear eat six fish:&amp;#39;&lt;/span&gt;)
+phrase_vec(sentence1, sentence3)
+
+print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bear hunted trout &amp;amp; bear eat six fish:&amp;#39;&lt;/span&gt;)
+phrase_vec(sentence2, sentence3)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;old man caught fish &amp;amp; bear hunted trout:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.36609688461789297
+USE sim: 0.50494814
+old man caught fish &amp;amp; bear eat six fish:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.6818474640845398
+USE sim: 0.5896743
+bear hunted trout &amp;amp; bear eat six fish:
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+glove sim: 0.6082457470353315
+USE sim: 0.72352856
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; From the example above, we can see that USE and GloVe capture somewhat differently. We can see that &lt;em&gt;bear hunted trout&lt;/em&gt; and &lt;em&gt;bear eat six fish&lt;/em&gt; are the most similar to each other, whereas &lt;em&gt;old man caught fish&lt;/em&gt; is also similar to the context of bear eating six fish.&lt;/p&gt;
+&lt;p&gt;More detailed analysis is required, but the example above shows great possibilities to exploring semantics.&lt;/p&gt;
+&lt;h3 id=&#34;plotting-similarity-matrix&#34;&gt;Plotting Similarity Matrix&lt;/h3&gt;
+&lt;p&gt;Now that we can compare similarity of words and sentences, we can plot a simple pairwise matrix, which basically compares how similar each word is to another in the given list. Fortunately, we already have a plot for doing it (using Seaborn).&lt;/p&gt;
+&lt;p&gt;I will only use few words as demonstration, since it&amp;rsquo;s been slowing up my computer so much!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;plot_sim_matrix([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;man&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bear&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fish&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;trout&amp;#39;&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+
+
+INFO:tensorflow:Saver not created because there are no variables in the graph to restore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./use_glove_cosine_similarity_25_2.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ending-note&#34;&gt;Ending Note&lt;/h2&gt;
+&lt;p&gt;In the example above, we only used simple noun words. The stronger blue color, the more similar the two words are. Thus, the diagonal strip is deep blue (similarity of same two words is 1). You can see &lt;em&gt;fish&lt;/em&gt; and &lt;em&gt;trout&lt;/em&gt; are more similar to each other, than is &lt;em&gt;man&lt;/em&gt; to &lt;em&gt;trout&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Keep in mind that you can feed in more words and sentences to create and visualize a larger matrix.&lt;/p&gt;
+&lt;p&gt;We looked at setting up USE locally, and creating embeddings from USE. The cloned project also has sample version of GloVe vectors. We use the vectors from the two models to extract vectors and compare similarity of two texts.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

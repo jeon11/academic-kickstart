@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jin Jeon">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Using mutual information to compare and plot the different registration types in neuroimaging data preprocessing steps">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jinjeon.me/post/mutual-info/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jinjeon.me/post/mutual-info/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Jin Jeon">
+  <meta property="og:url" content="https://jinjeon.me/post/mutual-info/">
+  <meta property="og:title" content="Information Theory: Mutual Information | Jin Jeon">
+  <meta property="og:description" content="Using mutual information to compare and plot the different registration types in neuroimaging data preprocessing steps"><meta property="og:image" content="https://jinjeon.me/post/mutual-info/featured.jpeg">
+  <meta property="twitter:image" content="https://jinjeon.me/post/mutual-info/featured.jpeg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-01-31T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-01-31T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jinjeon.me/post/mutual-info/"
+  },
+  "headline": "Information Theory: Mutual Information",
+  
+  "image": [
+    "https://jinjeon.me/post/mutual-info/featured.jpeg"
+  ],
+  
+  "datePublished": "2020-01-31T00:00:00Z",
+  "dateModified": "2020-01-31T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jin Jeon"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jin Jeon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jinjeon.me/img/icon.png"
+    }
+  },
+  "description": "Using mutual information to compare and plot the different registration types in neuroimaging data preprocessing steps"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Information Theory: Mutual Information | Jin Jeon</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/icon.png" alt="Jin Jeon"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About Me</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener"><span>Resume</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span></span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Information Theory: Mutual Information</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Fri, Jan 31, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    12 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="entropy-in-neuroimaging">Entropy in Neuroimaging</h2>
+<p>Entropy has three interpretations (three are identical, but in different expressions &amp; relations):</p>
+<p><!-- raw HTML omitted -->1. Amount of information in an event (N of possible outcomes, or grey value in images)<!-- raw HTML omitted --></p>
+<ul>
+<li>The larger the number of possible outcomes, the larger the information gain
+<ul>
+<li>Ex. Information gain from a sentence would exponentially increase with length of sentence<!-- raw HTML omitted --></li>
+<li>If outcome is 1, information gain is 0 (i.e. log1 = 0)</li>
+</ul>
+</li>
+</ul>
+<p><!-- raw HTML omitted -->2. Uncertainty of outcome in an event<!-- raw HTML omitted --></p>
+<ul>
+<li>Amount of information gain with probability is inversely related to the probability that the event will take place. The information per event is weighted by the probability of the event<!-- raw HTML omitted --></li>
+<li>The rarer an event, the more significance the event has</li>
+<li>When all events are likely to occur, uncertainty or entropy is maximum (ie. more possible outcomes)</li>
+<li>Most common entropy form is the Shannon&rsquo;s entropy:
+\begin{equation*}
+H = \sum_{i} p_i log(p_i)
+\end{equation*}</li>
+</ul>
+<blockquote>
+<p><strong>Entropy Example</strong> <!-- raw HTML omitted -->
+&gt;  In a fair coin toss, entropy is maximum. Vice versa, the more unfair the coint toss is, the more definitive the outcome is (which means lower entropy)<!-- raw HTML omitted --><!-- raw HTML omitted -->
+&gt;  Fair coin toss: P(head) = 0.5, P(tail) = 0.5<!-- raw HTML omitted -->
+&gt;  Entropy = -0.5log0.5 - 0.5log0.5 = 0.150 + 0.150 = 0.300
+&gt;<br>
+&gt;  Unfair coin toss: P(head) = 0.8, P(tail) = 0.2<!-- raw HTML omitted -->
+&gt;  Entropy = -0.8log0.8 - 0.2log0.2 = 0.077 + 0.140 = 0.217</p>
+</blockquote>
+<p><!-- raw HTML omitted -->3. Dispersion of probability distribution<!-- raw HTML omitted --></p>
+<ul>
+<li>Shannon&rsquo;s entropy can be used as a measure of dispersion of a probability distribution. It can be computed on images by looking at their dispersion of grey values</li>
+<li>Image with single intensity will have low entropy value as it contains little information. Conversely, if image with varying intesity will have higher entropy value with more information</li>
+<li>Ex. image with single sharp peak (ie. grey value condensed in small area) will have low entropy value</li>
+</ul>
+<h2 id="mutual-information">Mutual Information</h2>
+<p>The goal of registration is to maximize mutual information or the overlaps. There are three ways of interpreting MI, in which they are identical but in different forms of expression and relation of variables.</p>
+<ol>
+<li><strong><em>I(X, Y) = H(Y) - H(Y | X)</em></strong>
+<ul>
+<li>
+<p>This is the most closest form of mutual information. ie. MI of X and Y is subtracting entropy of H(Y) from the conditional entropy H(Y|X) (or p(Y) given p(X): chance of grey value in B given that corresponding image in A has grey value).</p>
+</li>
+<li>
+<p>In expression of uncertainty, MI is the amount by which uncertainty about Y changes when the amount of X containing Y is given
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+</li>
+</ul>
+</li>
+<li><strong><em>I(X, Y) = H(X) + H(Y) - H(X, Y)</em></strong>
+<ul>
+<li>It is the most closest form to joint entropy. <em>H(X | Y)</em> tells us that mutual information is greater when the joint entropy is lower. Small entropy or less dispersion would mean that information overlaps more.<br>
+<!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li><strong><em>I(X, Y) = Sum of [p(x,y) log (p(x,y) / p(x)p(y))</em></strong>]
+<ul>
+<li>This formula is analogous to Kullback-Leibler distance, which measures the distance between two distributions. It measures the dependence of the two images by calculating the distance between the joint distribution of the image&rsquo;s grey values p(x,y) and the joint distribution in case of independence of the two images p(x)p(y)</li>
+<li>We will use this formula to measure MI later in the code</li>
+</ul>
+</li>
+</ol>
+<h2 id="code-implementation">Code Implementation</h2>
+<p>Now let&rsquo;s try using Python to measure mutual information of given images. We will be mainly comparing in two ways: comparing the identical images, and two different images.</p>
+<h4 id="1-lets-begin-with-a-setup-and-direct-the-image-files">1. Let&rsquo;s begin with a setup, and direct the image files</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> __future__ <span style="color:#f92672">import</span> division
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> nibabel <span style="color:#66d9ef">as</span> nib
+
+<span style="color:#75715e"># set gray colormap and nearest neighbor interpolation by default</span>
+plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;image.cmap&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;gray&#39;</span>
+plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;image.interpolation&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;nearest&#39;</span>
+
+<span style="color:#75715e"># set the images</span>
+os<span style="color:#f92672">.</span>chdir(<span style="color:#e6db74">&#39;/Users/Jin/Documents/MATLAB&#39;</span>)
+
+img1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;4_23_Drake.nii&#39;</span>
+img2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;4_24_Denzel_Washington.nii&#39;</span>
+</code></pre></div><h4 id="2-lets-slice-the-image-and-set-side-by-side-to-display">2. Let&rsquo;s slice the image and set side by side to display</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_img_slice</span>(img, size<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    load the image using nibabel and slice the image by given size
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    img: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    numpy memmap: ndarray of image slice
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    img_data <span style="color:#f92672">=</span> nib<span style="color:#f92672">.</span>load(img)
+    img_data <span style="color:#f92672">=</span> img_data<span style="color:#f92672">.</span>get_data()
+    img_slice <span style="color:#f92672">=</span> img_data[:, :, size]  <span style="color:#75715e"># 50 is arbitrary here</span>
+    <span style="color:#75715e"># convert any nans to 0s</span>
+    img_nans <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>isnan(img_slice)
+    img_slice[img_nans] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">return</span> img_slice
+
+img1_slice <span style="color:#f92672">=</span> get_img_slice(img1)
+img2_slice <span style="color:#f92672">=</span> get_img_slice(img2)
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># display images left and right</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_raw</span>(img1, img2):
+    plt<span style="color:#f92672">.</span>imshow(np<span style="color:#f92672">.</span>hstack((img1, img2)))
+    plt<span style="color:#f92672">.</span>show()
+
+plot_raw(img1_slice, img1_slice)
+</code></pre></div><p><img src="./mutual_information_neuroimaging_6_0.png" alt="png"></p>
+<h4 id="3-lets-plot-a-1d-histogram-for-each-of-the-two-iamges">3. Let&rsquo;s plot a 1d histogram for each of the two iamges</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_hist1d</span>(img1, img2, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    one dimensional histogram of the slices
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    img1: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    img2: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    bins: optional (default=20)
+</span><span style="color:#e6db74">        bin size of the histogram
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    histogram
+</span><span style="color:#e6db74">        comparing two images side by side
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    fig, axes <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>hist(img1<span style="color:#f92672">.</span>ravel(), bins)
+    axes[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Img1 histogram&#39;</span>)
+    axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>hist(img2<span style="color:#f92672">.</span>ravel(), bins)
+    axes[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Img2 histogram&#39;</span>)
+    plt<span style="color:#f92672">.</span>show()
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_hist1d(img1_slice, img2_slice)
+</code></pre></div><p><img src="./mutual_information_neuroimaging_9_0.png" alt="png"></p>
+<h4 id="4-lets-plot-the-two-images-against-each-other-on-a-scatter-plot-and-calculate-correlation-coefficient">4. Let&rsquo;s plot the two images against each other on a scatter plot, and calculate correlation coefficient</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_scatter2d</span>(img1, img2):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    plot the two image&#39;s histogram against each other
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    img1: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    img2: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    2d plotting of the two images and correlation coeeficient
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    corr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>corrcoef(img1<span style="color:#f92672">.</span>ravel(), img2<span style="color:#f92672">.</span>ravel())[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>]
+    plt<span style="color:#f92672">.</span>plot(img1<span style="color:#f92672">.</span>ravel(), img2<span style="color:#f92672">.</span>ravel(), <span style="color:#e6db74">&#39;.&#39;</span>)
+
+    plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Img1 signal&#39;</span>)
+    plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Img2 signal&#39;</span>)
+    plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Img1 vs Img2 signal cc=&#39;</span> <span style="color:#f92672">+</span> str(corr))
+    plt<span style="color:#f92672">.</span>show()
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># this one is comparing two identical images so it should equal 1</span>
+plot_scatter2d(img1_slice, img1_slice)
+
+<span style="color:#75715e"># image 1 vs image 2</span>
+plot_scatter2d(img1_slice, img2_slice)
+</code></pre></div><p><img src="./mutual_information_neuroimaging_12_0.png" alt="png"></p>
+<p><img src="./mutual_information_neuroimaging_12_1.png" alt="png"></p>
+<h3 id="feature-space">Feature Space</h3>
+<p>Using MI as a registration measure, we plot a <strong><em>feature space</em></strong> (or <strong><em>joint histogram</em></strong>), a two-dimensional plot showing the combinations of grey values in each of the two images for all corresponding points. For example, for each corresponding point (x, y), in which x and y are coordinates of first and second images respectively,</p>
+<p>As the alignment of the two images change, the feature space changes. The more correctly registered the two images are, the more anatomical structures will overlap, showing clusters for the grey values. When the images are misaligned, the intensity of the clusters for certain structures will decrease, and a new pair of (x, y) will be matched as the image gets incorrectly aligned with other nearby structures of the other image. This is be shown as the dispersion of the clustering.</p>
+<h4 id="5-lets-plot-a-joint-histogram-now">5. Let&rsquo;s plot a joint histogram now</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_joint_histogram</span>(img1, img2, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>, log<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    plot feature space. Given two images, the feature space is constructed by counting the number of times a combination of grey values occur
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    img1: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    img2: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    bins: optional (default=20)
+</span><span style="color:#e6db74">        bin size of the histogram
+</span><span style="color:#e6db74">    log: boolean (default=True)
+</span><span style="color:#e6db74">        keeping it true will show a better contrasted image
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    joint histogram
+</span><span style="color:#e6db74">        feature space of the two images in graph
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    hist_2d, x_edges, y_edges <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>histogram2d(img1<span style="color:#f92672">.</span>ravel(), img2<span style="color:#f92672">.</span>ravel(), bins)
+    <span style="color:#75715e"># transpose to put the T1 bins on the horizontal axis and use &#39;lower&#39; to put 0, 0 at the bottom of the plot</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> log:
+        plt<span style="color:#f92672">.</span>imshow(hist_2d<span style="color:#f92672">.</span>T, origin<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lower&#39;</span>)
+        plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Img1 signal bin&#39;</span>)
+        plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Img2 signal bin&#39;</span>)
+
+    <span style="color:#75715e"># log the values to reduce the bins with large values</span>
+    hist_2d_log <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros(hist_2d<span style="color:#f92672">.</span>shape)
+    non_zeros <span style="color:#f92672">=</span> hist_2d <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>
+    hist_2d_log[non_zeros] <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>log(hist_2d[non_zeros])
+    plt<span style="color:#f92672">.</span>imshow(hist_2d_log<span style="color:#f92672">.</span>T, origin<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lower&#39;</span>)
+    plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Img1 signal bin&#39;</span>)
+    plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Img2 signal bin&#39;</span>)
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># this should print a linear graph as it&#39;s comparing it to itself</span>
+print(plot_joint_histogram(img1_slice, img1_slice))
+</code></pre></div><pre><code>None
+</code></pre>
+<p><img src="./mutual_information_neuroimaging_15_1.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compare images 1 and 2</span>
+print(plot_joint_histogram(img1_slice, img2_slice))
+</code></pre></div><pre><code>None
+</code></pre>
+<p><img src="./mutual_information_neuroimaging_16_1.png" alt="png"></p>
+<h4 id="6-lets-calculate-the-mutual-information-of-the-two-images-now">6. Let&rsquo;s calculate the mutual information of the two images now.</h4>
+<p>We use the third formula stated above to measure the overlaps of the two images. The goal of registration is to maximize mutual information or the overlaps.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mutual_information</span>(img1, img2, bins<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    measure the mutual information of the given two images
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    img1: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    img2: nii image data read via nibabel
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    bins: optional (default=20)
+</span><span style="color:#e6db74">        bin size of the histogram
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    calculated mutual information: float
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    hist_2d, x_edges, y_edges <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>histogram2d(img1<span style="color:#f92672">.</span>ravel(), img2<span style="color:#f92672">.</span>ravel(), bins)
+
+    <span style="color:#75715e"># convert bins counts to probability values</span>
+    pxy <span style="color:#f92672">=</span> hist_2d <span style="color:#f92672">/</span> float(np<span style="color:#f92672">.</span>sum(hist_2d))
+    px <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(pxy, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># marginal x over y</span>
+    py <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(pxy, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># marginal y over x</span>
+    px_py <span style="color:#f92672">=</span> px[:, <span style="color:#66d9ef">None</span>] <span style="color:#f92672">*</span> py[<span style="color:#66d9ef">None</span>, :]  <span style="color:#75715e"># broadcast to multiply marginals</span>
+
+    <span style="color:#75715e"># now we can do the calculation using the pxy, px_py 2D arrays</span>
+    nonzeros <span style="color:#f92672">=</span> pxy <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># filer out the zero values</span>
+    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>sum(pxy[nonzeros] <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log(pxy[nonzeros] <span style="color:#f92672">/</span> px_py[nonzeros]))
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># the MI value of the first should be greater than the second as the first is comparing the image to itself</span>
+print(mutual_information(img1_slice, img1_slice))
+print(mutual_information(img1_slice, img2_slice))
+</code></pre></div><pre><code>1.1967155090861803
+0.20578049748917815
+</code></pre>
+<h2 id="calculating-the-grand-average-of-mutual-information">Calculating the Grand Average of Mutual Information</h2>
+<p>The codes above are detailed step-by-step processes. We can condense the codes above into one useful function that will allow us to examine the overall average of mutual information of each every scan image to the register image.</p>
+<p>For example, given a register type (&lsquo;rtf&rsquo; for register to first image, or &lsquo;rtm&rsquo; for register to mean), it will calculate each scan to the register image, calculate the MI, and return the grand average MI value.</p>
+<p><strong>Note</strong>: The code is currently based on ACCRE system so the paths directing to the images must be changed for flexible use. The path should direct to the folder which holds all the scan images, and since it requires gigabytes of data, I had to implement the code on ACCRE-use only.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_avg_mi</span>(subjID, type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtf&#39;</span>, saveText<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, nScans<span style="color:#f92672">=</span><span style="color:#ae81ff">187</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    calculates the correlation coefficient and mutual information of the registered image to the rest of image files, and returns the grand average and trial averages
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Parameters
+</span><span style="color:#e6db74">    ----------
+</span><span style="color:#e6db74">    subjID : str
+</span><span style="color:#e6db74">        string of subject data (ie. &#39;cdcatmr011&#39;)
+</span><span style="color:#e6db74">    type : str {&#39;rtf&#39;, &#39;rtm&#39;}
+</span><span style="color:#e6db74">        registration type that would either register to first scan image or the mean image (default: &#39;rtf&#39;)
+</span><span style="color:#e6db74">    saveText : boolean
+</span><span style="color:#e6db74">        if True, will save the table report to a separate text file (default: False)
+</span><span style="color:#e6db74">    verbose : boolean
+</span><span style="color:#e6db74">        if True, will print out which scan file is being worked on (default: False)
+</span><span style="color:#e6db74">    nScans : int
+</span><span style="color:#e6db74">        integer of how many scans to expect per each run (default: 187)
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Returns
+</span><span style="color:#e6db74">    -------
+</span><span style="color:#e6db74">    cc_all: list
+</span><span style="color:#e6db74">        list of all correlation coefficient values
+</span><span style="color:#e6db74">    mi_all: list
+</span><span style="color:#e6db74">        list of all mutual information values
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    saveText <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+    subj <span style="color:#f92672">=</span> str(subjID)
+    baseDir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/scratch/polynlab/fmri/cdcatmr/&#39;</span>
+    funcDir <span style="color:#f92672">=</span> baseDir <span style="color:#f92672">+</span> subj <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/images/func&#39;</span>
+    tag <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;func&#39;</span>
+    <span style="color:#66d9ef">if</span> type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rtf&#39;</span>:  <span style="color:#75715e"># register to first</span>
+        sourceImg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/func1/func1_00001.nii&#39;</span>  <span style="color:#75715e"># [rmeanfunc1_00001.nii, meanfunc1_00001.nii]</span>
+        <span style="color:#75715e"># tag = &#39;func&#39;</span>
+    <span style="color:#66d9ef">elif</span> type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;rtm&#39;</span>:  <span style="color:#75715e"># register to mean</span>
+        sourceImg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/func1/meanfunc1_00001.nii&#39;</span>
+        <span style="color:#75715e"># tag = &#39;rfunc&#39;</span>
+    resDir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;/home/jeonj1/proj/mi&#39;</span>
+
+    os<span style="color:#f92672">.</span>chdir(funcDir)
+    funcs <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(funcDir)
+    funcs<span style="color:#f92672">.</span>sort()  <span style="color:#75715e"># funcs = [&#39;func1&#39;, &#39;func2&#39;, ... &#39;func7&#39;, &#39;func8&#39;]</span>
+
+    meanImg <span style="color:#f92672">=</span> mi<span style="color:#f92672">.</span>get_img_slice(funcDir <span style="color:#f92672">+</span> sourceImg, verbose<span style="color:#f92672">=</span>verbose)
+    mi_listVar <span style="color:#f92672">=</span> []
+    cc_listVar <span style="color:#f92672">=</span> []
+    <span style="color:#75715e"># loop by each functional run</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(funcs)):
+        curr_func <span style="color:#f92672">=</span> funcs[i]
+        <span style="color:#75715e"># let&#39;s first create list variables for each functional run</span>
+        temp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+        temp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mi_&#39;</span> <span style="color:#f92672">+</span> curr_func <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; = []&#39;</span>
+        exec(temp)
+        mi_listVar<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;mi_&#39;</span> <span style="color:#f92672">+</span> curr_func)
+        temp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+        temp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cc_&#39;</span> <span style="color:#f92672">+</span> curr_func <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; = []&#39;</span>
+        exec(temp)
+        cc_listVar<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;cc_&#39;</span> <span style="color:#f92672">+</span> curr_func)
+
+        <span style="color:#75715e"># now let&#39;s read in each functional run folder</span>
+        cfuncDir <span style="color:#f92672">=</span> funcDir <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> curr_func
+        os<span style="color:#f92672">.</span>chdir(cfuncDir)
+        nii_files <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(cfuncDir)
+        nii_files <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> nii_files <span style="color:#66d9ef">if</span> x<span style="color:#f92672">.</span>startswith(tag) <span style="color:#f92672">and</span> x<span style="color:#f92672">.</span>endswith(<span style="color:#e6db74">&#39;nii&#39;</span>)]
+        nii_files<span style="color:#f92672">.</span>sort()
+
+        <span style="color:#75715e"># sanity check: count scan files</span>
+        <span style="color:#66d9ef">assert</span> len(nii_files) <span style="color:#f92672">==</span> nScans, <span style="color:#e6db74">&#34;total scan files found do not match &#34;</span> <span style="color:#f92672">+</span> str(nScans) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; for func run &#34;</span> <span style="color:#f92672">+</span> str(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+
+        <span style="color:#75715e"># loop by each scan within run</span>
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, nScans):
+            <span style="color:#66d9ef">if</span> verbose:
+                print(<span style="color:#e6db74">&#39;starting &#39;</span> <span style="color:#f92672">+</span> curr_func <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; | scan &#39;</span> <span style="color:#f92672">+</span> str(j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+            curr_nii <span style="color:#f92672">=</span> mi<span style="color:#f92672">.</span>get_img_slice(nii_files[j], verbose<span style="color:#f92672">=</span>verbose)
+            corr <span style="color:#f92672">=</span> mi<span style="color:#f92672">.</span>get_core(meanImg, curr_nii)
+            mutual_info <span style="color:#f92672">=</span> mi<span style="color:#f92672">.</span>mutual_information(meanImg, curr_nii)
+
+            <span style="color:#75715e"># append each list</span>
+            temp_cc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cc_&#39;</span> <span style="color:#f92672">+</span> curr_func <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.append(corr)&#39;</span>
+            exec(temp_cc)
+            temp_mi <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;mi_&#39;</span> <span style="color:#f92672">+</span> curr_func <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.append(mutual_info)&#39;</span>
+            exec(temp_mi)
+
+    cc_sums <span style="color:#f92672">=</span> []
+    mi_sums <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(funcs)):
+        cc_sums<span style="color:#f92672">.</span>append(sum(eval(cc_listVar[r])))
+        mi_sums<span style="color:#f92672">.</span>append(sum(eval(mi_listVar[r])))
+
+    <span style="color:#75715e"># get all entries in a single list</span>
+    cc_all <span style="color:#f92672">=</span> []
+    mi_all <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(funcs)):
+        cc_all <span style="color:#f92672">=</span> cc_all <span style="color:#f92672">+</span> eval(cc_listVar[r])
+        mi_all <span style="color:#f92672">=</span> mi_all <span style="color:#f92672">+</span> eval(mi_listVar[r])
+
+
+    reports <span style="color:#f92672">=</span> []
+    reports<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;avg cc&#39;</span>, sum(cc_sums)<span style="color:#f92672">/</span>(nScans<span style="color:#f92672">*</span>len(funcs))])
+    reports<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;avg mi&#39;</span>, sum(mi_sums)<span style="color:#f92672">/</span>(nScans<span style="color:#f92672">*</span>len(funcs))])
+    reports<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;cc by runs&#39;</span>, <span style="color:#e6db74">&#39;-----&#39;</span>])
+    <span style="color:#66d9ef">for</span> l <span style="color:#f92672">in</span> cc_listVar:
+        reports<span style="color:#f92672">.</span>append([l, sum(eval(l))<span style="color:#f92672">/</span>nScans])
+    reports<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;mi by runs&#39;</span>, <span style="color:#e6db74">&#39;-----&#39;</span>])
+    <span style="color:#66d9ef">for</span> l <span style="color:#f92672">in</span> mi_listVar:
+        reports<span style="color:#f92672">.</span>append([l, sum(eval(l))<span style="color:#f92672">/</span>nScans])
+
+    print(tabulate(reports))
+
+    <span style="color:#66d9ef">if</span> saveText:
+        <span style="color:#66d9ef">with</span> open(resDir <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/&#39;</span> <span style="color:#f92672">+</span> subj <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;_mi_&#39;</span> <span style="color:#f92672">+</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(sourceImg) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.txt&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>) <span style="color:#66d9ef">as</span> f:
+            <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> reports:
+                f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> item)
+        print(<span style="color:#e6db74">&#39;saved the table report to &#39;</span> <span style="color:#f92672">+</span> resDir)
+
+    <span style="color:#66d9ef">return</span> cc_all, mi_all
+
+</code></pre></div><h2 id="t-test-and-plotting">T-test and Plotting</h2>
+<p>We can use the function <code>get_avg_mi</code> above to calculate the grand average. Then we will run a t-test on the two averages and plot the differences for visual reference. The script below is currently somewhat hard coded for simplicity sake.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nScans <span style="color:#f92672">=</span> <span style="color:#ae81ff">187</span>
+nRuns <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+
+<span style="color:#75715e"># we use the get_avg_mi function stated above. Specify the subject and register type.</span>
+cc1, mi1 <span style="color:#f92672">=</span> get_avg_mi(<span style="color:#e6db74">&#39;cdcatmr066&#39;</span>, <span style="color:#e6db74">&#39;rtf&#39;</span>, verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)  <span style="color:#75715e"># register to first scan</span>
+cc2, mi2 <span style="color:#f92672">=</span> get_avg_mi(<span style="color:#e6db74">&#39;cdcatmr066&#39;</span>, <span style="color:#e6db74">&#39;rtm&#39;</span>, verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)  <span style="color:#75715e"># register to mean</span>
+
+<span style="color:#66d9ef">assert</span> len(cc1) <span style="color:#f92672">==</span> len(cc2) <span style="color:#f92672">==</span> nScans <span style="color:#f92672">*</span> nRuns
+<span style="color:#66d9ef">assert</span> len(mi1) <span style="color:#f92672">==</span> len(mi2) <span style="color:#f92672">==</span> nScans <span style="color:#f92672">*</span> nRuns
+
+cc_t, cc_p <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_ind(cc1, cc2)
+mi_t, mi_p <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>ttest_ind(mi1, mi2)
+
+
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+<span style="color:#75715e"># switch matplotlib backend so that it knows it won&#39;t print anything.</span>
+plt<span style="color:#f92672">.</span>switch_backend(<span style="color:#e6db74">&#39;agg&#39;</span>)
+
+<span style="color:#75715e"># sns.set(color_codes=True)</span>
+sns<span style="color:#f92672">.</span>set_color_codes(<span style="color:#e6db74">&#39;pastel&#39;</span>)
+<span style="color:#75715e"># sns.set_palette(&#34;tab10&#34;)</span>
+
+plt<span style="color:#f92672">.</span>figure(<span style="color:#ae81ff">0</span>)
+sns<span style="color:#f92672">.</span>distplot(cc1, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtf&#39;</span>);
+sns<span style="color:#f92672">.</span>distplot(cc2, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtm&#39;</span>);
+plt<span style="color:#f92672">.</span>legend()
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;correlation coefficient n=&#39;</span> <span style="color:#f92672">+</span> str(len(cc1)))
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;/home/jeonj1/proj/mi/cc_distplot.png&#39;</span>)
+
+plt<span style="color:#f92672">.</span>figure(<span style="color:#ae81ff">1</span>)
+sns<span style="color:#f92672">.</span>distplot(mi1, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtf&#39;</span>);
+sns<span style="color:#f92672">.</span>distplot(mi2, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtm&#39;</span>);
+plt<span style="color:#f92672">.</span>legend()
+plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;mutual info | n=&#39;</span> <span style="color:#f92672">+</span> str(len(mi1)))
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;/home/jeonj1/proj/mi/mi_distplot.png&#39;</span>)
+
+
+<span style="color:#75715e"># let&#39;s plot box-dist plot combined</span>
+f, (ax_box1, ax_box2, ax_dist) <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">3</span>, sharex<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, gridspec_kw<span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;height_ratios&#34;</span>: (<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">1</span>)})
+
+cc1_mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(cc1)
+cc2_mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(cc2)
+
+sns<span style="color:#f92672">.</span>boxplot(cc1, ax<span style="color:#f92672">=</span>ax_box1, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+sns<span style="color:#f92672">.</span>boxplot(cc2, ax<span style="color:#f92672">=</span>ax_box2, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+ax_box1<span style="color:#f92672">.</span>axvline(cc1_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+ax_box2<span style="color:#f92672">.</span>axvline(cc2_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+plt<span style="color:#f92672">.</span>subplots_adjust(top<span style="color:#f92672">=</span><span style="color:#ae81ff">0.87</span>)
+plt<span style="color:#f92672">.</span>suptitle(<span style="color:#e6db74">&#39;correlation coefficient n=&#39;</span> <span style="color:#f92672">+</span> str(len(cc1)), fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>)
+
+sns<span style="color:#f92672">.</span>distplot(cc1, ax<span style="color:#f92672">=</span>ax_dist, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtf&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>, norm_hist<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+sns<span style="color:#f92672">.</span>distplot(cc2, ax<span style="color:#f92672">=</span>ax_dist, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtm&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>, norm_hist<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+ax_dist<span style="color:#f92672">.</span>axvline(cc1_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+ax_dist<span style="color:#f92672">.</span>axvline(cc2_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+plt<span style="color:#f92672">.</span>legend()
+ax_box1<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+ax_box2<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;/home/jeonj1/proj/mi/cc_box_distplot.png&#39;</span>)
+
+
+<span style="color:#75715e"># let&#39;s plot box-dist plot combined</span>
+f, (ax_box1, ax_box2, ax_dist) <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">3</span>, sharex<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, gridspec_kw<span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;height_ratios&#34;</span>: (<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">1</span>)})
+
+mi1_mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(mi1)
+mi2_mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(mi2)
+
+sns<span style="color:#f92672">.</span>boxplot(mi1, ax<span style="color:#f92672">=</span>ax_box1, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>)
+sns<span style="color:#f92672">.</span>boxplot(mi2, ax<span style="color:#f92672">=</span>ax_box2, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>)
+ax_box1<span style="color:#f92672">.</span>axvline(mi1_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+ax_box2<span style="color:#f92672">.</span>axvline(mi2_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+plt<span style="color:#f92672">.</span>subplots_adjust(top<span style="color:#f92672">=</span><span style="color:#ae81ff">0.87</span>)
+plt<span style="color:#f92672">.</span>suptitle(<span style="color:#e6db74">&#39;mutual information n=&#39;</span> <span style="color:#f92672">+</span> str(len(cc1)), fontsize <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>)
+
+sns<span style="color:#f92672">.</span>distplot(mi1, ax<span style="color:#f92672">=</span>ax_dist, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtf&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>, norm_hist<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+sns<span style="color:#f92672">.</span>distplot(mi2, ax<span style="color:#f92672">=</span>ax_dist, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rtm&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>, norm_hist<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+ax_dist<span style="color:#f92672">.</span>axvline(mi1_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;g&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+ax_dist<span style="color:#f92672">.</span>axvline(mi2_mean, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;m&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;--&#39;</span>)
+plt<span style="color:#f92672">.</span>legend()
+ax_box1<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+ax_box2<span style="color:#f92672">.</span>set(xlabel<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;/home/jeonj1/proj/mi/mi_box_distplot.png&#39;</span>)
+
+</code></pre></div><p>The following code above will generate two joint plots that combine the box plot and distribution plot for correlation coefficient and mutual information. The first image below shows the correlation coefficient distribution (note that the max is at 1.00). The N here represents the total number of scan images that were compared.</p>
+<p><img src="cc_box_distplot.png" alt="CC distribution plot for rtf vs rtm" title="CC distribution plot for rtf vs rtm"></p>
+<p>The image below is what we&rsquo;re really interested in (!The title should be changed to MI!). You can see the values range from 0.6~1.4. Also, it shows evidence that RTF version has outliers depicted in the box plot, but the outlier is moderated with the RTM method.</p>
+<p><img src="mi_box_distplot.png" alt="MI distribution plot for rtf vs rtm" title="MI distribution plot for rtf vs rtm"></p>
+<h3 id="references--useful-links">References &amp; Useful Links</h3>
+<p><a href="https://people.csail.mit.edu/fisher/publications/papers/tsai99.pdf">https://people.csail.mit.edu/fisher/publications/papers/tsai99.pdf</a></p>
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.2130&amp;rep=rep1&amp;type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.2130&amp;rep=rep1&amp;type=pdf</a></p>
+<p><a href="https://matthew-brett.github.io/teaching/mutual_information.html#t1-t2-scatter">https://matthew-brett.github.io/teaching/mutual_information.html#t1-t2-scatter</a></p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://jinjeon.me/post/mutual-info/&amp;text=Information%20Theory:%20Mutual%20Information" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://jinjeon.me/post/mutual-info/&amp;t=Information%20Theory:%20Mutual%20Information" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Information%20Theory:%20Mutual%20Information&amp;body=https://jinjeon.me/post/mutual-info/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://jinjeon.me/post/mutual-info/&amp;title=Information%20Theory:%20Mutual%20Information" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_huf5029b22bbb9407d45fad41834988009_176697_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://jinjeon.me/">Jin Jeon</a></h5>
+      <h6 class="card-subtitle">UX Researcher</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://jinjeon.me/pdf/JinJeon_Resume.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/jinjeon/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/jeon11" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:jinjeon@berkeley.edu" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/vectorspace/">Universal Sentence Encoder and GloVe on Narrative Semantic Representation</a></li>
+      
+      <li><a href="/post/eeg-advanced/">EEG/Signal Processing--Advanced Part 2</a></li>
+      
+      <li><a href="/post/eeg-basics/">EEG/Signal Processing--Basics Part 1</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python,%20r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.b59fdb6275ef5e6e2859c30582fc271a.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2024 developed by Jin with HTML/CSS/Markdown and ☕️ <!-- raw HTML omitted --> &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
